@@ -1,6 +1,6 @@
 ## Epms
 
-Entitlement Program
+Entitlement Program Program Management System (EPMS)
 
 #### License
 
