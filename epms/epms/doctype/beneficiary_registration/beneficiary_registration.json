@@ -26,6 +26,7 @@
   "caste",
   "tab_2_tab",
   "house_ownrent",
+  "district",
   "column_break_yalk",
   "tab_3_tab",
   "tab_4_tab",
@@ -159,11 +160,18 @@
   {
    "fieldname": "column_break_yalk",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "options": "District",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-14 12:42:06.361387",
+ "modified": "2023-09-14 13:42:40.294293",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary Registration",
