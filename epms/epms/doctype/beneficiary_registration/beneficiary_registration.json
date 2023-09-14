@@ -25,6 +25,8 @@
   "marital_status",
   "caste",
   "tab_2_tab",
+  "house_ownrent",
+  "column_break_yalk",
   "tab_3_tab",
   "tab_4_tab",
   "tab_5_tab"
@@ -146,11 +148,22 @@
    "label": "Caste",
    "options": "Caste master",
    "reqd": 1
+  },
+  {
+   "fieldname": "house_ownrent",
+   "fieldtype": "Select",
+   "label": "House (Own/Rent)",
+   "options": "\nOwn\nRented\nRelative's Home\nGovt. Quarter\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_yalk",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-14 12:37:36.589131",
+ "modified": "2023-09-14 12:42:06.361387",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary Registration",
