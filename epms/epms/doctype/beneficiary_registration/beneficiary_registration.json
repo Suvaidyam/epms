@@ -18,8 +18,10 @@
  "fields": [
   {
    "fieldname": "title",
-   "fieldtype": "Data",
-   "label": "Title"
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of visit",
+   "reqd": 1
   },
   {
    "fieldname": "tab_2_tab",
@@ -49,7 +51,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-13 19:53:58.521680",
+ "modified": "2023-09-14 10:19:10.114747",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary Registration",
