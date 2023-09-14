@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class CurrentOccupation(Document):
+class Maritalstatus(Document):
 	pass

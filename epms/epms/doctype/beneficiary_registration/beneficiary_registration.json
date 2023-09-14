@@ -15,6 +15,13 @@
   "date_of_birth",
   "age",
   "education",
+  "current_occupation",
+  "contact_number",
+  "alternate_contact_number",
+  "column_break_taix",
+  "head_of_family",
+  "fathers_name",
+  "mothers_name",
   "tab_2_tab",
   "tab_3_tab",
   "tab_4_tab",
@@ -83,11 +90,51 @@
    "label": "Education",
    "options": "Education master",
    "reqd": 1
+  },
+  {
+   "fieldname": "current_occupation",
+   "fieldtype": "Link",
+   "label": "Current Occupation",
+   "options": "Current Occupation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Phone",
+   "label": "Contact number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "alternate_contact_number",
+   "fieldtype": "Phone",
+   "label": "Alternate contact number"
+  },
+  {
+   "fieldname": "column_break_taix",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "head_of_family",
+   "fieldtype": "Select",
+   "label": "Head of family",
+   "options": "\nSelf\nFather\nMother\nHusband\nWife\nGrandfather\nGrandmother\nOther"
+  },
+  {
+   "fieldname": "fathers_name",
+   "fieldtype": "Data",
+   "label": "Father's name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mothers_name",
+   "fieldtype": "Data",
+   "label": "Mother's name",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-14 10:48:14.798973",
+ "modified": "2023-09-14 11:27:37.261072",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary Registration",

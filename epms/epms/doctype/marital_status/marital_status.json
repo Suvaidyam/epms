@@ -1,38 +1,32 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-09-14 10:57:15.184369",
+ "autoname": "field:marital_status",
+ "creation": "2023-09-14 11:30:56.486305",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "current_occupation",
-  "occupational_category"
+  "marital_status"
  ],
  "fields": [
   {
-   "fieldname": "current_occupation",
+   "fieldname": "marital_status",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Current Occupation",
-   "reqd": 1
-  },
-  {
-   "fieldname": "occupational_category",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Occupational Category",
-   "options": "Occupational Category",
-   "reqd": 1
+   "label": "Marital status",
+   "reqd": 1,
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-14 10:57:44.653117",
+ "modified": "2023-09-14 11:31:08.780754",
  "modified_by": "Administrator",
  "module": "Epms",
- "name": "Current Occupation",
+ "name": "Marital status",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -48,9 +42,7 @@
    "write": 1
   }
  ],
- "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "title_field": "current_occupation"
+ "states": []
 }

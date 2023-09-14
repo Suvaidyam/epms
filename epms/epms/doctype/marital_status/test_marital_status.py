@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestCurrentOccupation(FrappeTestCase):
+class TestMaritalstatus(FrappeTestCase):
 	pass

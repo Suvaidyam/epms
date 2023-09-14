@@ -1,7 +1,7 @@
 // Copyright (c) 2023, Management System for Agrasarteach@suvaidyam.com and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on("Current Occupation", {
+// frappe.ui.form.on("Marital status", {
 // 	refresh(frm) {
 
 // 	},
