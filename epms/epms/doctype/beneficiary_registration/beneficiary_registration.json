@@ -22,6 +22,7 @@
   "head_of_family",
   "fathers_name",
   "mothers_name",
+  "marital_status",
   "tab_2_tab",
   "tab_3_tab",
   "tab_4_tab",
@@ -130,11 +131,18 @@
    "fieldtype": "Data",
    "label": "Mother's name",
    "reqd": 1
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Link",
+   "label": "Marital status",
+   "options": "Marital status",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-14 11:27:37.261072",
+ "modified": "2023-09-14 12:06:13.215007",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary Registration",
