@@ -1,0 +1,33 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"jhNahU21MR\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Occupational Category\",\"col\":12}}]",
+ "creation": "2023-09-14 11:03:28.383140",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "shortcut",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Occupational Categories",
+ "links": [],
+ "modified": "2023-09-14 11:04:04.378342",
+ "modified_by": "Administrator",
+ "module": "Epms",
+ "name": "Occupational Categories",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "Master",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Occupational Category",
+   "label": "Occupational Category"
+  }
+ ],
+ "roles": [],
+ "sequence_id": 24.0,
+ "shortcuts": [],
+ "title": "Occupational Categories"
+}
