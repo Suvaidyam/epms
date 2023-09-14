@@ -1,0 +1,197 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:",
+ "creation": "2023-09-13 19:36:30.271397",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "profile_tab",
+  "title",
+  "name_of_the_beneficiary",
+  "gender",
+  "date_of_birth",
+  "age",
+  "education",
+  "current_occupation",
+  "column_break_taix",
+  "contact_number",
+  "alternate_contact_number",
+  "head_of_family",
+  "fathers_name",
+  "mothers_name",
+  "marital_status",
+  "caste",
+  "tab_2_tab",
+  "house_ownrent",
+  "district",
+  "column_break_yalk",
+  "tab_3_tab",
+  "tab_4_tab",
+  "tab_5_tab"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of visit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tab_2_tab",
+   "fieldtype": "Tab Break",
+   "label": "Residence Demography"
+  },
+  {
+   "fieldname": "tab_3_tab",
+   "fieldtype": "Tab Break",
+   "label": "ID proof"
+  },
+  {
+   "fieldname": "tab_4_tab",
+   "fieldtype": "Tab Break",
+   "label": "Scheme Details"
+  },
+  {
+   "fieldname": "tab_5_tab",
+   "fieldtype": "Tab Break",
+   "label": "Follow up details"
+  },
+  {
+   "fieldname": "profile_tab",
+   "fieldtype": "Tab Break",
+   "label": "Profile"
+  },
+  {
+   "fieldname": "name_of_the_beneficiary",
+   "fieldtype": "Data",
+   "label": "Name of the beneficiary",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "\nMale\nFemale\nTransgender\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Data",
+   "label": "Date of birth"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age",
+   "reqd": 1
+  },
+  {
+   "fieldname": "education",
+   "fieldtype": "Link",
+   "label": "Education",
+   "options": "Education master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "current_occupation",
+   "fieldtype": "Link",
+   "label": "Current Occupation",
+   "options": "Current Occupation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Phone",
+   "label": "Contact number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "alternate_contact_number",
+   "fieldtype": "Phone",
+   "label": "Alternate contact number"
+  },
+  {
+   "fieldname": "column_break_taix",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "head_of_family",
+   "fieldtype": "Select",
+   "label": "Head of family",
+   "options": "\nSelf\nFather\nMother\nHusband\nWife\nGrandfather\nGrandmother\nOther"
+  },
+  {
+   "fieldname": "fathers_name",
+   "fieldtype": "Data",
+   "label": "Father's name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mothers_name",
+   "fieldtype": "Data",
+   "label": "Mother's name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Link",
+   "label": "Marital status",
+   "options": "Marital status",
+   "reqd": 1
+  },
+  {
+   "fieldname": "caste",
+   "fieldtype": "Link",
+   "label": "Caste",
+   "options": "Caste master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "house_ownrent",
+   "fieldtype": "Select",
+   "label": "House (Own/Rent)",
+   "options": "\nOwn\nRented\nRelative's Home\nGovt. Quarter\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_yalk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "options": "District",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-14 13:42:40.294293",
+ "modified_by": "Administrator",
+ "module": "Epms",
+ "name": "Beneficiary Registration",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
