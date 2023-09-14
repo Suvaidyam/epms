@@ -10,6 +10,11 @@
  "field_order": [
   "profile_tab",
   "title",
+  "name_of_the_beneficiary",
+  "gender",
+  "date_of_birth",
+  "age",
+  "education",
   "tab_2_tab",
   "tab_3_tab",
   "tab_4_tab",
@@ -47,11 +52,42 @@
    "fieldname": "profile_tab",
    "fieldtype": "Tab Break",
    "label": "Profile"
+  },
+  {
+   "fieldname": "name_of_the_beneficiary",
+   "fieldtype": "Data",
+   "label": "Name of the beneficiary",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "\nMale\nFemale\nTransgender\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Data",
+   "label": "Date of birth"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age",
+   "reqd": 1
+  },
+  {
+   "fieldname": "education",
+   "fieldtype": "Link",
+   "label": "Education",
+   "options": "Education Master",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-14 10:19:10.114747",
+ "modified": "2023-09-14 10:34:04.015655",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary Registration",
