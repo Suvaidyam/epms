@@ -81,13 +81,13 @@
    "fieldname": "education",
    "fieldtype": "Link",
    "label": "Education",
-   "options": "Education Master",
+   "options": "Education master",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-14 10:34:04.015655",
+ "modified": "2023-09-14 10:48:14.798973",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary Registration",

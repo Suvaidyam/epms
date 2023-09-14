@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class EducationMaster(Document):
+class Educationmaster(Document):
 	pass
