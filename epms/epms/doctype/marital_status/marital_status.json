@@ -22,7 +22,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-14 11:31:08.780754",
+ "modified": "2023-09-14 11:36:48.764806",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Marital status",
@@ -42,7 +42,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "marital_status"
 }
