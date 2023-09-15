@@ -1,21 +1,21 @@
 {
  "charts": [],
- "content": "[{\"id\":\"SMsK61elnR\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Beneficiary Registration\",\"col\":12}}]",
- "creation": "2023-09-14 10:42:37.766653",
+ "content": "[{\"id\":\"_iLmOJ5b1l\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Beneficiary Registration\",\"col\":12}}]",
+ "creation": "2023-09-15 20:25:51.986386",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
  "for_user": "",
  "hide_custom": 0,
- "icon": "primitive-dot",
+ "icon": "assign",
  "idx": 0,
  "is_hidden": 0,
- "label": "Master",
+ "label": "Beneficiary",
  "links": [],
- "modified": "2023-09-15 20:26:32.251536",
+ "modified": "2023-09-15 20:27:02.904391",
  "modified_by": "Administrator",
  "module": "Epms",
- "name": "Master",
+ "name": "Beneficiary",
  "number_cards": [],
  "owner": "Administrator",
  "parent_page": "",
@@ -27,7 +27,7 @@
   }
  ],
  "roles": [],
- "sequence_id": 2.0,
+ "sequence_id": 1.0,
  "shortcuts": [],
- "title": "Master"
+ "title": "Beneficiary"
 }

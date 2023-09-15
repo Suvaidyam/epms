@@ -12,7 +12,7 @@
  "is_hidden": 0,
  "label": "Education",
  "links": [],
- "modified": "2023-09-14 10:49:47.291730",
+ "modified": "2023-09-15 20:25:54.191917",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Education",
@@ -27,7 +27,7 @@
   }
  ],
  "roles": [],
- "sequence_id": 23.0,
+ "sequence_id": 3.0,
  "shortcuts": [
   {
    "color": "Grey",
