@@ -29,7 +29,7 @@
   "parents",
   "tab_3_tab",
   "do_you_have_id_document",
-  "table_gptj",
+  "id_section",
   "tab_4_tab",
   "table_wgnk",
   "overall_status",
@@ -60,6 +60,7 @@
   {
    "fieldname": "name_of_the_beneficiary",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Name of the beneficiary",
    "reqd": 1
   },
@@ -86,6 +87,7 @@
   {
    "fieldname": "contact_number",
    "fieldtype": "Phone",
+   "in_standard_filter": 1,
    "label": "Contact number",
    "reqd": 1
   },
@@ -164,12 +166,14 @@
    "fieldname": "do_you_have_id_document",
    "fieldtype": "Select",
    "label": "Do you have ID document?",
-   "options": "\nNo\nYes",
+   "options": "\nYes\nNo",
    "reqd": 1
   },
   {
    "fieldname": "overall_status",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Overall Status",
    "options": "\naa\nbb\ncc\ndd",
    "reqd": 1
@@ -178,12 +182,6 @@
    "fieldname": "numeric_overall_status",
    "fieldtype": "Data",
    "label": "Numeric Overall Status"
-  },
-  {
-   "depends_on": "do_you_have_id_document",
-   "fieldname": "table_gptj",
-   "fieldtype": "Table",
-   "options": "ID Master"
   },
   {
    "fieldname": "table_wgnk",
@@ -203,11 +201,16 @@
    "in_list_view": 1,
    "label": "Date of visit",
    "reqd": 1
+  },
+  {
+   "fieldname": "id_section",
+   "fieldtype": "Table",
+   "options": "ID Master"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-16 10:54:02.756151",
+ "modified": "2023-09-16 11:51:15.635714",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary Registration",
