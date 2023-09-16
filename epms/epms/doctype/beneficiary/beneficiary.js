@@ -1,7 +1,7 @@
 // Copyright (c) 2023, Management System for Agrasarteach@suvaidyam.com and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on("Beneficiary Registration", {
+frappe.ui.form.on("Beneficiary", {
   refresh(frm) {
     var id_section = frm.get_field('id_section');
     if (frm.doc.do_you_have_id_document === 'Yes') {
@@ -12,14 +12,14 @@ frappe.ui.form.on("Beneficiary Registration", {
         id_section.refresh();
     }
 
-        frm.fields_dict["district"].get_query = function (doc) {
+        frm.fields_dict["district_of_origin" && "current_district"].get_query = function (doc) {
             return {
               filters: {
                 State: "please select state first",
               },
             };
           }
-        frm.fields_dict["block"].get_query = function (doc) {
+        frm.fields_dict["block_of_origin" && "current_block"].get_query = function (doc) {
             return {
               filters: {
                 District: "please select district first",
@@ -29,8 +29,8 @@ frappe.ui.form.on("Beneficiary Registration", {
           frm.set_value('date_of_visit', frappe.datetime.get_today());
           // frm.set_value('contact_number', '+91')
 	},
-  state: function(frm){
-    frm.fields_dict["district"].get_query = function (doc) {
+  state_of_origin: function(frm){
+    frm.fields_dict["district_of_origin"].get_query = function (doc) {
       return {
         filters: {
           State: frm.doc.state,
@@ -38,11 +38,11 @@ frappe.ui.form.on("Beneficiary Registration", {
       };
     }
   },
-  district: function(frm){
-    frm.fields_dict["block"].get_query = function (doc) {
+  district_of_origin: function(frm){
+    frm.fields_dict["block_of_origin"].get_query = function (doc) {
       return {
         filters: {
-          District: frm.doc.district,
+          District: frm.doc.district_of_origin,
         },
       };
     }
@@ -57,6 +57,4 @@ frappe.ui.form.on("Beneficiary Registration", {
             id_section.refresh();
   }
   }
-
-    
 });
