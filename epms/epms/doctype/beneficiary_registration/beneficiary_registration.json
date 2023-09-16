@@ -31,9 +31,9 @@
   "do_you_have_id_document",
   "table_gptj",
   "tab_4_tab",
+  "table_wgnk",
   "overall_status",
   "numeric_overall_status",
-  "column_break_qdjj",
   "tab_5_tab"
  ],
  "fields": [
@@ -189,10 +189,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "column_break_qdjj",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "numeric_overall_status",
    "fieldtype": "Data",
    "label": "Numeric Overall Status"
@@ -202,11 +198,16 @@
    "fieldname": "table_gptj",
    "fieldtype": "Table",
    "options": "ID Master"
+  },
+  {
+   "fieldname": "table_wgnk",
+   "fieldtype": "Table",
+   "options": "Support Child"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-16 06:50:18.584595",
+ "modified": "2023-09-16 09:37:51.994605",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary Registration",

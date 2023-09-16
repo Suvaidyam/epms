@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-09-16 08:55:03.804037",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "support_type",
+  "specific_support_type",
+  "status",
+  "action_taken",
+  "remarks",
+  "complete__1",
+  "complete_2"
+ ],
+ "fields": [
+  {
+   "fieldname": "support_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Support Type",
+   "options": "Support Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "specific_support_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Specific support type",
+   "options": "Support",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nActive\nActive",
+   "reqd": 1
+  },
+  {
+   "fieldname": "action_taken",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Action Taken"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "complete__1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Complete  1"
+  },
+  {
+   "fieldname": "complete_2",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "complete 2"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-16 09:55:55.518500",
+ "modified_by": "Administrator",
+ "module": "Epms",
+ "name": "Support Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
