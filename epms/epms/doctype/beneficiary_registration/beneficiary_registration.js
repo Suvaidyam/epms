@@ -10,13 +10,14 @@ frappe.ui.form.on("Beneficiary Registration", {
               },
             };
           }
-          frm.fields_dict["block"].get_query = function (doc) {
+        frm.fields_dict["block"].get_query = function (doc) {
             return {
               filters: {
                 District: "please select district first",
               },
             };
           }
+          frm.set_value('date_of_visit', frappe.datetime.get_today());
 	},
   state: function(frm){
     frm.fields_dict["district"].get_query = function (doc) {
