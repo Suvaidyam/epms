@@ -10,24 +10,24 @@
  "icon": "assign",
  "idx": 0,
  "is_hidden": 0,
- "label": "Beneficiary",
+ "label": "Beneficiarys",
  "links": [],
- "modified": "2023-09-15 20:27:02.904391",
+ "modified": "2023-09-16 14:47:44.572524",
  "modified_by": "Administrator",
  "module": "Epms",
- "name": "Beneficiary",
+ "name": "Beneficiarys",
  "number_cards": [],
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
  "quick_lists": [
   {
-   "document_type": "Beneficiary Registration",
+   "document_type": "Beneficiary",
    "label": "Beneficiary Registration"
   }
  ],
  "roles": [],
  "sequence_id": 1.0,
  "shortcuts": [],
- "title": "Beneficiary"
+ "title": "Beneficiarys"
 }

@@ -1,41 +1,45 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-09-16 06:39:05.083503",
+ "creation": "2023-09-16 13:25:15.574375",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "select_id_proof",
-  "enter_id_number"
+  "head_of_family"
  ],
  "fields": [
   {
-   "fieldname": "select_id_proof",
+   "fieldname": "head_of_family",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Select ID proof",
-   "options": "ID Master",
-   "reqd": 1
-  },
-  {
-   "fieldname": "enter_id_number",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Enter Id Number",
+   "label": "Head of Family",
+   "options": "Beneficiary",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
- "istable": 1,
  "links": [],
- "modified": "2023-09-16 12:09:31.583603",
+ "modified": "2023-09-16 14:47:25.430289",
  "modified_by": "Administrator",
  "module": "Epms",
- "name": "ID Proof",
+ "name": "Family",
  "owner": "Administrator",
- "permissions": [],
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

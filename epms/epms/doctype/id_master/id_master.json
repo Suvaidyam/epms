@@ -8,8 +8,7 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "name_of_id",
-  "enter_id_number"
+  "name_of_id"
  ],
  "fields": [
   {
@@ -20,25 +19,30 @@
    "options": "ID Master",
    "reqd": 1,
    "unique": 1
-  },
-  {
-   "fieldname": "enter_id_number",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Enter ID Number",
-   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
- "istable": 1,
  "links": [],
- "modified": "2023-09-16 06:51:07.764547",
+ "modified": "2023-09-16 12:08:36.408695",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "ID Master",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
- "permissions": [],
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
  "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
