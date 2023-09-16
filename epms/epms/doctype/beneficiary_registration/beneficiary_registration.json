@@ -166,7 +166,7 @@
    "fieldname": "do_you_have_id_document",
    "fieldtype": "Select",
    "label": "Do you have ID document?",
-   "options": "\nYes\nNo",
+   "options": "Yes\nNo",
    "reqd": 1
   },
   {
@@ -205,12 +205,12 @@
   {
    "fieldname": "id_section",
    "fieldtype": "Table",
-   "options": "ID Master"
+   "options": "ID Proof"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-16 11:51:15.635714",
+ "modified": "2023-09-16 12:09:22.030747",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary Registration",
@@ -230,7 +230,10 @@
    "write": 1
   }
  ],
+ "search_fields": "contact_number",
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "name_of_the_beneficiary"
 }

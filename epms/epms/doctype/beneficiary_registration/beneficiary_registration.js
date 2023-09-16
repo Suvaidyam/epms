@@ -10,7 +10,7 @@ frappe.ui.form.on("Beneficiary Registration", {
     } else {
         id_section.df.hidden = 1;
         id_section.refresh();
-}
+    }
 
         frm.fields_dict["district"].get_query = function (doc) {
             return {
