@@ -22,7 +22,7 @@
   "current_location",
   "state",
   "district",
-  "ward",
+  "block",
   "caste",
   "source_information_about_center",
   "education",
@@ -122,13 +122,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "ward",
-   "fieldtype": "Link",
-   "label": "Tehsil/Block of origin",
-   "options": "Block",
-   "reqd": 1
-  },
-  {
    "fieldname": "parents",
    "fieldtype": "Link",
    "label": "Name of family member who has already registered",
@@ -203,11 +196,18 @@
    "fieldname": "table_wgnk",
    "fieldtype": "Table",
    "options": "Support Child"
+  },
+  {
+   "fieldname": "block",
+   "fieldtype": "Link",
+   "label": "Tehsil/Block of origin",
+   "options": "Block",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-16 09:37:51.994605",
+ "modified": "2023-09-16 10:44:26.421525",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary Registration",
