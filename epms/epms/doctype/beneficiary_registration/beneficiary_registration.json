@@ -29,6 +29,7 @@
   "parents",
   "tab_3_tab",
   "do_you_have_id_document",
+  "table_gptj",
   "tab_4_tab",
   "overall_status",
   "numeric_overall_status",
@@ -195,11 +196,17 @@
    "fieldname": "numeric_overall_status",
    "fieldtype": "Data",
    "label": "Numeric Overall Status"
+  },
+  {
+   "depends_on": "do_you_have_id_document",
+   "fieldname": "table_gptj",
+   "fieldtype": "Table",
+   "options": "ID Master"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-16 03:40:15.085662",
+ "modified": "2023-09-16 06:50:18.584595",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary Registration",
