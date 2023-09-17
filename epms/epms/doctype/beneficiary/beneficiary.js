@@ -46,6 +46,7 @@ frappe.ui.form.on("Beneficiary", {
 
 // DEFULTS DATE SET 
           frm.set_value('date_of_visit', frappe.datetime.get_today());
+          frm.set_df_property('date_of_visit', 'read_only', 1);
 
 	},
 
@@ -106,5 +107,12 @@ frappe.ui.form.on("Beneficiary", {
       parentField.df.hidden = 0;
       parentField.refresh();
     }
+  },
+  date_of_birth:function(frm){
+    let dob = frm.doc.date_of_birth
+    let year = frappe.datetime.get_today()
+    let age = year.split('-')[0] - dob.split('-')[0]
+    frm.set_value('age', age)
+    frm.set_df_property('age', 'read_only', 1);
   }
 });
