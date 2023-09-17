@@ -7,30 +7,30 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "select_id_proof",
+  "select_id",
   "enter_id_number"
  ],
  "fields": [
-  {
-   "fieldname": "select_id_proof",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Select ID proof",
-   "options": "ID Master",
-   "reqd": 1
-  },
   {
    "fieldname": "enter_id_number",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Enter Id Number",
    "reqd": 1
+  },
+  {
+   "fieldname": "select_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Select ID",
+   "options": "ID Master",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-09-16 12:09:31.583603",
+ "modified": "2023-09-16 15:58:00.628486",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "ID Proof",

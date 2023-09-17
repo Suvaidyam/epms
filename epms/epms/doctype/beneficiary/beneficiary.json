@@ -20,7 +20,7 @@
   "contact_number",
   "alternate_contact_number",
   "column_break_taix",
-  "is__parents",
+  "are_you_parents",
   "family",
   "fathers_name",
   "mothers_name",
@@ -37,6 +37,7 @@
   "current_state",
   "current_district",
   "current_block",
+  "address",
   "column_break_ftlo",
   "state_of_origin",
   "district_of_origin",
@@ -239,12 +240,6 @@
    "label": "Alternate contact number"
   },
   {
-   "default": "0",
-   "fieldname": "is__parents",
-   "fieldtype": "Check",
-   "label": "Is  Parents?"
-  },
-  {
    "fieldname": "marital_status",
    "fieldtype": "Link",
    "label": "Marital status",
@@ -270,11 +265,23 @@
    "label": "Mode of reach out",
    "options": "\nCommunity Meeting\nCamp\nAwareness Session\nTraining\nOne to One Interaction of HD members",
    "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "are_you_parents",
+   "fieldtype": "Check",
+   "label": "Are You Parents?"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address (with landmark)",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-16 15:12:39.607452",
+ "modified": "2023-09-17 07:42:21.408616",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",

@@ -3,6 +3,7 @@
 
 frappe.ui.form.on("Beneficiary", {
   refresh(frm) {
+    console.log(frm.sidebar)
   //  ID PROOF SECTION LOGIC FOR SHOW AND HIDE SECTION
     var id_section = frm.get_field('id_section');
     if (frm.doc.do_you_have_id_document === 'Yes') {
@@ -47,6 +48,8 @@ frappe.ui.form.on("Beneficiary", {
           frm.set_value('date_of_visit', frappe.datetime.get_today());
 
 	},
+
+//  field wise dependent dropdowns
   state_of_origin: function(frm){
     frm.fields_dict["district_of_origin"].get_query = function (doc) {
       return {
@@ -93,5 +96,15 @@ frappe.ui.form.on("Beneficiary", {
             id_section.df.hidden = 1;
             id_section.refresh();
   }
+  },
+  are_you_parents:function(frm){
+    var parentField = frm.fields_dict['family'];
+    if(frm.doc.are_you_parents){
+      parentField.df.hidden = 1;
+      parentField.refresh();
+    }else{
+      parentField.df.hidden = 0;
+      parentField.refresh();
+    }
   }
 });
