@@ -18,5 +18,6 @@ class Beneficiary(Document):
 		else:
 			print("CREATING CHILD BENEFICARY")
 
-	
+	def after_insert(self):
+		print("hello")
 

@@ -3,6 +3,11 @@
 
 frappe.ui.form.on("Beneficiary", {
   refresh(frm) {
+    var parentField = frm.fields_dict['family'];
+    if(frm.doc.are_you_parents){
+      parentField.df.hidden = 1;
+      parentField.refresh();
+    }
     // frm.set_df_property('contact_number', 'options', '+91: India');
     // frm.fields_dict['contact_number'].df.options = '+91: India';
 
