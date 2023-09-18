@@ -7,7 +7,9 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "head_of_family"
+  "head_of_family",
+  "name_of_parents",
+  "contact_number"
  ],
  "fields": [
   {
@@ -17,11 +19,29 @@
    "label": "Head of Family",
    "options": "Beneficiary",
    "reqd": 1
+  },
+  {
+   "fetch_from": "head_of_family.name_of_the_beneficiary",
+   "fieldname": "name_of_parents",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Name of Parents",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "head_of_family.contact_number",
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Contact Number",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-16 14:47:25.430289",
+ "modified": "2023-09-18 09:51:38.915378",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Family",
@@ -40,7 +60,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "name_of_parents"
 }
