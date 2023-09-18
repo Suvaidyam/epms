@@ -31,8 +31,6 @@
   "source_information_about_center",
   "mode_of_reach_out",
   "date_of_visit",
-  "section_break_fgxs",
-  "family_members",
   "residence_demography_tab",
   "current_residence_column",
   "current_state",
@@ -272,21 +270,11 @@
    "fieldtype": "Data",
    "label": "Address (with landmark)",
    "reqd": 1
-  },
-  {
-   "fieldname": "family_members",
-   "fieldtype": "Table MultiSelect",
-   "label": "Name of family member who has already registered",
-   "options": "Child Beneficary"
-  },
-  {
-   "fieldname": "section_break_fgxs",
-   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-18 14:02:06.318289",
+ "modified": "2023-09-18 18:32:16.526536",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",

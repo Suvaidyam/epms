@@ -8,6 +8,14 @@ frappe.ui.form.on("Beneficiary", {
       parentField.df.hidden = 1;
       parentField.refresh();
     }
+    var spousesname = frm.fields_dict['spouses_name'];
+    if(frm.doc.marital_status === 'Married'){
+      spousesname.df.hidden = 0;
+      spousesname.refresh()
+    }else{
+      spousesname.df.hidden = 1;
+      spousesname.refresh()
+    }
     // frm.set_df_property('contact_number', 'options', '+91: India');
     // frm.fields_dict['contact_number'].df.options = '+91: India';
 
@@ -130,5 +138,15 @@ frappe.ui.form.on("Beneficiary", {
     let age = year.split('-')[0] - dob.split('-')[0]
     frm.set_value('age', age)
     frm.set_df_property('age', 'read_only', 1);
+  },
+  marital_status:function(frm){
+    var spousesname = frm.fields_dict['spouses_name'];
+    if(frm.doc.marital_status === 'Married'){
+      spousesname.df.hidden = 0;
+      spousesname.refresh()
+    }else{
+      spousesname.df.hidden = 1;
+      spousesname.refresh()
+    }
   }
 });

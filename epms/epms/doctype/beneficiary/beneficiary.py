@@ -15,6 +15,9 @@ class Beneficiary(Document):
 			family_doc.name_of_parents = beneficiary.name_of_the_beneficiary
 			family_doc.name_of_parents = beneficiary.contact_number
 			family_doc.insert()
+			# update current beneficery
+			beneficiary.family = family_doc.name
+			beneficiary.save()
 		else:
 			print("CREATING CHILD BENEFICARY")
 
