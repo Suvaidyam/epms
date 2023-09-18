@@ -9,7 +9,6 @@
  "engine": "InnoDB",
  "field_order": [
   "profile_tab",
-  "date_of_visit",
   "aadhar_number",
   "name_of_the_beneficiary",
   "gender",
@@ -19,8 +18,9 @@
   "occupation",
   "contact_number",
   "alternate_contact_number",
+  "existing_bank_account",
   "column_break_taix",
-  "is__parents",
+  "are_you_parents",
   "family",
   "fathers_name",
   "mothers_name",
@@ -28,15 +28,17 @@
   "spouses_name",
   "religion",
   "caste",
-  "existing_bank_account",
   "source_information_about_center",
   "mode_of_reach_out",
-  "parents",
+  "date_of_visit",
+  "section_break_xqxg",
+  "family_members",
   "residence_demography_tab",
   "current_residence_column",
   "current_state",
   "current_district",
   "current_block",
+  "address",
   "column_break_ftlo",
   "state_of_origin",
   "district_of_origin",
@@ -103,12 +105,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "parents",
-   "fieldtype": "Link",
-   "label": "Name of family member who has already registered",
-   "options": "Beneficiary"
-  },
-  {
    "fieldname": "aadhar_number",
    "fieldtype": "Data",
    "label": "Aadhar Number"
@@ -144,9 +140,9 @@
   {
    "fieldname": "date_of_visit",
    "fieldtype": "Date",
+   "hidden": 1,
    "in_list_view": 1,
-   "label": "Date of visit",
-   "reqd": 1
+   "label": "Date of visit"
   },
   {
    "fieldname": "id_section",
@@ -239,12 +235,6 @@
    "label": "Alternate contact number"
   },
   {
-   "default": "0",
-   "fieldname": "is__parents",
-   "fieldtype": "Check",
-   "label": "Is  Parents?"
-  },
-  {
    "fieldname": "marital_status",
    "fieldtype": "Link",
    "label": "Marital status",
@@ -270,11 +260,33 @@
    "label": "Mode of reach out",
    "options": "\nCommunity Meeting\nCamp\nAwareness Session\nTraining\nOne to One Interaction of HD members",
    "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "are_you_parents",
+   "fieldtype": "Check",
+   "label": "Are You Parents?"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address (with landmark)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_xqxg",
+   "fieldtype": "Section Break",
+   "label": "Name of family member who has already registered"
+  },
+  {
+   "fieldname": "family_members",
+   "fieldtype": "Table MultiSelect",
+   "options": "Child Beneficary"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-16 15:12:39.607452",
+ "modified": "2023-09-17 12:22:06.979013",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",

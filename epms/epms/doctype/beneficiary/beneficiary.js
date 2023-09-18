@@ -3,6 +3,9 @@
 
 frappe.ui.form.on("Beneficiary", {
   refresh(frm) {
+    // frm.set_df_property('contact_number', 'options', '+91: India');
+    // frm.fields_dict['contact_number'].df.options = '+91: India';
+
   //  ID PROOF SECTION LOGIC FOR SHOW AND HIDE SECTION
     var id_section = frm.get_field('id_section');
     if (frm.doc.do_you_have_id_document === 'Yes') {
@@ -45,8 +48,11 @@ frappe.ui.form.on("Beneficiary", {
 
 // DEFULTS DATE SET 
           frm.set_value('date_of_visit', frappe.datetime.get_today());
+          frm.set_df_property('date_of_visit', 'read_only', 1);
 
 	},
+
+//  field wise dependent dropdowns
   state_of_origin: function(frm){
     frm.fields_dict["district_of_origin"].get_query = function (doc) {
       return {
@@ -55,6 +61,9 @@ frappe.ui.form.on("Beneficiary", {
         },
       };
     }
+    //  clear dependent dropdown field values
+    frm.set_value('district_of_origin', '')
+    frm.set_value('block_of_origin', '')
   },
   district_of_origin: function(frm){
     frm.fields_dict["block_of_origin"].get_query = function (doc) {
@@ -64,6 +73,8 @@ frappe.ui.form.on("Beneficiary", {
         },
       };
     }
+    // clear dependent dropdowns values
+    frm.set_value('block_of_origin', '')
   },
   current_state: function(frm){
     frm.fields_dict["current_district"].get_query = function (doc) {
@@ -73,6 +84,9 @@ frappe.ui.form.on("Beneficiary", {
         },
       };
     }
+    // clear dependent dropdowns values
+    frm.set_value('current_district', '')
+    frm.set_value('current_block', '')
   },
   current_district: function(frm){
     frm.fields_dict["current_block"].get_query = function (doc) {
@@ -82,6 +96,7 @@ frappe.ui.form.on("Beneficiary", {
         },
       };
     }
+    frm.set_value('current_block', '')
   },
 
   do_you_have_id_document: function(frm){
@@ -93,5 +108,22 @@ frappe.ui.form.on("Beneficiary", {
             id_section.df.hidden = 1;
             id_section.refresh();
   }
+  },
+  are_you_parents:function(frm){
+    var parentField = frm.fields_dict['family'];
+    if(frm.doc.are_you_parents){
+      parentField.df.hidden = 1;
+      parentField.refresh();
+    }else{
+      parentField.df.hidden = 0;
+      parentField.refresh();
+    }
+  },
+  date_of_birth:function(frm){
+    let dob = frm.doc.date_of_birth
+    let year = frappe.datetime.get_today()
+    let age = year.split('-')[0] - dob.split('-')[0]
+    frm.set_value('age', age)
+    frm.set_df_property('age', 'read_only', 1);
   }
 });
