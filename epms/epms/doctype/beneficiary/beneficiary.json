@@ -263,7 +263,8 @@
    "default": "0",
    "fieldname": "are_you_parents",
    "fieldtype": "Check",
-   "label": "Are You Parents?"
+   "label": "Are You Parents?",
+   "set_only_once": 1
   },
   {
    "fieldname": "address",
@@ -274,7 +275,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-19 07:29:39.332085",
+ "modified": "2023-09-19 11:14:03.145229",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",
