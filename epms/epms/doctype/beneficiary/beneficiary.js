@@ -148,5 +148,11 @@ frappe.ui.form.on("Beneficiary", {
       spousesname.df.hidden = 1;
       spousesname.refresh()
     }
+  },
+  // do_you_have_id_document:function(frm){
+  //   console.log(frm.doc)
+  // },
+  id_section  :function(doc , cdt , cdn){
+    console.log("id section work", doc)
   }
 });

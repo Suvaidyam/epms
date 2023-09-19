@@ -18,7 +18,6 @@
   "occupation",
   "contact_number",
   "alternate_contact_number",
-  "existing_bank_account",
   "column_break_taix",
   "are_you_parents",
   "family",
@@ -30,6 +29,7 @@
   "caste",
   "source_information_about_center",
   "mode_of_reach_out",
+  "existing_bank_account",
   "date_of_visit",
   "residence_demography_tab",
   "current_residence_column",
@@ -123,9 +123,9 @@
   },
   {
    "fieldname": "source_information_about_center",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Source information about center",
-   "options": "\nNews Paper\nGoogle\nRelative\nFriends",
+   "options": "Source information about center",
    "reqd": 1
   },
   {
@@ -254,9 +254,9 @@
   },
   {
    "fieldname": "mode_of_reach_out",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Mode of reach out",
-   "options": "\nCommunity Meeting\nCamp\nAwareness Session\nTraining\nOne to One Interaction of HD members",
+   "options": "Mode of reach out",
    "reqd": 1
   },
   {
@@ -274,7 +274,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-18 18:32:16.526536",
+ "modified": "2023-09-19 07:29:39.332085",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",
