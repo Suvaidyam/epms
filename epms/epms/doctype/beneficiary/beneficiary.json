@@ -9,15 +9,13 @@
  "engine": "InnoDB",
  "field_order": [
   "profile_tab",
-  "aadhar_number",
+  "date_of_visit",
   "name_of_the_beneficiary",
-  "gender",
+  "contact_number",
   "date_of_birth",
   "age",
-  "education",
+  "gender",
   "occupation",
-  "contact_number",
-  "alternate_contact_number",
   "column_break_taix",
   "are_you_parents",
   "family",
@@ -27,10 +25,10 @@
   "spouses_name",
   "religion",
   "caste",
+  "education",
   "source_information_about_center",
   "mode_of_reach_out",
   "existing_bank_account",
-  "date_of_visit",
   "residence_demography_tab",
   "current_residence_column",
   "current_state",
@@ -103,11 +101,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "aadhar_number",
-   "fieldtype": "Data",
-   "label": "Aadhar Number"
-  },
-  {
    "fieldname": "occupation",
    "fieldtype": "Link",
    "label": "Occupation",
@@ -138,9 +131,9 @@
   {
    "fieldname": "date_of_visit",
    "fieldtype": "Date",
-   "hidden": 1,
    "in_list_view": 1,
-   "label": "Date of visit"
+   "label": "Date of visit",
+   "reqd": 1
   },
   {
    "fieldname": "id_section",
@@ -228,11 +221,6 @@
    "label": "Date of birth"
   },
   {
-   "fieldname": "alternate_contact_number",
-   "fieldtype": "Phone",
-   "label": "Alternate contact number"
-  },
-  {
    "fieldname": "marital_status",
    "fieldtype": "Link",
    "label": "Marital status",
@@ -275,7 +263,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-19 11:14:03.145229",
+ "modified": "2023-09-19 17:39:35.567656",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",

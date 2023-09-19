@@ -60,8 +60,8 @@ frappe.ui.form.on("Beneficiary", {
           }
 
 // DEFULTS DATE SET 
-          frm.set_value('date_of_visit', frappe.datetime.get_today());
-          frm.set_df_property('date_of_visit', 'read_only', 1);
+          // frm.set_value('date_of_visit', frappe.datetime.get_today());
+          // frm.set_df_property('date_of_visit', 'read_only', 1);
 
 	},
 
