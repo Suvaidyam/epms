@@ -8,9 +8,19 @@ from frappe.model.document import Document
 class Beneficiary(Document):
 
 	def after_insert(self):
-    # Your custom code here
-			print("/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////")	
-			print("Self data",self)
-			print("document",Document)
-			frappe.msgprint("after insert call")
+		beneficiary = frappe.get_doc("Beneficiary" , self.name)
+		if(beneficiary.are_you_parents == 1):
+			family_doc = frappe.new_doc("Family")
+			family_doc.head_of_family = beneficiary.name
+			family_doc.name_of_parents = beneficiary.name_of_the_beneficiary
+			family_doc.name_of_parents = beneficiary.contact_number
+			family_doc.insert()
+			# update current beneficery
+			beneficiary.family = family_doc.name
+			beneficiary.save()
+		else:
+			print("CREATING CHILD BENEFICARY")
+
+	def after_insert(self):
+		print("hello")
 

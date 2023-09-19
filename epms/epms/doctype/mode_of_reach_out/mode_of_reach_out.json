@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:mode_of_reach_out",
+ "creation": "2023-09-19 07:21:09.075689",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "mode_of_reach_out"
+ ],
+ "fields": [
+  {
+   "fieldname": "mode_of_reach_out",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mode of reach out",
+   "reqd": 1,
+   "unique": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-19 07:21:27.312367",
+ "modified_by": "Administrator",
+ "module": "Epms",
+ "name": "Mode of reach out",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
