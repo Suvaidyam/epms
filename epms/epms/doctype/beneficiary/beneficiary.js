@@ -4,18 +4,18 @@
 frappe.ui.form.on("Beneficiary", {
   refresh(frm) {
     var parentField = frm.fields_dict['family'];
-    if(frm.doc.are_you_parents){
+    if(frm.doc.head_of_family){
       parentField.df.hidden = 1;
       parentField.refresh();
     }
-    var spousesname = frm.fields_dict['spouses_name'];
-    if(frm.doc.marital_status === 'Married'){
-      spousesname.df.hidden = 0;
-      spousesname.refresh()
-    }else{
-      spousesname.df.hidden = 1;
-      spousesname.refresh()
-    }
+    // var spousesname = frm.fields_dict['spouses_name'];
+    // if(frm.doc.marital_status === 'Married'){
+    //   spousesname.df.hidden = 0;
+    //   spousesname.refresh()
+    // }else{
+    //   spousesname.df.hidden = 1;
+    //   spousesname.refresh()
+    // }
     // frm.set_df_property('contact_number', 'options', '+91: India');
     // frm.fields_dict['contact_number'].df.options = '+91: India';
 
@@ -44,51 +44,51 @@ frappe.ui.form.on("Beneficiary", {
             };
           }
 //  ORIGIN RESIDENT DEPENDENT DROPDOWNS LOGICS
-                frm.fields_dict["district_of_origin"].get_query = function (doc) {
-            return {
-              filters: {
-                State: "please select state of origin",
-              },
-            };
-          }
-        frm.fields_dict["current_block"].get_query = function (doc) {
-            return {
-              filters: {
-                District: "please select district of origin",
-              },
-            };
-          }
+          //       frm.fields_dict["district_of_origin"].get_query = function (doc) {
+          //   return {
+          //     filters: {
+          //       State: "please select state of origin",
+          //     },
+          //   };
+          // }
+        // frm.fields_dict["current_block"].get_query = function (doc) {
+        //     return {
+        //       filters: {
+        //         District: "please select district of origin",
+        //       },
+        //     };
+        //   }
 
 // DEFULTS DATE SET 
-          // frm.set_value('date_of_visit', frappe.datetime.get_today());
+          frm.set_value('registration_date', frappe.datetime.get_today());
           // frm.set_df_property('date_of_visit', 'read_only', 1);
 
 	},
 
 //  field wise dependent dropdowns
-  state_of_origin: function(frm){
-    frm.fields_dict["district_of_origin"].get_query = function (doc) {
-      return {
-        filters: {
-          State: frm.doc.state_of_origin,
-        },
-      };
-    }
-    //  clear dependent dropdown field values
-    frm.set_value('district_of_origin', '')
-    frm.set_value('block_of_origin', '')
-  },
-  district_of_origin: function(frm){
-    frm.fields_dict["block_of_origin"].get_query = function (doc) {
-      return {
-        filters: {
-          District: frm.doc.district_of_origin,
-        },
-      };
-    }
-    // clear dependent dropdowns values
-    frm.set_value('block_of_origin', '')
-  },
+  // state_of_origin: function(frm){
+  //   frm.fields_dict["district_of_origin"].get_query = function (doc) {
+  //     return {
+  //       filters: {
+  //         State: frm.doc.state_of_origin,
+  //       },
+  //     };
+  //   }
+  //   //  clear dependent dropdown field values
+  //   frm.set_value('district_of_origin', '')
+  //   frm.set_value('block_of_origin', '')
+  // },
+  // district_of_origin: function(frm){
+  //   frm.fields_dict["block_of_origin"].get_query = function (doc) {
+  //     return {
+  //       filters: {
+  //         District: frm.doc.district_of_origin,
+  //       },
+  //     };
+  //   }
+  //   // clear dependent dropdowns values
+  //   frm.set_value('block_of_origin', '')
+  // },
   current_state: function(frm){
     frm.fields_dict["current_district"].get_query = function (doc) {
       return {
@@ -122,9 +122,9 @@ frappe.ui.form.on("Beneficiary", {
             id_section.refresh();
   }
   },
-  are_you_parents:function(frm){
+  head_of_family:function(frm){
     var parentField = frm.fields_dict['family'];
-    if(frm.doc.are_you_parents){
+    if(frm.doc.head_of_family){
       parentField.df.hidden = 1;
       parentField.refresh();
     }else{
@@ -139,20 +139,7 @@ frappe.ui.form.on("Beneficiary", {
     frm.set_value('age', age)
     frm.set_df_property('age', 'read_only', 1);
   },
-  marital_status:function(frm){
-    var spousesname = frm.fields_dict['spouses_name'];
-    if(frm.doc.marital_status === 'Married'){
-      spousesname.df.hidden = 0;
-      spousesname.refresh()
-    }else{
-      spousesname.df.hidden = 1;
-      spousesname.refresh()
-    }
-  },
   // do_you_have_id_document:function(frm){
   //   console.log(frm.doc)
   // },
-  id_section  :function(doc , cdt , cdn){
-    console.log("id section work", doc)
-  }
 });

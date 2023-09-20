@@ -9,7 +9,7 @@ class Beneficiary(Document):
 
 	def after_insert(self):
 		beneficiary = frappe.get_doc("Beneficiary" , self.name)
-		if(beneficiary.are_you_parents == 1):
+		if(beneficiary.head_of_family == 1):
 			family_doc = frappe.new_doc("Family")
 			family_doc.head_of_family = beneficiary.name
 			family_doc.name_of_parents = beneficiary.name_of_the_beneficiary
@@ -22,7 +22,7 @@ class Beneficiary(Document):
 			print("CREATING CHILD BENEFICARY")
 	def on_update(self):
 		beneficiary = frappe.get_doc("Beneficiary" , self.name)
-		if(beneficiary.are_you_parents == 1):
+		if(beneficiary.head_of_family == 1):
 			family_doc_name = frappe.get_list("Family",
         	filters={'head_of_family': self.name},
         	fields=["name"])

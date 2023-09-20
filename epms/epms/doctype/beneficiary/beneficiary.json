@@ -9,36 +9,24 @@
  "engine": "InnoDB",
  "field_order": [
   "profile_tab",
-  "date_of_visit",
+  "registration_date",
   "name_of_the_beneficiary",
   "contact_number",
   "date_of_birth",
   "age",
   "gender",
   "occupation",
+  "do_you_have_appointment_letter",
   "column_break_taix",
-  "are_you_parents",
-  "family",
-  "fathers_name",
-  "mothers_name",
-  "marital_status",
-  "spouses_name",
-  "religion",
-  "caste",
-  "education",
-  "source_information_about_center",
-  "mode_of_reach_out",
   "existing_bank_account",
-  "residence_demography_tab",
-  "current_residence_column",
   "current_state",
   "current_district",
   "current_block",
-  "address",
-  "column_break_ftlo",
-  "state_of_origin",
-  "district_of_origin",
-  "block_of_origin",
+  "caste",
+  "source_information_about_center",
+  "education",
+  "head_of_family",
+  "family",
   "tab_3_tab",
   "do_you_have_id_document",
   "id_section"
@@ -129,13 +117,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "date_of_visit",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Date of visit",
-   "reqd": 1
-  },
-  {
    "fieldname": "id_section",
    "fieldtype": "Table",
    "options": "ID Proof"
@@ -145,42 +126,6 @@
    "fieldtype": "Link",
    "label": "Family",
    "options": "Family"
-  },
-  {
-   "fieldname": "residence_demography_tab",
-   "fieldtype": "Tab Break",
-   "label": "Residence Demography"
-  },
-  {
-   "fieldname": "column_break_ftlo",
-   "fieldtype": "Column Break",
-   "label": "Origin Residence"
-  },
-  {
-   "fieldname": "state_of_origin",
-   "fieldtype": "Link",
-   "label": "State of origin",
-   "options": "State",
-   "reqd": 1
-  },
-  {
-   "fieldname": "block_of_origin",
-   "fieldtype": "Link",
-   "label": "Tehsil/Block of origin",
-   "options": "Block",
-   "reqd": 1
-  },
-  {
-   "fieldname": "district_of_origin",
-   "fieldtype": "Link",
-   "label": "District of Origin",
-   "options": "District",
-   "reqd": 1
-  },
-  {
-   "fieldname": "current_residence_column",
-   "fieldtype": "Column Break",
-   "label": "Current Residence"
   },
   {
    "fieldname": "current_state",
@@ -204,66 +149,35 @@
    "reqd": 1
   },
   {
-   "fieldname": "fathers_name",
-   "fieldtype": "Data",
-   "label": "Father's name",
-   "reqd": 1
-  },
-  {
-   "fieldname": "mothers_name",
-   "fieldtype": "Data",
-   "label": "Mother's name",
-   "reqd": 1
-  },
-  {
    "fieldname": "date_of_birth",
    "fieldtype": "Date",
    "label": "Date of birth"
   },
   {
-   "fieldname": "marital_status",
-   "fieldtype": "Link",
-   "label": "Marital status",
-   "options": "Marital status",
+   "fieldname": "registration_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Registration date",
    "reqd": 1
   },
   {
-   "fieldname": "religion",
-   "fieldtype": "Link",
-   "label": "Religion",
-   "options": "Religion master",
-   "reqd": 1
-  },
-  {
-   "fieldname": "spouses_name",
-   "fieldtype": "Data",
-   "label": "Spouse's name",
-   "mandatory_depends_on": "spouses_name"
-  },
-  {
-   "fieldname": "mode_of_reach_out",
-   "fieldtype": "Link",
-   "label": "Mode of reach out",
-   "options": "Mode of reach out",
+   "fieldname": "do_you_have_appointment_letter",
+   "fieldtype": "Select",
+   "label": "Do you have appointment letter?",
+   "options": "\nYes\nNo",
    "reqd": 1
   },
   {
    "default": "0",
-   "fieldname": "are_you_parents",
+   "fieldname": "head_of_family",
    "fieldtype": "Check",
-   "label": "Are You Parents?",
+   "label": "Head of Family?",
    "set_only_once": 1
-  },
-  {
-   "fieldname": "address",
-   "fieldtype": "Data",
-   "label": "Address (with landmark)",
-   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-19 17:39:35.567656",
+ "modified": "2023-09-20 14:06:03.713263",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",
