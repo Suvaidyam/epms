@@ -29,35 +29,20 @@ frappe.ui.form.on("Beneficiary", {
         id_section.refresh();
     }
 // CURRENT RESIDENT DEPENDENT DROPDOWNS LOGICS
-        frm.fields_dict["current_district"].get_query = function (doc) {
+        frm.fields_dict["district_of_origin"].get_query = function (doc) {
             return {
               filters: {
                 State: "please select Current state",
               },
             };
           }
-        frm.fields_dict["current_block"].get_query = function (doc) {
+        frm.fields_dict["block_of_origin"].get_query = function (doc) {
             return {
               filters: {
                 District: "please select Current district",
               },
             };
           }
-//  ORIGIN RESIDENT DEPENDENT DROPDOWNS LOGICS
-          //       frm.fields_dict["district_of_origin"].get_query = function (doc) {
-          //   return {
-          //     filters: {
-          //       State: "please select state of origin",
-          //     },
-          //   };
-          // }
-        // frm.fields_dict["current_block"].get_query = function (doc) {
-        //     return {
-        //       filters: {
-        //         District: "please select district of origin",
-        //       },
-        //     };
-        //   }
 
 // DEFULTS DATE SET 
           frm.set_value('registration_date', frappe.datetime.get_today());
@@ -66,50 +51,28 @@ frappe.ui.form.on("Beneficiary", {
 	},
 
 //  field wise dependent dropdowns
-  // state_of_origin: function(frm){
-  //   frm.fields_dict["district_of_origin"].get_query = function (doc) {
-  //     return {
-  //       filters: {
-  //         State: frm.doc.state_of_origin,
-  //       },
-  //     };
-  //   }
-  //   //  clear dependent dropdown field values
-  //   frm.set_value('district_of_origin', '')
-  //   frm.set_value('block_of_origin', '')
-  // },
-  // district_of_origin: function(frm){
-  //   frm.fields_dict["block_of_origin"].get_query = function (doc) {
-  //     return {
-  //       filters: {
-  //         District: frm.doc.district_of_origin,
-  //       },
-  //     };
-  //   }
-  //   // clear dependent dropdowns values
-  //   frm.set_value('block_of_origin', '')
-  // },
-  current_state: function(frm){
-    frm.fields_dict["current_district"].get_query = function (doc) {
+
+  state_of_origin: function(frm){
+    frm.fields_dict["district_of_origin"].get_query = function (doc) {
       return {
         filters: {
-          State: frm.doc.current_state,
+          State: frm.doc.state_of_origin,
         },
       };
     }
     // clear dependent dropdowns values
-    frm.set_value('current_district', '')
-    frm.set_value('current_block', '')
+    frm.set_value('block_of_origin', '')
+    frm.set_value('block_of_origin', '')
   },
-  current_district: function(frm){
-    frm.fields_dict["current_block"].get_query = function (doc) {
+  district_of_origin: function(frm){
+    frm.fields_dict["block_of_origin"].get_query = function (doc) {
       return {
         filters: {
-          District: frm.doc.current_district,
+          District: frm.doc.district_of_origin,
         },
       };
     }
-    frm.set_value('current_block', '')
+    frm.set_value('block_of_origin', '')
   },
 
   do_you_have_id_document: function(frm){

@@ -17,11 +17,12 @@
   "gender",
   "occupation",
   "do_you_have_appointment_letter",
-  "column_break_taix",
   "existing_bank_account",
-  "current_state",
-  "current_district",
-  "current_block",
+  "column_break_taix",
+  "current_location",
+  "state_of_origin",
+  "district_of_origin",
+  "block_of_origin",
   "caste",
   "source_information_about_center",
   "education",
@@ -41,7 +42,7 @@
   {
    "fieldname": "tab_3_tab",
    "fieldtype": "Tab Break",
-   "label": "ID proof"
+   "label": "ID Proof"
   },
   {
    "fieldname": "profile_tab",
@@ -134,27 +135,6 @@
    "options": "Family"
   },
   {
-   "fieldname": "current_state",
-   "fieldtype": "Link",
-   "label": "Current State",
-   "options": "State",
-   "reqd": 1
-  },
-  {
-   "fieldname": "current_district",
-   "fieldtype": "Link",
-   "label": "Current District",
-   "options": "District",
-   "reqd": 1
-  },
-  {
-   "fieldname": "current_block",
-   "fieldtype": "Link",
-   "label": "Current Tehsil/Block",
-   "options": "Block",
-   "reqd": 1
-  },
-  {
    "fieldname": "date_of_birth",
    "fieldtype": "Date",
    "label": "Date of birth"
@@ -211,11 +191,38 @@
    "fieldname": "table_lzvq",
    "fieldtype": "Table",
    "options": "Follow Up Child"
+  },
+  {
+   "fieldname": "current_location",
+   "fieldtype": "Data",
+   "label": "Current Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "state_of_origin",
+   "fieldtype": "Link",
+   "label": "State of origin",
+   "options": "State",
+   "reqd": 1
+  },
+  {
+   "fieldname": "district_of_origin",
+   "fieldtype": "Link",
+   "label": "District of Origin",
+   "options": "District",
+   "reqd": 1
+  },
+  {
+   "fieldname": "block_of_origin",
+   "fieldtype": "Link",
+   "label": "Tehsil/Block of Origin",
+   "options": "Block",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-20 14:51:46.987739",
+ "modified": "2023-09-20 16:39:47.659534",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",
