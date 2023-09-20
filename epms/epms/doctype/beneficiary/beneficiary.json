@@ -29,7 +29,13 @@
   "family",
   "tab_3_tab",
   "do_you_have_id_document",
-  "id_section"
+  "id_section",
+  "support_tab",
+  "table_jffx",
+  "overall_status",
+  "numeric_overall_status",
+  "follow_up_tab",
+  "table_lzvq"
  ],
  "fields": [
   {
@@ -173,11 +179,43 @@
    "fieldtype": "Check",
    "label": "Head of Family?",
    "set_only_once": 1
+  },
+  {
+   "fieldname": "support_tab",
+   "fieldtype": "Tab Break",
+   "label": "Support"
+  },
+  {
+   "fieldname": "table_jffx",
+   "fieldtype": "Table",
+   "options": "Support Child"
+  },
+  {
+   "fieldname": "follow_up_tab",
+   "fieldtype": "Tab Break",
+   "label": "Follow Up"
+  },
+  {
+   "fieldname": "overall_status",
+   "fieldtype": "Select",
+   "label": "Overall Status",
+   "options": "a\nb\nc",
+   "reqd": 1
+  },
+  {
+   "fieldname": "numeric_overall_status",
+   "fieldtype": "Int",
+   "label": "Numeric Overall Status"
+  },
+  {
+   "fieldname": "table_lzvq",
+   "fieldtype": "Table",
+   "options": "Follow Up Child"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-20 14:06:03.713263",
+ "modified": "2023-09-20 14:51:46.987739",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",
