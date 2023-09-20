@@ -13,17 +13,16 @@
  "fields": [
   {
    "fieldname": "name_of_id",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Name of ID",
-   "options": "ID Master",
    "reqd": 1,
    "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-16 12:08:36.408695",
+ "modified": "2023-09-20 17:14:19.868451",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "ID Master",
