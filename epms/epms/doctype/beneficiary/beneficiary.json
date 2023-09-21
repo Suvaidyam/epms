@@ -178,8 +178,9 @@
   {
    "fieldname": "overall_status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Overall Status",
-   "options": "a\nb\nc",
+   "options": "\nOpen\nCompleted\nPartially completed\nCompleted",
    "reqd": 1
   },
   {
@@ -222,7 +223,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-20 16:39:47.659534",
+ "modified": "2023-09-21 11:08:19.517875",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",
