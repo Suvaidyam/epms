@@ -8,7 +8,7 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "profile_tab",
+  "details_tab",
   "registration_date",
   "name_of_the_beneficiary",
   "contact_number",
@@ -32,22 +32,17 @@
   "do_you_have_id_document",
   "id_section",
   "support_tab",
-  "table_jffx",
+  "support_table",
   "overall_status",
   "numeric_overall_status",
   "follow_up_tab",
-  "table_lzvq"
+  "followup_table"
  ],
  "fields": [
   {
    "fieldname": "tab_3_tab",
    "fieldtype": "Tab Break",
    "label": "ID Proof"
-  },
-  {
-   "fieldname": "profile_tab",
-   "fieldtype": "Tab Break",
-   "label": "Profile"
   },
   {
    "fieldname": "name_of_the_beneficiary",
@@ -166,11 +161,6 @@
    "label": "Support"
   },
   {
-   "fieldname": "table_jffx",
-   "fieldtype": "Table",
-   "options": "Support Child"
-  },
-  {
    "fieldname": "follow_up_tab",
    "fieldtype": "Tab Break",
    "label": "Follow Up"
@@ -179,6 +169,7 @@
    "fieldname": "overall_status",
    "fieldtype": "Select",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Overall Status",
    "options": "\nOpen\nCompleted\nPartially completed\nCompleted",
    "reqd": 1
@@ -187,11 +178,6 @@
    "fieldname": "numeric_overall_status",
    "fieldtype": "Int",
    "label": "Numeric Overall Status"
-  },
-  {
-   "fieldname": "table_lzvq",
-   "fieldtype": "Table",
-   "options": "Follow Up Child"
   },
   {
    "fieldname": "current_location",
@@ -219,11 +205,26 @@
    "label": "Tehsil/Block of Origin",
    "options": "Block",
    "reqd": 1
+  },
+  {
+   "fieldname": "details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "support_table",
+   "fieldtype": "Table",
+   "options": "Support Child"
+  },
+  {
+   "fieldname": "followup_table",
+   "fieldtype": "Table",
+   "options": "Follow Up Child"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-21 11:08:19.517875",
+ "modified": "2023-09-21 12:12:59.091821",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",

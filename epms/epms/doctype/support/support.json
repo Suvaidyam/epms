@@ -32,7 +32,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-16 09:48:51.387537",
+ "modified": "2023-09-21 16:47:41.287484",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Support",
@@ -52,7 +52,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "support"
 }

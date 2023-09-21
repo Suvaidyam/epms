@@ -76,6 +76,7 @@ frappe.ui.form.on("Beneficiary", {
   },
 
   do_you_have_id_document: function(frm){
+    console.log("Form data",frm.doc)
       var id_section = frm.get_field('id_section');
         if (frm.doc.do_you_have_id_document === 'Yes') {
             id_section.df.hidden = 0;
@@ -105,4 +106,77 @@ frappe.ui.form.on("Beneficiary", {
   // do_you_have_id_document:function(frm){
   //   console.log(frm.doc)
   // },
+  
 });
+// ********************* SUPER CHILD Table***********************
+frappe.ui.form.on('Support Child', {
+  form_render(frm){
+    console.log("this is awasome", frm.doc)
+  },
+  
+  refresh(frm){
+  },
+  status:function(frm, cdt, cdn){
+    let row = frappe.get_doc(cdt, cdn);
+    let status = row.status
+    if(status==="Rejected"){
+      frappe.ui.form.on('Support Child', {
+        reason_for_rejected: {
+            in_list_view: true, // Show in list view
+            reqd: true // Make it mandatory when shown
+        }
+    });
+    }
+  },
+  // cdt is Child DocType name i.e Quotation Item
+  // cdn is the row name for e.g bbfcb8da6a
+  support_table_add(frm, cdt, cdn) {
+      let row = frappe.get_doc(cdt, cdn);
+        console.log("Abhishek",row , cdn)
+
+      
+  },
+  
+  support_type:function(frm , cdt , cdn){
+    console.log("cd,cdn", cdt , cdn)
+    let row = frappe.get_doc(cdt, cdn);
+    let supportType = row.support_type;
+    console.log("aa;a;a;aa;;a;a", supportType , frm)
+    
+  //   frm.fields_dict['specific_support_type'].get_query = function (doc, cdt, cdn) {
+  //     return {
+  //         filters: {
+  //             'specific_support_type': supportType
+  //         }
+  //     };
+  // };
+  frm.refresh_field('support_table');
+
+  console.log(frm.doc.support_table[0])
+
+
+
+  }
+})
+//  follow table child table target 
+frappe.ui.form.on('Follow Up Child', {
+  // cdt is Child DocType name i.e Quotation Item
+  // cdn is the row name for e.g bbfcb8da6a
+  followup_table_add(frm, cdt, cdn) {
+    
+    console.log(frm)
+      let row = frappe.get_doc(cdt, cdn);  
+  },
+})
+
+// frappe.ui.form.on('Support Child', 'support_type', function(frm, cdt, cdn){
+//   let row = locals[cdt][cdn]
+//   console.log("hhhhhhhhhhhhh" ,row)
+//   // frm.fields_dict["specific_support_type"].get_query = function (doc) {
+//   //   return {
+//   //     filters: {
+//   //       'specific_support_type': frm.doc.district_of_origin,
+//   //     },
+//   //   };
+//   // }
+// })
