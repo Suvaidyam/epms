@@ -68,8 +68,7 @@
    "fieldname": "education",
    "fieldtype": "Link",
    "label": "Education Details",
-   "options": "Education master",
-   "reqd": 1
+   "options": "Education master"
   },
   {
    "default": "+91",
@@ -99,9 +98,9 @@
   },
   {
    "fieldname": "existing_bank_account",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Existing bank account",
-   "options": "\nYes\nNo",
+   "options": "Bank",
    "reqd": 1
   },
   {
@@ -181,8 +180,9 @@
   },
   {
    "fieldname": "current_location",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Current Location",
+   "options": "Current location",
    "reqd": 1
   },
   {
@@ -224,7 +224,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-21 12:12:59.091821",
+ "modified": "2023-09-22 16:08:24.761068",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",

@@ -15,8 +15,7 @@
    "fieldname": "enter_id_number",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Enter Id Number",
-   "reqd": 1
+   "label": "Enter Id Number"
   },
   {
    "fieldname": "select_id",
@@ -30,7 +29,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-09-16 15:58:00.628486",
+ "modified": "2023-09-22 16:10:22.221829",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "ID Proof",
