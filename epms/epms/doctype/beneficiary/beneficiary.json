@@ -170,7 +170,7 @@
    "in_standard_filter": 1,
    "label": "Overall Status",
    "options": "\nOpen\nCompleted\nPartially completed",
-   "reqd": 1
+   "read_only": 1
   },
   {
    "fieldname": "numeric_overall_status",

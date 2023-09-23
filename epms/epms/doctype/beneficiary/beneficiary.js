@@ -4,9 +4,11 @@ var global_data = "Abhishek Global Data"
 frappe.ui.form.on("Beneficiary", {
   before_save:function(frm){
     console.log("before save " , frm.selected_doc.support_table)
-    let open , under_process , form_submitted , rejected , completed;
-    open = under_process = form_submitted = rejected = completed = 0;
+    let open , under_process , form_submitted , rejected , completed , closed;
+    open = under_process = form_submitted = rejected = completed = closed = 0;
+    let total_no_of_support  = 0
     for(item of frm.selected_doc.support_table){
+        ++total_no_of_support
         if(item.status === 'Open'){
           ++open
         }else if(item.status === 'Under Process'){
@@ -17,12 +19,27 @@ frappe.ui.form.on("Beneficiary", {
           ++rejected
         }else if(item.status == 'Completed'){
           ++completed
+        }else{
+          ++closed
         }
     }
     let numberic_overall_status = (completed + rejected) + '/' + (completed + rejected + form_submitted + under_process + open)
     console.log(open , under_process,form_submitted , rejected , completed)
     frm.doc.numeric_overall_status = numberic_overall_status;
-    console.log(numberic_overall_status)
+    console.log(numberic_overall_status , total_no_of_support)
+    if(total_no_of_support === open){
+      frm.doc.overall_status = 'Open'
+    }else if(total_no_of_support === completed){
+      frm.doc.overall_status = 'Completed'
+    }else{
+      if(total_no_of_support === open + under_process + form_submitted){
+        frm.doc.overall_status = 'Open'
+      }else if(total_no_of_support === completed + closed + rejected ){
+        frm.doc.overall_status = 'Completed'
+      }else{
+        frm.doc.overall_status = 'Partially completed'
+      }
+    }
   },
   onupdate:function(frm){
     // console.log("after save " , frm)
