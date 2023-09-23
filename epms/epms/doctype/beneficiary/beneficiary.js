@@ -1,24 +1,38 @@
 // Copyright (c) 2023, Management System for Agrasarteach@suvaidyam.com and contributors
 // For license information, please see license.txt
-
+var global_data = "Abhishek Global Data"
 frappe.ui.form.on("Beneficiary", {
+  before_save:function(frm){
+    console.log("before save " , frm.selected_doc.support_table)
+    let open , under_process , form_submitted , rejected , completed;
+    open = under_process = form_submitted = rejected = completed = 0;
+    for(item of frm.selected_doc.support_table){
+        if(item.status === 'Open'){
+          ++open
+        }else if(item.status === 'Under Process'){
+          ++under_process
+        }else if(item.status == 'Form Submitted'){
+          ++form_submitted
+        }else if(item.status == 'Rejected'){
+          ++rejected
+        }else if(item.status == 'Completed'){
+          ++completed
+        }
+    }
+    let numberic_overall_status = (completed + rejected) + '/' + (completed + rejected + form_submitted + under_process + open)
+    console.log(open , under_process,form_submitted , rejected , completed)
+    frm.doc.numeric_overall_status = numberic_overall_status;
+    console.log(numberic_overall_status)
+  },
+  onupdate:function(frm){
+    // console.log("after save " , frm)
+  },
   refresh(frm) {
     var parentField = frm.fields_dict['family'];
     if(frm.doc.head_of_family){
       parentField.df.hidden = 1;
       parentField.refresh();
     }
-    // var spousesname = frm.fields_dict['spouses_name'];
-    // if(frm.doc.marital_status === 'Married'){
-    //   spousesname.df.hidden = 0;
-    //   spousesname.refresh()
-    // }else{
-    //   spousesname.df.hidden = 1;
-    //   spousesname.refresh()
-    // }
-    // frm.set_df_property('contact_number', 'options', '+91: India');
-    // frm.fields_dict['contact_number'].df.options = '+91: India';
-
   //  ID PROOF SECTION LOGIC FOR SHOW AND HIDE SECTION
     var id_section = frm.get_field('id_section');
     if (frm.doc.do_you_have_id_document === 'Yes') {
@@ -46,12 +60,7 @@ frappe.ui.form.on("Beneficiary", {
 
 // DEFULTS DATE SET 
           frm.set_value('registration_date', frappe.datetime.get_today());
-          // frm.set_df_property('date_of_visit', 'read_only', 1);
-
 	},
-
-//  field wise dependent dropdowns
-
   state_of_origin: function(frm){
     frm.fields_dict["district_of_origin"].get_query = function (doc) {
       return {
@@ -103,38 +112,22 @@ frappe.ui.form.on("Beneficiary", {
     frm.set_value('age', age)
     frm.set_df_property('age', 'read_only', 1);
   },
-  // do_you_have_id_document:function(frm){
-  //   console.log(frm.doc)
-  // },
   
 });
-// ********************* SUPER CHILD Table***********************
+// ********************* SUPERT CHILD Table***********************
 frappe.ui.form.on('Support Child', {
   form_render(frm){
-    console.log("this is awasome", frm.doc)
+    console.log("global_data",global_data)
   },
   
-  refresh(frm){
-  },
+  refresh(frm){},
   status:function(frm, cdt, cdn){
     let row = frappe.get_doc(cdt, cdn);
     let status = row.status
-    if(status==="Rejected"){
-      frappe.ui.form.on('Support Child', {
-        reason_for_rejected: {
-            in_list_view: true, // Show in list view
-            reqd: true // Make it mandatory when shown
-        }
-    });
-    }
   },
-  // cdt is Child DocType name i.e Quotation Item
-  // cdn is the row name for e.g bbfcb8da6a
   support_table_add(frm, cdt, cdn) {
       let row = frappe.get_doc(cdt, cdn);
-        console.log("Abhishek",row , cdn)
-
-      
+        console.log("Abhishek",row , cdn)  
   },
   
   support_type:function(frm , cdt , cdn){
@@ -142,41 +135,12 @@ frappe.ui.form.on('Support Child', {
     let row = frappe.get_doc(cdt, cdn);
     let supportType = row.support_type;
     console.log("aa;a;a;aa;;a;a", supportType , frm)
-    
-  //   frm.fields_dict['specific_support_type'].get_query = function (doc, cdt, cdn) {
-  //     return {
-  //         filters: {
-  //             'specific_support_type': supportType
-  //         }
-  //     };
-  // };
   frm.refresh_field('support_table');
-
-  console.log(frm.doc.support_table[0])
-
-
-
   }
 })
-//  follow table child table target 
+// ********************* FOLLOW UP CHILD Table***********************
 frappe.ui.form.on('Follow Up Child', {
-  // cdt is Child DocType name i.e Quotation Item
-  // cdn is the row name for e.g bbfcb8da6a
   followup_table_add(frm, cdt, cdn) {
-    
-    console.log(frm)
-      let row = frappe.get_doc(cdt, cdn);  
+
   },
 })
-
-// frappe.ui.form.on('Support Child', 'support_type', function(frm, cdt, cdn){
-//   let row = locals[cdt][cdn]
-//   console.log("hhhhhhhhhhhhh" ,row)
-//   // frm.fields_dict["specific_support_type"].get_query = function (doc) {
-//   //   return {
-//   //     filters: {
-//   //       'specific_support_type': frm.doc.district_of_origin,
-//   //     },
-//   //   };
-//   // }
-// })
