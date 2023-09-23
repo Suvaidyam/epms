@@ -1,7 +1,32 @@
 // Copyright (c) 2023, Management System for Agrasarteach@suvaidyam.com and contributors
 // For license information, please see license.txt
-
+var global_data = "Abhishek Global Data"
 frappe.ui.form.on("Beneficiary", {
+  before_save:function(frm){
+    console.log("before save " , frm.selected_doc.support_table)
+    let open , under_process , form_submitted , rejected , completed;
+    open = under_process = form_submitted = rejected = completed = 0;
+    for(item of frm.selected_doc.support_table){
+        if(item.status === 'Open'){
+          ++open
+        }else if(item.status === 'Under Process'){
+          ++under_process
+        }else if(item.status == 'Form Submitted'){
+          ++form_submitted
+        }else if(item.status == 'Rejected'){
+          ++rejected
+        }else if(item.status == 'Completed'){
+          ++completed
+        }
+    }
+    let numberic_overall_status = (completed + rejected) + '/' + (completed + rejected + form_submitted + under_process + open)
+    console.log(open , under_process,form_submitted , rejected , completed)
+    frm.doc.numeric_overall_status = numberic_overall_status;
+    console.log(numberic_overall_status)
+  },
+  onupdate:function(frm){
+    // console.log("after save " , frm)
+  },
   refresh(frm) {
     var parentField = frm.fields_dict['family'];
     if(frm.doc.head_of_family){
@@ -92,7 +117,7 @@ frappe.ui.form.on("Beneficiary", {
 // ********************* SUPERT CHILD Table***********************
 frappe.ui.form.on('Support Child', {
   form_render(frm){
-    console.log("this is awasome", frm.doc)
+    console.log("global_data",global_data)
   },
   
   refresh(frm){},

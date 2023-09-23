@@ -37,7 +37,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "\nCompleted\nRejected",
+   "options": "\nOpen\nUnder Process\nForm Submitted\nClosed\nRejected\nCompleted",
    "reqd": 1
   },
   {
@@ -74,7 +74,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-09-22 16:11:25.353152",
+ "modified": "2023-09-22 16:39:08.393627",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Support Child",
