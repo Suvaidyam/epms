@@ -1,6 +1,6 @@
 // Copyright (c) 2023, Management System for Agrasarteach@suvaidyam.com and contributors
 // For license information, please see license.txt
-var global_data = "Abhishek Global Data"
+var global_data = []
 frappe.ui.form.on("Beneficiary", {
   before_save:function(frm){
     console.log("before save " , frm.selected_doc.support_table)
@@ -8,6 +8,7 @@ frappe.ui.form.on("Beneficiary", {
     open = under_process = form_submitted = rejected = completed = closed = 0;
     let total_no_of_support  = 0
     for(item of frm.selected_doc.support_table){
+        global_data.push(item)
         ++total_no_of_support
         if(item.status === 'Open'){
           ++open
@@ -45,6 +46,7 @@ frappe.ui.form.on("Beneficiary", {
     // console.log("after save " , frm)
   },
   refresh(frm) {
+    global_data.push(frm.selected_doc.support_table)
     var parentField = frm.fields_dict['family'];
     if(frm.doc.head_of_family){
       parentField.df.hidden = 1;
@@ -129,6 +131,16 @@ frappe.ui.form.on("Beneficiary", {
     frm.set_value('age', age)
     frm.set_df_property('age', 'read_only', 1);
   },
+  // support_tab_add:function(frm){
+  //   console.log("support add")
+  //   frm.fields_dict['specific_support_type'].grid.get_field('specific_support_type').get_query = function(doc , cdt , cdn){
+  //     return {
+  //       filters: [
+  //           ['support_type', '=', supportType], // Add your filter conditions
+  //       ],
+  //   };
+  //   }
+  // }
   
 });
 // ********************* SUPERT CHILD Table***********************
@@ -141,23 +153,40 @@ frappe.ui.form.on('Support Child', {
   status:function(frm, cdt, cdn){
     let row = frappe.get_doc(cdt, cdn);
     let status = row.status
+    // frappe.model.set_value(cdt, cdn, 'reason_of_rejection', 1);
+    // row.reason_of_rejection = 1
+    if(status ==="Rejected"){
+      row.reason_of_rejection = 0
+    }
+    frm.refresh_field('support_tab');
   },
   support_table_add(frm, cdt, cdn) {
       let row = frappe.get_doc(cdt, cdn);
-        console.log("Abhishek",row , cdn)  
+    
   },
   
   support_type:function(frm , cdt , cdn){
     console.log("cd,cdn", cdt , cdn)
     let row = frappe.get_doc(cdt, cdn);
     let supportType = row.support_type;
-    console.log("aa;a;a;aa;;a;a", supportType , frm)
+
+
   frm.refresh_field('support_table');
   }
 })
 // ********************* FOLLOW UP CHILD Table***********************
 frappe.ui.form.on('Follow Up Child', {
   followup_table_add(frm, cdt, cdn) {
-
+    let row = frappe.get_doc(cdt, cdn);
+    console.log( frm.fields_dict.followup_table)
+    // frm.set_value(frm.fields_dict.followup_table[0].follow_up_status, "Closed")
+    console.log("child frm",row)
+    // frappe.meta.get_docfield("Follow Up Child", "support_name",
+		// cur_frm.support_name).options = "Initial\n1 Month\n2 Months\n3 Months\n6 Months";
+		// refresh_field("support_name");
+    // row.support_name='support_name';
+    // frm.set_field_options('support_name', 'Option Value');
+    // frm.set_df_property('support_name', 'options', '[aaa]');
+    frm.refresh_field('support_name');
   },
 })
