@@ -3,6 +3,26 @@
 var global_data = []
 frappe.ui.form.on("Beneficiary", {
   before_save:function(frm){
+        // follow up status manage
+    if(frm.selected_doc.followup_table){
+      for(follow_up_items of frm.selected_doc.followup_table){
+        let support_name = follow_up_items.support_name;
+        for(support_items of frm.selected_doc.support_table){
+          if(support_items.specific_support_type === support_name){
+            if(follow_up_items.follow_up_status === "Not interested"){
+              support_items.status = "Closed"
+            }else if(follow_up_items.follow_up_status === "interested"){
+                if(support_items.status === 'Closed'){
+                  support_items.status = "Open"
+                }
+            }else{
+              support_items.status = follow_up_items.follow_up_status
+            }
+          } 
+        }
+      }
+    }
+
     console.log("before save " , frm.selected_doc.support_table)
     let open , under_process , form_submitted , rejected , completed , closed;
     open = under_process = form_submitted = rejected = completed = closed = 0;
@@ -25,9 +45,9 @@ frappe.ui.form.on("Beneficiary", {
         }
     }
     let numberic_overall_status = (completed + rejected) + '/' + (completed + rejected + form_submitted + under_process + open)
-    console.log(open , under_process,form_submitted , rejected , completed)
+    // console.log(open , under_process,form_submitted , rejected , completed)
     frm.doc.numeric_overall_status = numberic_overall_status;
-    console.log(numberic_overall_status , total_no_of_support)
+    // console.log(numberic_overall_status , total_no_of_support)
     if(total_no_of_support === open){
       frm.doc.overall_status = 'Open'
     }else if(total_no_of_support === completed){
@@ -41,6 +61,7 @@ frappe.ui.form.on("Beneficiary", {
         frm.doc.overall_status = 'Partially completed'
       }
     }
+
   },
   onupdate:function(frm){
     // console.log("after save " , frm)
@@ -187,6 +208,7 @@ frappe.ui.form.on('Follow Up Child', {
     // row.support_name='support_name';
     // frm.set_field_options('support_name', 'Option Value');
     // frm.set_df_property('support_name', 'options', '[aaa]');
-    frm.refresh_field('support_name');
+    // frm.refresh_field('support_name');\
+    
   },
 })

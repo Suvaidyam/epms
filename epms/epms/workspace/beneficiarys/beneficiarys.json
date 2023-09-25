@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"_iLmOJ5b1l\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Beneficiary Registration\",\"col\":12}}]",
+ "content": "[{\"id\":\"WrcmBci23y\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"No of Beneficiary\",\"col\":3}},{\"id\":\"G5d2w-D20O\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"No of Family\",\"col\":3}}]",
  "creation": "2023-09-15 20:25:51.986386",
  "custom_blocks": [],
  "docstatus": 0,
@@ -12,20 +12,24 @@
  "is_hidden": 0,
  "label": "Beneficiarys",
  "links": [],
- "modified": "2023-09-23 15:47:41.041280",
+ "modified": "2023-09-25 09:41:38.834363",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiarys",
- "number_cards": [],
+ "number_cards": [
+  {
+   "label": "No of Beneficiary",
+   "number_card_name": "No of Beneficiary"
+  },
+  {
+   "label": "No of Family",
+   "number_card_name": "No of Family"
+  }
+ ],
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
- "quick_lists": [
-  {
-   "document_type": "Beneficiary",
-   "label": "Beneficiary Registration"
-  }
- ],
+ "quick_lists": [],
  "roles": [],
  "sequence_id": 1.0,
  "shortcuts": [],
