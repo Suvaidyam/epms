@@ -1,0 +1,30 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Source information about center",
+  "modified": "2023-09-26 13:31:13.183066",
+  "name": "Direct Mobilization",
+  "source_information_about_center": "Direct Mobilization"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Source information about center",
+  "modified": "2023-09-26 13:31:20.413189",
+  "name": "Self",
+  "source_information_about_center": "Self"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Source information about center",
+  "modified": "2023-09-26 13:31:51.083311",
+  "name": "Collectivisation",
+  "source_information_about_center": "Collectivisation"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Source information about center",
+  "modified": "2023-09-26 13:31:57.188547",
+  "name": "Others",
+  "source_information_about_center": "Others"
+ }
+]

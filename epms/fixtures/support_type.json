@@ -1,0 +1,37 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Support Type",
+  "modified": "2023-09-26 12:14:14.311894",
+  "name": "Legal Support",
+  "support_type": "Legal Support"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support Type",
+  "modified": "2023-09-26 12:14:02.399604",
+  "name": "Bank A/C",
+  "support_type": "Bank A/C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support Type",
+  "modified": "2023-09-26 12:14:25.552384",
+  "name": "Others",
+  "support_type": "Others"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support Type",
+  "modified": "2023-09-26 12:13:39.953690",
+  "name": "Documentation",
+  "support_type": "Documentation"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support Type",
+  "modified": "2023-09-26 12:13:50.892059",
+  "name": "Govt. Schemes",
+  "support_type": "Govt. Schemes"
+ }
+]

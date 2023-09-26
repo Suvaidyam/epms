@@ -7,7 +7,15 @@ app_license = "mit"
 # required_apps = []
 
 fixtures = [
-    "Education master"
+    "Education master",
+    "Support Type",
+    "Support",
+    "Current Occupation",
+    "Bank",
+    "Current location",
+    "Caste master",
+    "Source information about center",
+    "ID Master"
 
     # {
     #     "dt":"docttype name",

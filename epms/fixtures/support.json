@@ -1,0 +1,410 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:17:59.764460",
+  "name": "Aadhaar Correction",
+  "support": "Aadhaar Correction",
+  "support_type": "Documentation"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:18:13.776916",
+  "name": "Aadhaar New",
+  "support": "Aadhaar New",
+  "support_type": "Documentation"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:18:22.277685",
+  "name": "Aadhaar Print",
+  "support": "Aadhaar Print",
+  "support_type": "Documentation"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:18:32.169812",
+  "name": "Aadhaar Update",
+  "support": "Aadhaar Update",
+  "support_type": "Documentation"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:18:47.243166",
+  "name": "DOB Certificate Correction",
+  "support": "DOB Certificate Correction",
+  "support_type": "Documentation"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:18:59.183167",
+  "name": "DOB Certificate New",
+  "support": "DOB Certificate New",
+  "support_type": "Documentation"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:19:56.533464",
+  "name": "Family ID Correction",
+  "support": "Family ID Correction",
+  "support_type": "Documentation"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:20:07.259570",
+  "name": "Family ID New",
+  "support": "Family ID New",
+  "support_type": "Documentation"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:20:22.800100",
+  "name": "Family ID Update",
+  "support": "Family ID Update",
+  "support_type": "Documentation"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:20:32.610232",
+  "name": "PAN Correction",
+  "support": "PAN Correction",
+  "support_type": "Documentation"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:20:46.125260",
+  "name": "PAN New",
+  "support": "PAN New",
+  "support_type": "Documentation"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:20:56.953483",
+  "name": "Voter ID",
+  "support": "Voter ID",
+  "support_type": "Documentation"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:21:09.600893",
+  "name": "Atal Pension",
+  "support": "Atal Pension",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:21:20.658905",
+  "name": "BoBCW Benefit Application",
+  "support": "BoBCW Benefit Application",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:21:32.771224",
+  "name": "BoBCW Registration",
+  "support": "BoBCW Registration",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:21:42.973859",
+  "name": "BoBCW Renewal",
+  "support": "BoBCW Renewal",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:21:58.758235",
+  "name": "EShram Benefit Application",
+  "support": "EShram Benefit Application",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:22:11.831473",
+  "name": "EShram Correction",
+  "support": "EShram Correction",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:22:23.882830",
+  "name": "EShram Registration",
+  "support": "EShram Registration",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:22:36.942710",
+  "name": "ONORC",
+  "support": "ONORC",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:23:20.904347",
+  "name": "Other Insurance",
+  "support": "Other Insurance",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:23:30.014020",
+  "name": "Pension Disability",
+  "support": "Pension Disability",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:23:39.786067",
+  "name": "Pension Old Age",
+  "support": "Pension Old Age",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:23:53.915636",
+  "name": "Pension Widow",
+  "support": "Pension Widow",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:24:06.979120",
+  "name": "PMJJBY Claim",
+  "support": "PMJJBY Claim",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:24:18.080529",
+  "name": "PMJJBY New",
+  "support": "PMJJBY New",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:24:31.719370",
+  "name": "PMSBY Claim",
+  "support": "PMSBY Claim",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:24:42.864627",
+  "name": "PMSBY New",
+  "support": "PMSBY New",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:24:54.112004",
+  "name": "PMSY Maandhan Yojana",
+  "support": "PMSY Maandhan Yojana",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:25:05.879873",
+  "name": "Ayushman Card Update",
+  "support": "Ayushman Card Update",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:25:18.418921",
+  "name": "PM Kisan Samman Nidhi",
+  "support": "PM Kisan Samman Nidhi",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:25:40.153831",
+  "name": "LWF Registration",
+  "support": "LWF Registration",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:25:57.041869",
+  "name": "LWF Scheme apply",
+  "support": "LWF Scheme apply",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:26:11.740880",
+  "name": "Ayushman Card Registration",
+  "support": "Ayushman Card Registration",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:26:22.220131",
+  "name": "Ration Card New",
+  "support": "Ration Card New",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:26:32.210001",
+  "name": "Ration Card Update",
+  "support": "Ration Card Update",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:26:44.201415",
+  "name": "Ayushman Card Print",
+  "support": "Ayushman Card Print",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:27:06.509319",
+  "name": "PPF",
+  "support": "PPF",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:27:17.926856",
+  "name": "Sukanya Samriddhi",
+  "support": "Sukanya Samriddhi",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:30:25.433181",
+  "name": "ESI Problem Solving",
+  "support": "ESI Problem Solving",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:30:37.906936",
+  "name": "ESI Registration",
+  "support": "ESI Registration",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:30:48.087263",
+  "name": "PF Activation & KYC",
+  "support": "PF Activation & KYC",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:30:59.247969",
+  "name": "PF Nominee",
+  "support": "PF Nominee",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:31:08.930235",
+  "name": "PF Problem Solving",
+  "support": "PF Problem Solving",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:31:22.346510",
+  "name": "PF Transfer",
+  "support": "PF Transfer",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:31:39.255472",
+  "name": "PF Withdrawal",
+  "support": "PF Withdrawal",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:31:51.950302",
+  "name": "Jan Dhan Account Correction",
+  "support": "Jan Dhan Account Correction",
+  "support_type": "Bank A/C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:32:05.165474",
+  "name": "Jan Dhan Account New",
+  "support": "Jan Dhan Account New",
+  "support_type": "Bank A/C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:32:16.315061",
+  "name": "EPF",
+  "support": "EPF",
+  "support_type": "Legal Support"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:32:26.381250",
+  "name": "Job required",
+  "support": "Job required",
+  "support_type": "Others"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:32:36.376300",
+  "name": "Other support",
+  "support": "Other support",
+  "support_type": "Others"
+ }
+]

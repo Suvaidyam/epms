@@ -1,0 +1,37 @@
+[
+ {
+  "caste": "General",
+  "docstatus": 0,
+  "doctype": "Caste master",
+  "modified": "2023-09-26 13:27:52.721626",
+  "name": "General"
+ },
+ {
+  "caste": "OBC",
+  "docstatus": 0,
+  "doctype": "Caste master",
+  "modified": "2023-09-26 13:27:57.673012",
+  "name": "OBC"
+ },
+ {
+  "caste": "SC",
+  "docstatus": 0,
+  "doctype": "Caste master",
+  "modified": "2023-09-26 13:28:03.116655",
+  "name": "SC"
+ },
+ {
+  "caste": "ST",
+  "docstatus": 0,
+  "doctype": "Caste master",
+  "modified": "2023-09-26 13:28:07.714068",
+  "name": "ST"
+ },
+ {
+  "caste": "Others",
+  "docstatus": 0,
+  "doctype": "Caste master",
+  "modified": "2023-09-26 13:28:16.614437",
+  "name": "Others"
+ }
+]
