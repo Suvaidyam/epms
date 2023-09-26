@@ -27,6 +27,7 @@ frappe.ui.form.on("Beneficiary", {
     let open , under_process , form_submitted , rejected , completed , closed;
     open = under_process = form_submitted = rejected = completed = closed = 0;
     let total_no_of_support  = 0
+    if(frm.selected_doc.support_table){
     for(item of frm.selected_doc.support_table){
         global_data.push(item)
         ++total_no_of_support
@@ -44,6 +45,7 @@ frappe.ui.form.on("Beneficiary", {
           ++closed
         }
     }
+  }
     let numberic_overall_status = (completed + rejected) + '/' + (completed + rejected + form_submitted + under_process + open)
     // console.log(open , under_process,form_submitted , rejected , completed)
     frm.doc.numeric_overall_status = numberic_overall_status;

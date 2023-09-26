@@ -55,7 +55,7 @@
    "fieldname": "gender",
    "fieldtype": "Select",
    "label": "Gender",
-   "options": "\nMale\nFemale\nOther",
+   "options": "\nMale\nFemale\nOthers",
    "reqd": 1
   },
   {
@@ -226,7 +226,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-26 13:01:08.343926",
+ "modified": "2023-09-26 14:58:48.285435",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",
