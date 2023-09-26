@@ -13,7 +13,8 @@ fixtures = [
     "Current Occupation",
     "Bank",
     "Current location",
-    "Caste master"
+    "Caste master",
+    "Source information about center"
 
     # {
     #     "dt":"docttype name",
