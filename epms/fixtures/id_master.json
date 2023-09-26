@@ -1,0 +1,37 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "ID Master",
+  "modified": "2023-09-26 14:00:43.302645",
+  "name": "Aadhar Card",
+  "name_of_id": "Aadhar Card"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "ID Master",
+  "modified": "2023-09-26 14:00:56.006598",
+  "name": "PAN Card",
+  "name_of_id": "PAN Card"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "ID Master",
+  "modified": "2023-09-26 14:01:13.081780",
+  "name": "Voter ID Card",
+  "name_of_id": "Voter ID Card"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "ID Master",
+  "modified": "2023-09-26 14:01:22.610303",
+  "name": "Ration Card",
+  "name_of_id": "Ration Card"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "ID Master",
+  "modified": "2023-09-26 14:01:36.665526",
+  "name": "Bank Account",
+  "name_of_id": "Bank Account"
+ }
+]
