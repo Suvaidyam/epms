@@ -12,7 +12,8 @@ fixtures = [
     "Support",
     "Current Occupation",
     "Bank",
-    "Current location"
+    "Current location",
+    "Caste master"
 
     # {
     #     "dt":"docttype name",
