@@ -1,0 +1,86 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Education master",
+  "education": "Child",
+  "modified": "2023-09-26 11:54:01.968809",
+  "name": "Child"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Education master",
+  "education": "Illiterate",
+  "modified": "2023-09-26 11:54:10.799525",
+  "name": "Illiterate"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Education master",
+  "education": "Below Primary (add clases)",
+  "modified": "2023-09-26 11:54:19.288167",
+  "name": "Below Primary (add clases)"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Education master",
+  "education": "Primary (1st to 5th Class)",
+  "modified": "2023-09-26 11:55:40.925674",
+  "name": "Primary (1st to 5th Class)"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Education master",
+  "education": "Secondary (6th to 10th class)",
+  "modified": "2023-09-26 11:55:50.321851",
+  "name": "Secondary (6th to 10th class)"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Education master",
+  "education": "Higher Secondary (11th and 12th class)",
+  "modified": "2023-09-26 11:55:59.748453",
+  "name": "Higher Secondary (11th and 12th class)"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Education master",
+  "education": "Under Graduate",
+  "modified": "2023-09-26 11:56:25.761812",
+  "name": "Under Graduate"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Education master",
+  "education": "Graduate",
+  "modified": "2023-09-26 11:56:34.111532",
+  "name": "Graduate"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Education master",
+  "education": "Post Graduate",
+  "modified": "2023-09-26 11:56:46.009849",
+  "name": "Post Graduate"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Education master",
+  "education": "B.Com",
+  "modified": "2023-09-26 11:57:13.036867",
+  "name": "B.Com"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Education master",
+  "education": "Computer",
+  "modified": "2023-09-26 11:57:21.532039",
+  "name": "Computer"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Education master",
+  "education": "ITI/Technical",
+  "modified": "2023-09-26 11:57:30.304896",
+  "name": "ITI/Technical"
+ }
+]
