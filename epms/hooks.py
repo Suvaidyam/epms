@@ -6,6 +6,15 @@ app_email = "teach@suvaidyam.com"
 app_license = "mit"
 # required_apps = []
 
+fixtures = [
+    "Education master"
+
+    # {
+    #     "dt":"docttype name",
+    #     "filters":""
+    # }
+]
+
 # Includes in <head>
 # ------------------
 
