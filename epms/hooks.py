@@ -10,7 +10,8 @@ fixtures = [
     "Education master",
     "Support Type",
     "Support",
-    "Current Occupation"
+    "Current Occupation",
+    "Bank"
 
     # {
     #     "dt":"docttype name",
