@@ -9,7 +9,7 @@ app_license = "mit"
 fixtures = [
     "Education master",
     "Support Type",
-    "Support"
+    "Support",
     "Current Occupation"
 
     # {

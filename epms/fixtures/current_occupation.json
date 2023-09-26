@@ -1,0 +1,72 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-09-26 12:40:35.175101",
+  "name": "Construction Worker (under Contractor)",
+  "occupation": "Construction Worker (under Contractor)"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-09-26 12:40:43.447100",
+  "name": "Construction Worker Carpenter",
+  "occupation": "Construction Worker Carpenter"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-09-26 12:40:51.327916",
+  "name": "Construction Worker Electrician",
+  "occupation": "Construction Worker Electrician"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-09-26 12:41:05.036235",
+  "name": "Construction Worker Labour Market",
+  "occupation": "Construction Worker Labour Market"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-09-26 12:41:12.072257",
+  "name": "Construction Worker Painter",
+  "occupation": "Construction Worker Painter"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-09-26 12:41:19.237408",
+  "name": "Construction Worker Plumber",
+  "occupation": "Construction Worker Plumber"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-09-26 12:41:25.687769",
+  "name": "Delivery Person",
+  "occupation": "Delivery Person"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-09-26 12:41:33.165561",
+  "name": "Domestic Help",
+  "occupation": "Domestic Help"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-09-26 12:41:50.306011",
+  "name": "Driver Private",
+  "occupation": "Driver Private"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-09-26 12:42:00.194829",
+  "name": "Driver Public",
+  "occupation": "Driver Public"
+ }
+]
