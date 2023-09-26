@@ -11,7 +11,8 @@ fixtures = [
     "Support Type",
     "Support",
     "Current Occupation",
-    "Bank"
+    "Bank",
+    "Current location"
 
     # {
     #     "dt":"docttype name",
