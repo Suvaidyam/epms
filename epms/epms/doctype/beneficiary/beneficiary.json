@@ -16,15 +16,20 @@
   "age",
   "gender",
   "occupation",
+  "new_occupation",
   "do_you_have_appointment_letter",
   "existing_bank_account",
+  "other_bank_account",
   "column_break_taix",
   "current_location",
+  "other_current_location",
   "state_of_origin",
   "district_of_origin",
   "block_of_origin",
   "caste",
+  "other_caste_category",
   "source_information_about_center",
+  "other_source_information_about_center",
   "education",
   "head_of_family",
   "family",
@@ -222,11 +227,41 @@
    "fieldname": "followup_table",
    "fieldtype": "Table",
    "options": "Follow Up Child"
+  },
+  {
+   "fieldname": "new_occupation",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "New Occupation"
+  },
+  {
+   "fieldname": "other_bank_account",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Other Bank Account"
+  },
+  {
+   "fieldname": "other_current_location",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Other Current Location"
+  },
+  {
+   "fieldname": "other_caste_category",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Other Caste Category"
+  },
+  {
+   "fieldname": "other_source_information_about_center",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Other Source information about center"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-26 14:58:48.285435",
+ "modified": "2023-09-26 19:04:15.289642",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",
