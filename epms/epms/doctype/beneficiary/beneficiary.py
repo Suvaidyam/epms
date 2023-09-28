@@ -5,8 +5,29 @@ import frappe
 from frappe.model.document import Document
 
 class Beneficiary(Document):
-	global no_of_overall_status
 	def after_insert(self):
+		# if other select then auto add in list next time
+		if(self.new_occupation):
+			new_occupation_doc = frappe.new_doc("Current Occupation")
+			new_occupation_doc.occupation = self.new_occupation
+			new_occupation_doc.save()
+		if(self.other_bank_account):
+			new_bank_doc = frappe.new_doc("Bank")
+			new_bank_doc.bank_name = self.other_bank_account
+			new_bank_doc.save()
+		if(self.other_current_location):
+			new_location_doc = frappe.new_doc("Current location")
+			new_location_doc.name_of_location = self.other_current_location
+			new_location_doc.save()
+		if(self.other_caste_category):
+			new_cast_category = frappe.new_doc("Caste master")
+			new_cast_category.caste = self.other_caste_category
+			new_cast_category.save()
+		if(self.other_source_information_about_center):
+			new_source = frappe.new_doc("Source information about center")
+			new_source.source_information_about_center = self.other_source_information_about_center
+			new_source.save()
+
 		beneficiary = frappe.get_doc("Beneficiary" , self.name)
 		if(self.head_of_family == 1):
 			family_doc = frappe.new_doc("Family")
@@ -39,7 +60,6 @@ class Beneficiary(Document):
 				family_doc.insert()
 				# update current beneficery to family
 				beneficiary.family = family_doc.name
-				beneficiary.save()	
 				frappe.msgprint("New Beneficary Update As a Head of Family")
 		else:
 			print("THis is beneficary is not a parent ")

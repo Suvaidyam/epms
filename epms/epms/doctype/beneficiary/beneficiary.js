@@ -63,17 +63,41 @@ frappe.ui.form.on("Beneficiary", {
         frm.doc.overall_status = 'Partially completed'
       }
     }
-
   },
   onupdate:function(frm){
     // console.log("after save " , frm)
   },
   refresh(frm) {
     global_data.push(frm.selected_doc.support_table)
-    var parentField = frm.fields_dict['family'];
+    let parentField = frm.fields_dict['family'];
     if(frm.doc.head_of_family){
       parentField.df.hidden = 1;
       parentField.refresh();
+    }
+    let new_occupation = frm.fields_dict['new_occupation'];
+    if(frm.doc.occupation ==="Others"){
+      new_occupation.df.hidden = 0;
+      new_occupation.refresh();
+    }
+    let new_bank = frm.fields_dict['other_bank_account'];
+    if(frm.doc.existing_bank_account === "Others"){
+      new_bank.df.hidden = 0;
+      new_bank.refresh();
+    }
+    let new_location = frm.fields_dict['other_current_location'];
+    if(frm.doc.current_location === "Others"){
+      new_location.df.hidden = 0;
+      new_location.refresh();
+    }
+    let new_caste = frm.fields_dict['other_caste_category'];
+    if(frm.doc.caste === "Others"){
+      new_caste.df.hidden = 0;
+      new_caste.refresh();
+    }
+    let new_sorce = frm.fields_dict['other_source_information_about_center'];
+    if(frm.doc.source_information_about_center === "Others"){
+      new_sorce.df.hidden = 0;
+      new_sorce.refresh();
     }
   //  ID PROOF SECTION LOGIC FOR SHOW AND HIDE SECTION
     var id_section = frm.get_field('id_section');
@@ -154,6 +178,57 @@ frappe.ui.form.on("Beneficiary", {
     frm.set_value('age', age)
     frm.set_df_property('age', 'read_only', 1);
   },
+  occupation:function(frm){
+    var new_occupation = frm.fields_dict['new_occupation'];
+    if(frm.doc.occupation ==="Others"){
+      new_occupation.df.hidden = 0;
+      new_occupation.refresh();
+    }else{
+      new_occupation.df.hidden = 1;
+      new_occupation.refresh();
+    }
+  },
+  existing_bank_account:function(frm){
+    var new_bank = frm.fields_dict['other_bank_account'];
+    if(frm.doc.existing_bank_account === "Others"){
+      new_bank.df.hidden = 0;
+      new_bank.refresh();
+    }else{
+      new_bank.df.hidden = 1;
+      new_bank.refresh();
+    }
+  },
+  current_location:function(frm){
+    console.log("lllll", frm.doc.current_location)
+    var new_location = frm.fields_dict['other_current_location'];
+    if(frm.doc.current_location === "Others"){
+      new_location.df.hidden = 0;
+      new_location.refresh();
+    }else{
+      new_location.df.hidden = 1;
+      new_location.refresh();
+    }
+  },
+  caste:function(frm){
+    var new_caste = frm.fields_dict['other_caste_category'];
+    if(frm.doc.caste === "Others"){
+      new_caste.df.hidden = 0;
+      new_caste.refresh();
+    }else{
+      new_caste.df.hidden = 1;
+      new_caste.refresh();
+    }
+  },
+  source_information_about_center:function(frm){
+    var new_sorce = frm.fields_dict['other_source_information_about_center'];
+    if(frm.doc.source_information_about_center === "Others"){
+      new_sorce.df.hidden = 0;
+      new_sorce.refresh();
+    }else{
+      new_sorce.df.hidden = 1;
+      new_sorce.refresh();
+    }
+  }
   // support_tab_add:function(frm){
   //   console.log("support add")
   //   frm.fields_dict['specific_support_type'].grid.get_field('specific_support_type').get_query = function(doc , cdt , cdn){

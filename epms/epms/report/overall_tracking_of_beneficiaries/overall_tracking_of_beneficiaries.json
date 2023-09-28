@@ -1,0 +1,40 @@
+{
+ "add_total_row": 0,
+ "columns": [
+  {
+   "fieldname": "category",
+   "fieldtype": "Data",
+   "label": "Overall tracking of Beneficiaries",
+   "width": 0
+  },
+  {
+   "fieldname": "count",
+   "fieldtype": "Int",
+   "label": "Count",
+   "width": 0
+  }
+ ],
+ "creation": "2023-09-28 12:07:51.468909",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2023-09-28 12:12:07.565065",
+ "modified_by": "Administrator",
+ "module": "Epms",
+ "name": "Overall tracking of Beneficiaries",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT 'No of beneficiaries reached' AS category, COUNT(name) AS count FROM tabBeneficiary\nUNION\nSELECT 'No of families reached' AS category, COUNT(name) AS count FROM tabFamily;\n",
+ "ref_doctype": "Beneficiary",
+ "report_name": "Overall tracking of Beneficiaries",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}
