@@ -1,0 +1,80 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"WrcmBci23y\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"No of Beneficiary\",\"col\":3}},{\"id\":\"G5d2w-D20O\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"No of Family\",\"col\":3}},{\"id\":\"wYeD-Wyx_2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overall Tracking Of Beneficiaries\",\"col\":3}},{\"id\":\"FsYLqb1nMZ\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"ZyLeUJOqXf\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"State Of Origin\",\"col\":3}},{\"id\":\"7WIkU0xloX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Current Location\",\"col\":3}},{\"id\":\"70Z-8GsMNN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gender of Beneficaries\",\"col\":3}},{\"id\":\"AWUUsSYCso\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Education of Beneficiary\",\"col\":3}},{\"id\":\"eO8HhJ8UzN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Beneficiaries have Bank Account\",\"col\":3}}]",
+ "creation": "2023-09-15 20:25:51.986386",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "assign",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Beneficiaries",
+ "links": [],
+ "modified": "2023-09-28 12:27:06.682225",
+ "modified_by": "Administrator",
+ "module": "Epms",
+ "name": "Beneficiaries",
+ "number_cards": [
+  {
+   "label": "No of Beneficiary",
+   "number_card_name": "No of Beneficiary"
+  },
+  {
+   "label": "No of Family",
+   "number_card_name": "No of Family"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "State Of Origin",
+   "link_to": "State Of Origin",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Beneficiaries have Bank Account",
+   "link_to": "Beneficiaries have Bank",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Education of Beneficiary",
+   "link_to": "Education of Beneficiary",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Current Location",
+   "link_to": "Current Location",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Gender of Beneficaries",
+   "link_to": "Gender of Beneficaries",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Overall Tracking Of Beneficiaries",
+   "link_to": "Overall tracking of Beneficiaries",
+   "type": "Report"
+  }
+ ],
+ "title": "Beneficiaries"
+}
