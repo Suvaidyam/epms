@@ -15,7 +15,8 @@ fixtures = [
     "Current location",
     "Caste master",
     "Source information about center",
-    "ID Master"
+    "ID Master",
+    "Beneficiaries"
 
     # {
     #     "dt":"docttype name",

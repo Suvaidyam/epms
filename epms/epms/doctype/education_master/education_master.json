@@ -22,7 +22,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-14 10:32:50.723621",
+ "modified": "2023-09-29 11:15:03.147566",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Education master",
@@ -42,9 +42,7 @@
    "write": 1
   }
  ],
- "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "title_field": "education"
+ "states": []
 }
