@@ -129,8 +129,8 @@
   {
    "fieldname": "family",
    "fieldtype": "Link",
-   "label": "Family",
-   "options": "Family"
+   "label": "Select Primary Member",
+   "options": "Primary Member"
   },
   {
    "fieldname": "date_of_birth",
@@ -155,7 +155,7 @@
    "default": "0",
    "fieldname": "head_of_family",
    "fieldtype": "Check",
-   "label": "Head of Family?",
+   "label": "Are You Primary Member?",
    "set_only_once": 1
   },
   {
@@ -261,7 +261,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-28 13:47:19.909621",
+ "modified": "2023-09-29 11:09:41.202844",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",

@@ -30,7 +30,7 @@ class Beneficiary(Document):
 
 		beneficiary = frappe.get_doc("Beneficiary" , self.name)
 		if(self.head_of_family == 1):
-			family_doc = frappe.new_doc("Family")
+			family_doc = frappe.new_doc("Primary Member")
 			family_doc.head_of_family = beneficiary.name
 			family_doc.name_of_parents = beneficiary.name_of_the_beneficiary
 			family_doc.contact_number = beneficiary.contact_number
@@ -44,16 +44,16 @@ class Beneficiary(Document):
 	def on_update(self):
 		beneficiary = frappe.get_doc("Beneficiary" , self.name)
 		if(self.head_of_family == 1):
-			family_doc_name = frappe.get_list("Family",
+			family_doc_name = frappe.get_list("Primary Member",
         	filters={'head_of_family': beneficiary.name},
         	fields=["name"])
 			if(family_doc_name):
-				family_doc = frappe.get_doc("Family", family_doc_name[0].name)
+				family_doc = frappe.get_doc("Primary Member", family_doc_name[0].name)
 				family_doc.name_of_parents = beneficiary.name_of_the_beneficiary
 				family_doc.contact_number = beneficiary.contact_number
 				family_doc.save()
 			else:
-				family_doc = frappe.new_doc("Family")
+				family_doc = frappe.new_doc("Primary Member")
 				family_doc.head_of_family = beneficiary.name
 				family_doc.name_of_parents = beneficiary.name_of_the_beneficiary
 				family_doc.contact_number = beneficiary.contact_number

@@ -23,7 +23,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-26 12:38:22.490088",
+ "modified": "2023-09-29 11:12:18.775233",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Current Occupation",
@@ -43,9 +43,7 @@
    "write": 1
   }
  ],
- "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "title_field": "occupation"
+ "states": []
 }

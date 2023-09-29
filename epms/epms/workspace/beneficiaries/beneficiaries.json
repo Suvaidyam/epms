@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"WrcmBci23y\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"No of Beneficiary\",\"col\":3}},{\"id\":\"G5d2w-D20O\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"No of Family\",\"col\":3}},{\"id\":\"wYeD-Wyx_2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overall Tracking Of Beneficiaries\",\"col\":3}},{\"id\":\"FsYLqb1nMZ\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"ZyLeUJOqXf\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"State Of Origin\",\"col\":3}},{\"id\":\"7WIkU0xloX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Current Location\",\"col\":3}},{\"id\":\"70Z-8GsMNN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gender of Beneficaries\",\"col\":3}},{\"id\":\"AWUUsSYCso\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Education of Beneficiary\",\"col\":3}},{\"id\":\"eO8HhJ8UzN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Beneficiaries have Bank Account\",\"col\":5}},{\"id\":\"fYZJelgt3-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Beneficiaries by State and District\",\"col\":5}}]",
+ "content": "[{\"id\":\"WrcmBci23y\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"No of Beneficiary\",\"col\":3}},{\"id\":\"G5d2w-D20O\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Primary Member\",\"col\":3}},{\"id\":\"wYeD-Wyx_2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overall Tracking Of Beneficiaries\",\"col\":3}},{\"id\":\"FsYLqb1nMZ\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"ZyLeUJOqXf\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"State Of Origin\",\"col\":3}},{\"id\":\"7WIkU0xloX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Current Location\",\"col\":3}},{\"id\":\"70Z-8GsMNN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gender of Beneficaries\",\"col\":3}},{\"id\":\"AWUUsSYCso\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Education of Beneficiary\",\"col\":3}},{\"id\":\"eO8HhJ8UzN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Beneficiaries have Bank Account\",\"col\":5}},{\"id\":\"fYZJelgt3-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Beneficiaries by State and District\",\"col\":5}}]",
  "creation": "2023-09-15 20:25:51.986386",
  "custom_blocks": [],
  "docstatus": 0,
@@ -12,18 +12,18 @@
  "is_hidden": 0,
  "label": "Beneficiaries",
  "links": [],
- "modified": "2023-09-28 17:48:31.458757",
+ "modified": "2023-09-29 11:03:47.630319",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiaries",
  "number_cards": [
   {
-   "label": "No of Beneficiary",
-   "number_card_name": "No of Beneficiary"
+   "label": "Primary Member",
+   "number_card_name": "No of Family"
   },
   {
-   "label": "No of Family",
-   "number_card_name": "No of Family"
+   "label": "No of Beneficiary",
+   "number_card_name": "No of Beneficiary"
   }
  ],
  "owner": "Administrator",

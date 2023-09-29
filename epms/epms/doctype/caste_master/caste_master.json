@@ -22,7 +22,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-14 12:34:26.194426",
+ "modified": "2023-09-29 11:14:40.038421",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Caste master",
@@ -42,9 +42,7 @@
    "write": 1
   }
  ],
- "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "title_field": "caste"
+ "states": []
 }
