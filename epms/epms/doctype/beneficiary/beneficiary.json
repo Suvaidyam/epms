@@ -166,7 +166,7 @@
   {
    "fieldname": "follow_up_tab",
    "fieldtype": "Tab Break",
-   "label": "Follow Up"
+   "label": "Follow-up"
   },
   {
    "fieldname": "overall_status",
@@ -261,7 +261,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-29 11:09:41.202844",
+ "modified": "2023-10-03 10:56:48.792737",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",
