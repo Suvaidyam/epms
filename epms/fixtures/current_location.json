@@ -79,13 +79,6 @@
  {
   "docstatus": 0,
   "doctype": "Current location",
-  "modified": "2023-09-26 13:18:22.057640",
-  "name": "Others",
-  "name_of_location": "Others"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current location",
   "modified": "2023-09-26 13:18:32.296315",
   "name": "Om Vihar",
   "name_of_location": "Om Vihar"
@@ -222,5 +215,12 @@
   "modified": "2023-09-26 13:24:09.313318",
   "name": "Ravi Nagar",
   "name_of_location": "Ravi Nagar"
- }
+ },
+ {
+    "docstatus": 0,
+    "doctype": "Current location",
+    "modified": "2023-09-26 13:18:22.057640",
+    "name": "Others",
+    "name_of_location": "Others"
+}
 ]

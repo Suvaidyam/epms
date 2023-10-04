@@ -163,13 +163,6 @@
  {
   "docstatus": 0,
   "doctype": "Current Occupation",
-  "modified": "2023-09-26 13:09:22.033011",
-  "name": "Others",
-  "occupation": "Others"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
   "modified": "2023-09-26 13:09:34.394916",
   "name": "Out of School",
   "occupation": "Out of School"
@@ -208,5 +201,12 @@
   "modified": "2023-09-26 13:11:10.413029",
   "name": "Unemployed",
   "occupation": "Unemployed"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-09-26 13:09:22.033011",
+  "name": "Others",
+  "occupation": "Others"
  }
 ]
