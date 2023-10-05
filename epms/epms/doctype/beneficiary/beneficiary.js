@@ -173,10 +173,15 @@ frappe.ui.form.on("Beneficiary", {
   },
   date_of_birth:function(frm){
     let dob = frm.doc.date_of_birth
-    let year = frappe.datetime.get_today()
-    let age = year.split('-')[0] - dob.split('-')[0]
-    frm.set_value('age', age)
-    frm.set_df_property('age', 'read_only', 1);
+    if(dob){  
+      let year = frappe.datetime.get_today()
+      let age = year.split('-')[0] - dob.split('-')[0]
+      frm.set_value('age', age)
+      frm.set_df_property('age', 'read_only', 1);
+    }else{
+      frm.set_df_property('age', 'read_only', 0);
+      frm.set_value('age', null)
+    }
   },
   occupation:function(frm){
     var new_occupation = frm.fields_dict['new_occupation'];
