@@ -76,28 +76,43 @@ frappe.ui.form.on("Beneficiary", {
     }
     let new_occupation = frm.fields_dict['new_occupation'];
     if(frm.doc.occupation ==="Others"){
+      frm.set_df_property('new_occupation', 'reqd', 1);
       new_occupation.df.hidden = 0;
       new_occupation.refresh();
+    }else{
+      frm.set_df_property('new_occupation', 'reqd', 0);
     }
     let new_bank = frm.fields_dict['other_bank_account'];
     if(frm.doc.existing_bank_account === "Others"){
+      frm.set_df_property('other_bank_account', 'reqd', 1);
       new_bank.df.hidden = 0;
       new_bank.refresh();
+    }else{
+      frm.set_df_property('other_bank_account', 'reqd', 0);
     }
     let new_location = frm.fields_dict['other_current_location'];
     if(frm.doc.current_location === "Others"){
+      frm.set_df_property('other_current_location', 'reqd', 1);
       new_location.df.hidden = 0;
       new_location.refresh();
+    }else{
+      frm.set_df_property('other_current_location', 'reqd', 0);
     }
     let new_caste = frm.fields_dict['other_caste_category'];
     if(frm.doc.caste === "Others"){
+      frm.set_df_property('other_caste_category', 'reqd', 1);
       new_caste.df.hidden = 0;
       new_caste.refresh();
+    }else{
+      frm.set_df_property('other_caste_category', 'reqd', 0);
     }
     let new_sorce = frm.fields_dict['other_source_information_about_center'];
     if(frm.doc.source_information_about_center === "Others"){
+      frm.set_df_property('other_source_information_about_center', 'reqd', 1);
       new_sorce.df.hidden = 0;
       new_sorce.refresh();
+    }else{
+      frm.set_df_property('other_source_information_about_center', 'reqd', 0);
     }
   //  ID PROOF SECTION LOGIC FOR SHOW AND HIDE SECTION
     var id_section = frm.get_field('id_section');
@@ -187,9 +202,11 @@ frappe.ui.form.on("Beneficiary", {
     var new_occupation = frm.fields_dict['new_occupation'];
     if(frm.doc.occupation ==="Others"){
       new_occupation.df.hidden = 0;
+      frm.set_df_property('new_occupation', 'reqd', 1);
       new_occupation.refresh();
     }else{
       new_occupation.df.hidden = 1;
+      frm.set_df_property('new_occupation', 'reqd', 0);
       new_occupation.refresh();
     }
   },
@@ -197,9 +214,11 @@ frappe.ui.form.on("Beneficiary", {
     var new_bank = frm.fields_dict['other_bank_account'];
     if(frm.doc.existing_bank_account === "Others"){
       new_bank.df.hidden = 0;
+      frm.set_df_property('other_bank_account', 'reqd', 1);
       new_bank.refresh();
     }else{
       new_bank.df.hidden = 1;
+      frm.set_df_property('other_bank_account', 'reqd', 0);
       new_bank.refresh();
     }
   },
@@ -207,10 +226,12 @@ frappe.ui.form.on("Beneficiary", {
     console.log("lllll", frm.doc.current_location)
     var new_location = frm.fields_dict['other_current_location'];
     if(frm.doc.current_location === "Others"){
+      frm.set_df_property('other_current_location', 'reqd', 1);
       new_location.df.hidden = 0;
       new_location.refresh();
     }else{
       new_location.df.hidden = 1;
+      frm.set_df_property('other_current_location', 'reqd', 0);
       new_location.refresh();
     }
   },
@@ -218,19 +239,23 @@ frappe.ui.form.on("Beneficiary", {
     var new_caste = frm.fields_dict['other_caste_category'];
     if(frm.doc.caste === "Others"){
       new_caste.df.hidden = 0;
+      frm.set_df_property('other_caste_category', 'reqd', 1);
       new_caste.refresh();
     }else{
       new_caste.df.hidden = 1;
+      frm.set_df_property('other_caste_category', 'reqd', 0);
       new_caste.refresh();
     }
   },
   source_information_about_center:function(frm){
     var new_sorce = frm.fields_dict['other_source_information_about_center'];
     if(frm.doc.source_information_about_center === "Others"){
+      frm.set_df_property('other_source_information_about_center', 'reqd', 1);
       new_sorce.df.hidden = 0;
       new_sorce.refresh();
     }else{
       new_sorce.df.hidden = 1;
+      frm.set_df_property('other_source_information_about_center', 'reqd', 0);
       new_sorce.refresh();
     }
   },
