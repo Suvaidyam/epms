@@ -19,7 +19,7 @@
    "fieldname": "support_type",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Support Type",
+   "label": "Support Category",
    "options": "Support Type",
    "reqd": 1
   },
@@ -28,7 +28,7 @@
    "fieldname": "specific_support_type",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Specific support type",
+   "label": "Support Name",
    "options": "Support",
    "reqd": 1
   },
@@ -66,14 +66,14 @@
   },
   {
    "fieldname": "completion_certificate",
-   "fieldtype": "Data",
+   "fieldtype": "Attach",
    "label": "Completion certificate"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-10-03 11:02:40.266200",
+ "modified": "2023-10-05 12:49:47.347752",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Support Child",

@@ -130,7 +130,7 @@
    "fieldname": "family",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Select Primary Member",
+   "label": "Primary Member",
    "options": "Primary Member"
   },
   {
@@ -262,7 +262,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-04 17:27:15.442377",
+ "modified": "2023-10-05 12:11:26.411744",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",

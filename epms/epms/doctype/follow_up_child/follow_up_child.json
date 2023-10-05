@@ -24,7 +24,7 @@
    "fieldname": "follow_up_status",
    "fieldtype": "Select",
    "in_list_view": 1,
-   "label": "Follow up status",
+   "label": "Follow-up status",
    "options": "\nUnder Process\ninterested\nNot interested",
    "reqd": 1
   },
@@ -45,7 +45,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-09-25 12:59:15.356854",
+ "modified": "2023-10-05 12:51:38.649464",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Follow Up Child",
