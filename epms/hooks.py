@@ -24,6 +24,10 @@ fixtures = [
     # }
 ]
 
+permission_query_conditions = {
+    "ToDo": "app.permissions.todo_query",
+}
+
 # Includes in <head>
 # ------------------
 
