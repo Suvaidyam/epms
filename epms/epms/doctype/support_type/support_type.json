@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:support_type",
  "creation": "2023-09-16 09:27:38.019744",
@@ -22,7 +23,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-05 11:45:01.027598",
+ "modified": "2023-10-06 13:30:30.016200",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Support Type",

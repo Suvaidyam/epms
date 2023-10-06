@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:name_of_id",
  "creation": "2023-09-16 06:40:20.686450",
@@ -22,7 +23,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-05 11:46:12.502310",
+ "modified": "2023-10-06 13:29:59.642170",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "ID Master",

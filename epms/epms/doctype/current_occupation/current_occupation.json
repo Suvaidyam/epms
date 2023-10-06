@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:occupation",
  "creation": "2023-09-14 10:57:15.184369",
@@ -23,7 +24,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-05 11:47:26.691584",
+ "modified": "2023-10-06 13:29:06.046331",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Current Occupation",

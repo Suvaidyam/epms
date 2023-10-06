@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format:{MM}/{#####}",
  "creation": "2023-09-13 19:36:30.271397",
@@ -262,7 +263,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-05 12:11:26.411744",
+ "modified": "2023-10-06 13:31:50.077316",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",
@@ -274,6 +275,7 @@
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,
@@ -305,6 +307,7 @@
   }
  ],
  "search_fields": "contact_number",
+ "show_name_in_global_search": 1,
  "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",

@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:mode_of_reach_out",
  "creation": "2023-09-19 07:21:09.075689",
@@ -22,7 +23,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-05 11:45:20.267596",
+ "modified": "2023-10-06 13:30:18.184946",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Mode of reach out",

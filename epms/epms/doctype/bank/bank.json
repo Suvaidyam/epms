@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:bank_name",
  "creation": "2023-09-22 15:59:13.619306",
@@ -22,7 +23,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-05 11:46:56.536266",
+ "modified": "2023-10-06 13:29:32.577508",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Bank",
