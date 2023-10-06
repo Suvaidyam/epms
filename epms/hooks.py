@@ -25,7 +25,7 @@ fixtures = [
 ]
 
 permission_query_conditions = {
-    "ToDo": "app.permissions.todo_query",
+    "Beneficiary": "epms.middlewares.beneficiary.list_query",
 }
 
 # Includes in <head>
