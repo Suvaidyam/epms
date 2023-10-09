@@ -1,7 +1,6 @@
 {
  "actions": [],
  "allow_import": 1,
- "allow_rename": 1,
  "autoname": "format:{MM}/{#####}",
  "creation": "2023-09-13 19:36:30.271397",
  "default_view": "List",
@@ -74,7 +73,7 @@
   {
    "fieldname": "education",
    "fieldtype": "Link",
-   "label": "Education Details",
+   "label": "Education details",
    "options": "Education master"
   },
   {
@@ -91,7 +90,7 @@
   {
    "fieldname": "caste",
    "fieldtype": "Link",
-   "label": "Caste Category",
+   "label": "Caste category",
    "options": "Caste master",
    "reqd": 1
   },
@@ -119,7 +118,7 @@
   {
    "fieldname": "do_you_have_id_document",
    "fieldtype": "Select",
-   "label": "Do you have ID document?",
+   "label": "Do you have any ID documents?",
    "options": "Yes\nNo",
    "reqd": 1
   },
@@ -132,7 +131,7 @@
    "fieldname": "family",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Primary Member",
+   "label": "Select primary member ",
    "options": "Primary Member"
   },
   {
@@ -155,10 +154,12 @@
    "reqd": 1
   },
   {
-   "default": "0",
+   "default": "No",
    "fieldname": "head_of_family",
-   "fieldtype": "Check",
-   "label": "Are You Primary Member?",
+   "fieldtype": "Select",
+   "label": "Has anyone from your family visisted Agrasar before?",
+   "options": "\nNo\nYes",
+   "reqd": 1,
    "set_only_once": 1
   },
   {
@@ -191,7 +192,7 @@
   {
    "fieldname": "current_location",
    "fieldtype": "Link",
-   "label": "Current Location",
+   "label": "Current location",
    "options": "Current location",
    "reqd": 1
   },
@@ -205,14 +206,14 @@
   {
    "fieldname": "district_of_origin",
    "fieldtype": "Link",
-   "label": "District of Origin",
+   "label": "District of origin",
    "options": "District",
    "reqd": 1
   },
   {
    "fieldname": "block_of_origin",
    "fieldtype": "Link",
-   "label": "Tehsil/Block of Origin",
+   "label": "Tehsil/Block of origin",
    "options": "Block",
    "reqd": 1
   },
@@ -235,42 +236,43 @@
    "fieldname": "new_occupation",
    "fieldtype": "Data",
    "hidden": 1,
-   "label": "New Occupation"
+   "label": "New occupation"
   },
   {
    "fieldname": "other_bank_account",
    "fieldtype": "Data",
    "hidden": 1,
-   "label": "Other Bank Account"
+   "label": "Other bank account"
   },
   {
    "fieldname": "other_current_location",
    "fieldtype": "Data",
    "hidden": 1,
-   "label": "Other Current Location"
+   "label": "Add current location"
   },
   {
    "fieldname": "other_caste_category",
    "fieldtype": "Data",
    "hidden": 1,
-   "label": "Other Caste Category"
+   "label": "Other caste category"
   },
   {
    "fieldname": "other_source_information_about_center",
    "fieldtype": "Data",
    "hidden": 1,
-   "label": "Other Source information about center"
+   "label": "Other source information about center"
   },
   {
    "fieldname": "csc",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "CSC",
    "options": "CSC"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-06 17:29:37.705254",
+ "modified": "2023-10-09 12:28:18.024300",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",
