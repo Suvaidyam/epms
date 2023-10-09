@@ -178,7 +178,7 @@ frappe.ui.form.on("Beneficiary", {
   },
   head_of_family:function(frm){
     var parentField = frm.fields_dict['family'];
-    if(frm.doc.head_of_family){
+    if(frm.doc.head_of_family === "No"){
       parentField.df.hidden = 1;
       parentField.refresh();
     }else{
@@ -259,16 +259,6 @@ frappe.ui.form.on("Beneficiary", {
       new_sorce.refresh();
     }
   },
-  support_tab_add:function(frm){
-    console.log("support add")
-    frm.fields_dict['support_table'].grid.get_field('specific_support_type').get_query = function(doc , cdt , cdn){
-      return {
-        filters: [
-            ['support_type', '=', "aaaaa"], // Add your filter conditions
-        ],
-    };
-    }
-  }
   
 });
 // ********************* SUPERT CHILD Table***********************
@@ -278,28 +268,28 @@ frappe.ui.form.on('Support Child', {
   },
   
   refresh(frm){},
-  status:function(frm, cdt, cdn){
-    let row = frappe.get_doc(cdt, cdn);
-    console.log("Kk", row)
-    let status = row.status
-    var df = frappe.meta.get_docfield("Support Child", 'reason_of_rejection'  , frm.doc.name);
-    df.hidden = 1; 
-    frm.refresh_field('reason_of_rejection');
+  // status:function(frm, cdt, cdn){
+  //   let row = frappe.get_doc(cdt, cdn);
+  //   console.log("Kk", row)
+  //   let status = row.status
+  //   var df = frappe.meta.get_docfield("Support Child", 'reason_of_rejection'  , frm.doc.name);
+  //   df.hidden = 1; 
+  //   frm.refresh_field('reason_of_rejection');
 
-    console.log(df)
-    frm.fields_dict['support_table'].grid.get_field('specific_support_type').get_query = function(doc, cdt, cdn) {
-      var child = locals[cdt][cdn];
-      return {    
-          filters:[
-              ['specific_support_type', '=', child.status]
-          ]
-      }
-  }
-    // if(status ==="Rejected"){
-    //   row.reason_of_rejection = 0
-    // }
-    // frm.refresh_field('support_tab');
-  },
+  //   console.log(df)
+  //   frm.fields_dict['support_table'].grid.get_field('specific_support_type').get_query = function(doc, cdt, cdn) {
+  //     var child = locals[cdt][cdn];
+  //     return {    
+  //         filters:[
+  //             ['specific_support_type', '=', child.status]
+  //         ]
+  //     }
+  // }
+  //   // if(status ==="Rejected"){
+  //   //   row.reason_of_rejection = 0
+  //   // }
+  //   // frm.refresh_field('support_tab');
+  // },
   support_table_add(frm, cdt, cdn) {
       let row = frappe.get_doc(cdt, cdn);
     
@@ -309,9 +299,18 @@ frappe.ui.form.on('Support Child', {
     console.log("cd,cdn", cdt , cdn)
     let row = frappe.get_doc(cdt, cdn);
     let supportType = row.support_type;
-
-
   frm.refresh_field('support_table');
+  },
+  specific_support_type:function(frm , cdt , cdn){
+    let row = frappe.get_doc(cdt, cdn);
+    console.log("lll")
+    // frm.set_query('specific_support_type', 'Support Child', function() {
+		// 	return {
+		// 		'filters': {
+		// 			"Support Type": row.support_type
+		// 		}
+		// 	};
+		// });
   }
 })
 // ********************* FOLLOW UP CHILD Table***********************

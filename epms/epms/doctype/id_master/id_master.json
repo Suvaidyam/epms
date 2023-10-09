@@ -23,7 +23,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-06 13:29:59.642170",
+ "modified": "2023-10-09 11:45:52.865015",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "ID Master",
@@ -67,11 +67,9 @@
    "write": 1
   }
  ],
- "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "name_of_id",
  "track_changes": 1,
  "track_seen": 1
 }

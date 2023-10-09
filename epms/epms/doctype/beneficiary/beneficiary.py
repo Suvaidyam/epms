@@ -19,17 +19,17 @@ class Beneficiary(Document):
 			new_location_doc = frappe.new_doc("Current location")
 			new_location_doc.name_of_location = self.other_current_location
 			new_location_doc.save()
-		if(self.other_caste_category):
-			new_cast_category = frappe.new_doc("Caste master")
-			new_cast_category.caste = self.other_caste_category
-			new_cast_category.save()
-		if(self.other_source_information_about_center):
-			new_source = frappe.new_doc("Source information about center")
-			new_source.source_information_about_center = self.other_source_information_about_center
-			new_source.save()
+		# if(self.other_caste_category):
+		# 	new_cast_category = frappe.new_doc("Caste master")
+		# 	new_cast_category.caste = self.other_caste_category
+		# 	new_cast_category.save()
+		# if(self.other_source_information_about_center):
+		# 	new_source = frappe.new_doc("Source information about center")
+		# 	new_source.source_information_about_center = self.other_source_information_about_center
+		# 	new_source.save()
 
 		beneficiary = frappe.get_doc("Beneficiary" , self.name)
-		if(self.head_of_family == 1):
+		if(self.head_of_family == "No"):
 			family_doc = frappe.new_doc("Primary Member")
 			family_doc.head_of_family = beneficiary.name
 			family_doc.name_of_parents = beneficiary.name_of_the_beneficiary
@@ -43,7 +43,7 @@ class Beneficiary(Document):
 	
 	def on_update(self):
 		beneficiary = frappe.get_doc("Beneficiary" , self.name)
-		if(self.head_of_family == 1):
+		if(self.head_of_family == "No"):
 			family_doc_name = frappe.get_list("Primary Member",
         	filters={'head_of_family': beneficiary.name},
         	fields=["name"])
@@ -60,6 +60,7 @@ class Beneficiary(Document):
 				family_doc.insert()
 				# update current beneficery to family
 				beneficiary.family = family_doc.name
+				beneficiary.save()
 				frappe.msgprint("New Beneficary Update As a Head of Family")
 		else:
 			print("THis is beneficary is not a parent ")
