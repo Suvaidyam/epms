@@ -159,8 +159,7 @@
    "fieldtype": "Select",
    "label": "Has anyone from your family visisted Agrasar before?",
    "options": "\nNo\nYes",
-   "reqd": 1,
-   "set_only_once": 1
+   "reqd": 1
   },
   {
    "fieldname": "support_tab",
@@ -272,7 +271,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-09 12:28:18.024300",
+ "modified": "2023-10-09 17:09:44.347013",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",

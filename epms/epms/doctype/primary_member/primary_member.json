@@ -10,7 +10,8 @@
  "field_order": [
   "head_of_family",
   "name_of_parents",
-  "contact_number"
+  "contact_number",
+  "csc"
  ],
  "fields": [
   {
@@ -39,6 +40,12 @@
    "label": "Contact Number",
    "read_only": 1,
    "unique": 1
+  },
+  {
+   "fieldname": "csc",
+   "fieldtype": "Link",
+   "label": "csc",
+   "options": "CSC"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -48,7 +55,7 @@
    "link_fieldname": "family"
   }
  ],
- "modified": "2023-10-05 11:51:01.311882",
+ "modified": "2023-10-09 17:06:27.196382",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Primary Member",

@@ -29,11 +29,14 @@ class Beneficiary(Document):
 		# 	new_source.save()
 
 		beneficiary = frappe.get_doc("Beneficiary" , self.name)
+		csc_id = frappe.cache().get_value("csc-"+self.name)
+		beneficiary.csc = csc_id
 		if(self.head_of_family == "No"):
 			family_doc = frappe.new_doc("Primary Member")
 			family_doc.head_of_family = beneficiary.name
 			family_doc.name_of_parents = beneficiary.name_of_the_beneficiary
 			family_doc.contact_number = beneficiary.contact_number
+			family_doc.csc = beneficiary.csc
 			family_doc.insert()
 			# update current beneficery
 			beneficiary.family = family_doc.name
@@ -43,6 +46,8 @@ class Beneficiary(Document):
 	
 	def on_update(self):
 		beneficiary = frappe.get_doc("Beneficiary" , self.name)
+		csc_id = frappe.cache().get_value("csc-"+self.name)
+		beneficiary.csc = csc_id
 		if(self.head_of_family == "No"):
 			family_doc_name = frappe.get_list("Primary Member",
         	filters={'head_of_family': beneficiary.name},
@@ -51,12 +56,14 @@ class Beneficiary(Document):
 				family_doc = frappe.get_doc("Primary Member", family_doc_name[0].name)
 				family_doc.name_of_parents = beneficiary.name_of_the_beneficiary
 				family_doc.contact_number = beneficiary.contact_number
+				family_doc.csc = beneficiary.csc
 				family_doc.save()
 			else:
 				family_doc = frappe.new_doc("Primary Member")
 				family_doc.head_of_family = beneficiary.name
 				family_doc.name_of_parents = beneficiary.name_of_the_beneficiary
 				family_doc.contact_number = beneficiary.contact_number
+				family_doc.csc = beneficiary.csc
 				family_doc.insert()
 				# update current beneficery to family
 				beneficiary.family = family_doc.name

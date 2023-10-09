@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "CSC centres",
  "links": [],
- "modified": "2023-10-09 12:58:15.278271",
+ "modified": "2023-10-09 16:39:12.533426",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "CSC centres",
@@ -27,7 +27,11 @@
    "label": "Csc Centre"
   }
  ],
- "roles": [],
+ "roles": [
+  {
+   "role": "Admin"
+  }
+ ],
  "sequence_id": 2.0,
  "shortcuts": [],
  "title": "CSC centres"

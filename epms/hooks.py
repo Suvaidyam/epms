@@ -30,6 +30,8 @@ on_session_creation = "epms.middlewares.session_create.allocate_csc"
 
 permission_query_conditions = {
     "Beneficiary": "epms.middlewares.beneficiary.list_query",
+    "Primary Member": "epms.middlewares.family.list_query",
+
 }
 
 # Includes in <head>
