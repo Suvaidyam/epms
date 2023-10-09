@@ -24,13 +24,13 @@ fixtures = [
     # }
 ]
 
-# on_session_creation = "epms.middlewares.session_create.allocate_csc"
+on_session_creation = "epms.middlewares.session_create.allocate_csc"
 
 # on_login = "epms.middlewares.session_create.allocate_free_credits"
 
-# permission_query_conditions = {
-#     "Beneficiary": "epms.middlewares.beneficiary.list_query",
-# }
+permission_query_conditions = {
+    "Beneficiary": "epms.middlewares.beneficiary.list_query",
+}
 
 # Includes in <head>
 # ------------------
