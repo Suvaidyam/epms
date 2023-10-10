@@ -29,10 +29,10 @@
    "wildcard_filter": 0
   }
  ],
- "idx": 10,
+ "idx": 11,
  "is_standard": "Yes",
  "letterhead": null,
- "modified": "2023-10-09 14:58:32.647410",
+ "modified": "2023-10-10 13:49:15.495675",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Current Location",
@@ -45,6 +45,12 @@
  "roles": [
   {
    "role": "System Manager"
+  },
+  {
+   "role": "Admin"
+  },
+  {
+   "role": "MIS executive"
   }
  ]
 }
