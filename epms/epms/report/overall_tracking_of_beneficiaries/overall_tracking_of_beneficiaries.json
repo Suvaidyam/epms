@@ -22,7 +22,7 @@
  "idx": 0,
  "is_standard": "Yes",
  "letterhead": null,
- "modified": "2023-09-29 11:04:37.250536",
+ "modified": "2023-10-10 16:04:20.046010",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Overall tracking of Beneficiaries",
@@ -35,6 +35,9 @@
  "roles": [
   {
    "role": "System Manager"
+  },
+  {
+   "role": "Admin"
   }
  ]
 }

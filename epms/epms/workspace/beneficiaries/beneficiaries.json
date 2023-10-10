@@ -1,6 +1,15 @@
 {
- "charts": [],
- "content": "[{\"id\":\"WrcmBci23y\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"No. of beneficiaries\",\"col\":3}},{\"id\":\"G5d2w-D20O\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"No. of primary members\",\"col\":3}},{\"id\":\"wYeD-Wyx_2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overall Tracking Of Beneficiaries\",\"col\":3}},{\"id\":\"FsYLqb1nMZ\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"ZyLeUJOqXf\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"State Of Origin\",\"col\":3}},{\"id\":\"7WIkU0xloX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Current Location\",\"col\":3}},{\"id\":\"70Z-8GsMNN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gender of Beneficaries\",\"col\":3}},{\"id\":\"AWUUsSYCso\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Education of Beneficiary\",\"col\":3}},{\"id\":\"eO8HhJ8UzN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Beneficiaries have Bank Account\",\"col\":5}},{\"id\":\"fYZJelgt3-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Beneficiaries by State and District\",\"col\":5}}]",
+ "charts": [
+  {
+   "chart_name": "Beneficary by Genders",
+   "label": "Beneficary by Genders"
+  },
+  {
+   "chart_name": "current location",
+   "label": "current location"
+  }
+ ],
+ "content": "[{\"id\":\"WrcmBci23y\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"No. of beneficiaries\",\"col\":3}},{\"id\":\"G5d2w-D20O\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"No. of primary members\",\"col\":3}},{\"id\":\"FsYLqb1nMZ\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"v9VCWCElTb\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports Table\",\"col\":5}},{\"id\":\"56nG-JKJZc\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Beneficary by Genders\",\"col\":7}},{\"id\":\"GcWSZSX2B_\",\"type\":\"chart\",\"data\":{\"chart_name\":\"current location\",\"col\":12}}]",
  "creation": "2023-09-15 20:25:51.986386",
  "custom_blocks": [],
  "docstatus": 0,
@@ -11,8 +20,87 @@
  "idx": 1,
  "is_hidden": 0,
  "label": "Beneficiaries",
- "links": [],
- "modified": "2023-10-09 12:58:11.575538",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports Table",
+   "link_count": 7,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Current Location",
+   "link_count": 0,
+   "link_to": "Current Location",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Gender of Beneficaries",
+   "link_count": 0,
+   "link_to": "Gender of Beneficaries",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Education of Beneficiary",
+   "link_count": 0,
+   "link_to": "Education of Beneficiary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Beneficiaries have Bank",
+   "link_count": 0,
+   "link_to": "Beneficiaries have Bank",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Beneficiaries by State and District",
+   "link_count": 0,
+   "link_to": "Tracking of place of origin of beneficiaries",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Overall tracking of Beneficiaries",
+   "link_count": 0,
+   "link_to": "Overall tracking of Beneficiaries",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "State Of Origin",
+   "link_count": 0,
+   "link_to": "State Of Origin",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2023-10-10 15:55:34.499101",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiaries",
@@ -32,56 +120,6 @@
  "quick_lists": [],
  "roles": [],
  "sequence_id": 1.0,
- "shortcuts": [
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Beneficiaries by State and District",
-   "link_to": "Tracking of place of origin of beneficiaries",
-   "type": "Report"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "State Of Origin",
-   "link_to": "State Of Origin",
-   "type": "Report"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Beneficiaries have Bank Account",
-   "link_to": "Beneficiaries have Bank",
-   "type": "Report"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Education of Beneficiary",
-   "link_to": "Education of Beneficiary",
-   "type": "Report"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Current Location",
-   "link_to": "Current Location",
-   "type": "Report"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Gender of Beneficaries",
-   "link_to": "Gender of Beneficaries",
-   "type": "Report"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Overall Tracking Of Beneficiaries",
-   "link_to": "Overall tracking of Beneficiaries",
-   "type": "Report"
-  }
- ],
+ "shortcuts": [],
  "title": "Beneficiaries"
 }

@@ -140,13 +140,6 @@
   "name": "Others"
  },
  {
-  "bank_name": "IndusInd Bank",
-  "docstatus": 0,
-  "doctype": "Bank",
-  "modified": "2023-09-26 12:53:22.674486",
-  "name": "IndusInd Bank"
- },
- {
   "bank_name": "No",
   "docstatus": 0,
   "doctype": "Bank",
@@ -159,6 +152,13 @@
   "doctype": "Bank",
   "modified": "2023-09-26 12:52:34.170844",
   "name": "BOI Jan Dhan"
+ },
+ {
+  "bank_name": "IndusInd Bank",
+  "docstatus": 0,
+  "doctype": "Bank",
+  "modified": "2023-09-26 12:53:22.674486",
+  "name": "IndusInd Bank"
  },
  {
   "bank_name": "BOI",

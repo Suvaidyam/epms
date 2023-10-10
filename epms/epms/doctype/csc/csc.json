@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:CSC-{district}-{###}",
+ "autoname": "format:CSC-{state}-{###}",
  "creation": "2023-10-06 17:23:30.018810",
  "default_view": "List",
  "doctype": "DocType",
@@ -16,7 +16,6 @@
   {
    "fieldname": "state",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "State",
    "options": "State",
    "reqd": 1
@@ -24,10 +23,8 @@
   {
    "fieldname": "district",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "District",
-   "options": "District",
-   "reqd": 1
+   "options": "District"
   },
   {
    "fieldname": "csc_name",
@@ -39,7 +36,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-06 17:24:40.476962",
+ "modified": "2023-10-10 17:18:26.306945",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "CSC",
@@ -55,6 +52,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Admin",
    "share": 1,
    "write": 1
   }

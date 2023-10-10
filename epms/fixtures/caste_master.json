@@ -1,12 +1,5 @@
 [
  {
-  "caste": "SC",
-  "docstatus": 0,
-  "doctype": "Caste master",
-  "modified": "2023-09-26 13:28:03.116655",
-  "name": "SC"
- },
- {
   "caste": "ST",
   "docstatus": 0,
   "doctype": "Caste master",
@@ -19,6 +12,13 @@
   "doctype": "Caste master",
   "modified": "2023-09-26 13:28:16.614437",
   "name": "Others"
+ },
+ {
+  "caste": "SC",
+  "docstatus": 0,
+  "doctype": "Caste master",
+  "modified": "2023-09-26 13:28:03.116655",
+  "name": "SC"
  },
  {
   "caste": "OBC",

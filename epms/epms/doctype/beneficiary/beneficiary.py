@@ -4,6 +4,7 @@
 import frappe
 from frappe.model.document import Document
 from epms.utils.cache import Cache
+from epms.services.primary_member import Primary_member
 
 class Beneficiary(Document):
 	def after_insert(self):
@@ -30,45 +31,21 @@ class Beneficiary(Document):
 		# 	new_source.save()
 
 		beneficiary = frappe.get_doc("Beneficiary" , self.name)
-		# csc_id = frappe.cache().get_value("csc-"+(frappe.session.user))
 		beneficiary.csc = Cache.get_csc()
 		if(self.head_of_family == "No"):
-			family_doc = frappe.new_doc("Primary Member")
-			family_doc.head_of_family = beneficiary.name
-			family_doc.name_of_parents = beneficiary.name_of_the_beneficiary
-			family_doc.contact_number = beneficiary.contact_number
-			family_doc.csc = beneficiary.csc
-			family_doc.insert()
+			# To Create primary member
+			Primary_member.create_family(beneficiary)
 			# update current beneficery
-			beneficiary.family = family_doc.name
+			beneficiary.family = Primary_member.create_family
 			beneficiary.save()
 		else:
+			beneficiary.save()
 			print("CREATING CHILD BENEFICARY")
 	
 	def on_update(self):
-		beneficiary = frappe.get_doc("Beneficiary" , self.name)
-		# csc_id = frappe.cache().get_value("csc-"+(frappe.session.user))
-		# beneficiary.csc = Cache.get_csc()
+		# beneficiary = frappe.get_doc("Beneficiary" , self.name)
 		if(self.head_of_family == "No"):
-			family_doc_name = frappe.get_list("Primary Member",
-        	filters={'head_of_family': beneficiary.name},
-        	fields=["name"])
-			if(family_doc_name):
-				family_doc = frappe.get_doc("Primary Member", family_doc_name[0].name)
-				family_doc.name_of_parents = beneficiary.name_of_the_beneficiary
-				family_doc.contact_number = beneficiary.contact_number
-				# family_doc.csc = beneficiary.csc
-				family_doc.save()
-			else:
-				family_doc = frappe.new_doc("Primary Member")
-				family_doc.head_of_family = beneficiary.name
-				family_doc.name_of_parents = beneficiary.name_of_the_beneficiary
-				family_doc.contact_number = beneficiary.contact_number
-				family_doc.csc = beneficiary.csc
-				family_doc.insert()
-				# update current beneficery to family
-				beneficiary.family = family_doc.name
-				beneficiary.save()
-				frappe.msgprint("New Beneficary Update As a Head of Family")
+			# update primary members
+			Primary_member.update_family(self)
 		else:
 			print("THis is beneficary is not a parent ")

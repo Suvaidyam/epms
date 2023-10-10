@@ -44,8 +44,7 @@
    "fieldname": "csc",
    "fieldtype": "Link",
    "label": "csc",
-   "options": "CSC",
-   "unique": 1
+   "options": "CSC"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -55,7 +54,7 @@
    "link_fieldname": "family"
   }
  ],
- "modified": "2023-10-09 19:09:02.221114",
+ "modified": "2023-10-10 13:21:08.696404",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Primary Member",
@@ -75,7 +74,6 @@
    "write": 1
   },
   {
-   "create": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
@@ -83,8 +81,7 @@
    "read": 1,
    "report": 1,
    "role": "Admin",
-   "share": 1,
-   "write": 1
+   "share": 1
   },
   {
    "create": 1,
