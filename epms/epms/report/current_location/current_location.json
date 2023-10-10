@@ -32,7 +32,7 @@
  "idx": 11,
  "is_standard": "Yes",
  "letterhead": null,
- "modified": "2023-10-10 13:49:15.495675",
+ "modified": "2023-10-10 14:57:59.234738",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Current Location",
@@ -48,9 +48,6 @@
   },
   {
    "role": "Admin"
-  },
-  {
-   "role": "MIS executive"
   }
  ]
 }

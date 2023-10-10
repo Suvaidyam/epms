@@ -23,7 +23,7 @@
  "idx": 0,
  "is_standard": "Yes",
  "letterhead": null,
- "modified": "2023-09-28 10:57:32.593931",
+ "modified": "2023-10-10 15:33:49.437798",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Education of Beneficiary",
@@ -37,6 +37,9 @@
  "roles": [
   {
    "role": "System Manager"
+  },
+  {
+   "role": "Admin"
   }
  ]
 }
