@@ -163,13 +163,6 @@
  {
   "docstatus": 0,
   "doctype": "Current location",
-  "modified": "2023-09-26 13:22:04.908039",
-  "name": "Devilal Colony",
-  "name_of_location": "Devilal Colony"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current location",
   "modified": "2023-09-26 13:22:28.656427",
   "name": "Bhawani Enclave",
   "name_of_location": "Bhawani Enclave"
@@ -191,16 +184,16 @@
  {
   "docstatus": 0,
   "doctype": "Current location",
-  "modified": "2023-09-26 13:23:16.608242",
-  "name": "Amar Colony",
-  "name_of_location": "Amar Colony"
+  "modified": "2023-09-26 13:18:22.057640",
+  "name": "Others",
+  "name_of_location": "Others"
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
-  "modified": "2023-09-26 13:23:28.444920",
-  "name": "Arjun Nagar",
-  "name_of_location": "Arjun Nagar"
+  "modified": "2023-09-26 13:22:04.908039",
+  "name": "Devilal Colony",
+  "name_of_location": "Devilal Colony"
  },
  {
   "docstatus": 0,
@@ -212,15 +205,22 @@
  {
   "docstatus": 0,
   "doctype": "Current location",
+  "modified": "2023-09-26 13:23:28.444920",
+  "name": "Arjun Nagar",
+  "name_of_location": "Arjun Nagar"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current location",
   "modified": "2023-09-26 13:24:09.313318",
   "name": "Ravi Nagar",
   "name_of_location": "Ravi Nagar"
  },
  {
-    "docstatus": 0,
-    "doctype": "Current location",
-    "modified": "2023-09-26 13:18:22.057640",
-    "name": "Others",
-    "name_of_location": "Others"
-}
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-09-26 13:23:16.608242",
+  "name": "Amar Colony",
+  "name_of_location": "Amar Colony"
+ }
 ]

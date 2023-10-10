@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_rename": 1,
  "autoname": "field:contact_number",
  "creation": "2023-09-16 13:25:15.574375",
  "default_view": "List",
@@ -45,7 +44,8 @@
    "fieldname": "csc",
    "fieldtype": "Link",
    "label": "csc",
-   "options": "CSC"
+   "options": "CSC",
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -55,7 +55,7 @@
    "link_fieldname": "family"
   }
  ],
- "modified": "2023-10-09 17:06:27.196382",
+ "modified": "2023-10-09 19:09:02.221114",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Primary Member",

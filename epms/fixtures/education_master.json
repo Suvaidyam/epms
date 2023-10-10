@@ -16,13 +16,6 @@
  {
   "docstatus": 0,
   "doctype": "Education master",
-  "education": "Below Primary",
-  "modified": "2023-09-26 11:54:19.288167",
-  "name": "Below Primary"
- },
- {
-  "docstatus": 0,
-  "doctype": "Education master",
   "education": "Primary (1st to 5th Class)",
   "modified": "2023-09-26 11:55:40.925674",
   "name": "Primary (1st to 5th Class)"
@@ -65,13 +58,6 @@
  {
   "docstatus": 0,
   "doctype": "Education master",
-  "education": "B.Com",
-  "modified": "2023-09-26 11:57:13.036867",
-  "name": "B.Com"
- },
- {
-  "docstatus": 0,
-  "doctype": "Education master",
   "education": "Computer",
   "modified": "2023-09-26 11:57:21.532039",
   "name": "Computer"
@@ -82,5 +68,19 @@
   "education": "ITI/Technical",
   "modified": "2023-09-26 11:57:30.304896",
   "name": "ITI/Technical"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Education master",
+  "education": "B.Com",
+  "modified": "2023-09-26 11:57:13.036867",
+  "name": "B.Com"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Education master",
+  "education": "Below Primary",
+  "modified": "2023-09-26 11:54:19.288167",
+  "name": "Below Primary"
  }
 ]
