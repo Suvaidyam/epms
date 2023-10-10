@@ -26,7 +26,7 @@ fixtures = [
 ]
 
 # on session create allocate csc centre it important
-on_session_creation = "epms.middlewares.session_create.allocate_csc"
+# on_session_creation = "epms.middlewares.session_create.allocate_csc"
 
 # on_login = "epms.middlewares.session_create.allocate_free_credits"
 
