@@ -177,13 +177,6 @@
  {
   "docstatus": 0,
   "doctype": "Current location",
-  "modified": "2023-09-26 13:23:00.564160",
-  "name": "Basai Enclave",
-  "name_of_location": "Basai Enclave"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current location",
   "modified": "2023-09-26 13:18:22.057640",
   "name": "Others",
   "name_of_location": "Others"
@@ -205,6 +198,13 @@
  {
   "docstatus": 0,
   "doctype": "Current location",
+  "modified": "2023-09-26 13:24:09.313318",
+  "name": "Ravi Nagar",
+  "name_of_location": "Ravi Nagar"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current location",
   "modified": "2023-09-26 13:23:28.444920",
   "name": "Arjun Nagar",
   "name_of_location": "Arjun Nagar"
@@ -212,9 +212,9 @@
  {
   "docstatus": 0,
   "doctype": "Current location",
-  "modified": "2023-09-26 13:24:09.313318",
-  "name": "Ravi Nagar",
-  "name_of_location": "Ravi Nagar"
+  "modified": "2023-09-26 13:23:00.564160",
+  "name": "Basai Enclave",
+  "name_of_location": "Basai Enclave"
  },
  {
   "docstatus": 0,
