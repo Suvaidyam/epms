@@ -3,7 +3,6 @@ import frappe
 class Family:
     def create_family():
         new_doc = ""
-
         return new_doc
     
     def update_family():
