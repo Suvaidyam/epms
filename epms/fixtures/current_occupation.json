@@ -142,20 +142,6 @@
  {
   "docstatus": 0,
   "doctype": "Current Occupation",
-  "modified": "2023-09-26 13:07:06.191315",
-  "name": "Loading Unloading Worker",
-  "occupation": "Loading Unloading Worker"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 13:07:31.355495",
-  "name": "Micro Enterprise",
-  "occupation": "Micro Enterprise"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
   "modified": "2023-09-26 13:09:14.721444",
   "name": "NA",
   "occupation": "NA"
@@ -208,5 +194,19 @@
   "modified": "2023-09-26 13:09:22.033011",
   "name": "Others",
   "occupation": "Others"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-09-26 13:07:06.191315",
+  "name": "Loading Unloading Worker",
+  "occupation": "Loading Unloading Worker"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-09-26 13:07:31.355495",
+  "name": "Micro Enterprise",
+  "occupation": "Micro Enterprise"
  }
 ]

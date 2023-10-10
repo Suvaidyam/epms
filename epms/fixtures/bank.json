@@ -1,12 +1,5 @@
 [
  {
-  "bank_name": "No",
-  "docstatus": 0,
-  "doctype": "Bank",
-  "modified": "2023-09-26 12:47:27.653935",
-  "name": "No"
- },
- {
   "bank_name": "SBI",
   "docstatus": 0,
   "doctype": "Bank",
@@ -126,20 +119,6 @@
   "name": "Canara Bank Jan Dhan"
  },
  {
-  "bank_name": "BOI",
-  "docstatus": 0,
-  "doctype": "Bank",
-  "modified": "2023-09-26 12:52:16.840609",
-  "name": "BOI"
- },
- {
-  "bank_name": "BOI Jan Dhan",
-  "docstatus": 0,
-  "doctype": "Bank",
-  "modified": "2023-09-26 12:52:34.170844",
-  "name": "BOI Jan Dhan"
- },
- {
   "bank_name": "P & S Bank",
   "docstatus": 0,
   "doctype": "Bank",
@@ -154,6 +133,13 @@
   "name": "P & S Bank Jan Dhan"
  },
  {
+  "bank_name": "Others",
+  "docstatus": 0,
+  "doctype": "Bank",
+  "modified": "2023-09-26 12:53:33.319945",
+  "name": "Others"
+ },
+ {
   "bank_name": "IndusInd Bank",
   "docstatus": 0,
   "doctype": "Bank",
@@ -161,10 +147,24 @@
   "name": "IndusInd Bank"
  },
  {
-  "bank_name": "Others",
+  "bank_name": "No",
   "docstatus": 0,
   "doctype": "Bank",
-  "modified": "2023-09-26 12:53:33.319945",
-  "name": "Others"
+  "modified": "2023-09-26 12:47:27.653935",
+  "name": "No"
+ },
+ {
+  "bank_name": "BOI Jan Dhan",
+  "docstatus": 0,
+  "doctype": "Bank",
+  "modified": "2023-09-26 12:52:34.170844",
+  "name": "BOI Jan Dhan"
+ },
+ {
+  "bank_name": "BOI",
+  "docstatus": 0,
+  "doctype": "Bank",
+  "modified": "2023-09-26 12:52:16.840609",
+  "name": "BOI"
  }
 ]

@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_rename": 1,
  "autoname": "field:contact_number",
  "creation": "2023-09-16 13:25:15.574375",
  "default_view": "List",
@@ -10,7 +9,8 @@
  "field_order": [
   "head_of_family",
   "name_of_parents",
-  "contact_number"
+  "contact_number",
+  "csc"
  ],
  "fields": [
   {
@@ -39,6 +39,13 @@
    "label": "Contact Number",
    "read_only": 1,
    "unique": 1
+  },
+  {
+   "fieldname": "csc",
+   "fieldtype": "Link",
+   "label": "csc",
+   "options": "CSC",
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -48,7 +55,7 @@
    "link_fieldname": "family"
   }
  ],
- "modified": "2023-10-05 11:51:01.311882",
+ "modified": "2023-10-09 19:09:02.221114",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Primary Member",
