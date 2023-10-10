@@ -39,6 +39,7 @@ class Beneficiary(Document):
 			beneficiary.family = Primary_member.create_family
 			beneficiary.save()
 		else:
+			beneficiary.save()
 			print("CREATING CHILD BENEFICARY")
 	
 	def on_update(self):
