@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_import": 1,
- "autoname": "format:{MM}/{#####}",
+ "autoname": "format:{MMM}/{#####}",
  "creation": "2023-09-13 19:36:30.271397",
  "default_view": "List",
  "doctype": "DocType",
@@ -272,7 +272,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-10 12:47:38.701022",
+ "modified": "2023-10-11 13:10:38.288459",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",
