@@ -19,7 +19,7 @@
    "fieldname": "support_type",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Support Category",
+   "label": "Support category",
    "options": "Support Type",
    "reqd": 1
   },
@@ -28,7 +28,7 @@
    "fieldname": "specific_support_type",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Support Name",
+   "label": "Support name",
    "options": "Support",
    "reqd": 1
   },
@@ -44,7 +44,7 @@
    "fieldname": "action_taken",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Action Taken"
+   "label": "Action taken"
   },
   {
    "fieldname": "remarks",
@@ -73,7 +73,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-10-05 12:49:47.347752",
+ "modified": "2023-10-11 16:10:30.374980",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Support Child",
