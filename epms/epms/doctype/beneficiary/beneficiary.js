@@ -288,7 +288,7 @@ frappe.ui.form.on('Support Child', {
   //   // if(status ==="Rejected"){
   //   //   row.reason_of_rejection = 0
   //   // }
-  //   // frm.refresh_field('support_tab');
+    // frm.refresh_field('support_tab');
   // },
   support_table_add(frm, cdt, cdn) {
       let row = frappe.get_doc(cdt, cdn);
