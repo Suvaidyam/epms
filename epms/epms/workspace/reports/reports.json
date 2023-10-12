@@ -1,0 +1,86 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"fMnFYgrVea\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Reports</span>\",\"col\":12}},{\"id\":\"eSj1bGZGRb\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Current Location\",\"col\":3}},{\"id\":\"yg3bWUkwH5\",\"type\":\"spacer\",\"data\":{\"col\":9}},{\"id\":\"qPnh_efTPs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gender of Beneficaries\",\"col\":3}},{\"id\":\"unl0QVcqjH\",\"type\":\"spacer\",\"data\":{\"col\":9}},{\"id\":\"i7JpUl3Mzp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Education of Beneficiary\",\"col\":3}},{\"id\":\"S8MxNgyBIo\",\"type\":\"spacer\",\"data\":{\"col\":9}},{\"id\":\"ZEi36ESaoh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Beneficiaries Have Bank\",\"col\":3}},{\"id\":\"kZo0XM4NKE\",\"type\":\"spacer\",\"data\":{\"col\":9}},{\"id\":\"m0IQlaFTiy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"State Of Origin\",\"col\":3}},{\"id\":\"mHLqDqEgmG\",\"type\":\"spacer\",\"data\":{\"col\":6}},{\"id\":\"Ptf9OO6JXX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tracking Of Place Of Origin Of Beneficiaries\",\"col\":6}},{\"id\":\"rcz5cVzbJo\",\"type\":\"spacer\",\"data\":{\"col\":5}},{\"id\":\"PCFyg0JV56\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overall Tracking Of Beneficiaries\",\"col\":5}}]",
+ "creation": "2023-10-12 12:09:55.430267",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "table",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Reports",
+ "links": [],
+ "modified": "2023-10-12 14:10:25.216815",
+ "modified_by": "Administrator",
+ "module": "Epms",
+ "name": "Reports",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Admin"
+  },
+  {
+   "role": "MIS executive"
+  }
+ ],
+ "sequence_id": 23.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Beneficiaries Have Bank",
+   "link_to": "Beneficiaries have Bank",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "State Of Origin",
+   "link_to": "State Of Origin",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Tracking Of Place Of Origin Of Beneficiaries",
+   "link_to": "Tracking of place of origin of beneficiaries",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Current Location",
+   "link_to": "Current Location",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Education of Beneficiary",
+   "link_to": "Education of Beneficiary",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Overall Tracking Of Beneficiaries",
+   "link_to": "Overall tracking of Beneficiaries",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Gender of Beneficaries",
+   "link_to": "Gender of Beneficaries",
+   "type": "Report"
+  }
+ ],
+ "title": "Reports"
+}
