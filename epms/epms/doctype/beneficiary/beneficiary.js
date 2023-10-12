@@ -130,8 +130,6 @@ frappe.ui.form.on("Beneficiary", {
               },
             };
           }
-
-// DEFULTS DATE SET 
           frm.set_value('registration_date', frappe.datetime.get_today());
 	},
   state_of_origin: function(frm){
@@ -144,7 +142,7 @@ frappe.ui.form.on("Beneficiary", {
     }
     // clear dependent dropdowns values
     frm.set_value('block_of_origin', '')
-    frm.set_value('block_of_origin', '')
+    frm.set_value('district_of_origin', '')
   },
   district_of_origin: function(frm){
     frm.fields_dict["block_of_origin"].get_query = function (doc) {
@@ -175,6 +173,7 @@ frappe.ui.form.on("Beneficiary", {
       parentField.refresh();
     }else{
       parentField.df.hidden = 0;
+      frm.set_df_property('family', 'reqd', 1);
       parentField.refresh();
     }
   },
