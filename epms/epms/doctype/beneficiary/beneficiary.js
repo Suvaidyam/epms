@@ -98,14 +98,6 @@ frappe.ui.form.on("Beneficiary", {
     }else{
       frm.set_df_property('other_current_location', 'reqd', 0);
     }
-    let new_caste = frm.fields_dict['other_caste_category'];
-    if(frm.doc.caste === "Others"){
-      frm.set_df_property('other_caste_category', 'reqd', 1);
-      new_caste.df.hidden = 0;
-      new_caste.refresh();
-    }else{
-      frm.set_df_property('other_caste_category', 'reqd', 0);
-    }
     let new_sorce = frm.fields_dict['other_source_information_about_center'];
     if(frm.doc.source_information_about_center === "Others"){
       frm.set_df_property('other_source_information_about_center', 'reqd', 1);
@@ -233,18 +225,6 @@ frappe.ui.form.on("Beneficiary", {
       new_location.df.hidden = 1;
       frm.set_df_property('other_current_location', 'reqd', 0);
       new_location.refresh();
-    }
-  },
-  caste:function(frm){
-    var new_caste = frm.fields_dict['other_caste_category'];
-    if(frm.doc.caste === "Others"){
-      new_caste.df.hidden = 0;
-      frm.set_df_property('other_caste_category', 'reqd', 1);
-      new_caste.refresh();
-    }else{
-      new_caste.df.hidden = 1;
-      frm.set_df_property('other_caste_category', 'reqd', 0);
-      new_caste.refresh();
     }
   },
   source_information_about_center:function(frm){
