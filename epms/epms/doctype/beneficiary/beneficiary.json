@@ -28,7 +28,6 @@
   "district_of_origin",
   "block_of_origin",
   "caste",
-  "other_caste_category",
   "source_information_about_center",
   "other_source_information_about_center",
   "education",
@@ -251,12 +250,6 @@
    "label": "Add current location"
   },
   {
-   "fieldname": "other_caste_category",
-   "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Other caste category"
-  },
-  {
    "fieldname": "other_source_information_about_center",
    "fieldtype": "Data",
    "hidden": 1,
@@ -272,7 +265,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-11 16:15:34.414156",
+ "modified": "2023-10-12 10:22:42.353394",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",
