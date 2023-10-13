@@ -149,8 +149,7 @@
    "fieldname": "do_you_have_appointment_letter",
    "fieldtype": "Select",
    "label": "Do you have appointment letter?",
-   "options": "\nYes\nNo",
-   "reqd": 1
+   "options": "\nYes\nNo"
   },
   {
    "default": "No",
@@ -265,7 +264,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-12 10:22:42.353394",
+ "modified": "2023-10-13 14:48:38.646368",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",
