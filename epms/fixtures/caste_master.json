@@ -1,37 +1,37 @@
 [
  {
+  "caste": "OBC",
+  "docstatus": 0,
+  "doctype": "Caste master",
+  "modified": "2023-10-12 10:40:52.462332",
+  "name": "OBC"
+ },
+ {
+  "caste": "SC",
+  "docstatus": 0,
+  "doctype": "Caste master",
+  "modified": "2023-10-12 10:40:53.076269",
+  "name": "SC"
+ },
+ {
   "caste": "ST",
   "docstatus": 0,
   "doctype": "Caste master",
-  "modified": "2023-09-26 13:28:07.714068",
+  "modified": "2023-10-12 10:40:54.201639",
   "name": "ST"
  },
  {
   "caste": "Others",
   "docstatus": 0,
   "doctype": "Caste master",
-  "modified": "2023-09-26 13:28:16.614437",
+  "modified": "2023-10-12 10:42:20.218123",
   "name": "Others"
- },
- {
-  "caste": "SC",
-  "docstatus": 0,
-  "doctype": "Caste master",
-  "modified": "2023-09-26 13:28:03.116655",
-  "name": "SC"
- },
- {
-  "caste": "OBC",
-  "docstatus": 0,
-  "doctype": "Caste master",
-  "modified": "2023-09-26 13:27:57.673012",
-  "name": "OBC"
  },
  {
   "caste": "General",
   "docstatus": 0,
   "doctype": "Caste master",
-  "modified": "2023-09-26 13:27:52.721626",
+  "modified": "2023-10-12 10:40:51.438102",
   "name": "General"
  }
 ]
