@@ -20,10 +20,10 @@
  "docstatus": 0,
  "doctype": "Report",
  "filters": [],
- "idx": 21,
+ "idx": 26,
  "is_standard": "Yes",
  "letterhead": null,
- "modified": "2023-10-13 14:52:06.541833",
+ "modified": "2023-10-14 09:50:15.965020",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Education of Beneficiary",
@@ -40,6 +40,9 @@
   },
   {
    "role": "Admin"
+  },
+  {
+   "role": "MIS executive"
   }
  ]
 }

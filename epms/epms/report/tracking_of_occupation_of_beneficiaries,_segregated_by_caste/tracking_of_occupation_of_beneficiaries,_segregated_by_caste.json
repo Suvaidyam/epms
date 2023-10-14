@@ -29,10 +29,10 @@
    "wildcard_filter": 0
   }
  ],
- "idx": 0,
+ "idx": 3,
  "is_standard": "Yes",
  "letterhead": null,
- "modified": "2023-10-13 14:34:52.721511",
+ "modified": "2023-10-14 09:50:46.670231",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Tracking of Occupation of beneficiaries, segregated by Caste",
@@ -48,6 +48,9 @@
   },
   {
    "role": "Admin"
+  },
+  {
+   "role": "MIS executive"
   }
  ]
 }

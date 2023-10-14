@@ -8,10 +8,10 @@
  "dynamic_filters_json": "{}",
  "filters_json": "{}",
  "group_by_type": "Count",
- "idx": 0,
+ "idx": 4,
  "is_public": 0,
  "is_standard": 1,
- "modified": "2023-10-10 14:51:07.371687",
+ "modified": "2023-10-14 10:04:46.230430",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficary by Genders",
@@ -21,6 +21,9 @@
  "roles": [
   {
    "role": "Admin"
+  },
+  {
+   "role": "MIS executive"
   }
  ],
  "time_interval": "Yearly",
