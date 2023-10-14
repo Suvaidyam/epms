@@ -10,6 +10,7 @@
   "status",
   "reason_of_rejection",
   "date_of_completion",
+  "date_of_rejection",
   "completion_certificate",
   "action_taken",
   "remarks"
@@ -67,12 +68,18 @@
    "fieldname": "completion_certificate",
    "fieldtype": "Attach",
    "label": "Completion certificate"
+  },
+  {
+   "fieldname": "date_of_rejection",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of rejection"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-10-11 19:04:59.989139",
+ "modified": "2023-10-14 12:10:05.513897",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Support Child",
