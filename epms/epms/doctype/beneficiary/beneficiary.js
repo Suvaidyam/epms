@@ -132,6 +132,11 @@ frappe.ui.form.on("Beneficiary", {
           }
           frm.set_value('registration_date', frappe.datetime.get_today());
 	},
+  setup(frm) {
+    frm.set_query("current_location", () => {
+      return { page_length: 100 };
+    });
+  },
   state_of_origin: function(frm){
     frm.fields_dict["district_of_origin"].get_query = function (doc) {
       return {
