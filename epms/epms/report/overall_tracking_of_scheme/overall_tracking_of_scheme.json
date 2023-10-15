@@ -4,14 +4,14 @@
   {
    "fieldname": "support_type",
    "fieldtype": "Link",
-   "label": "Support Type",
+   "label": "Support category",
    "options": "Support Type",
    "width": 0
   },
   {
    "fieldname": "support",
    "fieldtype": "Link",
-   "label": "Support",
+   "label": "Support name",
    "options": "Support",
    "width": 0
   },
@@ -25,6 +25,12 @@
    "fieldname": "achieved_count",
    "fieldtype": "Int",
    "label": "Achieved",
+   "width": 0
+  },
+  {
+   "fieldname": "rejected_count",
+   "fieldtype": "Int",
+   "label": "Rejected",
    "width": 0
   },
   {
@@ -59,13 +65,13 @@
  "idx": 0,
  "is_standard": "Yes",
  "letterhead": null,
- "modified": "2023-10-12 17:24:23.284232",
+ "modified": "2023-10-12 17:45:21.887048",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Overall tracking of scheme",
  "owner": "Administrator",
  "prepared_report": 0,
- "query": "SELECT \n    s.support,\n    s.support_type,\n    (select count(parent) from `tabSupport Child` _sc where _sc.specific_support_type = s.support ) as enquiry_count,\n    (select count(parent) from `tabSupport Child` _sc where _sc.specific_support_type = s.support and status in ('Rejected','Completed') ) as achieved_count,\n    (select count(parent) from `tabSupport Child` _sc where _sc.specific_support_type = s.support and status in ('Open','Under Process','Form Submitted') ) as pending_count\nFROM\n    `tabSupport` s\n",
+ "query": "SELECT \n    s.support,\n    s.support_type,\n    (select count(parent) from `tabSupport Child` _sc where _sc.specific_support_type = s.support ) as enquiry_count,\n    (select count(parent) from `tabSupport Child` _sc where _sc.specific_support_type = s.support and status = 'Completed' ) as achieved_count,\n    (select count(parent) from `tabSupport Child` _sc where _sc.specific_support_type = s.support and status = 'Rejected' ) as rejected_count,\n    (select count(parent) from `tabSupport Child` _sc where _sc.specific_support_type = s.support and status in ('','Open','Under Process','Form Submitted') ) as pending_count\nFROM\n    `tabSupport` s\n",
  "ref_doctype": "Support",
  "report_name": "Overall tracking of scheme",
  "report_type": "Query Report",
