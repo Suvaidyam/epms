@@ -2,28 +2,28 @@
  {
   "docstatus": 0,
   "doctype": "Source information about center",
-  "modified": "2023-09-26 13:31:20.413189",
-  "name": "Self",
-  "source_information_about_center": "Self"
- },
- {
-  "docstatus": 0,
-  "doctype": "Source information about center",
-  "modified": "2023-09-26 13:31:57.188547",
+  "modified": "2023-10-11 19:41:48.671604",
   "name": "Others",
   "source_information_about_center": "Others"
  },
  {
   "docstatus": 0,
   "doctype": "Source information about center",
-  "modified": "2023-09-26 13:31:13.183066",
+  "modified": "2023-10-11 19:42:23.485410",
   "name": "Direct Mobilization",
   "source_information_about_center": "Direct Mobilization"
  },
  {
   "docstatus": 0,
   "doctype": "Source information about center",
-  "modified": "2023-09-26 13:31:51.083311",
+  "modified": "2023-10-11 19:43:06.893106",
+  "name": "Self",
+  "source_information_about_center": "Self"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Source information about center",
+  "modified": "2023-10-11 19:42:06.489165",
   "name": "Collectivisation",
   "source_information_about_center": "Collectivisation"
  }

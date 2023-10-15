@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"fMnFYgrVea\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Reports</span>\",\"col\":12}},{\"id\":\"eSj1bGZGRb\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Current Location\",\"col\":3}},{\"id\":\"yg3bWUkwH5\",\"type\":\"spacer\",\"data\":{\"col\":9}},{\"id\":\"qPnh_efTPs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gender of Beneficaries\",\"col\":3}},{\"id\":\"unl0QVcqjH\",\"type\":\"spacer\",\"data\":{\"col\":9}},{\"id\":\"i7JpUl3Mzp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Education of Beneficiary\",\"col\":3}},{\"id\":\"S8MxNgyBIo\",\"type\":\"spacer\",\"data\":{\"col\":9}},{\"id\":\"ZEi36ESaoh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Beneficiaries Have Bank\",\"col\":3}},{\"id\":\"kZo0XM4NKE\",\"type\":\"spacer\",\"data\":{\"col\":9}},{\"id\":\"m0IQlaFTiy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"State Of Origin\",\"col\":3}},{\"id\":\"mHLqDqEgmG\",\"type\":\"spacer\",\"data\":{\"col\":6}},{\"id\":\"Ptf9OO6JXX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tracking Of Place Of Origin Of Beneficiaries\",\"col\":6}},{\"id\":\"rcz5cVzbJo\",\"type\":\"spacer\",\"data\":{\"col\":5}},{\"id\":\"PCFyg0JV56\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overall Tracking Of Beneficiaries\",\"col\":5}}]",
+ "content": "[{\"id\":\"fMnFYgrVea\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Reports</span>\",\"col\":12}},{\"id\":\"eSj1bGZGRb\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Current Location\",\"col\":3}},{\"id\":\"yg3bWUkwH5\",\"type\":\"spacer\",\"data\":{\"col\":9}},{\"id\":\"qPnh_efTPs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gender of Beneficaries\",\"col\":3}},{\"id\":\"unl0QVcqjH\",\"type\":\"spacer\",\"data\":{\"col\":9}},{\"id\":\"i7JpUl3Mzp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Education of Beneficiary\",\"col\":3}},{\"id\":\"S8MxNgyBIo\",\"type\":\"spacer\",\"data\":{\"col\":9}},{\"id\":\"ZEi36ESaoh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Beneficiaries Have Bank\",\"col\":3}},{\"id\":\"kZo0XM4NKE\",\"type\":\"spacer\",\"data\":{\"col\":9}},{\"id\":\"m0IQlaFTiy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"State Of Origin\",\"col\":3}},{\"id\":\"mHLqDqEgmG\",\"type\":\"spacer\",\"data\":{\"col\":6}},{\"id\":\"Ptf9OO6JXX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tracking Of Place Of Origin Of Beneficiaries\",\"col\":6}},{\"id\":\"rcz5cVzbJo\",\"type\":\"spacer\",\"data\":{\"col\":5}},{\"id\":\"PCFyg0JV56\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overall Tracking Of Beneficiaries\",\"col\":5}},{\"id\":\"5FMfA3ARFO\",\"type\":\"spacer\",\"data\":{\"col\":6}},{\"id\":\"Lpb2-Pfw_0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tracking of Occupation of beneficiaries, segregated by Caste\",\"col\":11}},{\"id\":\"tMcc9qKLgj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overall tracking of scheme\",\"col\":3}}]",
  "creation": "2023-10-12 12:09:55.430267",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Reports",
  "links": [],
- "modified": "2023-10-12 14:10:25.216815",
+ "modified": "2023-10-13 15:33:24.381910",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Reports",
@@ -56,6 +56,13 @@
   {
    "color": "Grey",
    "doc_view": "List",
+   "label": "Overall tracking of scheme",
+   "link_to": "Overall tracking of scheme",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
    "label": "Current Location",
    "link_to": "Current Location",
    "type": "Report"
@@ -79,6 +86,13 @@
    "doc_view": "List",
    "label": "Gender of Beneficaries",
    "link_to": "Gender of Beneficaries",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Tracking of Occupation of beneficiaries, segregated by Caste",
+   "link_to": "Tracking of Occupation of beneficiaries, segregated by Caste",
    "type": "Report"
   }
  ],

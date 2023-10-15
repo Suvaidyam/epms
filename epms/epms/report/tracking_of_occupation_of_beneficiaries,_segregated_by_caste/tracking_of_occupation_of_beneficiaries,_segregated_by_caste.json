@@ -1,46 +1,56 @@
 {
- "add_total_row": 1,
- "columns": [
-  {
-   "fieldname": "occupation",
-   "fieldtype": "Link",
-   "label": "Occupation",
-   "options": "Current Occupation",
-   "width": 0
-  },
-  {
-   "fieldname": "count",
-   "fieldtype": "Int",
-   "label": "No. of Beneficiary",
-   "width": 0
-  }
- ],
- "creation": "2023-10-12 17:18:47.993601",
- "disabled": 0,
- "docstatus": 0,
- "doctype": "Report",
- "filters": [
-  {
-   "fieldname": "caste",
-   "fieldtype": "Link",
-   "label": "Caste",
-   "mandatory": 0,
-   "options": "Caste master",
-   "wildcard_filter": 0
-  }
- ],
- "idx": 0,
- "is_standard": "Yes",
- "letterhead": null,
- "modified": "2023-10-12 17:48:53.653025",
- "modified_by": "Administrator",
- "module": "Epms",
- "name": "Tracking of Occupation of beneficiaries, segregated by Caste",
- "owner": "Administrator",
- "prepared_report": 0,
- "query": "select\n    _o.occupation,\n    count(_b.name) as count\nfrom\n    `tabCurrent Occupation` _o\nleft join `tabBeneficiary` _b on _b.occupation = _o.name\ngroup by _o.occupation",
- "ref_doctype": "Current Occupation",
- "report_name": "Tracking of Occupation of beneficiaries, segregated by Caste",
- "report_type": "Query Report",
- "roles": []
+    "add_total_row": 1,
+    "columns": [
+        {
+            "fieldname": "occupation",
+            "fieldtype": "Link",
+            "label": "Occupation",
+            "options": "Current Occupation",
+            "width": 0
+        },
+        {
+            "fieldname": "count",
+            "fieldtype": "Int",
+            "label": "No. of Beneficiary",
+            "width": 0
+        }
+    ],
+    "creation": "2023-10-12 17:18:47.993601",
+    "disabled": 0,
+    "docstatus": 0,
+    "doctype": "Report",
+    "filters": [
+        {
+            "fieldname": "caste",
+            "fieldtype": "Link",
+            "label": "Caste",
+            "mandatory": 0,
+            "options": "Caste master",
+            "wildcard_filter": 0
+        }
+    ],
+    "idx": 3,
+    "is_standard": "Yes",
+    "letterhead": null,
+    "modified": "2023-10-12 17:48:53.653025",
+    "modified_by": "Administrator",
+    "module": "Epms",
+    "name": "Tracking of Occupation of beneficiaries, segregated by Caste",
+    "owner": "Administrator",
+    "prepared_report": 0,
+    "query": "select\n    _o.occupation,\n    count(_b.name) as count\nfrom\n    `tabCurrent Occupation` _o\nleft join `tabBeneficiary` _b on _b.occupation = _o.name\nwhere caste = %(caste)s\ngroup by  _o.occupation\n",
+    "ref_doctype": "Current Occupation",
+    "report_name": "Tracking of Occupation of beneficiaries, segregated by Caste",
+    "report_type": "Query Report",
+    "roles": [
+        {
+            "role": "MIS executive"
+        },
+        {
+            "role": "Admin"
+        },
+        {
+            "role": "MIS executive"
+        }
+    ]
 }

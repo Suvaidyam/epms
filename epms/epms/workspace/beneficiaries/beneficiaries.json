@@ -1,37 +1,54 @@
 {
- "charts": [],
- "content": "[{\"id\":\"WrcmBci23y\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"No. of beneficiaries\",\"col\":3}},{\"id\":\"G5d2w-D20O\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"No. of primary members\",\"col\":3}},{\"id\":\"f4PFE3zYkF\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
- "creation": "2023-09-15 20:25:51.986386",
- "custom_blocks": [],
- "docstatus": 0,
- "doctype": "Workspace",
- "for_user": "",
- "hide_custom": 0,
- "icon": "assign",
- "idx": 1,
- "is_hidden": 0,
- "label": "Beneficiaries",
- "links": [],
- "modified": "2023-10-13 18:20:14.520696",
- "modified_by": "Administrator",
- "module": "Epms",
- "name": "Beneficiaries",
- "number_cards": [
-  {
-   "label": "No. of beneficiaries",
-   "number_card_name": "No of Beneficiary"
-  },
-  {
-   "label": "No. of primary members",
-   "number_card_name": "No of Family"
-  }
- ],
- "owner": "Administrator",
- "parent_page": "",
- "public": 1,
- "quick_lists": [],
- "roles": [],
- "sequence_id": 1.0,
- "shortcuts": [],
- "title": "Beneficiaries"
+    "charts": [
+        {
+            "chart_name": "Beneficiaries have Bank",
+            "label": "Beneficiaries have bank"
+        },
+        {
+            "chart_name": "Education of Beneficiary",
+            "label": "Education of beneficiary"
+        },
+        {
+            "chart_name": "Beneficary by Genders",
+            "label": "Beneficary by genders"
+        },
+        {
+            "chart_name": "Current location",
+            "label": "Current location"
+        }
+    ],
+    "content": "[{\"id\":\"WrcmBci23y\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"No. of beneficiaries\",\"col\":3}},{\"id\":\"G5d2w-D20O\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"No. of primary members\",\"col\":3}},{\"id\":\"f4PFE3zYkF\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"onYOP_YtCL\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Beneficiaries have bank\",\"col\":6}},{\"id\":\"Q5gyoUcjCa\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Beneficary by genders\",\"col\":6}},{\"id\":\"-L2mwpU7hE\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Education of beneficiary\",\"col\":12}},{\"id\":\"X1ME6el2Qj\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Current location\",\"col\":12}}]",
+    "creation": "2023-09-15 20:25:51.986386",
+    "custom_blocks": [],
+    "docstatus": 0,
+    "doctype": "Workspace",
+    "for_user": "",
+    "hide_custom": 0,
+    "icon": "assign",
+    "idx": 1,
+    "is_hidden": 0,
+    "label": "Beneficiaries",
+    "links": [],
+    "modified": "2023-10-14 09:33:50.708721",
+    "modified_by": "Administrator",
+    "module": "Epms",
+    "name": "Beneficiaries",
+    "number_cards": [
+        {
+            "label": "No. of beneficiaries",
+            "number_card_name": "No of Beneficiary"
+        },
+        {
+            "label": "No. of primary members",
+            "number_card_name": "No of Family"
+        }
+    ],
+    "owner": "Administrator",
+    "parent_page": "",
+    "public": 1,
+    "quick_lists": [],
+    "roles": [],
+    "sequence_id": 1.0,
+    "shortcuts": [],
+    "title": "Beneficiaries"
 }

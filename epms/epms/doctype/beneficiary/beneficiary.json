@@ -18,6 +18,7 @@
   "occupation",
   "new_occupation",
   "do_you_have_appointment_letter",
+  "do_you_have_bank_account",
   "existing_bank_account",
   "other_bank_account",
   "csc",
@@ -101,13 +102,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "existing_bank_account",
-   "fieldtype": "Link",
-   "label": "Existing bank account",
-   "options": "Bank",
-   "reqd": 1
-  },
-  {
    "fieldname": "source_information_about_center",
    "fieldtype": "Link",
    "label": "Source information about center",
@@ -149,8 +143,7 @@
    "fieldname": "do_you_have_appointment_letter",
    "fieldtype": "Select",
    "label": "Do you have appointment letter?",
-   "options": "\nYes\nNo",
-   "reqd": 1
+   "options": "\nYes\nNo"
   },
   {
    "default": "No",
@@ -261,11 +254,25 @@
    "hidden": 1,
    "label": "CSC",
    "options": "CSC"
+  },
+  {
+   "fieldname": "do_you_have_bank_account",
+   "fieldtype": "Select",
+   "label": "Do you have bank account",
+   "options": "\nYes\nNo",
+   "reqd": 1
+  },
+  {
+   "fieldname": "existing_bank_account",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Existing bank account",
+   "options": "Bank"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-12 10:22:42.353394",
+ "modified": "2023-10-14 13:21:10.460752",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",

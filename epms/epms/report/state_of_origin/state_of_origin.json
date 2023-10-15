@@ -20,10 +20,10 @@
  "docstatus": 0,
  "doctype": "Report",
  "filters": [],
- "idx": 0,
+ "idx": 7,
  "is_standard": "Yes",
  "letterhead": null,
- "modified": "2023-10-10 16:06:34.152845",
+ "modified": "2023-10-13 10:53:36.058589",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "State Of Origin",
@@ -39,6 +39,9 @@
   },
   {
    "role": "Admin"
+  },
+  {
+   "role": "MIS executive"
   }
  ]
 }

@@ -177,6 +177,17 @@ frappe.ui.form.on("Beneficiary", {
       parentField.refresh();
     }
   },
+  do_you_have_bank_account:function(frm){
+    var have_bank = frm.fields_dict['existing_bank_account'];
+    frm.set_df_property('existing_bank_account', 'reqd', 1);
+    if(frm.doc.do_you_have_bank_account === "Yes"){
+    have_bank.df.hidden = 0;
+    have_bank.refresh();
+    }else{
+      have_bank.df.hidden = 1;
+      have_bank.refresh();
+    }
+  },
   date_of_birth:function(frm){
     let dob = frm.doc.date_of_birth
     if(dob){  

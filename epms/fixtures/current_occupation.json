@@ -2,210 +2,203 @@
  {
   "docstatus": 0,
   "doctype": "Current Occupation",
-  "modified": "2023-09-26 12:40:35.175101",
-  "name": "Construction Worker (under Contractor)",
-  "occupation": "Construction Worker (under Contractor)"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 12:40:43.447100",
-  "name": "Construction Worker Carpenter",
-  "occupation": "Construction Worker Carpenter"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 12:40:51.327916",
-  "name": "Construction Worker Electrician",
-  "occupation": "Construction Worker Electrician"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 12:41:05.036235",
-  "name": "Construction Worker Labour Market",
-  "occupation": "Construction Worker Labour Market"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 12:41:12.072257",
-  "name": "Construction Worker Painter",
-  "occupation": "Construction Worker Painter"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 12:41:19.237408",
-  "name": "Construction Worker Plumber",
-  "occupation": "Construction Worker Plumber"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 12:41:25.687769",
-  "name": "Delivery Person",
-  "occupation": "Delivery Person"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 12:41:33.165561",
-  "name": "Domestic Help",
-  "occupation": "Domestic Help"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 12:41:50.306011",
-  "name": "Driver Private",
-  "occupation": "Driver Private"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 12:42:00.194829",
-  "name": "Driver Public",
-  "occupation": "Driver Public"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 13:02:43.502823",
-  "name": "Factory Worker Automobile Helper",
-  "occupation": "Factory Worker Automobile Helper"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 13:03:06.320157",
-  "name": "Factory Worker Automobile Technician",
-  "occupation": "Factory Worker Automobile Technician"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 13:03:35.352010",
-  "name": "Factory Worker Garment Helper",
-  "occupation": "Factory Worker Garment Helper"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 13:04:00.689197",
-  "name": "Factory Worker Garment Technician",
-  "occupation": "Factory Worker Garment Technician"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 13:04:21.976605",
-  "name": "Factory Worker Others Helper",
-  "occupation": "Factory Worker Others Helper"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 13:04:48.196110",
-  "name": "Factory Worker Others Technician",
-  "occupation": "Factory Worker Others Technician"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 13:05:33.437037",
-  "name": "Form Separately Filled",
-  "occupation": "Form Separately Filled"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 13:06:07.107156",
-  "name": "Home Based Garment Worker",
-  "occupation": "Home Based Garment Worker"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 13:06:17.044952",
-  "name": "Home Maker",
-  "occupation": "Home Maker"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 13:06:42.627532",
-  "name": "Hotel Worker Helper",
-  "occupation": "Hotel Worker Helper"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 13:09:34.394916",
-  "name": "Out of School",
-  "occupation": "Out of School"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 13:09:51.675119",
-  "name": "Security Guard",
-  "occupation": "Security Guard"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 13:10:05.296594",
-  "name": "Shop Worker",
-  "occupation": "Shop Worker"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 13:10:24.458659",
-  "name": "Street Vendor",
-  "occupation": "Street Vendor"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 13:10:32.395621",
-  "name": "Student",
-  "occupation": "Student"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 13:11:10.413029",
-  "name": "Unemployed",
-  "occupation": "Unemployed"
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-09-26 13:09:22.033011",
+  "modified": "2023-10-11 15:17:13.366025",
   "name": "Others",
   "occupation": "Others"
  },
  {
   "docstatus": 0,
   "doctype": "Current Occupation",
-  "modified": "2023-09-26 13:09:14.721444",
-  "name": "NA",
-  "occupation": "NA"
+  "modified": "2023-10-11 15:17:13.388538",
+  "name": "Unemployed",
+  "occupation": "Unemployed"
  },
  {
   "docstatus": 0,
   "doctype": "Current Occupation",
-  "modified": "2023-09-26 13:07:06.191315",
+  "modified": "2023-10-11 15:17:13.406774",
+  "name": "Student",
+  "occupation": "Student"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:13.426035",
+  "name": "Street Vendor",
+  "occupation": "Street Vendor"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:13.448203",
+  "name": "Shop Worker",
+  "occupation": "Shop Worker"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:13.466894",
+  "name": "Security Guard",
+  "occupation": "Security Guard"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:13.484355",
+  "name": "Out of School",
+  "occupation": "Out of School"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:13.521027",
   "name": "Loading Unloading Worker",
   "occupation": "Loading Unloading Worker"
  },
  {
   "docstatus": 0,
   "doctype": "Current Occupation",
-  "modified": "2023-09-26 13:07:31.355495",
+  "modified": "2023-10-11 15:17:13.539684",
+  "name": "Hotel Worker Helper",
+  "occupation": "Hotel Worker Helper"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:13.557481",
+  "name": "Home Maker",
+  "occupation": "Home Maker"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:13.579462",
+  "name": "Home Based Garment Worker",
+  "occupation": "Home Based Garment Worker"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:13.607813",
+  "name": "Form Separately Filled",
+  "occupation": "Form Separately Filled"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:13.627882",
+  "name": "Factory Worker Others Technician",
+  "occupation": "Factory Worker Others Technician"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:13.649776",
+  "name": "Factory Worker Others Helper",
+  "occupation": "Factory Worker Others Helper"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:13.671985",
+  "name": "Factory Worker Garment Technician",
+  "occupation": "Factory Worker Garment Technician"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:13.709179",
+  "name": "Factory Worker Garment Helper",
+  "occupation": "Factory Worker Garment Helper"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:13.771822",
+  "name": "Factory Worker Automobile Technician",
+  "occupation": "Factory Worker Automobile Technician"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:13.811041",
+  "name": "Factory Worker Automobile Helper",
+  "occupation": "Factory Worker Automobile Helper"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:13.842488",
+  "name": "Driver Public",
+  "occupation": "Driver Public"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:13.864962",
+  "name": "Driver Private",
+  "occupation": "Driver Private"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:13.935049",
+  "name": "Domestic Help",
+  "occupation": "Domestic Help"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:13.970437",
+  "name": "Delivery Person",
+  "occupation": "Delivery Person"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:13.998387",
+  "name": "Construction Worker Plumber",
+  "occupation": "Construction Worker Plumber"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:14.020949",
+  "name": "Construction Worker Painter",
+  "occupation": "Construction Worker Painter"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:14.040508",
+  "name": "Construction Worker Labour Market",
+  "occupation": "Construction Worker Labour Market"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:14.067179",
+  "name": "Construction Worker Electrician",
+  "occupation": "Construction Worker Electrician"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:14.085045",
+  "name": "Construction Worker Carpenter",
+  "occupation": "Construction Worker Carpenter"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:14.101946",
+  "name": "Construction Worker (under Contractor)",
+  "occupation": "Construction Worker (under Contractor)"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:13.502572",
   "name": "Micro Enterprise",
   "occupation": "Micro Enterprise"
  }
