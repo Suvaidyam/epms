@@ -284,10 +284,19 @@ frappe.ui.form.on("Beneficiary", {
 // ********************* SUPERT CHILD Table***********************
 frappe.ui.form.on('Support Child', {
   form_render(frm){
-    console.log("global_data",global_data)
+
   },
   
-  refresh(frm){},
+  refresh(frm){
+    frm.set_query("specific_support_type", () => {
+      return { page_length: 1000 };
+    });
+  },
+  specific_support_type:function(frm){
+    frm.set_query("specific_support_type", () => {
+      return { page_length: 1000 };
+    });
+  },
   // status:function(frm, cdt, cdn){
   //   let row = frappe.get_doc(cdt, cdn);
   //   console.log("Kk", row)
