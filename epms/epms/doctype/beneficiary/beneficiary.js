@@ -134,9 +134,34 @@ frappe.ui.form.on("Beneficiary", {
 	},
   setup(frm) {
     frm.set_query("current_location", () => {
-      return { page_length: 100 };
+      return { page_length: 1000 };
+    });
+    frm.set_query("occupation", () => {
+      return { page_length: 1000 };
+    });
+    frm.set_query("existing_bank_account", () => {
+      return { page_length: 1000 };
+    });
+    frm.set_query("state_of_origin", () => {
+      return { page_length: 1000 };
+    });
+    frm.set_query("district_of_origin", () => {
+      return { page_length: 1000 };
+    });
+    frm.set_query("block_of_origin", () => {
+      return { page_length: 1000 };
+    });
+    frm.set_query("caste", () => {
+      return { page_length: 1000 };
+    });
+    frm.set_query("source_information_about_center", () => {
+      return { page_length: 1000 };
+    });
+    frm.set_query("education", () => {
+      return { page_length: 1000 };
     });
   },
+  
   state_of_origin: function(frm){
     frm.fields_dict["district_of_origin"].get_query = function (doc) {
       return {

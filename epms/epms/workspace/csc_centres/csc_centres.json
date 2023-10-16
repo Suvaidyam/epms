@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"zMKy32sVVb\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Csc Centre\",\"col\":12}}]",
+ "content": "[{\"id\":\"zMKy32sVVb\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"CSC centres\",\"col\":12}}]",
  "creation": "2023-10-09 12:51:50.431975",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "CSC centres",
  "links": [],
- "modified": "2023-10-12 12:10:18.071240",
+ "modified": "2023-10-16 10:17:13.647261",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "CSC centres",
@@ -24,7 +24,7 @@
  "quick_lists": [
   {
    "document_type": "CSC",
-   "label": "Csc Centre"
+   "label": "CSC centres"
   }
  ],
  "roles": [
