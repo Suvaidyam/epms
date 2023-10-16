@@ -18,17 +18,34 @@
  "disabled": 0,
  "docstatus": 0,
  "doctype": "Report",
- "filters": [],
+ "filters": [
+  {
+   "default": "01-10-2023",
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From date",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  },
+  {
+   "default": "30-10-2023",
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To date",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  }
+ ],
  "idx": 16,
  "is_standard": "Yes",
  "letterhead": null,
- "modified": "2023-10-14 10:00:24.222825",
+ "modified": "2023-10-16 12:01:44.904521",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Overall tracking of Beneficiaries",
  "owner": "Administrator",
  "prepared_report": 0,
- "query": "SELECT 'No of beneficiaries reached' AS category, COUNT(name) AS count FROM tabBeneficiary\nUNION\nSELECT 'No of families reached' AS category, COUNT(name) AS count FROM `tabPrimary Member`;\n",
+ "query": "SELECT 'No of beneficiaries reached' AS category, COUNT(name) AS count\nFROM tabBeneficiary\nWHERE registration_date >= %(from_date)s AND registration_date <= %(to_date)s\nOR ('from_date' IS NULL OR 'to_date' IS NULL)\nUNION\nSELECT 'No of families reached' AS category, COUNT(name) AS count\nFROM `tabPrimary Member`\nWHERE creation >= %(from_date)s AND creation <= %(to_date)s\nOR ('from_date' IS NULL OR 'to_date' IS NULL);\n",
  "ref_doctype": "Beneficiary",
  "report_name": "Overall tracking of Beneficiaries",
  "report_type": "Query Report",
