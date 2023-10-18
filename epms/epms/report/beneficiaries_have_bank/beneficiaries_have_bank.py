@@ -21,7 +21,7 @@ def execute(filters=None):
 		}
 	]
 
-	bank_account_data = frappe.get_all("Beneficiary" , fields=["do_you_have_bank_account"])
+	bank_account_data = frappe.get_all("Beneficiary",filters=filters, fields=["do_you_have_bank_account as have_account",'count(name) as count'], group_by='do_you_have_bank_account')
 
 	have_bank_account = 0
 	have_not_bank_account = 0

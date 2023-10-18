@@ -1,27 +1,27 @@
 {
  "charts": [
   {
-   "chart_name": "Beneficary by Genders",
-   "label": "Gender composition"
+   "chart_name": "Education of Beneficiary",
+   "label": "Education composition"
   },
   {
    "chart_name": "State of origin",
    "label": "State of origin"
   },
   {
+   "chart_name": "Current location",
+   "label": "Current location"
+  },
+  {
+   "chart_name": "Beneficary by Genders",
+   "label": "Gender composition"
+  },
+  {
    "chart_name": "Beneficiaries have Bank",
    "label": "Bank account details"
-  },
-  {
-   "chart_name": "Education of Beneficiary",
-   "label": "Education composition"
-  },
-  {
-   "chart_name": "Current location",
-   "label": "Current location "
   }
  ],
- "content": "[{\"id\":\"WrcmBci23y\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of beneficiaries\",\"col\":6}},{\"id\":\"G5d2w-D20O\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of families reached\",\"col\":6}},{\"id\":\"f4PFE3zYkF\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"onYOP_YtCL\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Bank account details\",\"col\":6}},{\"id\":\"Q5gyoUcjCa\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Gender composition\",\"col\":6}},{\"id\":\"-L2mwpU7hE\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Education composition\",\"col\":12}},{\"id\":\"fYASpFlD3y\",\"type\":\"chart\",\"data\":{\"chart_name\":\"State of origin\",\"col\":12}},{\"id\":\"X1ME6el2Qj\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Current location \",\"col\":12}}]",
+ "content": "[{\"id\":\"nSyCLnHvUy\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of Beneficiaries\",\"col\":6}},{\"id\":\"EXmth7zOaZ\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of families\",\"col\":6}},{\"id\":\"UjlosovxUu\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of Camps\",\"col\":6}},{\"id\":\"i7cx2NgbOP\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total number of participants in camp\",\"col\":6}},{\"id\":\"936LL1B_Cb\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Gender composition\",\"col\":6}},{\"id\":\"nSPB_q_UIh\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Bank account details\",\"col\":6}},{\"id\":\"TROMGsPZq2\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Education composition\",\"col\":12}},{\"id\":\"PigjIhLP5C\",\"type\":\"chart\",\"data\":{\"chart_name\":\"State of origin\",\"col\":12}},{\"id\":\"FkxHXNCSQe\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Current location\",\"col\":12}}]",
  "creation": "2023-09-15 20:25:51.986386",
  "custom_blocks": [],
  "docstatus": 0,
@@ -33,18 +33,26 @@
  "is_hidden": 0,
  "label": "Beneficiaries",
  "links": [],
- "modified": "2023-10-16 10:51:12.413607",
+ "modified": "2023-10-17 16:16:17.465005",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiaries",
  "number_cards": [
   {
-   "label": "Number of beneficiaries",
+   "label": "Number of Beneficiaries",
    "number_card_name": "No of Beneficiary"
   },
   {
-   "label": "Number of families reached",
+   "label": "Total number of participants in camp",
+   "number_card_name": "Total no of participant in camp"
+  },
+  {
+   "label": "Number of families",
    "number_card_name": "No of Family"
+  },
+  {
+   "label": "Number of Camps",
+   "number_card_name": "No. of camp"
   }
  ],
  "owner": "Administrator",
