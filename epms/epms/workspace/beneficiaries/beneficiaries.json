@@ -13,15 +13,15 @@
    "label": "Current location"
   },
   {
-   "chart_name": "Beneficary by Genders",
-   "label": "Gender composition"
+   "chart_name": "Beneficary have bank account",
+   "label": "Beneficary have bank account"
   },
   {
-   "chart_name": "Beneficiaries have Bank",
-   "label": "Bank account details"
+   "chart_name": "Beneficary by Genders",
+   "label": "Gender composition"
   }
  ],
- "content": "[{\"id\":\"nSyCLnHvUy\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of Beneficiaries\",\"col\":6}},{\"id\":\"EXmth7zOaZ\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of families\",\"col\":6}},{\"id\":\"UjlosovxUu\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of Camps\",\"col\":6}},{\"id\":\"i7cx2NgbOP\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total number of participants in camp\",\"col\":6}},{\"id\":\"936LL1B_Cb\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Gender composition\",\"col\":6}},{\"id\":\"nSPB_q_UIh\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Bank account details\",\"col\":6}},{\"id\":\"TROMGsPZq2\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Education composition\",\"col\":12}},{\"id\":\"PigjIhLP5C\",\"type\":\"chart\",\"data\":{\"chart_name\":\"State of origin\",\"col\":12}},{\"id\":\"FkxHXNCSQe\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Current location\",\"col\":12}}]",
+ "content": "[{\"id\":\"nSyCLnHvUy\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of Beneficiaries\",\"col\":6}},{\"id\":\"EXmth7zOaZ\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of families\",\"col\":6}},{\"id\":\"UjlosovxUu\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of Camps\",\"col\":6}},{\"id\":\"i7cx2NgbOP\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total number of participants in camp\",\"col\":6}},{\"id\":\"936LL1B_Cb\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Gender composition\",\"col\":6}},{\"id\":\"-2CMMxIOyZ\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Beneficary have bank account\",\"col\":6}},{\"id\":\"TROMGsPZq2\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Education composition\",\"col\":12}},{\"id\":\"PigjIhLP5C\",\"type\":\"chart\",\"data\":{\"chart_name\":\"State of origin\",\"col\":12}},{\"id\":\"FkxHXNCSQe\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Current location\",\"col\":12}}]",
  "creation": "2023-09-15 20:25:51.986386",
  "custom_blocks": [],
  "docstatus": 0,
@@ -33,7 +33,7 @@
  "is_hidden": 0,
  "label": "Beneficiaries",
  "links": [],
- "modified": "2023-10-17 16:16:17.465005",
+ "modified": "2023-10-18 22:02:20.817243",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiaries",
@@ -59,7 +59,14 @@
  "parent_page": "",
  "public": 1,
  "quick_lists": [],
- "roles": [],
+ "roles": [
+  {
+   "role": "Admin"
+  },
+  {
+   "role": "MIS executive"
+  }
+ ],
  "sequence_id": 1.0,
  "shortcuts": [],
  "title": "Beneficiaries"

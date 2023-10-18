@@ -13,10 +13,10 @@
  "docstatus": 0,
  "doctype": "Report",
  "filters": [],
- "idx": 1,
+ "idx": 6,
  "is_standard": "Yes",
  "letterhead": null,
- "modified": "2023-10-17 12:41:16.269453",
+ "modified": "2023-10-18 21:02:38.061433",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "No. of Participant in camp",
@@ -29,6 +29,12 @@
  "roles": [
   {
    "role": "System Manager"
+  },
+  {
+   "role": "Admin"
+  },
+  {
+   "role": "MIS executive"
   }
  ]
 }
