@@ -17,7 +17,7 @@
    "fieldname": "support",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Support",
+   "label": "Support name",
    "reqd": 1,
    "unique": 1
   },
@@ -33,7 +33,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-11 16:12:50.258328",
+ "modified": "2023-10-18 02:44:35.359215",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Support",

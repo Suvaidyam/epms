@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_copy": 1,
  "allow_import": 1,
  "autoname": "format:{MMM}/{#####}",
  "creation": "2023-09-13 19:36:30.271397",
@@ -77,6 +78,7 @@
    "options": "Education master"
   },
   {
+   "default": "+91-",
    "fieldname": "contact_number",
    "fieldtype": "Phone",
    "in_standard_filter": 1,
@@ -266,13 +268,14 @@
    "fieldname": "existing_bank_account",
    "fieldtype": "Link",
    "hidden": 1,
-   "label": "Existing bank account",
+   "label": "Bank name",
    "options": "Bank"
   }
  ],
+ "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-14 13:21:10.460752",
+ "modified": "2023-10-18 13:05:06.454065",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",

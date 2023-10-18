@@ -68,6 +68,25 @@ frappe.ui.form.on("Beneficiary", {
     // console.log("after save " , frm)
   },
   refresh(frm) {
+    // hide advance search and create new option in lists
+    frm.set_df_property('current_location', 'only_select', true); 
+    frm.set_df_property('occupation', 'only_select', true); 
+    frm.set_df_property('existing_bank_account', 'only_select', true); 
+    frm.set_df_property('state_of_origin', 'only_select', true); 
+    frm.set_df_property('district_of_origin', 'only_select', true); 
+    frm.set_df_property('block_of_origin', 'only_select', true); 
+    frm.set_df_property('caste', 'only_select', true); 
+    frm.set_df_property('source_information_about_center', 'only_select', true); 
+    frm.set_df_property('education', 'only_select', true); 
+    frm.set_df_property('family', 'only_select', true); 
+    frm.set_df_property('education', 'only_select', true); 
+  //   frm.set_query('contact_number', function () {
+  //     return {
+  //         filters: {
+  //             'default_country': '91' // Set the default country code to 91 (India)
+  //         }
+  //     };
+  // });
     global_data.push(frm.selected_doc.support_table)
     let parentField = frm.fields_dict['family'];
     if(frm.doc.head_of_family){
@@ -137,10 +156,10 @@ frappe.ui.form.on("Beneficiary", {
       return { page_length: 1000 };
     });
     frm.set_query("occupation", () => {
-      return { page_length: 1000 };
+      return { page_length: 1000 , order_by: "sequence DESC"};
     });
     frm.set_query("existing_bank_account", () => {
-      return { page_length: 1000 };
+      return { page_length: 1000, order_by:"`tabBank`.`sequence` asc" , view:"List" , group_by:"`tabBank`.`name`"};
     });
     frm.set_query("state_of_origin", () => {
       return { page_length: 1000 };
@@ -209,12 +228,13 @@ frappe.ui.form.on("Beneficiary", {
   },
   do_you_have_bank_account:function(frm){
     var have_bank = frm.fields_dict['existing_bank_account'];
-    frm.set_df_property('existing_bank_account', 'reqd', 1);
     if(frm.doc.do_you_have_bank_account === "Yes"){
     have_bank.df.hidden = 0;
+    frm.set_df_property('existing_bank_account', 'reqd', 1);
     have_bank.refresh();
     }else{
       have_bank.df.hidden = 1;
+      frm.set_df_property('existing_bank_account', 'reqd', 0);
       have_bank.refresh();
     }
   },
@@ -284,7 +304,9 @@ frappe.ui.form.on("Beneficiary", {
 // ********************* SUPERT CHILD Table***********************
 frappe.ui.form.on('Support Child', {
   form_render(frm){
-
+    frm.set_query("specific_support_type", () => {
+      return { page_length: 1000 };
+    });
   },
   
   refresh(frm){
@@ -293,6 +315,7 @@ frappe.ui.form.on('Support Child', {
     });
   },
   specific_support_type:function(frm){
+    console.log(frm)
     frm.set_query("specific_support_type", () => {
       return { page_length: 1000 };
     });
@@ -324,22 +347,23 @@ frappe.ui.form.on('Support Child', {
     
   },
   
+  // support_type:function(frm , cdt , cdn){
+  //   console.log("cd,cdn", cdt , cdn)
+  //   let row = frappe.get_doc(cdt, cdn);
+  //   let supportType = row.support_type;
+  // frm.refresh_field('support_table');
+  // },
   support_type:function(frm , cdt , cdn){
-    console.log("cd,cdn", cdt , cdn)
-    let row = frappe.get_doc(cdt, cdn);
-    let supportType = row.support_type;
-  frm.refresh_field('support_table');
-  },
-  specific_support_type:function(frm , cdt , cdn){
     let row = frappe.get_doc(cdt, cdn);
     console.log("lll")
     // frm.set_query('specific_support_type', 'Support Child', function() {
 		// 	return {
 		// 		'filters': {
-		// 			"Support Type": row.support_type
+		// 			'Support Type': row.support_type
 		// 		}
 		// 	};
 		// });
+    
   }
 })
 // ********************* FOLLOW UP CHILD Table***********************

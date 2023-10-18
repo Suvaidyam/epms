@@ -1,8 +1,7 @@
 {
  "actions": [],
  "allow_import": 1,
- "allow_rename": 1,
- "autoname": "field:name_of_location",
+ "autoname": "autoincrement",
  "creation": "2023-10-06 13:12:55.239708",
  "default_view": "List",
  "doctype": "DocType",
@@ -23,11 +22,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-11 19:18:16.845496",
+ "modified": "2023-10-18 10:15:46.052401",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Current location",
- "naming_rule": "By fieldname",
+ "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
   {
@@ -69,7 +68,10 @@
    "write": 1
   }
  ],
+ "search_fields": "name_of_location",
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "name_of_location"
 }
