@@ -1,20 +1,6 @@
 {
  "add_total_row": 0,
- "columns": [
-  {
-   "fieldname": "existing_bank_account",
-   "fieldtype": "Link",
-   "label": "Have Bank Account",
-   "options": "Education master",
-   "width": 400
-  },
-  {
-   "fieldname": "count",
-   "fieldtype": "Int",
-   "label": "No. of Beneficiary Have Bank Account",
-   "width": 400
-  }
- ],
+ "columns": [],
  "creation": "2023-09-28 11:05:38.537809",
  "disabled": 0,
  "docstatus": 0,
@@ -40,13 +26,13 @@
  "idx": 23,
  "is_standard": "Yes",
  "letterhead": null,
- "modified": "2023-10-16 11:29:08.130991",
+ "modified": "2023-10-17 16:33:27.870436",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiaries have Bank",
  "owner": "Administrator",
  "prepared_report": 0,
- "query": "SELECT\n    CASE\n        WHEN existing_bank_account = 'No' THEN 'No. of beneficiaries who don''t have a bank account'\n        ELSE 'No. of beneficiaries who have a bank account'\n    END AS has_bank_account,\n    COUNT(name) AS beneficiary_count\nFROM tabBeneficiary\nWHERE (registration_date >= %(start_date)s AND registration_date <= %(end_date)s)\n   OR ('start_date' IS NULL OR 'end_date' IS NULL)\nGROUP BY\n    CASE\n        WHEN existing_bank_account = 'No' THEN 'No'\n        ELSE 'Yes'\n    END;\n",
+ "query": "SELECT\n    CASE\n        WHEN existing_bank_account = 'No' THEN 'No. of beneficiaries who don''t have a bank account'\n        ELSE 'No. of beneficiaries who have a bank account'\n    END AS \"\",\n    COUNT(name) AS Count\nFROM tabBeneficiary\nWHERE (registration_date >= %(start_date)s AND registration_date <= %(end_date)s)\n   OR ('start_date' IS NULL OR 'end_date' IS NULL)\nGROUP BY\n    CASE\n        WHEN existing_bank_account = 'No' THEN 'No'\n        ELSE 'Yes'\n    END;\n",
  "ref_doctype": "Beneficiary",
  "report_name": "Beneficiaries have Bank",
  "report_type": "Query Report",

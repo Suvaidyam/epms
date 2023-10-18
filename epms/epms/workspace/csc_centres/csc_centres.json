@@ -1,7 +1,7 @@
 {
  "charts": [],
- "content": "[{\"id\":\"zMKy32sVVb\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"CSC centres\",\"col\":12}}]",
- "creation": "2023-10-09 12:51:50.431975",
+ "content": "[{\"id\":\"WaujojESER\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">CSC</span>\",\"col\":12}},{\"id\":\"1qrebE8l-9\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"CSC\",\"col\":12}}]",
+ "creation": "2023-10-17 11:28:03.825172",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
@@ -9,11 +9,11 @@
  "hide_custom": 0,
  "icon": "retail",
  "idx": 0,
- "indicator_color": "green",
+ "indicator_color": "yellow",
  "is_hidden": 0,
  "label": "CSC centres",
  "links": [],
- "modified": "2023-10-16 10:17:13.647261",
+ "modified": "2023-10-17 11:29:53.471508",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "CSC centres",
@@ -24,14 +24,10 @@
  "quick_lists": [
   {
    "document_type": "CSC",
-   "label": "CSC centres"
+   "label": "CSC"
   }
  ],
- "roles": [
-  {
-   "role": "Admin"
-  }
- ],
+ "roles": [],
  "sequence_id": 2.0,
  "shortcuts": [],
  "title": "CSC centres"
