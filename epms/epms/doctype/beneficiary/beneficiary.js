@@ -300,13 +300,14 @@ frappe.ui.form.on("Beneficiary", {
     }
   },
   
+  
 });
 // ********************* SUPERT CHILD Table***********************
 frappe.ui.form.on('Support Child', {
   form_render(frm){
-    frm.set_query("specific_support_type", () => {
-      return { page_length: 1000 };
-    });
+    // frm.set_query("specific_support_type", () => {
+    //   return { page_length: 1000 };
+    // });
   },
   
   refresh(frm){
@@ -319,6 +320,9 @@ frappe.ui.form.on('Support Child', {
     frm.set_query("specific_support_type", () => {
       return { page_length: 1000 };
     });
+  },
+  support:function(frm){
+    console.log("hhh")
   },
   // status:function(frm, cdt, cdn){
   //   let row = frappe.get_doc(cdt, cdn);
@@ -355,14 +359,13 @@ frappe.ui.form.on('Support Child', {
   // },
   support_type:function(frm , cdt , cdn){
     let row = frappe.get_doc(cdt, cdn);
-    console.log("lll")
-    // frm.set_query('specific_support_type', 'Support Child', function() {
-		// 	return {
-		// 		'filters': {
-		// 			'Support Type': row.support_type
-		// 		}
-		// 	};
-		// });
+    // frm.set_query("specific_support_type", "Support Child", function() {
+    //   return {
+    //     filters: {
+    //       'support_type': "nnn", // Replace this with your filter
+    //     }
+    //   }
+    // });
     
   }
 })
@@ -383,3 +386,5 @@ frappe.ui.form.on('Follow Up Child', {
     
   },
 })
+
+
