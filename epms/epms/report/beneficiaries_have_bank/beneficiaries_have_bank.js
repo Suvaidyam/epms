@@ -7,7 +7,6 @@ frappe.query_reports["Beneficiaries have Bank"] = {
 			"fieldname":"from_date",
 			"fieldtype":"Date",
 			"label":"From Date",
-			"options": frappe.datetime.get_today()
 		},
 		{
 			"fieldname":"to_date",
