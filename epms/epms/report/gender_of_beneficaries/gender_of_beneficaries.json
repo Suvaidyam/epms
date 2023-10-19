@@ -1,46 +1,16 @@
 {
- "add_total_row": 0,
- "columns": [
-  {
-   "fieldname": "gender",
-   "fieldtype": "Select",
-   "label": "Gender",
-   "width": 200
-  },
-  {
-   "fieldname": "count",
-   "fieldtype": "Int",
-   "label": "No. of Beneficiary",
-   "width": 400
-  }
- ],
+ "add_total_row": 1,
+ "columns": [],
  "creation": "2023-09-28 10:26:32.218923",
  "disabled": 0,
  "docstatus": 0,
  "doctype": "Report",
- "filters": [
-  {
-   "default": "01-10-2023",
-   "fieldname": "from_date",
-   "fieldtype": "Date",
-   "label": "From date",
-   "mandatory": 0,
-   "wildcard_filter": 0
-  },
-  {
-   "default": "30-10-2023",
-   "fieldname": "to_date",
-   "fieldtype": "Date",
-   "label": "To date",
-   "mandatory": 0,
-   "wildcard_filter": 0
-  }
- ],
- "idx": 29,
+ "filters": [],
+ "idx": 30,
  "is_standard": "Yes",
  "json": "{}",
  "letterhead": null,
- "modified": "2023-10-16 12:23:08.061834",
+ "modified": "2023-10-19 10:51:56.475002",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Gender of Beneficaries",
@@ -49,7 +19,7 @@
  "query": "SELECT gender, COUNT(name)\nFROM `tabBeneficiary`\nWHERE registration_date >= %(from_date)s AND registration_date <= %(to_date)s\nGROUP BY gender;\n",
  "ref_doctype": "Beneficiary",
  "report_name": "Gender of Beneficaries",
- "report_type": "Query Report",
+ "report_type": "Script Report",
  "roles": [
   {
    "role": "System Manager"
