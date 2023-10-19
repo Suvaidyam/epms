@@ -3,12 +3,13 @@
 
 import frappe
 
+
 def execute(filters=None):
 	frappe.errprint(filters)
 	columns = [
 		{
-		"fieldname":"location",
-		"label":"Current location",
+		"fieldname":"education",
+		"label":"Education",
 		"fieldtype":"Data",
 		"width":400
 		},
@@ -22,10 +23,10 @@ def execute(filters=None):
 
 
 	new_filters =None
-	location = frappe.get_all("Beneficiary",
+	education = frappe.get_all("Beneficiary",
 	filters=new_filters,
-	fields=["current_location as location",'count(name) as count'], 
-	group_by='current_location')
-	print("education", location)
-	data = location
+	fields=["education as education",'count(name) as count'], 
+	group_by='education')
+	print("education", education)
+	data = education
 	return columns, data
