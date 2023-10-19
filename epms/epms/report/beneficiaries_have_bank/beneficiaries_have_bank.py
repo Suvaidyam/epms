@@ -43,7 +43,6 @@ def execute(filters=None):
 	fields=["do_you_have_bank_account as have_account",'count(name) as count'], 
 	group_by='do_you_have_bank_account')
 
-	print(bank_account_data)
 
 
 	data = [{"beneficary":"No. of beneficary have bank account" , "count":bank_account_data[0].count},
