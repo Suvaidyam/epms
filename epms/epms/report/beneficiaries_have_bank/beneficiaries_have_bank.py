@@ -42,12 +42,17 @@ def execute(filters=None):
 	fields=["do_you_have_bank_account as have_account",'count(name) as count'],
 	group_by='do_you_have_bank_account')
 
+	yes_count, no_count = 0, 0
+	for acc in bank_account_data:
+		if acc.have_account == 'Yes':
+			yes_count += acc.count
+		else:
+			no_count += acc.count
 
-
-	data = [{"beneficary":"No. of beneficary have bank account" , "count":bank_account_data[0].count},
-		 {"beneficary":"No. of beneficary have not bank account", "count":bank_account_data[1].count}]
+	data = [{"beneficary":"No. of beneficary have bank account" , "count":yes_count},
+		 {"beneficary":"No. of beneficary have not bank account", "count":no_count}]
 	# data = []
-	chart = get_chart(columns , data)
+	chart = get_chart(columns , [yes_count, no_count])
 
 
 	return columns, data ,None , chart ,None
@@ -56,7 +61,7 @@ def get_chart(columns,data):
 	return{
 		"data":{
 			"labels":["Beneficiaries have bank account","Beneficiaries have not bank account"],
-			"datasets":[{"name":"Beneficiaries have bank Account", "values":{d["count"] for d in data}}]
+			"datasets":[{"name":"Beneficiaries have bank Account", "values":data}]
 		},
 		"type":"pie"
 	}
