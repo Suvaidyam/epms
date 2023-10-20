@@ -21,13 +21,14 @@ def execute(filters=None):
 		}
 	]
 	new_filters = None
+
 	if filters:
 		if filters.from_date and filters.to_date:
-			new_filters={ "registration_date": ["between", (filters.from_date, filters.to_date)]}
+			new_filters={ "registration_date": ["between", [filters.from_date, filters.to_date]]}
 		elif filters.from_date:
-			frappe.msgprint("Please select to date")
-		else:
-			frappe.msgprint("Please select from date")
+			new_filters={ "registration_date": [">=", filters.from_date]}
+		elif filters.to_date:
+			new_filters={ "registration_date": ["<=", filters.to_date]}
 	else:
 		new_filters= {}
 
@@ -41,7 +42,6 @@ def execute(filters=None):
 	filters=new_filters,
 	fields=["gender as gender",'count(name) as count'],
 	group_by='gender')
-	print("gender", gender)
 
 	# data = [{"gender":"Male" , "count":"0"},
 	# 	 {"gender":"Female", "count":"0"}]
@@ -53,7 +53,7 @@ def get_chart(data):
 	return{
 		"data":{
 			"labels":["Female","Male"],
-			"datasets":[{"name":"Gender Composition", "values":{d["count"] for d in data}}]
+			"datasets":[{"name":"Gender Composition", "values":(d["count"] for d in data)}]
 		},
 		"type":"pie"
 	}
