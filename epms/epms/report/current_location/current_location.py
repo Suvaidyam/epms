@@ -2,6 +2,7 @@
 # For license information, please see license.txt
 
 import frappe
+from epms.utils.cache import Cache
 
 def execute(filters=None):
 	frappe.errprint(filters)
@@ -20,8 +21,23 @@ def execute(filters=None):
 		}
 	]
 
+	new_filters = None
+	if filters:
+		if filters.from_date and filters.to_date:
+			new_filters={ "registration_date": ["between", [filters.from_date, filters.to_date]]}
+		elif filters.from_date:
+			new_filters={ "registration_date": [">=", filters.from_date]}
+		elif filters.to_date:
+			new_filters={ "registration_date": ["<=", filters.to_date]}
+	else:
+		new_filters= {}
 
-	new_filters =None
+	csc =None
+	user = frappe.session.user
+	if "MIS executive" in frappe.get_roles(user) and ("Administrator" not in frappe.get_roles(user)):
+		csc = Cache.get_csc()
+		new_filters["csc"] = csc
+
 	location = frappe.get_all("Beneficiary",
 	filters=new_filters,
 	fields=["current_location.name_of_location as location",'count(`tabBeneficiary`.name) as count'],

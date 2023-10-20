@@ -20,15 +20,14 @@ def execute(filters=None):
 		"width":400
 		}
 	]
-	# check user roles 
-	new_filters= None
+	new_filters = None
 	if filters:
 		if filters.from_date and filters.to_date:
-			new_filters={ "registration_date": ["between", (filters.from_date, filters.to_date)]}
+			new_filters={ "registration_date": ["between", [filters.from_date, filters.to_date]]}
 		elif filters.from_date:
-			frappe.msgprint("Please select to date")
-		else:
-			frappe.msgprint("Please select from date")
+			new_filters={ "registration_date": [">=", filters.from_date]}
+		elif filters.to_date:
+			new_filters={ "registration_date": ["<=", filters.to_date]}
 	else:
 		new_filters= {}
 
@@ -40,7 +39,7 @@ def execute(filters=None):
 	# bank_account_data = frappe.get_all("Beneficiary",filters=filters, fields=["do_you_have_bank_account as have_account",'count(name) as count'], group_by='do_you_have_bank_account')
 	bank_account_data = frappe.get_all("Beneficiary",
 	filters=new_filters,
-	fields=["do_you_have_bank_account as have_account",'count(name) as count'], 
+	fields=["do_you_have_bank_account as have_account",'count(name) as count'],
 	group_by='do_you_have_bank_account')
 
 
