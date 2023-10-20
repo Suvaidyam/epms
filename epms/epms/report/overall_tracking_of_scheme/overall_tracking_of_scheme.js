@@ -13,9 +13,10 @@ let filters = [
 		"label": "To Date"
 	},
 	{
-		"fieldname": "to_date",
-		"fieldtype": "Date",
-		"label": "To Date"
+		"fieldname": "Support_category",
+		"fieldtype": "Link",
+		"options":"Support Type",
+		"label": "Support category"
 	}
 ];
 if (true) {
