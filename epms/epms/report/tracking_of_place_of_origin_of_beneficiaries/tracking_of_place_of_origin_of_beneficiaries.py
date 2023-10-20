@@ -43,12 +43,16 @@ def execute(filters=None):
 		csc = Cache.get_csc()
 		new_filters["csc"] = csc
 
-	# count of beneficary according to state and district of origins
-	state = frappe.get_all("Beneficiary",
-	filters=new_filters,
-	fields=[" district_of_origin as district",'count(`tabBeneficiary`.name) as count'],
-	group_by='district_of_origin'
-	)
-	# print(state)
-	data = []
+
+	sql_query = """
+	SELECT  s.state_name as state, d.district_name as district, COUNT(b.name) AS count
+	FROM tabBeneficiary AS b
+	JOIN tabState AS s JOIN tabDistrict AS d ON b.state_of_origin = s.name AND b.district_of_origin = d.name
+	GROUP BY state_of_origin, district_of_origin
+	ORDER BY state_of_origin, district_of_origin;;
+	"""
+
+	result = frappe.db.sql(sql_query, as_dict=True)
+	print(result)
+	data = result
 	return columns, data
