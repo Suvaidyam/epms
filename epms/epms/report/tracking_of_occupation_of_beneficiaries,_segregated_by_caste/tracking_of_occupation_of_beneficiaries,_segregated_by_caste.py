@@ -28,13 +28,19 @@ def execute(filters=None):
 			"width":200
 		}
 	]
-
-	sql_query = """
+	condition_str = Filter.set_report_filters(filters, 'registration_date', True)
+	if condition_str:
+		condition_str = f"{condition_str}"
+	else:
+		condition_str = "1=1"
+	sql_query = f"""
 	SELECT _o.occupation as occupations, caste,  COUNT(_b.name) AS count
 	FROM `tabCurrent Occupation` _o
 	LEFT JOIN `tabBeneficiary` _b ON _b.occupation = _o.name
+	WHERE {condition_str}
 	GROUP BY _o.occupation;
 	"""
+	print("sql_query",sql_query)
 
 	result = frappe.db.sql(sql_query, as_dict=True)
 

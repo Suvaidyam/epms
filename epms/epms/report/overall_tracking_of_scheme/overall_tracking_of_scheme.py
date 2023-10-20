@@ -46,15 +46,17 @@ def execute(filters=None):
 			"width":100
 		}
 	]
-
-	sql_query = """
-	SELECT 
+	condition_str = Filter.set_report_filters(filters, 'registration_date', True)
+	if condition_str:
+		condition_str = f"AND {condition_str}"
+	sql_query = f"""
+	SELECT
     s.support as support_name,
     s.support_type as support_category,
-    (select count(parent) from `tabSupport Child` _sc where _sc.specific_support_type = s.support ) as enquiry_count,
-    (select count(parent) from `tabSupport Child` _sc where _sc.specific_support_type = s.support and status = 'Completed' ) as achieved_count,
-    (select count(parent) from `tabSupport Child` _sc where _sc.specific_support_type = s.support and status = 'Rejected' ) as rejected_count,
-    (select count(parent) from `tabSupport Child` _sc where _sc.specific_support_type = s.support and status in ('','Open','Under Process','Form Submitted') ) as pending_count
+    (select count(parent) from `tabSupport Child` _sc where _sc.specific_support_type = s.support {condition_str} ) as enquiry_count,
+    (select count(parent) from `tabSupport Child` _sc where _sc.specific_support_type = s.support and status = 'Completed' {condition_str}) as achieved_count,
+    (select count(parent) from `tabSupport Child` _sc where _sc.specific_support_type = s.support and status = 'Rejected' {condition_str}) as rejected_count,
+    (select count(parent) from `tabSupport Child` _sc where _sc.specific_support_type = s.support and status in ('','Open','Under Process','Form Submitted') {condition_str}) as pending_count
 	FROM
     `tabSupport` s
 	"""

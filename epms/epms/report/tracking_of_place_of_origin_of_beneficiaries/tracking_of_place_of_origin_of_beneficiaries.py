@@ -2,8 +2,7 @@
 # For license information, please see license.txt
 
 import frappe
-from epms.utils.cache import Cache
-
+from epms.utils.filter import Filter
 
 def execute(filters=None):
 	columns = [
@@ -26,29 +25,18 @@ def execute(filters=None):
 		"width":200
 		}
 	]
-	new_filters = None
-	if filters:
-		if filters.from_date and filters.to_date:
-			new_filters={ "registration_date": ["between", [filters.from_date, filters.to_date]]}
-		elif filters.from_date:
-			new_filters={ "registration_date": [">=", filters.from_date]}
-		elif filters.to_date:
-			new_filters={ "registration_date": ["<=", filters.to_date]}
+	condition_str = Filter.set_report_filters(filters, 'registration_date', True)
+	if condition_str:
+		condition_str = f"{condition_str}"
 	else:
-		new_filters= {}
+		condition_str = "1=1"
 
-	csc =None
-	user = frappe.session.user
-	if "MIS executive" in frappe.get_roles(user) and ("Administrator" not in frappe.get_roles(user)):
-		csc = Cache.get_csc()
-		new_filters["csc"] = csc
-
-
-	sql_query = """
+	sql_query = f"""
 	SELECT  s.state_name as state, d.district_name as district, COUNT(b.name) AS count
 	FROM tabBeneficiary AS b
 	JOIN tabState AS s JOIN tabDistrict AS d ON b.state_of_origin = s.name AND b.district_of_origin = d.name
-	GROUP BY state_of_origin, district_of_origin
+	WHERE {condition_str}
+ 	GROUP BY state_of_origin, district_of_origin
 	ORDER BY state_of_origin, district_of_origin;;
 	"""
 
