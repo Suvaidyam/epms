@@ -21,7 +21,6 @@ def execute(filters=None):
 		}
 	]
 	new_filters = None
-
 	if filters:
 		if filters.from_date and filters.to_date:
 			new_filters={ "registration_date": ["between", [filters.from_date, filters.to_date]]}
@@ -50,10 +49,15 @@ def execute(filters=None):
 	return columns, data , None , chart , None
 
 def get_chart(data):
-	return{
+
+    values = []
+    for d in data:
+        values.append(d["count"])
+
+    return{
 		"data":{
 			"labels":["Female","Male"],
-			"datasets":[{"name":"Gender Composition", "values":(d["count"] for d in data)}]
+			"datasets":[{"name":"Gender Composition", "values":values}]
 		},
 		"type":"pie"
 	}
