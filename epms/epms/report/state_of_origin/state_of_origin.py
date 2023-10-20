@@ -5,27 +5,26 @@ import frappe
 
 
 def execute(filters=None):
-	frappe.errprint(filters)
+	# frappe.errprint(filters)
 	columns = [
 		{
-		"fieldname":"state",
-		"label":"State",
-		"fieldtype":"Data",
-		"width":400
+			"fieldname":"state",
+			"label":"State",
+			"fieldtype":"Data",
+			"width":400
 		},
 		{
-		"fieldname":"count",
-		"label":"Count",
-		"fieldtype":"int",
-		"width":200
+			"fieldname":"count",
+			"label":"Count",
+			"fieldtype":"int",
+			"width":200
 		}
 	]
 
 	new_filters =None
-	state = frappe.get_all("Beneficiary",
+	data = frappe.get_all("Beneficiary",
 	filters=new_filters,
 	fields=["state_of_origin.state_name as state",'count(`tabBeneficiary`.name) as count'],
 	group_by='state')
-	print("education", state)
-	data = state
+
 	return columns, data

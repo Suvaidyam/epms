@@ -30,16 +30,16 @@ def execute(filters=None):
 			frappe.msgprint("Please select from date")
 	else:
 		new_filters= {}
-	
+
 	csc =None
 	user = frappe.session.user
 	if "MIS executive" in frappe.get_roles(user) and ("Administrator" not in frappe.get_roles(user)):
 		csc = Cache.get_csc()
-		new_filters["csc"] = csc	
+		new_filters["csc"] = csc
 
 	gender = frappe.get_all("Beneficiary",
 	filters=new_filters,
-	fields=["gender as gender",'count(name) as count'], 
+	fields=["gender as gender",'count(name) as count'],
 	group_by='gender')
 	print("gender", gender)
 
@@ -55,5 +55,5 @@ def get_chart(data):
 			"labels":["Female","Male"],
 			"datasets":[{"name":"Gender Composition", "values":{d["count"] for d in data}}]
 		},
-	"type":"pie"
+		"type":"pie"
 	}

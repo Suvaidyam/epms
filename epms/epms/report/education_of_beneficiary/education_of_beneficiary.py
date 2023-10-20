@@ -8,25 +8,27 @@ def execute(filters=None):
 	frappe.errprint(filters)
 	columns = [
 		{
-		"fieldname":"education",
-		"label":"Education",
-		"fieldtype":"Data",
-		"width":400
+			"fieldname":"education",
+			"label":"Education",
+			"fieldtype":"Data",
+			"width":400
 		},
 		{
-		"fieldname":"count",
-		"label":"Count",
-		"fieldtype":"int",
-		"width":200
+			"fieldname":"count",
+			"label":"Count",
+			"fieldtype":"int",
+			"width":200
 		}
 	]
 
 
 	new_filters =None
-	education = frappe.get_all("Beneficiary",
+	data = frappe.get_all("Beneficiary",
 	filters=new_filters,
-	fields=["education as education",'count(name) as count'], 
+	fields=["education as education",'count(name) as count'],
 	group_by='education')
-	print("education", education)
-	data = education
+
+	for result in data:
+		if result.education is None:
+			result.education = 'None'
 	return columns, data
