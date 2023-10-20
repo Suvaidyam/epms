@@ -1,80 +1,24 @@
 {
  "add_total_row": 1,
- "columns": [
-  {
-   "fieldname": "support_type",
-   "fieldtype": "Link",
-   "label": "Support name",
-   "options": "Support Type",
-   "width": 0
-  },
-  {
-   "fieldname": "support",
-   "fieldtype": "Link",
-   "label": "Support category",
-   "options": "Support",
-   "width": 0
-  },
-  {
-   "fieldname": "enquiry_count",
-   "fieldtype": "Int",
-   "label": "No. of enquiries received",
-   "width": 0
-  },
-  {
-   "fieldname": "achieved_count",
-   "fieldtype": "Int",
-   "label": "Achieved",
-   "width": 0
-  },
-  {
-   "fieldname": "rejected_count",
-   "fieldtype": "Int",
-   "label": "Rejected",
-   "width": 0
-  },
-  {
-   "fieldname": "pending_count",
-   "fieldtype": "Int",
-   "label": "Pending",
-   "width": 0
-  }
- ],
+ "columns": [],
  "creation": "2023-10-12 16:45:49.804740",
  "disabled": 0,
  "docstatus": 0,
  "doctype": "Report",
- "filters": [
-  {
-   "fieldname": "support_type",
-   "fieldtype": "Link",
-   "label": "Support category",
-   "mandatory": 0,
-   "options": "Support Type",
-   "wildcard_filter": 0
-  },
-  {
-   "fieldname": "support",
-   "fieldtype": "Link",
-   "label": "Support name",
-   "mandatory": 0,
-   "options": "Support",
-   "wildcard_filter": 0
-  }
- ],
+ "filters": [],
  "idx": 1,
  "is_standard": "Yes",
  "letterhead": null,
- "modified": "2023-10-17 16:21:20.664977",
+ "modified": "2023-10-20 17:45:56.309730",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Overall tracking of scheme",
  "owner": "Administrator",
  "prepared_report": 0,
- "query": "SELECT \n    s.support,\n    s.support_type,\n    (select count(parent) from `tabSupport Child` _sc where _sc.specific_support_type = s.support ) as enquiry_count,\n    (select count(parent) from `tabSupport Child` _sc where _sc.specific_support_type = s.support and status = 'Completed' ) as achieved_count,\n    (select count(parent) from `tabSupport Child` _sc where _sc.specific_support_type = s.support and status = 'Rejected' ) as rejected_count,\n    (select count(parent) from `tabSupport Child` _sc where _sc.specific_support_type = s.support and status in ('','Open','Under Process','Form Submitted') ) as pending_count\nFROM\n    `tabSupport` s\n",
+ "query": "\n",
  "ref_doctype": "Support",
  "report_name": "Overall tracking of scheme",
- "report_type": "Query Report",
+ "report_type": "Script Report",
  "roles": [
   {
    "role": "System Manager"
