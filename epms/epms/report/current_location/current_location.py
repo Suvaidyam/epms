@@ -24,7 +24,7 @@ def execute(filters=None):
 	new_filters =None
 	location = frappe.get_all("Beneficiary",
 	filters=new_filters,
-	fields=["current_location as location",'count(name) as count'], 
+	fields=["current_location.name_of_location as location",'count(`tabBeneficiary`.name) as count'],
 	group_by='current_location')
 	print("education", location)
 	data = location

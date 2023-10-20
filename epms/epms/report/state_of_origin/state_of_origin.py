@@ -21,11 +21,10 @@ def execute(filters=None):
 		}
 	]
 
-
 	new_filters =None
 	state = frappe.get_all("Beneficiary",
 	filters=new_filters,
-	fields=["state_of_origin as state",'count(name) as count'], 
+	fields=["state_of_origin.state_name as state",'count(`tabBeneficiary`.name) as count'],
 	group_by='state')
 	print("education", state)
 	data = state
