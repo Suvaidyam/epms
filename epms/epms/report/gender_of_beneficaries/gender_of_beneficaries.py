@@ -5,7 +5,7 @@ import frappe
 from epms.utils.cache import Cache
 
 def execute(filters=None):
-	frappe.errprint(filters)
+	# frappe.errprint(filters)
 	columns = [
 		{
 		"fieldname":"gender",
@@ -45,19 +45,19 @@ def execute(filters=None):
 	# data = [{"gender":"Male" , "count":"0"},
 	# 	 {"gender":"Female", "count":"0"}]
 	data = gender
-	chart = get_chart(data)
-	return columns, data , None , chart , None
+	# chart = get_chart(data)
+	return columns, data
 
-def get_chart(data):
+# def get_chart(data):
 
-    values = []
-    for d in data:
-        values.append(d["count"])
+#     values = []
+#     for d in data:
+#         values.append(d["count"])
 
-    return{
-		"data":{
-			"labels":["Female","Male"],
-			"datasets":[{"name":"Gender Composition", "values":values}]
-		},
-		"type":"pie"
-	}
+#     return{
+# 		"data":{
+# 			"labels":["Female","Male"],
+# 			"datasets":[{"name":"Gender Composition", "values":values}]
+# 		},
+# 		"type":"pie"
+# 	}

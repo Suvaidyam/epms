@@ -52,16 +52,16 @@ def execute(filters=None):
 	data = [{"beneficary":"No. of beneficary have bank account" , "count":yes_count},
 		 {"beneficary":"No. of beneficary have not bank account", "count":no_count}]
 	# data = []
-	chart = get_chart(columns , [yes_count, no_count])
+	# chart = get_chart(columns , [yes_count, no_count])
 
 
-	return columns, data ,None , chart ,None
+	return columns, data ,None
 
-def get_chart(columns,data):
-	return{
-		"data":{
-			"labels":["Beneficiaries have bank account","Beneficiaries have not bank account"],
-			"datasets":[{"name":"Beneficiaries have bank Account", "values":data}]
-		},
-		"type":"pie"
-	}
+# def get_chart(columns,data):
+# 	return{
+# 		"data":{
+# 			"labels":["Beneficiaries have bank account","Beneficiaries have not bank account"],
+# 			"datasets":[{"name":"Beneficiaries have bank Account", "values":data}]
+# 		},
+# 		"type":"pie"
+# 	}

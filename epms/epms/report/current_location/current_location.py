@@ -5,7 +5,7 @@ import frappe
 from epms.utils.cache import Cache
 
 def execute(filters=None):
-	frappe.errprint(filters)
+	# frappe.errprint(filters)
 	columns = [
 		{
 		"fieldname":"location",
