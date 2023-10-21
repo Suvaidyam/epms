@@ -12,7 +12,7 @@ let filters = [
 		"label": "To Date"
 	}
 ];
-if (true) {
+if (!frappe.user_roles.includes("MIS executive")) {
 	filters.push({
 		"fieldname": "csc",
 		"fieldtype": "Link",
