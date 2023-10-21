@@ -1,5 +1,12 @@
 [
  {
+ "docstatus": 0,
+ "doctype": "Support Type",
+ "modified": "2023-09-26 12:14:25.552384",
+ "name": "Others",
+ "support_type": "Others"
+ },
+ {
   "docstatus": 0,
   "doctype": "Support Type",
   "modified": "2023-09-26 12:14:14.311894",
@@ -19,13 +26,6 @@
   "modified": "2023-09-26 12:13:50.892059",
   "name": "Govt. Schemes",
   "support_type": "Govt. Schemes"
- },
- {
-  "docstatus": 0,
-  "doctype": "Support Type",
-  "modified": "2023-09-26 12:14:25.552384",
-  "name": "Others",
-  "support_type": "Others"
  },
  {
   "docstatus": 0,
