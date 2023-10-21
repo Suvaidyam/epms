@@ -1,7 +1,7 @@
 // Copyright (c) 2023, Management System for Agrasarteach@suvaidyam.com and contributors
 // For license information, please see license.txt
 
-let filters = [
+var filters = [
 	{
 		"fieldname": "from_date",
 		"fieldtype": "Date",

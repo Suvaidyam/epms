@@ -34,7 +34,7 @@ class  Filter:
         if "MIS executive" in frappe.get_roles(user) and ("Administrator" not in frappe.get_roles(user)):
             csc = Cache.get_csc()
             if str:
-                str_list.append(f"(csc={csc})")
+                str_list.append(f"(csc='{csc}')")
             else:
                 new_filters["csc"] = csc
         if str:

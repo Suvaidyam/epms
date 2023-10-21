@@ -1,6 +1,6 @@
 // Copyright (c) 2023, Management System for Agrasarteach@suvaidyam.com and contributors
 // For license information, please see license.txt
-let filters = [
+var filters = [
 	{
 		"fieldname": "from_date",
 		"fieldtype": "Date",
@@ -16,16 +16,9 @@ let filters = [
 		"label":"Caste",
 		"fieldtype":"Link",
 		"options":"Caste master"
-	},
-	{
-		"fieldname":"occupations",
-		"label":"occupations",
-		"fieldtype":"Link",
-		"options":"Current Occupation",
-		"width":300
 	}
 ];
-if (true) {
+if (!frappe.user_roles.includes("MIS executive")) {
 	filters.push({
 		"fieldname": "csc",
 		"fieldtype": "Link",
