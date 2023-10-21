@@ -46,22 +46,48 @@ def execute(filters=None):
 			"width":100
 		}
 	]
-	condition_str = Filter.set_report_filters(filters, 'registration_date', True)
-	if condition_str:
-		condition_str = f"AND {condition_str}"
+	ben_filters = frappe._dict()
+	other_filters = frappe._dict()
+	for key in filters:
+		if key in ['from_date','to_date','registration_date']:
+			ben_filters[key] = filters[key]
+		else:
+			other_filters[key] = filters[key]
+	# print("ben_filters",ben_filters, "other_filters",other_filters, type(ben_filters), type(filters))
+
+	ben_condition_str = Filter.set_report_filters(ben_filters, 'registration_date', True, '')
+	support_condition_str = Filter.set_report_filters(other_filters, '', True, 's')
+
+	if ben_condition_str:
+		ben_condition_str = f"AND {ben_condition_str}"
+	if support_condition_str:
+		support_condition_str = f" WHERE {support_condition_str}"
 	sql_query = f"""
-	SELECT
-    s.support as support_name,
-    s.support_type as support_category,
-    (select count(parent) from `tabSupport Child` _sc where _sc.specific_support_type = s.support {condition_str} ) as enquiry_count,
-    (select count(parent) from `tabSupport Child` _sc where _sc.specific_support_type = s.support and status = 'Completed' {condition_str}) as achieved_count,
-    (select count(parent) from `tabSupport Child` _sc where _sc.specific_support_type = s.support and status = 'Rejected' {condition_str}) as rejected_count,
-    (select count(parent) from `tabSupport Child` _sc where _sc.specific_support_type = s.support and status in ('','Open','Under Process','Form Submitted') {condition_str}) as pending_count
-	FROM
-    `tabSupport` s
+		with beneficiary_report as (
+			select
+			_sc.specific_support_type,
+			_sc.status,
+			count(distinct tabBeneficiary.name) as ben_count
+			from
+				`tabSupport Child` _sc
+			inner join tabBeneficiary on (tabBeneficiary.name = _sc.parent and _sc.parenttype = 'Beneficiary' {ben_condition_str})
+			group by _sc.specific_support_type,_sc.status
+		)
+
+		select
+			s.support_type as support_category,
+			s.support as support_name,
+			(select SUM(ben_count) as count from beneficiary_report _sc where _sc.specific_support_type = s.support ) as enquiry_count,
+			(select sum(ben_count) as count from beneficiary_report _sc where _sc.specific_support_type = s.support and status = 'Completed') as achieved_count,
+			(select sum(ben_count) as count from beneficiary_report _sc where _sc.specific_support_type = s.support and status = 'Rejected' ) as rejected_count,
+			(select sum(ben_count) as count from beneficiary_report _sc where _sc.specific_support_type = s.support and status in ('','Open','Under Process','Form Submitted') ) as pending_count
+		from
+			`tabSupport` s
+		{support_condition_str}
+		order by support_category,support_name
 	"""
 
 	result = frappe.db.sql(sql_query, as_dict=True)
-	print(result)
+	# print(sql_query)
 	data = result
 	return columns, data

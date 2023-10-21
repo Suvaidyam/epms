@@ -37,10 +37,8 @@ def execute(filters=None):
 	JOIN tabState AS s JOIN tabDistrict AS d ON b.state_of_origin = s.name AND b.district_of_origin = d.name
 	WHERE {condition_str}
  	GROUP BY state_of_origin, district_of_origin
-	ORDER BY state_of_origin, district_of_origin;;
+	ORDER BY state_of_origin, district_of_origin;
 	"""
-
-	result = frappe.db.sql(sql_query, as_dict=True)
-	print(result)
-	data = result
+	print("sql_query",sql_query)
+	data = frappe.db.sql(sql_query, as_dict=True)
 	return columns, data

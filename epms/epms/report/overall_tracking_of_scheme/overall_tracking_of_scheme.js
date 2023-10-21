@@ -13,9 +13,9 @@ var filters = [
 		"label": "To Date"
 	},
 	{
-		"fieldname": "Support_category",
+		"fieldname": "support_type",
 		"fieldtype": "Link",
-		"options":"Support Type",
+		"options": "Support Type",
 		"label": "Support category"
 	}
 ];
