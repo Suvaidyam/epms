@@ -1,7 +1,8 @@
 {
  "actions": [],
  "allow_import": 1,
- "autoname": "autoincrement",
+ "allow_rename": 1,
+ "autoname": "field:occupation",
  "creation": "2023-09-14 10:57:15.184369",
  "default_view": "List",
  "doctype": "DocType",
@@ -31,11 +32,11 @@
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-18 13:46:23.116024",
+ "modified": "2023-10-21 17:34:59.842952",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Current Occupation",
- "naming_rule": "Autoincrement",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

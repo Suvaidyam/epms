@@ -1,14 +1,15 @@
 {
  "actions": [],
  "allow_import": 1,
- "autoname": "autoincrement",
+ "autoname": "field:name_of_location",
  "creation": "2023-10-06 13:12:55.239708",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "name_of_location"
+  "name_of_location",
+  "order"
  ],
  "fields": [
   {
@@ -18,15 +19,22 @@
    "label": "Name of Location",
    "reqd": 1,
    "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "order",
+   "fieldtype": "Int",
+   "label": "order",
+   "non_negative": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-18 10:15:46.052401",
+ "modified": "2023-10-21 19:29:23.243843",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Current location",
- "naming_rule": "Autoincrement",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -69,9 +77,7 @@
   }
  ],
  "search_fields": "name_of_location",
- "show_title_field_in_link": 1,
- "sort_field": "modified",
+ "sort_field": "order",
  "sort_order": "DESC",
- "states": [],
- "title_field": "name_of_location"
+ "states": []
 }
