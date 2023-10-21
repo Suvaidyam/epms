@@ -1,5 +1,12 @@
 [
  {
+  "caste": "Others",
+  "docstatus": 0,
+  "doctype": "Caste master",
+  "modified": "2023-10-12 10:42:20.218123",
+  "name": "Others"
+ },
+ {
   "caste": "OBC",
   "docstatus": 0,
   "doctype": "Caste master",
@@ -19,13 +26,6 @@
   "doctype": "Caste master",
   "modified": "2023-10-12 10:40:54.201639",
   "name": "ST"
- },
- {
-  "caste": "Others",
-  "docstatus": 0,
-  "doctype": "Caste master",
-  "modified": "2023-10-12 10:42:20.218123",
-  "name": "Others"
  },
  {
   "caste": "General",

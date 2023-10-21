@@ -16,7 +16,7 @@ fixtures = [
     "Caste master",
     "Source information about center",
     "ID Master",
-    # "Beneficiaries",
+    # "Beneficiary",
     "CSC"
 
     # {
@@ -202,8 +202,8 @@ permission_query_conditions = {
 # Ignore links to specified DocTypes when deleting documents
 # -----------------------------------------------------------
 
-ignore_links_on_delete = ["CSC" , "Primary Member", "User" , "Beneficiary" , "Route History", 
-                          "Current location", "Caste master" ,"Bank"]
+# ignore_links_on_delete = ["CSC" , "Primary Member", "User" , "Beneficiary" , "Route History", 
+#                           "Current location", "Caste master" ,"Bank"]
 
 # Request Events
 # ----------------
