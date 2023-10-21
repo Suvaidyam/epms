@@ -19,7 +19,7 @@ let filters = [
 		"label": "Support category"
 	}
 ];
-if (true) {
+if (!frappe.user_roles.includes("MIS executive")) {
 	filters.push({
 		"fieldname": "csc",
 		"fieldtype": "Link",
