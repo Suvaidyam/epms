@@ -27,6 +27,7 @@ if (!frappe.user_roles.includes("MIS executive")) {
 		"options": "CSC"
 	})
 }
+console.log(filters);
 frappe.query_reports["Overall tracking of scheme"] = {
 	filters: filters
 };
