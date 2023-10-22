@@ -87,7 +87,7 @@ frappe.ui.form.on("Beneficiary", {
     //         }
     //     };
     // });
-    global_data.push(frm.selected_doc.support_table)
+    // global_data.push(frm.selected_doc.support_table)
     let parentField = frm.fields_dict['family'];
     if (frm.doc.head_of_family) {
       parentField.df.hidden = 1;
@@ -149,11 +149,13 @@ frappe.ui.form.on("Beneficiary", {
         },
       };
     }
-    frm.set_value('registration_date', frappe.datetime.get_today());
+    if(frm.doc.__islocal){
+      frm.set_value('registration_date', frappe.datetime.get_today());
+    }
   },
   setup(frm) {
     frm.set_query("current_location", () => {
-      return { page_length: 1000 };
+      return { "query": "select name from `tabCurrent location` order by sequence asc"  };
     });
     frm.set_query("occupation", () => {
       return { "query": "select name from `tabCurrent Occupation` order by sequence asc" };
@@ -171,13 +173,13 @@ frappe.ui.form.on("Beneficiary", {
       return { page_length: 1000 };
     });
     frm.set_query("caste", () => {
-      return { page_length: 1000 };
+      return { "query": "select name from `tabCaste master` order by sequence asc" };
     });
     frm.set_query("source_information_about_center", () => {
-      return { page_length: 1000 };
+      return {"query": "select name from `tabSource information about center` order by sequence asc" };
     });
     frm.set_query("education", () => {
-      return { page_length: 1000 };
+      return {"query": "select name from `tabEducation master` order by sequence asc"};
     });
   },
 

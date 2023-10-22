@@ -9,7 +9,8 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "caste"
+  "caste",
+  "sequence"
  ],
  "fields": [
   {
@@ -19,11 +20,18 @@
    "label": "Caste",
    "reqd": 1,
    "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "sequence",
+   "fieldtype": "Int",
+   "label": "sequence",
+   "non_negative": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-06 13:29:19.915722",
+ "modified": "2023-10-22 15:03:47.596652",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Caste master",
