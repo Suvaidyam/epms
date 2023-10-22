@@ -275,7 +275,7 @@
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-18 21:42:01.082596",
+ "modified": "2023-10-22 16:25:01.143863",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",
@@ -310,7 +310,8 @@
    "read": 1,
    "report": 1,
    "role": "Admin",
-   "share": 1
+   "share": 1,
+   "write": 1
   }
  ],
  "search_fields": "contact_number",
