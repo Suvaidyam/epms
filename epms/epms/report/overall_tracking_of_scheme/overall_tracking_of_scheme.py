@@ -55,7 +55,7 @@ def execute(filters=None):
 			other_filters[key] = filters[key]
 	# print("ben_filters",ben_filters, "other_filters",other_filters, type(ben_filters), type(filters))
 
-	ben_condition_str = Filter.set_report_filters(ben_filters, 'registration_date', True, '')
+	ben_condition_str = Filter.set_report_filters(ben_filters, 'registration_date', True, 'tabBeneficiary')
 	support_condition_str = Filter.set_report_filters(other_filters, '', True, 's')
 
 	if ben_condition_str:
