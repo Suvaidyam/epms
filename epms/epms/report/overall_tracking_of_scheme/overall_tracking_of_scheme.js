@@ -19,7 +19,7 @@ var filters = [
 		"label": "Support category"
 	}
 ];
-if (!frappe.user_roles.includes("MIS executive")) {
+if (!frappe.user_roles.includes("MIS executive") || frappe.user_roles.includes("Administrator")) {
 	filters.push({
 		"fieldname": "csc",
 		"fieldtype": "Link",
@@ -27,7 +27,6 @@ if (!frappe.user_roles.includes("MIS executive")) {
 		"options": "CSC"
 	})
 }
-console.log(filters);
 frappe.query_reports["Overall tracking of scheme"] = {
 	filters: filters
 };
