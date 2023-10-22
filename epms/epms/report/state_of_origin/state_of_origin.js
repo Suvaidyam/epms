@@ -22,5 +22,5 @@ if (!frappe.user_roles.includes("MIS executive")) {
 	})
 }
 frappe.query_reports["State Of Origin"] = {
-	"filters": filters
+	filters: filters
 };

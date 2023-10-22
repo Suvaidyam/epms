@@ -28,5 +28,5 @@ if (!frappe.user_roles.includes("MIS executive")) {
 	})
 }
 frappe.query_reports["Overall tracking of scheme"] = {
-	"filters": filters
+	filters: filters
 };

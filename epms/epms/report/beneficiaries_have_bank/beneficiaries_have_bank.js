@@ -22,5 +22,5 @@ if (!frappe.user_roles.includes("MIS executive")) {
 	})
 }
 frappe.query_reports["Beneficiaries have Bank"] = {
-	"filters": filters
+	filters: filters
 };

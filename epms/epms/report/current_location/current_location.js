@@ -23,5 +23,5 @@ if (!frappe.user_roles.includes("MIS executive")) {
 	})
 }
 frappe.query_reports["Current Location"] = {
-	"filters": filters
+	filters: filters
 };

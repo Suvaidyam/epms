@@ -22,5 +22,5 @@ if (!frappe.user_roles.includes("MIS executive")) {
 	})
 }
 frappe.query_reports["Gender of Beneficaries"] = {
-	"filters": filters
+	filters: filters
 };

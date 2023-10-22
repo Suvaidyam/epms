@@ -27,5 +27,5 @@ if (!frappe.user_roles.includes("MIS executive")) {
 	})
 }
 frappe.query_reports["Tracking of Occupation of beneficiaries, segregated by Caste"] = {
-	"filters": filters
+	filters: filters
 };

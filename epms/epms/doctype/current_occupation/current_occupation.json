@@ -32,7 +32,7 @@
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-21 17:34:59.842952",
+ "modified": "2023-10-22 06:42:58.659906",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Current Occupation",
@@ -77,9 +77,7 @@
   }
  ],
  "search_fields": "occupation",
- "show_title_field_in_link": 1,
  "sort_field": "sequence",
  "sort_order": "DESC",
- "states": [],
- "title_field": "occupation"
+ "states": []
 }

@@ -28,6 +28,6 @@ if (!frappe.user_roles.includes("MIS executive")) {
 	})
 }
 frappe.query_reports["Tracking of place of origin of beneficiaries"] = {
-	'filters': filters
+	filters: filters
 	
 };
