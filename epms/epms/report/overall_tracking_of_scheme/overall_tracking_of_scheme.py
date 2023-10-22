@@ -49,7 +49,7 @@ def execute(filters=None):
 	ben_filters = frappe._dict()
 	other_filters = frappe._dict()
 	for key in filters:
-		if key in ['from_date','to_date','registration_date']:
+		if key in ['from_date','to_date','registration_date', 'csc']:
 			ben_filters[key] = filters[key]
 		else:
 			other_filters[key] = filters[key]
