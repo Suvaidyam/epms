@@ -89,7 +89,10 @@ frappe.ui.form.on("Beneficiary", {
     // });
     // global_data.push(frm.selected_doc.support_table)
     let parentField = frm.fields_dict['family'];
-    if (frm.doc.head_of_family) {
+    if (frm.doc.head_of_family === 'Yes') {
+      parentField.df.hidden = 0;
+      parentField.refresh();
+    }else{
       parentField.df.hidden = 1;
       parentField.refresh();
     }
@@ -219,8 +222,9 @@ frappe.ui.form.on("Beneficiary", {
   },
   head_of_family: function (frm) {
     var parentField = frm.fields_dict['family'];
-    if (frm.doc.head_of_family === "No") {
+    if (frm.doc.head_of_family === "No" || frm.doc.head_of_family ==='') {
       parentField.df.hidden = 1;
+      frm.set_df_property('family', 'reqd', 0);
       parentField.refresh();
     } else {
       parentField.df.hidden = 0;
