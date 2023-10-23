@@ -14,7 +14,7 @@ var filters = [
 	}
 	
 ];
-if (!frappe.user_roles.includes("MIS executive")) {
+if (!frappe.user_roles.includes("MIS executive")|| frappe.user_roles.includes("Administrator")) {
 	filters.push({
 		"fieldname": "csc",
 		"fieldtype": "Link",
