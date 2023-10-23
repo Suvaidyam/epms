@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"fMnFYgrVea\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Reports</span>\",\"col\":12}},{\"id\":\"Qhb0H6rDy-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Current location\",\"col\":3}},{\"id\":\"yg3bWUkwH5\",\"type\":\"spacer\",\"data\":{\"col\":9}},{\"id\":\"yQ5Pyba7iK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gender Composition\",\"col\":3}},{\"id\":\"unl0QVcqjH\",\"type\":\"spacer\",\"data\":{\"col\":9}},{\"id\":\"G5vEfERp8K\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Education Compositions\",\"col\":3}},{\"id\":\"S8MxNgyBIo\",\"type\":\"spacer\",\"data\":{\"col\":9}},{\"id\":\"Et54zMhXbo\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Bank account details\",\"col\":3}},{\"id\":\"kZo0XM4NKE\",\"type\":\"spacer\",\"data\":{\"col\":9}},{\"id\":\"DAUHjLdQIu\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"State Of origin\",\"col\":3}},{\"id\":\"mHLqDqEgmG\",\"type\":\"spacer\",\"data\":{\"col\":9}},{\"id\":\"s3L5BiOTXf\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Place of origin\",\"col\":3}},{\"id\":\"rcz5cVzbJo\",\"type\":\"spacer\",\"data\":{\"col\":9}},{\"id\":\"V_k7vXyWON\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overall tracking of beneficiaries\",\"col\":3}},{\"id\":\"5FMfA3ARFO\",\"type\":\"spacer\",\"data\":{\"col\":9}},{\"id\":\"9bTNJO93Xd\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tracking of occupation of beneficiaries, segregated by caste\",\"col\":9}},{\"id\":\"Jv-e8KHtvL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overall tracking of scheme\",\"col\":4}}]",
+ "content": "[{\"id\":\"fMnFYgrVea\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Reports</span>\",\"col\":12}},{\"id\":\"Qhb0H6rDy-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Current location\",\"col\":12}},{\"id\":\"P0g-WF-JT9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gender composition\",\"col\":12}},{\"id\":\"MOZ98zSIlu\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Education composition\",\"col\":12}},{\"id\":\"wGEqfbNIGI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Bank details\",\"col\":12}},{\"id\":\"uNmRrDK46T\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"State of origin\",\"col\":12}},{\"id\":\"s3L5BiOTXf\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Place of origin\",\"col\":12}},{\"id\":\"V_k7vXyWON\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overall tracking of beneficiaries\",\"col\":12}},{\"id\":\"9bTNJO93Xd\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tracking of occupation of beneficiaries, segregated by caste\",\"col\":12}},{\"id\":\"Jv-e8KHtvL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overall tracking of scheme\",\"col\":12}}]",
  "creation": "2023-10-12 12:09:55.430267",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Reports",
  "links": [],
- "modified": "2023-10-17 11:29:33.910561",
+ "modified": "2023-10-23 12:39:31.683639",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Reports",
@@ -35,8 +35,15 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Bank account details",
-   "link_to": "Beneficiaries have Bank",
+   "label": "Gender composition",
+   "link_to": "Gender of Beneficaries",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Education composition",
+   "link_to": "Education of Beneficiary",
    "type": "Report"
   },
   {
@@ -49,15 +56,15 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "State Of origin",
-   "link_to": "State Of Origin",
+   "label": "Bank details",
+   "link_to": "Beneficiaries have Bank",
    "type": "Report"
   },
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Gender Composition",
-   "link_to": "Gender of Beneficaries",
+   "label": "State of origin",
+   "link_to": "State Of Origin",
    "type": "Report"
   },
   {
@@ -65,13 +72,6 @@
    "doc_view": "List",
    "label": "Place of origin",
    "link_to": "Tracking of place of origin of beneficiaries",
-   "type": "Report"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Education Compositions",
-   "link_to": "Education of Beneficiary",
    "type": "Report"
   },
   {
