@@ -9,7 +9,7 @@
    "label": "Gender composition"
   },
   {
-   "chart_name": "Education of Beneficiary",
+   "chart_name": "Education composition",
    "label": "Education composition"
   },
   {
@@ -33,7 +33,7 @@
  "is_hidden": 0,
  "label": "Beneficiaries",
  "links": [],
- "modified": "2023-10-24 12:09:15.689943",
+ "modified": "2023-10-24 12:23:59.298747",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiaries",
