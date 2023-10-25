@@ -92,6 +92,9 @@ def execute(filters=None):
 			_sc.name,
    			_sc.specific_support_type,
 			_sc.status,
+            _sc.creation,
+            _sc.date_of_completion,
+            _sc.date_of_rejection
 			from
 				`tabSupport Child` _sc
 			inner join tabBeneficiary on (tabBeneficiary.name = _sc.parent and _sc.parenttype = 'Beneficiary' {ben_condition_str})
@@ -100,10 +103,10 @@ def execute(filters=None):
 		select
 			s.support_type as support_category,
 			s.support as support_name,
-			(select SUM(ben_count) as count from beneficiary_report _sc where _sc.specific_support_type = s.support {enquiry_condition_str}) as enquiry_count,
-			(select sum(ben_count) as count from beneficiary_report _sc where _sc.specific_support_type = s.support and status = 'Completed' {achieved_condition_str}) as achieved_count,
-			(select sum(ben_count) as count from beneficiary_report _sc where _sc.specific_support_type = s.support and status = 'Rejected' {rejected_condition_str}) as rejected_count,
-			(select sum(ben_count) as count from beneficiary_report _sc where _sc.specific_support_type = s.support and status in ('','Open','Under Process','Form Submitted') {enquiry_condition_str} ) as pending_count
+			(select count(_sc.name) as count from beneficiary_report _sc where _sc.specific_support_type = s.support {enquiry_condition_str}) as enquiry_count,
+			(select count(_sc.name) as count from beneficiary_report _sc where _sc.specific_support_type = s.support and status = 'Completed' {achieved_condition_str}) as achieved_count,
+			(select count(_sc.name) as count from beneficiary_report _sc where _sc.specific_support_type = s.support and status = 'Rejected' {rejected_condition_str}) as rejected_count,
+			(select count(_sc.name) as count from beneficiary_report _sc where _sc.specific_support_type = s.support and status in ('','Open','Under Process','Form Submitted') {enquiry_condition_str} ) as pending_count
 		from
 			`tabSupport` s
 		{support_master_condition_str}
