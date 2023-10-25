@@ -13,15 +13,11 @@
    "label": "Education composition"
   },
   {
-   "chart_name": "State of origin",
-   "label": "State of origin"
-  },
-  {
    "chart_name": "Current location",
    "label": "Current location"
   }
  ],
- "content": "[{\"id\":\"nSyCLnHvUy\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of Beneficiaries\",\"col\":6}},{\"id\":\"EXmth7zOaZ\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of families\",\"col\":6}},{\"id\":\"UjlosovxUu\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of Camps\",\"col\":6}},{\"id\":\"i7cx2NgbOP\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total number of participants in camp\",\"col\":6}},{\"id\":\"8MwIEpbEYX\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Gender composition\",\"col\":6}},{\"id\":\"ds3OKc4Rqj\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Bank account details\",\"col\":6}},{\"id\":\"TROMGsPZq2\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Education composition\",\"col\":12}},{\"id\":\"PigjIhLP5C\",\"type\":\"chart\",\"data\":{\"chart_name\":\"State of origin\",\"col\":12}},{\"id\":\"FkxHXNCSQe\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Current location\",\"col\":12}}]",
+ "content": "[{\"id\":\"nSyCLnHvUy\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of Beneficiaries\",\"col\":6}},{\"id\":\"EXmth7zOaZ\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of families\",\"col\":6}},{\"id\":\"UjlosovxUu\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of Camps\",\"col\":6}},{\"id\":\"i7cx2NgbOP\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total number of participants in camp\",\"col\":6}},{\"id\":\"8MwIEpbEYX\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Gender composition\",\"col\":6}},{\"id\":\"ds3OKc4Rqj\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Bank account details\",\"col\":6}},{\"id\":\"TROMGsPZq2\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Education composition\",\"col\":12}},{\"id\":\"FkxHXNCSQe\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Current location\",\"col\":12}}]",
  "creation": "2023-09-15 20:25:51.986386",
  "custom_blocks": [],
  "docstatus": 0,
@@ -33,7 +29,7 @@
  "is_hidden": 0,
  "label": "Beneficiaries",
  "links": [],
- "modified": "2023-10-24 12:23:59.298747",
+ "modified": "2023-10-24 16:30:52.625838",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiaries",

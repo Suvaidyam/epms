@@ -21,6 +21,6 @@ if (!frappe.user_roles.includes("MIS executive") || frappe.user_roles.includes("
 		"options": "CSC"
 	})
 }
-frappe.query_reports["State of origin"] = {
+frappe.query_reports["State of origin1"] = {
 	filters: filters
 };
