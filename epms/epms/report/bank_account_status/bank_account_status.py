@@ -34,8 +34,8 @@ def execute(filters=None):
 		else:
 			no_count += acc.count
 
-	data = [{"beneficary":"No. of beneficary have bank account" , "count":yes_count},
-		 {"beneficary":"No. of beneficary have not bank account", "count":no_count}]
+	data = [{"beneficary":"Beneficiaries with one or more bank accounts" , "count":yes_count},
+		 {"beneficary":"Beneficiaries with no bank account", "count":no_count}]
 	# data = []
 	# chart = get_chart(columns , [yes_count, no_count])
 

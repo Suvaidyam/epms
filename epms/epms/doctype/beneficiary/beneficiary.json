@@ -62,7 +62,7 @@
    "fieldname": "gender",
    "fieldtype": "Select",
    "label": "Gender",
-   "options": "\nMale\nFemale\nOthers",
+   "options": "\nMale\nFemale\nDon't wish to say\nOthers",
    "reqd": 1
   },
   {
@@ -106,7 +106,7 @@
   {
    "fieldname": "source_information_about_center",
    "fieldtype": "Link",
-   "label": "Source information about center",
+   "label": "Source of information about center",
    "options": "Source information about center",
    "reqd": 1
   },
@@ -144,7 +144,7 @@
   {
    "fieldname": "do_you_have_appointment_letter",
    "fieldtype": "Select",
-   "label": "Do you have appointment letter?",
+   "label": "Do you have an appointment letter?",
    "options": "\nYes\nNo"
   },
   {
@@ -248,7 +248,7 @@
    "fieldname": "other_source_information_about_center",
    "fieldtype": "Data",
    "hidden": 1,
-   "label": "Other source information about center"
+   "label": "Other source of information about center"
   },
   {
    "fieldname": "csc",
@@ -260,22 +260,22 @@
   {
    "fieldname": "do_you_have_bank_account",
    "fieldtype": "Select",
-   "label": "Do you have bank account",
+   "label": "Do you have any bank account",
    "options": "\nYes\nNo",
    "reqd": 1
   },
   {
    "fieldname": "existing_bank_account",
-   "fieldtype": "Link",
+   "fieldtype": "Table MultiSelect",
    "hidden": 1,
    "label": "Bank name",
-   "options": "Bank"
+   "options": "Bank Child"
   }
  ],
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-22 16:25:01.143863",
+ "modified": "2023-10-25 11:44:37.321859",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",

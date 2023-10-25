@@ -1,7 +1,7 @@
 {
  "charts": [
   {
-   "chart_name": "Beneficiaries have Bank",
+   "chart_name": "Bank account status",
    "label": "Bank account details"
   },
   {
@@ -29,7 +29,7 @@
  "is_hidden": 0,
  "label": "Beneficiaries",
  "links": [],
- "modified": "2023-10-24 16:30:52.625838",
+ "modified": "2023-10-25 11:15:49.515137",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiaries",
