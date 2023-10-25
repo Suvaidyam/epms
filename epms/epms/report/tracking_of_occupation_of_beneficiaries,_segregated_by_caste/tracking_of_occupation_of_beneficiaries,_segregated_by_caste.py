@@ -16,7 +16,7 @@ def execute(filters=None):
 		},
 		{
 			"fieldname":"occupations",
-			"label":"Occupations",
+			"label":"Occupation",
 			"fieldtype":"Link",
 			"options":"Current Occupation",
 			"width":300
