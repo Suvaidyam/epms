@@ -27,7 +27,6 @@ if (!frappe.user_roles.includes("MIS executive") || frappe.user_roles.includes("
 		"options": "CSC"
 	})
 }
-frappe.query_reports["Tracking of place of origin of beneficiaries"] = {
+frappe.query_reports["Place of origin"] = {
 	filters: filters
-	
 };

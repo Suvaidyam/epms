@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Reports",
  "links": [],
- "modified": "2023-10-25 09:55:19.643739",
+ "modified": "2023-10-25 10:00:40.917055",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Reports",
@@ -49,6 +49,13 @@
   {
    "color": "Grey",
    "doc_view": "List",
+   "label": "Place of origin",
+   "link_to": "Place of origin",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
    "label": "Bank details",
    "link_to": "Beneficiaries have Bank",
    "type": "Report"
@@ -65,13 +72,6 @@
    "doc_view": "List",
    "label": "Current location",
    "link_to": "Current Location",
-   "type": "Report"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Place of origin",
-   "link_to": "Tracking of place of origin of beneficiaries",
    "type": "Report"
   },
   {
