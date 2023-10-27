@@ -62,7 +62,7 @@
    "fieldname": "gender",
    "fieldtype": "Select",
    "label": "Gender",
-   "options": "\nMale\nFemale\nDon't wish to say\nOthers",
+   "options": "\nMale\nFemale\nOthers",
    "reqd": 1
   },
   {
@@ -145,7 +145,7 @@
    "fieldname": "do_you_have_appointment_letter",
    "fieldtype": "Select",
    "label": "Do you have an appointment letter?",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo\nNot applicable"
   },
   {
    "default": "No",
@@ -275,7 +275,7 @@
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-26 10:14:42.548023",
+ "modified": "2023-10-27 20:34:26.462952",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",

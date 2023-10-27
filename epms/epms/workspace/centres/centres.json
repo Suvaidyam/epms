@@ -11,12 +11,12 @@
  "idx": 1,
  "indicator_color": "yellow",
  "is_hidden": 0,
- "label": "CSC centres",
+ "label": "Centres",
  "links": [],
- "modified": "2023-10-18 22:09:58.722105",
+ "modified": "2023-10-27 21:04:42.362818",
  "modified_by": "Administrator",
  "module": "Epms",
- "name": "CSC centres",
+ "name": "Centres",
  "number_cards": [],
  "owner": "Administrator",
  "parent_page": "",
@@ -34,5 +34,5 @@
  ],
  "sequence_id": 2.0,
  "shortcuts": [],
- "title": "CSC centres"
+ "title": "Centres"
 }
