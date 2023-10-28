@@ -62,7 +62,7 @@
    "fieldname": "gender",
    "fieldtype": "Select",
    "label": "Gender",
-   "options": "\nMale\nFemale\nDon't wish to say\nOthers",
+   "options": "\nMale\nFemale\nOthers",
    "reqd": 1
   },
   {
@@ -106,7 +106,7 @@
   {
    "fieldname": "source_information_about_center",
    "fieldtype": "Link",
-   "label": "Source of information about center",
+   "label": "Source of information about the center",
    "options": "Source information about center",
    "reqd": 1
   },
@@ -145,7 +145,7 @@
    "fieldname": "do_you_have_appointment_letter",
    "fieldtype": "Select",
    "label": "Do you have an appointment letter?",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo\nNot applicable"
   },
   {
    "default": "No",
@@ -248,14 +248,14 @@
    "fieldname": "other_source_information_about_center",
    "fieldtype": "Data",
    "hidden": 1,
-   "label": "Other source of information about center"
+   "label": "Other source of information about the center"
   },
   {
    "fieldname": "csc",
    "fieldtype": "Link",
    "hidden": 1,
    "label": "CSC",
-   "options": "CSC"
+   "options": "Centre"
   },
   {
    "fieldname": "do_you_have_bank_account",
@@ -275,7 +275,7 @@
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-25 11:44:37.321859",
+ "modified": "2023-10-28 09:54:34.280642",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",

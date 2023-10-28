@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"WaujojESER\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">CSC</span>\",\"col\":12}},{\"id\":\"1qrebE8l-9\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"CSC\",\"col\":12}}]",
+ "content": "[{\"id\":\"1qrebE8l-9\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Centre\",\"col\":12}},{\"id\":\"XUaczDFTU8\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
  "creation": "2023-10-17 11:28:03.825172",
  "custom_blocks": [],
  "docstatus": 0,
@@ -8,23 +8,23 @@
  "for_user": "",
  "hide_custom": 0,
  "icon": "retail",
- "idx": 1,
+ "idx": 2,
  "indicator_color": "yellow",
  "is_hidden": 0,
- "label": "CSC centres",
+ "label": "Centres",
  "links": [],
- "modified": "2023-10-18 22:09:58.722105",
+ "modified": "2023-10-28 11:52:56.672194",
  "modified_by": "Administrator",
  "module": "Epms",
- "name": "CSC centres",
+ "name": "Centres",
  "number_cards": [],
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
  "quick_lists": [
   {
-   "document_type": "CSC",
-   "label": "CSC"
+   "document_type": "Centre",
+   "label": "Centre"
   }
  ],
  "roles": [
@@ -34,5 +34,5 @@
  ],
  "sequence_id": 2.0,
  "shortcuts": [],
- "title": "CSC centres"
+ "title": "Centres"
 }

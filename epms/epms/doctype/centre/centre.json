@@ -30,16 +30,16 @@
    "fieldname": "csc_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "CSC Name",
+   "label": "Centre Name",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-10 17:18:26.306945",
+ "modified": "2023-10-28 15:24:15.792118",
  "modified_by": "Administrator",
  "module": "Epms",
- "name": "CSC",
+ "name": "Centre",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
