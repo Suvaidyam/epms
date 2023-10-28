@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"1qrebE8l-9\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Centre\",\"col\":12}},{\"id\":\"xdrb0W_prr\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Centre\",\"col\":3}},{\"id\":\"XUaczDFTU8\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
+ "content": "[{\"id\":\"1qrebE8l-9\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Centre\",\"col\":12}},{\"id\":\"XUaczDFTU8\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
  "creation": "2023-10-17 11:28:03.825172",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Centres",
  "links": [],
- "modified": "2023-10-28 11:14:02.322139",
+ "modified": "2023-10-28 11:52:56.672194",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Centres",
@@ -33,14 +33,6 @@
   }
  ],
  "sequence_id": 2.0,
- "shortcuts": [
-  {
-   "color": "Grey",
-   "doc_view": "New",
-   "label": "Centre",
-   "link_to": "Centre",
-   "type": "DocType"
-  }
- ],
+ "shortcuts": [],
  "title": "Centres"
 }

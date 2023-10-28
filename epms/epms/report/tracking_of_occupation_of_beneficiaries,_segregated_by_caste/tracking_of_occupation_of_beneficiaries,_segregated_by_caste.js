@@ -22,8 +22,8 @@ if (!frappe.user_roles.includes("MIS executive") || frappe.user_roles.includes("
 	filters.push({
 		"fieldname": "csc",
 		"fieldtype": "Link",
-		"label": "CSC",
-		"options": "CSC"
+		"label": "Centre",
+		"options": "Centre"
 	})
 }
 frappe.query_reports["Tracking of Occupation of beneficiaries, segregated by Caste"] = {
