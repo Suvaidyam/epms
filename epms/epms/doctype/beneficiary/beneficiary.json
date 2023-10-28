@@ -255,7 +255,7 @@
    "fieldtype": "Link",
    "hidden": 1,
    "label": "CSC",
-   "options": "CSC"
+   "options": "Centre"
   },
   {
    "fieldname": "do_you_have_bank_account",
@@ -275,7 +275,7 @@
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-27 20:34:26.462952",
+ "modified": "2023-10-28 09:54:34.280642",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",

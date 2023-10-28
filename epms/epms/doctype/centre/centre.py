@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class CSC(Document):
+class Centre(Document):
 	pass

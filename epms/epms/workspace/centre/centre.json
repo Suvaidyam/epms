@@ -8,15 +8,15 @@
  "for_user": "",
  "hide_custom": 0,
  "icon": "retail",
- "idx": 1,
+ "idx": 2,
  "indicator_color": "yellow",
  "is_hidden": 0,
- "label": "Centres",
+ "label": "Centre",
  "links": [],
- "modified": "2023-10-27 21:04:42.362818",
+ "modified": "2023-10-28 08:28:38.469921",
  "modified_by": "Administrator",
  "module": "Epms",
- "name": "Centres",
+ "name": "Centre",
  "number_cards": [],
  "owner": "Administrator",
  "parent_page": "",
@@ -34,5 +34,5 @@
  ],
  "sequence_id": 2.0,
  "shortcuts": [],
- "title": "Centres"
+ "title": "Centre"
 }
