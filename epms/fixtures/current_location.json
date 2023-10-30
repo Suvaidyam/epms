@@ -4,223 +4,255 @@
   "doctype": "Current location",
   "modified": "2023-10-11 19:35:46.302159",
   "name": "Others",
-  "name_of_location": "Others"
+  "name_of_location": "Others",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:35:47.733820",
   "name": "Vishkarma Colony",
-  "name_of_location": "Vishkarma Colony"
+  "name_of_location": "Vishkarma Colony",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:35:49.172968",
   "name": "Visaya Harijan Chaupal",
-  "name_of_location": "Visaya Harijan Chaupal"
+  "name_of_location": "Visaya Harijan Chaupal",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:35:50.791282",
   "name": "Vikas Nagar",
-  "name_of_location": "Vikas Nagar"
+  "name_of_location": "Vikas Nagar",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:35:51.868347",
   "name": "Shivji Park",
-  "name_of_location": "Shivji Park"
+  "name_of_location": "Shivji Park",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:35:53.062366",
   "name": "Shivaji Park",
-  "name_of_location": "Shivaji Park"
+  "name_of_location": "Shivaji Park",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:35:54.904554",
   "name": "Shiv Nagar",
-  "name_of_location": "Shiv Nagar"
+  "name_of_location": "Shiv Nagar",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:35:56.129944",
   "name": "Shakti Park",
-  "name_of_location": "Shakti Park"
+  "name_of_location": "Shakti Park",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:35:58.384429",
   "name": "Sec-10",
-  "name_of_location": "Sec-10"
+  "name_of_location": "Sec-10",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:36:00.639326",
   "name": "Roopa Naharpur",
-  "name_of_location": "Roopa Naharpur"
+  "name_of_location": "Roopa Naharpur",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:36:02.073934",
   "name": "Ravi Nagar",
-  "name_of_location": "Ravi Nagar"
+  "name_of_location": "Ravi Nagar",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:36:03.653909",
   "name": "Rajasthani Colony",
-  "name_of_location": "Rajasthani Colony"
+  "name_of_location": "Rajasthani Colony",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:36:05.044188",
   "name": "Om Vihar",
-  "name_of_location": "Om Vihar"
+  "name_of_location": "Om Vihar",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:36:06.586140",
   "name": "Om Nagar",
-  "name_of_location": "Om Nagar"
+  "name_of_location": "Om Nagar",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:36:08.270962",
   "name": "Nai Basti",
-  "name_of_location": "Nai Basti"
+  "name_of_location": "Nai Basti",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:36:09.857587",
   "name": "Madanpuri",
-  "name_of_location": "Madanpuri"
+  "name_of_location": "Madanpuri",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:36:11.496430",
   "name": "Laxmi Garden",
-  "name_of_location": "Laxmi Garden"
+  "name_of_location": "Laxmi Garden",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:36:14.964556",
   "name": "Krishna Colony",
-  "name_of_location": "Krishna Colony"
+  "name_of_location": "Krishna Colony",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:36:16.950207",
   "name": "Khandsa Road",
-  "name_of_location": "Khandsa Road"
+  "name_of_location": "Khandsa Road",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:36:19.505599",
   "name": "Kadipur",
-  "name_of_location": "Kadipur"
+  "name_of_location": "Kadipur",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:36:21.231524",
   "name": "Islampur",
-  "name_of_location": "Islampur"
+  "name_of_location": "Islampur",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:36:23.374937",
   "name": "Heera Nagar",
-  "name_of_location": "Heera Nagar"
+  "name_of_location": "Heera Nagar",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:36:25.022850",
   "name": "Hari Nagar",
-  "name_of_location": "Hari Nagar"
+  "name_of_location": "Hari Nagar",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:36:26.451608",
   "name": "Gandhinagar",
-  "name_of_location": "Gandhinagar"
+  "name_of_location": "Gandhinagar",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:36:27.890612",
   "name": "Firoz Gandhi Colony",
-  "name_of_location": "Firoz Gandhi Colony"
+  "name_of_location": "Firoz Gandhi Colony",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:36:29.733364",
   "name": "Devilal Colony",
-  "name_of_location": "Devilal Colony"
+  "name_of_location": "Devilal Colony",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:36:31.162367",
   "name": "Current Location",
-  "name_of_location": "Current Location"
+  "name_of_location": "Current Location",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:36:32.797847",
   "name": "Bhawani Enclave",
-  "name_of_location": "Bhawani Enclave"
+  "name_of_location": "Bhawani Enclave",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:36:34.438977",
   "name": "Basai Road",
-  "name_of_location": "Basai Road"
+  "name_of_location": "Basai Road",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:36:36.274316",
   "name": "Basai Enclave",
-  "name_of_location": "Basai Enclave"
+  "name_of_location": "Basai Enclave",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:36:40.152482",
   "name": "Amar Colony",
-  "name_of_location": "Amar Colony"
+  "name_of_location": "Amar Colony",
+  "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current location",
   "modified": "2023-10-11 19:36:37.703887",
   "name": "Arjun Nagar",
-  "name_of_location": "Arjun Nagar"
+  "name_of_location": "Arjun Nagar",
+  "sequence": 0
  }
 ]

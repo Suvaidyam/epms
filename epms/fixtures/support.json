@@ -378,14 +378,6 @@
  {
   "docstatus": 0,
   "doctype": "Support",
-  "modified": "2023-09-26 12:32:26.381250",
-  "name": "Job required",
-  "support": "Job required",
-  "support_type": "Others"
- },
- {
-  "docstatus": 0,
-  "doctype": "Support",
   "modified": "2023-09-26 12:32:36.376300",
   "name": "Other support",
   "support": "Other support",
@@ -403,8 +395,40 @@
   "docstatus": 0,
   "doctype": "Support",
   "modified": "2023-09-26 12:32:16.315061",
-  "name": "EPF",
-  "support": "EPF",
+  "name": "PF",
+  "support": "PF",
+  "support_type": "Legal Support"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-10-30 11:14:16.061282",
+  "name": "Job required",
+  "support": "Job required",
+  "support_type": "Employbility"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-10-30 11:14:57.202586",
+  "name": "ESI",
+  "support": "ESI",
+  "support_type": "Legal Support"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-10-30 11:15:10.644001",
+  "name": "Non payment of wages",
+  "support": "Non payment of wages",
+  "support_type": "Legal Support"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-10-30 11:15:21.905880",
+  "name": "Others",
+  "support": "Others",
   "support_type": "Legal Support"
  }
 ]
