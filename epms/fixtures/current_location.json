@@ -74,14 +74,6 @@
  {
   "docstatus": 0,
   "doctype": "Current location",
-  "modified": "2023-10-11 19:36:00.639326",
-  "name": "Roopa Naharpur",
-  "name_of_location": "Roopa Naharpur",
-  "sequence": 0
- },
- {
-  "docstatus": 0,
-  "doctype": "Current location",
   "modified": "2023-10-11 19:36:02.073934",
   "name": "Ravi Nagar",
   "name_of_location": "Ravi Nagar",
@@ -93,22 +85,6 @@
   "modified": "2023-10-11 19:36:03.653909",
   "name": "Rajasthani Colony",
   "name_of_location": "Rajasthani Colony",
-  "sequence": 0
- },
- {
-  "docstatus": 0,
-  "doctype": "Current location",
-  "modified": "2023-10-11 19:36:05.044188",
-  "name": "Om Vihar",
-  "name_of_location": "Om Vihar",
-  "sequence": 0
- },
- {
-  "docstatus": 0,
-  "doctype": "Current location",
-  "modified": "2023-10-11 19:36:06.586140",
-  "name": "Om Nagar",
-  "name_of_location": "Om Nagar",
   "sequence": 0
  },
  {
@@ -245,6 +221,30 @@
   "modified": "2023-10-11 19:36:40.152482",
   "name": "Amar Colony",
   "name_of_location": "Amar Colony",
+  "sequence": 0
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-10-11 19:36:00.639326",
+  "name": "Roopa Naharpur",
+  "name_of_location": "Roopa Naharpur",
+  "sequence": 0
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-10-11 19:36:05.044188",
+  "name": "Om Vihar",
+  "name_of_location": "Om Vihar",
+  "sequence": 0
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-10-11 19:36:06.586140",
+  "name": "Om Nagar",
+  "name_of_location": "Om Nagar",
   "sequence": 0
  },
  {

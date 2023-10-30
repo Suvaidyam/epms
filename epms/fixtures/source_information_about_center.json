@@ -26,18 +26,18 @@
  {
   "docstatus": 0,
   "doctype": "Source information about center",
-  "modified": "2023-10-11 19:42:23.485410",
-  "name": "Direct Mobilization",
-  "sequence": 0,
-  "source_information_about_center": "Direct Mobilization"
- },
- {
-  "docstatus": 0,
-  "doctype": "Source information about center",
   "modified": "2023-10-11 19:43:06.893106",
   "name": "Self",
   "sequence": 0,
   "source_information_about_center": "Self"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Source information about center",
+  "modified": "2023-10-11 19:42:23.485410",
+  "name": "Direct Mobilization",
+  "sequence": 0,
+  "source_information_about_center": "Direct Mobilization"
  },
  {
   "docstatus": 0,

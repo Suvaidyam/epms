@@ -2,20 +2,6 @@
  {
   "docstatus": 0,
   "doctype": "Support Type",
-  "modified": "2023-09-26 12:14:25.552384",
-  "name": "Others",
-  "support_type": "Others"
- },
- {
-  "docstatus": 0,
-  "doctype": "Support Type",
-  "modified": "2023-09-26 12:14:14.311894",
-  "name": "Legal Support",
-  "support_type": "Legal Support"
- },
- {
-  "docstatus": 0,
-  "doctype": "Support Type",
   "modified": "2023-09-26 12:13:39.953690",
   "name": "Documentation",
   "support_type": "Documentation"
@@ -23,9 +9,16 @@
  {
   "docstatus": 0,
   "doctype": "Support Type",
-  "modified": "2023-09-26 12:13:50.892059",
-  "name": "Govt. Schemes",
-  "support_type": "Govt. Schemes"
+  "modified": "2023-10-30 10:45:36.626851",
+  "name": "Employbility",
+  "support_type": "Employbility"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support Type",
+  "modified": "2023-09-26 12:14:25.552384",
+  "name": "Others",
+  "support_type": "Others"
  },
  {
   "docstatus": 0,
@@ -37,8 +30,15 @@
  {
   "docstatus": 0,
   "doctype": "Support Type",
-  "modified": "2023-10-30 10:45:36.626851",
-  "name": "Employbility",
-  "support_type": "Employbility"
+  "modified": "2023-09-26 12:13:50.892059",
+  "name": "Govt. Schemes",
+  "support_type": "Govt. Schemes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support Type",
+  "modified": "2023-09-26 12:14:14.311894",
+  "name": "Legal Support",
+  "support_type": "Legal Support"
  }
 ]

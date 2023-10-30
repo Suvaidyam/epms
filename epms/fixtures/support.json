@@ -370,30 +370,6 @@
  {
   "docstatus": 0,
   "doctype": "Support",
-  "modified": "2023-09-26 12:32:05.165474",
-  "name": "Jan Dhan Account New",
-  "support": "Jan Dhan Account New",
-  "support_type": "Bank A/C"
- },
- {
-  "docstatus": 0,
-  "doctype": "Support",
-  "modified": "2023-09-26 12:32:36.376300",
-  "name": "Other support",
-  "support": "Other support",
-  "support_type": "Others"
- },
- {
-  "docstatus": 0,
-  "doctype": "Support",
-  "modified": "2023-09-26 12:31:51.950302",
-  "name": "Jan Dhan Account Correction",
-  "support": "Jan Dhan Account Correction",
-  "support_type": "Bank A/C"
- },
- {
-  "docstatus": 0,
-  "doctype": "Support",
   "modified": "2023-09-26 12:32:16.315061",
   "name": "PF",
   "support": "PF",
@@ -430,5 +406,29 @@
   "name": "Others",
   "support": "Others",
   "support_type": "Legal Support"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:32:05.165474",
+  "name": "Jan Dhan Account New",
+  "support": "Jan Dhan Account New",
+  "support_type": "Bank A/C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:31:51.950302",
+  "name": "Jan Dhan Account Correction",
+  "support": "Jan Dhan Account Correction",
+  "support_type": "Bank A/C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Support",
+  "modified": "2023-09-26 12:32:36.376300",
+  "name": "Other support",
+  "support": "Other support",
+  "support_type": "Others"
  }
 ]

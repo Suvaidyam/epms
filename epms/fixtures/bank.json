@@ -72,14 +72,6 @@
   "sequence": 0
  },
  {
-  "bank_name": "No",
-  "docstatus": 0,
-  "doctype": "Bank",
-  "modified": "2023-10-11 17:34:10.283569",
-  "name": "No",
-  "sequence": 0
- },
- {
   "bank_name": "Kotak Jan Dhan",
   "docstatus": 0,
   "doctype": "Bank",
@@ -136,14 +128,6 @@
   "sequence": 0
  },
  {
-  "bank_name": "Gramin Bank",
-  "docstatus": 0,
-  "doctype": "Bank",
-  "modified": "2023-10-11 17:34:10.466785",
-  "name": "Gramin Bank",
-  "sequence": 0
- },
- {
   "bank_name": "Canara Bank Jan Dhan",
   "docstatus": 0,
   "doctype": "Bank",
@@ -189,6 +173,14 @@
   "doctype": "Bank",
   "modified": "2023-10-11 17:34:10.536018",
   "name": "BOI Jan Dhan",
+  "sequence": 0
+ },
+ {
+  "bank_name": "Gramin Bank",
+  "docstatus": 0,
+  "doctype": "Bank",
+  "modified": "2023-10-11 17:34:10.466785",
+  "name": "Gramin Bank",
   "sequence": 0
  }
 ]

@@ -1,14 +1,5 @@
 [
  {
-  "csc_name": "Devilal colony",
-  "district": null,
-  "docstatus": 0,
-  "doctype": "Centre",
-  "modified": "2023-10-10 17:19:27.955248",
-  "name": "CSC-S07-026",
-  "state": "S07"
- },
- {
   "csc_name": "Sikanderpur",
   "district": null,
   "docstatus": 0,
@@ -27,21 +18,30 @@
   "state": "S07"
  },
  {
-  "csc_name": "Sarhol",
-  "district": null,
-  "docstatus": 0,
-  "doctype": "Centre",
-  "modified": "2023-10-10 17:19:41.399970",
-  "name": "CSC-S07-027",
-  "state": "S07"
- },
- {
   "csc_name": "Islampur",
   "district": null,
   "docstatus": 0,
   "doctype": "Centre",
   "modified": "2023-10-28 08:38:30.215651",
   "name": "CSC-S07-064",
+  "state": "S07"
+ },
+ {
+  "csc_name": "Devilal colony",
+  "district": null,
+  "docstatus": 0,
+  "doctype": "Centre",
+  "modified": "2023-10-10 17:19:27.955248",
+  "name": "CSC-S07-026",
+  "state": "S07"
+ },
+ {
+  "csc_name": "Sarhol",
+  "district": null,
+  "docstatus": 0,
+  "doctype": "Centre",
+  "modified": "2023-10-10 17:19:41.399970",
+  "name": "CSC-S07-027",
   "state": "S07"
  },
  {
