@@ -1,6 +1,23 @@
 // Copyright (c) 2023, Management System for Agrasarteach@suvaidyam.com and contributors
 // For license information, please see license.txt
-var global_data = []
+
+function bank_name(frm,data){
+  var new_bank = frm.fields_dict['other_bank_account'];
+  for(a of data){
+    if(a.bank_name==="Others"){
+      console.log(a.bank_name)
+      new_bank.df.hidden = 0;
+      frm.set_df_property('other_bank_account', 'reqd', 1);
+      new_bank.refresh();
+    }else{
+      new_bank.df.hidden = 1;
+      frm.set_df_property('other_bank_account', 'reqd', 0);
+      new_bank.refresh();
+    }
+  }
+}
+
+// /////////////////////////////////////////////////////////////////////////
 frappe.ui.form.on("Beneficiary", {
   before_save: function (frm) {
     // follow up status manage
@@ -104,14 +121,19 @@ frappe.ui.form.on("Beneficiary", {
     } else {
       frm.set_df_property('new_occupation', 'reqd', 0);
     }
-    let new_bank = frm.fields_dict['other_bank_account'];
-    if (frm.doc.existing_bank_account === "Others") {
-      frm.set_df_property('other_bank_account', 'reqd', 1);
-      new_bank.df.hidden = 0;
-      new_bank.refresh();
+    bank_name(frm,frm.doc.existing_bank_account)
+
+    var have_bank = frm.fields_dict['existing_bank_account'];
+    if (frm.doc.do_you_have_bank_account === "Yes") {
+      have_bank.df.hidden = 0;
+      frm.set_df_property('existing_bank_account', 'reqd', 1);
+      have_bank.refresh();
     } else {
-      frm.set_df_property('other_bank_account', 'reqd', 0);
+      have_bank.df.hidden = 1;
+      frm.set_df_property('existing_bank_account', 'reqd', 0);
+      have_bank.refresh();
     }
+
     let new_location = frm.fields_dict['other_current_location'];
     if (frm.doc.current_location === "Others") {
       frm.set_df_property('other_current_location', 'reqd', 1);
@@ -269,16 +291,8 @@ frappe.ui.form.on("Beneficiary", {
     }
   },
   existing_bank_account: function (frm) {
-    var new_bank = frm.fields_dict['other_bank_account'];
-    if (frm.doc.existing_bank_account === "Others") {
-      new_bank.df.hidden = 0;
-      frm.set_df_property('other_bank_account', 'reqd', 1);
-      new_bank.refresh();
-    } else {
-      new_bank.df.hidden = 1;
-      frm.set_df_property('other_bank_account', 'reqd', 0);
-      new_bank.refresh();
-    }
+    // Call function on top
+    bank_name(frm,frm.doc.existing_bank_account)
   },
   current_location: function (frm) {
     console.log("lllll", frm.doc.current_location)
