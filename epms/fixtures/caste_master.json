@@ -1,5 +1,29 @@
 [
  {
+  "caste": "ST",
+  "docstatus": 0,
+  "doctype": "Caste master",
+  "modified": "2023-10-12 10:40:54.201639",
+  "name": "ST",
+  "sequence": 0
+ },
+ {
+  "caste": "SC",
+  "docstatus": 0,
+  "doctype": "Caste master",
+  "modified": "2023-10-12 10:40:53.076269",
+  "name": "SC",
+  "sequence": 0
+ },
+ {
+  "caste": "General",
+  "docstatus": 0,
+  "doctype": "Caste master",
+  "modified": "2023-10-12 10:40:51.438102",
+  "name": "General",
+  "sequence": 0
+ },
+ {
   "caste": "Others",
   "docstatus": 0,
   "doctype": "Caste master",
@@ -13,30 +37,6 @@
   "doctype": "Caste master",
   "modified": "2023-10-12 10:40:52.462332",
   "name": "OBC",
-  "sequence": 0
- },
- {
-  "caste": "SC",
-  "docstatus": 0,
-  "doctype": "Caste master",
-  "modified": "2023-10-12 10:40:53.076269",
-  "name": "SC",
-  "sequence": 0
- },
- {
-  "caste": "ST",
-  "docstatus": 0,
-  "doctype": "Caste master",
-  "modified": "2023-10-12 10:40:54.201639",
-  "name": "ST",
-  "sequence": 0
- },
- {
-  "caste": "General",
-  "docstatus": 0,
-  "doctype": "Caste master",
-  "modified": "2023-10-12 10:40:51.438102",
-  "name": "General",
   "sequence": 0
  }
 ]

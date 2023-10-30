@@ -2,41 +2,9 @@
  {
   "docstatus": 0,
   "doctype": "Education master",
-  "education": "B.Com",
-  "modified": "2023-10-12 17:27:03.513966",
-  "name": "B.Com",
-  "sequence": 0
- },
- {
-  "docstatus": 0,
-  "doctype": "Education master",
-  "education": "Child",
-  "modified": "2023-10-12 10:59:54.846871",
-  "name": "Child",
-  "sequence": 0
- },
- {
-  "docstatus": 0,
-  "doctype": "Education master",
-  "education": "Below Primary",
-  "modified": "2023-10-12 10:59:55.487720",
-  "name": "Below Primary",
-  "sequence": 0
- },
- {
-  "docstatus": 0,
-  "doctype": "Education master",
   "education": "Primary (1st to 5th Class)",
   "modified": "2023-10-12 10:59:55.771660",
   "name": "Primary (1st to 5th Class)",
-  "sequence": 0
- },
- {
-  "docstatus": 0,
-  "doctype": "Education master",
-  "education": "Secondary (6th to 10th class)",
-  "modified": "2023-10-12 10:59:56.058187",
-  "name": "Secondary (6th to 10th class)",
   "sequence": 0
  },
  {
@@ -90,9 +58,33 @@
  {
   "docstatus": 0,
   "doctype": "Education master",
-  "education": "Bcom",
+  "education": "Child",
+  "modified": "2023-10-12 10:59:54.846871",
+  "name": "Child",
+  "sequence": 0
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Education master",
+  "education": "Below Primary",
+  "modified": "2023-10-12 10:59:55.487720",
+  "name": "Below Primary",
+  "sequence": 0
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Education master",
+  "education": "B.Com",
   "modified": "2023-10-12 17:27:03.513966",
-  "name": "Bcom",
+  "name": "B.Com",
+  "sequence": 0
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Education master",
+  "education": "Secondary (6th to 10th class)",
+  "modified": "2023-10-12 10:59:56.058187",
+  "name": "Secondary (6th to 10th class)",
   "sequence": 0
  }
 ]

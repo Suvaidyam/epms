@@ -98,14 +98,6 @@
  {
   "docstatus": 0,
   "doctype": "Current Occupation",
-  "modified": "2023-10-11 15:17:13.627882",
-  "name": "Factory Worker Others Technician",
-  "occupation": "Factory Worker Others Technician",
-  "sequence": 0
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
   "modified": "2023-10-11 15:17:13.649776",
   "name": "Factory Worker Others Helper",
   "occupation": "Factory Worker Others Helper",
@@ -194,17 +186,41 @@
  {
   "docstatus": 0,
   "doctype": "Current Occupation",
-  "modified": "2023-10-11 15:17:14.040508",
-  "name": "Construction Worker Labour Market",
-  "occupation": "Construction Worker Labour Market",
+  "modified": "2023-10-11 15:17:14.067179",
+  "name": "Construction Worker Electrician",
+  "occupation": "Construction Worker Electrician",
   "sequence": 0
  },
  {
   "docstatus": 0,
   "doctype": "Current Occupation",
-  "modified": "2023-10-11 15:17:14.067179",
-  "name": "Construction Worker Electrician",
-  "occupation": "Construction Worker Electrician",
+  "modified": "2023-10-11 15:17:13.502572",
+  "name": "Micro Enterprise",
+  "occupation": "Micro Enterprise",
+  "sequence": 0
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-30 16:16:17.033170",
+  "name": "t1",
+  "occupation": "t1",
+  "sequence": 0
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:13.627882",
+  "name": "Factory Worker Others Technician",
+  "occupation": "Factory Worker Others Technician",
+  "sequence": 0
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Current Occupation",
+  "modified": "2023-10-11 15:17:14.040508",
+  "name": "Construction Worker Labour Market",
+  "occupation": "Construction Worker Labour Market",
   "sequence": 0
  },
  {
@@ -221,14 +237,6 @@
   "modified": "2023-10-11 15:17:14.101946",
   "name": "Construction Worker (under Contractor)",
   "occupation": "Construction Worker (under Contractor)",
-  "sequence": 0
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-10-11 15:17:13.502572",
-  "name": "Micro Enterprise",
-  "occupation": "Micro Enterprise",
   "sequence": 0
  }
 ]
