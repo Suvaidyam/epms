@@ -4,34 +4,39 @@
   "docstatus": 0,
   "doctype": "Caste master",
   "modified": "2023-10-12 10:42:20.218123",
-  "name": "Others"
+  "name": "Others",
+  "sequence": 0
  },
  {
   "caste": "OBC",
   "docstatus": 0,
   "doctype": "Caste master",
   "modified": "2023-10-12 10:40:52.462332",
-  "name": "OBC"
+  "name": "OBC",
+  "sequence": 0
  },
  {
   "caste": "SC",
   "docstatus": 0,
   "doctype": "Caste master",
   "modified": "2023-10-12 10:40:53.076269",
-  "name": "SC"
+  "name": "SC",
+  "sequence": 0
  },
  {
   "caste": "ST",
   "docstatus": 0,
   "doctype": "Caste master",
   "modified": "2023-10-12 10:40:54.201639",
-  "name": "ST"
+  "name": "ST",
+  "sequence": 0
  },
  {
   "caste": "General",
   "docstatus": 0,
   "doctype": "Caste master",
   "modified": "2023-10-12 10:40:51.438102",
-  "name": "General"
+  "name": "General",
+  "sequence": 0
  }
 ]

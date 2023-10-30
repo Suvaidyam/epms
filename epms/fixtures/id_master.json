@@ -35,10 +35,10 @@
   "name_of_id": "Bank Account"
  },
  {
-    "docstatus": 0,
-    "doctype": "ID Master",
-    "modified": "2023-09-26 14:01:36.665526",
-    "name": "Family ID",
-    "name_of_id": "Family ID"
-   }
+  "docstatus": 0,
+  "doctype": "ID Master",
+  "modified": "2023-09-26 14:01:36.665526",
+  "name": "Family ID",
+  "name_of_id": "Family ID"
+ }
 ]

@@ -4,167 +4,191 @@
   "docstatus": 0,
   "doctype": "Bank",
   "modified": "2023-10-11 17:34:10.110272",
-  "name": "Others"
+  "name": "Others",
+  "sequence": 0
  },
  {
   "bank_name": "UBI Jan Dhan",
   "docstatus": 0,
   "doctype": "Bank",
   "modified": "2023-10-11 17:34:10.141969",
-  "name": "UBI Jan Dhan"
+  "name": "UBI Jan Dhan",
+  "sequence": 0
  },
  {
   "bank_name": "UBI",
   "docstatus": 0,
   "doctype": "Bank",
   "modified": "2023-10-11 17:34:10.158674",
-  "name": "UBI"
+  "name": "UBI",
+  "sequence": 0
  },
  {
   "bank_name": "SBI Jan Dhan",
   "docstatus": 0,
   "doctype": "Bank",
   "modified": "2023-10-11 17:34:10.175007",
-  "name": "SBI Jan Dhan"
+  "name": "SBI Jan Dhan",
+  "sequence": 0
  },
  {
   "bank_name": "SBI",
   "docstatus": 0,
   "doctype": "Bank",
   "modified": "2023-10-11 17:34:10.193134",
-  "name": "SBI"
+  "name": "SBI",
+  "sequence": 0
  },
  {
   "bank_name": "PNB Jan Dhan",
   "docstatus": 0,
   "doctype": "Bank",
   "modified": "2023-10-11 17:34:10.210595",
-  "name": "PNB Jan Dhan"
+  "name": "PNB Jan Dhan",
+  "sequence": 0
  },
  {
   "bank_name": "PNB",
   "docstatus": 0,
   "doctype": "Bank",
   "modified": "2023-10-11 17:34:10.227967",
-  "name": "PNB"
+  "name": "PNB",
+  "sequence": 0
  },
  {
   "bank_name": "P & S Bank Jan Dhan",
   "docstatus": 0,
   "doctype": "Bank",
   "modified": "2023-10-11 17:34:10.245537",
-  "name": "P & S Bank Jan Dhan"
+  "name": "P & S Bank Jan Dhan",
+  "sequence": 0
  },
  {
   "bank_name": "P & S Bank",
   "docstatus": 0,
   "doctype": "Bank",
   "modified": "2023-10-11 17:34:10.262029",
-  "name": "P & S Bank"
+  "name": "P & S Bank",
+  "sequence": 0
  },
  {
   "bank_name": "No",
   "docstatus": 0,
   "doctype": "Bank",
   "modified": "2023-10-11 17:34:10.283569",
-  "name": "No"
+  "name": "No",
+  "sequence": 0
  },
  {
   "bank_name": "Kotak Jan Dhan",
   "docstatus": 0,
   "doctype": "Bank",
   "modified": "2023-10-11 17:34:10.307559",
-  "name": "Kotak Jan Dhan"
+  "name": "Kotak Jan Dhan",
+  "sequence": 0
  },
  {
   "bank_name": "Kotak",
   "docstatus": 0,
   "doctype": "Bank",
   "modified": "2023-10-11 17:34:10.328768",
-  "name": "Kotak"
+  "name": "Kotak",
+  "sequence": 0
  },
  {
   "bank_name": "IPPB",
   "docstatus": 0,
   "doctype": "Bank",
   "modified": "2023-10-11 17:34:10.351337",
-  "name": "IPPB"
+  "name": "IPPB",
+  "sequence": 0
  },
  {
   "bank_name": "IndusInd Bank",
   "docstatus": 0,
   "doctype": "Bank",
   "modified": "2023-10-11 17:34:10.372544",
-  "name": "IndusInd Bank"
+  "name": "IndusInd Bank",
+  "sequence": 0
  },
  {
   "bank_name": "ICICI",
   "docstatus": 0,
   "doctype": "Bank",
   "modified": "2023-10-11 17:34:10.398896",
-  "name": "ICICI"
+  "name": "ICICI",
+  "sequence": 0
  },
  {
   "bank_name": "HDFC",
   "docstatus": 0,
   "doctype": "Bank",
   "modified": "2023-10-11 17:34:10.421487",
-  "name": "HDFC"
+  "name": "HDFC",
+  "sequence": 0
  },
  {
   "bank_name": "Gramin Bank Jan Dhan",
   "docstatus": 0,
   "doctype": "Bank",
   "modified": "2023-10-11 17:34:10.444147",
-  "name": "Gramin Bank Jan Dhan"
+  "name": "Gramin Bank Jan Dhan",
+  "sequence": 0
  },
  {
   "bank_name": "Gramin Bank",
   "docstatus": 0,
   "doctype": "Bank",
   "modified": "2023-10-11 17:34:10.466785",
-  "name": "Gramin Bank"
+  "name": "Gramin Bank",
+  "sequence": 0
  },
  {
   "bank_name": "Canara Bank Jan Dhan",
   "docstatus": 0,
   "doctype": "Bank",
   "modified": "2023-10-11 17:34:10.489094",
-  "name": "Canara Bank Jan Dhan"
+  "name": "Canara Bank Jan Dhan",
+  "sequence": 0
  },
  {
   "bank_name": "Canara Bank",
   "docstatus": 0,
   "doctype": "Bank",
   "modified": "2023-10-11 17:34:10.512052",
-  "name": "Canara Bank"
+  "name": "Canara Bank",
+  "sequence": 0
  },
  {
   "bank_name": "BOI",
   "docstatus": 0,
   "doctype": "Bank",
   "modified": "2023-10-11 17:34:10.563654",
-  "name": "BOI"
+  "name": "BOI",
+  "sequence": 0
  },
  {
   "bank_name": "BOB Jan Dhan",
   "docstatus": 0,
   "doctype": "Bank",
   "modified": "2023-10-11 17:34:10.585167",
-  "name": "BOB Jan Dhan"
+  "name": "BOB Jan Dhan",
+  "sequence": 0
  },
  {
   "bank_name": "BOB",
   "docstatus": 0,
   "doctype": "Bank",
   "modified": "2023-10-11 17:34:10.611350",
-  "name": "BOB"
+  "name": "BOB",
+  "sequence": 0
  },
  {
   "bank_name": "BOI Jan Dhan",
   "docstatus": 0,
   "doctype": "Bank",
   "modified": "2023-10-11 17:34:10.536018",
-  "name": "BOI Jan Dhan"
+  "name": "BOI Jan Dhan",
+  "sequence": 0
  }
 ]

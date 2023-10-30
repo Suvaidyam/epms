@@ -2,8 +2,25 @@
  {
   "docstatus": 0,
   "doctype": "Source information about center",
+  "modified": "2023-10-27 20:47:59.835295",
+  "name": "Radio program",
+  "sequence": 0,
+  "source_information_about_center": "Radio program"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Source information about center",
+  "modified": "2023-10-27 20:50:50.606013",
+  "name": "Agrasar Sathi",
+  "sequence": 0,
+  "source_information_about_center": "Agrasar Sathi"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Source information about center",
   "modified": "2023-10-11 19:41:48.671604",
   "name": "Others",
+  "sequence": 0,
   "source_information_about_center": "Others"
  },
  {
@@ -11,6 +28,7 @@
   "doctype": "Source information about center",
   "modified": "2023-10-11 19:42:23.485410",
   "name": "Direct Mobilization",
+  "sequence": 0,
   "source_information_about_center": "Direct Mobilization"
  },
  {
@@ -18,6 +36,7 @@
   "doctype": "Source information about center",
   "modified": "2023-10-11 19:43:06.893106",
   "name": "Self",
+  "sequence": 0,
   "source_information_about_center": "Self"
  },
  {
@@ -25,6 +44,7 @@
   "doctype": "Source information about center",
   "modified": "2023-10-11 19:42:06.489165",
   "name": "Collectivisation",
+  "sequence": 0,
   "source_information_about_center": "Collectivisation"
  }
 ]
