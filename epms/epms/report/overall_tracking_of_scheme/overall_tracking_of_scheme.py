@@ -60,15 +60,15 @@ def execute(filters=None):
     # print("ben_filters",ben_filters, "other_filters",other_filters, type(ben_filters), type(filters))
 
     enquiry_condition_str = Filter.set_report_filters(
-        support_filters, 'creation', True, '_sc')
+        support_filters, 'creation', True, '_sc', False)
     achieved_condition_str = Filter.set_report_filters(
-        support_filters, 'date_of_completion', True, '_sc')
+        support_filters, 'date_of_completion', True, '_sc', False)
     rejected_condition_str = Filter.set_report_filters(
-        support_filters, 'date_of_rejection', True, '_sc')
+        support_filters, 'date_of_rejection', True, '_sc', False)
     ben_condition_str = Filter.set_report_filters(
         ben_filters, 'registration_date', True, 'tabBeneficiary')
     support_master_condition_str = Filter.set_report_filters(
-        other_filters, '', True, 's')
+        other_filters, '', True, 's', False)
 
     if ben_condition_str:
         ben_condition_str = f"AND {ben_condition_str}"
@@ -113,7 +113,7 @@ def execute(filters=None):
 		order by support_category,support_name
 	"""
 
+    # print(sql_query)
     result = frappe.db.sql(sql_query, as_dict=True)
-    print(sql_query)
     data = result
     return columns, data
