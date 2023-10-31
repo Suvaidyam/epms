@@ -2,7 +2,7 @@
  {
   "docstatus": 0,
   "doctype": "Current Occupation",
-  "modified": "2023-10-11 15:17:13.366025",
+  "modified": "2023-10-31 16:32:53.577769",
   "name": "Others",
   "occupation": "Others",
   "sequence": 1000
@@ -197,14 +197,6 @@
   "modified": "2023-10-11 15:17:13.502572",
   "name": "Micro Enterprise",
   "occupation": "Micro Enterprise",
-  "sequence": 0
- },
- {
-  "docstatus": 0,
-  "doctype": "Current Occupation",
-  "modified": "2023-10-30 16:16:17.033170",
-  "name": "t1",
-  "occupation": "t1",
   "sequence": 0
  },
  {
