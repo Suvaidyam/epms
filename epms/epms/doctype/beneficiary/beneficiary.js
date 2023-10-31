@@ -50,9 +50,9 @@ frappe.ui.form.on("Beneficiary", {
         ++total_no_of_support
         if (item.status === 'Open') {
           ++open
-        } else if (item.status === 'Under Process') {
+        } else if (item.status === 'Under process') {
           ++under_process
-        } else if (item.status == 'Form Submitted') {
+        } else if (item.status == 'Form submitted') {
           ++form_submitted
         } else if (item.status == 'Rejected') {
           ++rejected
