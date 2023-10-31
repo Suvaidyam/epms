@@ -29,7 +29,6 @@ frappe.ui.form.on("Beneficiary", {
             if (follow_up_items.follow_up_status === "Not interested") {
               support_items.status = "Closed"
             } else if (follow_up_items.follow_up_status === "Interested") {
-              console.log("intrested")
               // support_items.status = "Open"
               if (support_items.status === 'Closed') {
                 support_items.status = "Open"
