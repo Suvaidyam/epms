@@ -46,7 +46,7 @@ frappe.ui.form.on("Beneficiary", {
     let total_no_of_support = 0
     if (frm.selected_doc.support_table) {
       for (item of frm.selected_doc.support_table) {
-        global_data.push(item)
+        // global_data.push(item)
         ++total_no_of_support
         if (item.status === 'Open') {
           ++open
