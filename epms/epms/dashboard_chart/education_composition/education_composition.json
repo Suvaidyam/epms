@@ -1,0 +1,33 @@
+{
+ "chart_name": "Education composition",
+ "chart_type": "Report",
+ "creation": "2023-10-24 12:22:19.357768",
+ "custom_options": "{\"x_field\": \"education\", \"chart_type\": \"Bar\", \"y_axis_fields\": [{\"idx\": 1, \"__islocal\": true, \"name\": \"row 1\", \"y_field\": \"count\", \"color\": \"#5da0de\"}], \"y_fields\": [\"count\"], \"colors\": [\"#5da0de\"]}",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "filters_json": "{}",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "modified": "2023-10-31 15:21:06.288003",
+ "modified_by": "Administrator",
+ "module": "Epms",
+ "name": "Education composition",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "report_name": "Education composition",
+ "roles": [],
+ "time_interval": "Yearly",
+ "timeseries": 0,
+ "timespan": "Last Year",
+ "type": "Bar",
+ "use_report_chart": 0,
+ "x_field": "education",
+ "y_axis": [
+  {
+   "color": "#5da0de",
+   "y_field": "count"
+  }
+ ]
+}
