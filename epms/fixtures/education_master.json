@@ -3,57 +3,57 @@
   "docstatus": 0,
   "doctype": "Education master",
   "education": "Primary (1st to 5th Class)",
-  "modified": "2023-10-12 10:59:55.771660",
+  "modified": "2023-10-31 16:29:39.740562",
   "name": "Primary (1st to 5th Class)",
-  "sequence": 0
+  "sequence": 2
  },
  {
   "docstatus": 0,
   "doctype": "Education master",
   "education": "Higher Secondary (11th and 12th class)",
-  "modified": "2023-10-12 10:59:56.339943",
+  "modified": "2023-10-31 16:30:09.066934",
   "name": "Higher Secondary (11th and 12th class)",
-  "sequence": 0
+  "sequence": 4
  },
  {
   "docstatus": 0,
   "doctype": "Education master",
   "education": "ITI/Technical",
-  "modified": "2023-10-12 10:59:56.627216",
+  "modified": "2023-10-31 16:30:26.068759",
   "name": "ITI/Technical",
-  "sequence": 0
+  "sequence": 5
  },
  {
   "docstatus": 0,
   "doctype": "Education master",
   "education": "Under Graduate",
-  "modified": "2023-10-12 10:59:56.914876",
+  "modified": "2023-10-31 16:30:47.598694",
   "name": "Under Graduate",
-  "sequence": 0
+  "sequence": 6
  },
  {
   "docstatus": 0,
   "doctype": "Education master",
   "education": "Graduate",
-  "modified": "2023-10-12 10:59:57.200875",
+  "modified": "2023-10-31 16:31:00.416135",
   "name": "Graduate",
-  "sequence": 0
+  "sequence": 7
  },
  {
   "docstatus": 0,
   "doctype": "Education master",
   "education": "Post Graduate",
-  "modified": "2023-10-12 10:59:57.487541",
+  "modified": "2023-10-31 16:31:28.265143",
   "name": "Post Graduate",
-  "sequence": 0
+  "sequence": 8
  },
  {
   "docstatus": 0,
   "doctype": "Education master",
   "education": "Illiterate",
-  "modified": "2023-10-12 10:59:57.774679",
+  "modified": "2023-10-31 16:31:11.827499",
   "name": "Illiterate",
-  "sequence": 0
+  "sequence": 1000
  },
  {
   "docstatus": 0,
@@ -67,24 +67,24 @@
   "docstatus": 0,
   "doctype": "Education master",
   "education": "Below Primary",
-  "modified": "2023-10-12 10:59:55.487720",
+  "modified": "2023-10-31 16:29:21.638750",
   "name": "Below Primary",
-  "sequence": 0
+  "sequence": 1
  },
  {
   "docstatus": 0,
   "doctype": "Education master",
   "education": "B.Com",
-  "modified": "2023-10-12 17:27:03.513966",
+  "modified": "2023-10-31 16:31:41.363132",
   "name": "B.Com",
-  "sequence": 0
+  "sequence": 9
  },
  {
   "docstatus": 0,
   "doctype": "Education master",
   "education": "Secondary (6th to 10th class)",
-  "modified": "2023-10-12 10:59:56.058187",
+  "modified": "2023-10-31 16:29:53.540799",
   "name": "Secondary (6th to 10th class)",
-  "sequence": 0
+  "sequence": 3
  }
 ]
