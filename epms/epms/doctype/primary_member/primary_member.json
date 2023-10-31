@@ -43,6 +43,7 @@
   {
    "fieldname": "csc",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "csc",
    "options": "Centre"
   }
@@ -54,7 +55,7 @@
    "link_fieldname": "family"
   }
  ],
- "modified": "2023-10-28 09:53:37.542305",
+ "modified": "2023-10-31 21:19:43.396533",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Primary Member",
