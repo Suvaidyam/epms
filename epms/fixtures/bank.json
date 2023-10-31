@@ -5,7 +5,7 @@
   "doctype": "Bank",
   "modified": "2023-10-11 17:34:10.110272",
   "name": "Others",
-  "sequence": 0
+  "sequence": 1000
  },
  {
   "bank_name": "UBI Jan Dhan",
