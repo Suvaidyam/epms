@@ -1,7 +1,7 @@
 // Copyright (c) 2023, Management System for Agrasarteach@suvaidyam.com and contributors
 // For license information, please see license.txt
 
-function bank_name(frm,data){
+function bank_name(frm,data=[]){
   var new_bank = frm.fields_dict['other_bank_account'];
   for(a of data){
     if(a.bank_name==="Others"){
@@ -97,14 +97,7 @@ frappe.ui.form.on("Beneficiary", {
     frm.set_df_property('education', 'only_select', true);
     frm.set_df_property('family', 'only_select', true);
     frm.set_df_property('education', 'only_select', true);
-    //   frm.set_query('contact_number', function () {
-    //     return {
-    //         filters: {
-    //             'default_country': '91' // Set the default country code to 91 (India)
-    //         }
-    //     };
-    // });
-    // global_data.push(frm.selected_doc.support_table)
+
     let parentField = frm.fields_dict['family'];
     if (frm.doc.head_of_family === 'Yes') {
       parentField.df.hidden = 0;
@@ -191,12 +184,7 @@ frappe.ui.form.on("Beneficiary", {
     frm.set_query("state_of_origin", () => {
       return { page_length: 1000 };
     });
-    frm.set_query("district_of_origin", () => {
-      return { page_length: 1000 };
-    });
-    frm.set_query("block_of_origin", () => {
-      return { page_length: 1000 };
-    });
+
     frm.set_query("caste", () => {
       return { "query": "select name from `tabCaste master` order by sequence asc" };
     });
@@ -214,6 +202,7 @@ frappe.ui.form.on("Beneficiary", {
         filters: {
           State: frm.doc.state_of_origin,
         },
+        page_length: 1000
       };
     }
     // clear dependent dropdowns values
@@ -226,6 +215,7 @@ frappe.ui.form.on("Beneficiary", {
         filters: {
           District: frm.doc.district_of_origin,
         },
+        page_length: 1000 
       };
     }
     frm.set_value('block_of_origin', '')
