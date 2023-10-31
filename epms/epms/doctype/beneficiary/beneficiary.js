@@ -28,7 +28,9 @@ frappe.ui.form.on("Beneficiary", {
           if (support_items.specific_support_type === support_name) {
             if (follow_up_items.follow_up_status === "Not interested") {
               support_items.status = "Closed"
-            } else if (follow_up_items.follow_up_status === "interested") {
+            } else if (follow_up_items.follow_up_status === "Interested") {
+              console.log("intrested")
+              // support_items.status = "Open"
               if (support_items.status === 'Closed') {
                 support_items.status = "Open"
               }
@@ -40,7 +42,7 @@ frappe.ui.form.on("Beneficiary", {
       }
     }
 
-    console.log("before save ", frm.selected_doc.support_table)
+    // console.log("before save ", frm.selected_doc.support_table)
     let open, under_process, form_submitted, rejected, completed, closed;
     open = under_process = form_submitted = rejected = completed = closed = 0;
     let total_no_of_support = 0
@@ -52,11 +54,11 @@ frappe.ui.form.on("Beneficiary", {
           ++open
         } else if (item.status === 'Under process') {
           ++under_process
-        } else if (item.status == 'Form submitted') {
+        } else if (item.status === 'Form submitted') {
           ++form_submitted
-        } else if (item.status == 'Rejected') {
+        } else if (item.status === 'Rejected') {
           ++rejected
-        } else if (item.status == 'Completed') {
+        } else if (item.status === 'Completed') {
           ++completed
         } else {
           ++closed
