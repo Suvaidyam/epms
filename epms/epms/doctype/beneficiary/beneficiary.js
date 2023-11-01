@@ -28,7 +28,8 @@ frappe.ui.form.on("Beneficiary", {
           if (support_items.specific_support_type === support_name) {
             if (follow_up_items.follow_up_status === "Not interested") {
               support_items.status = "Closed"
-            } else if (follow_up_items.follow_up_status === "interested") {
+            } else if (follow_up_items.follow_up_status === "Interested") {
+              // support_items.status = "Open"
               if (support_items.status === 'Closed') {
                 support_items.status = "Open"
               }
@@ -40,7 +41,7 @@ frappe.ui.form.on("Beneficiary", {
       }
     }
 
-    console.log("before save ", frm.selected_doc.support_table)
+    // console.log("before save ", frm.selected_doc.support_table)
     let open, under_process, form_submitted, rejected, completed, closed;
     open = under_process = form_submitted = rejected = completed = closed = 0;
     let total_no_of_support = 0
@@ -50,13 +51,13 @@ frappe.ui.form.on("Beneficiary", {
         ++total_no_of_support
         if (item.status === 'Open') {
           ++open
-        } else if (item.status === 'Under Process') {
+        } else if (item.status === 'Under process') {
           ++under_process
-        } else if (item.status == 'Form Submitted') {
+        } else if (item.status === 'Form submitted') {
           ++form_submitted
-        } else if (item.status == 'Rejected') {
+        } else if (item.status === 'Rejected') {
           ++rejected
-        } else if (item.status == 'Completed') {
+        } else if (item.status === 'Completed') {
           ++completed
         } else {
           ++closed
@@ -173,23 +174,23 @@ frappe.ui.form.on("Beneficiary", {
   },
   setup(frm) {
     frm.set_query("current_location", () => {
-      return { "query": "select name from `tabCurrent location` order by sequence asc"  };
+      return { "query": "select name from `tabCurrent location` order by sequence asc , name asc"  };
     });
     frm.set_query("occupation", () => {
-      return { "query": "select name from `tabCurrent Occupation` order by sequence asc" };
+      return { "query": "select name from `tabCurrent Occupation` order by sequence asc , name asc" };
     });
     frm.set_query("existing_bank_account", () => {
-      return { "query": "select name from `tabBank` order by sequence asc" };
+      return { "query": "select name from `tabBank` order by sequence asc, name asc" };
     });
     frm.set_query("state_of_origin", () => {
       return { page_length: 1000 };
     });
 
     frm.set_query("caste", () => {
-      return { "query": "select name from `tabCaste master` order by sequence asc" };
+      return { "query": "select name from `tabCaste master` order by sequence asc , name asc" };
     });
     frm.set_query("source_information_about_center", () => {
-      return {"query": "select name from `tabSource information about center` order by sequence asc" };
+      return {"query": "select name from `tabSource information about center` order by sequence asc , name asc" };
     });
     frm.set_query("education", () => {
       return {"query": "select name from `tabEducation master` order by sequence asc"};
