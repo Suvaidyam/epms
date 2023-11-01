@@ -16,7 +16,8 @@ fixtures = [
     "Caste master",
     "Source information about center",
     "ID Master",
-    "Centre"
+    "Centre",
+    "Role Profile"
 
     # {
     #     "dt":"docttype name",
