@@ -23,6 +23,7 @@ frappe.ui.form.on("Centre", {
               filters: {
                 state: frm.doc.state,
               },
+              page_length: 1000
             };
           }
     }
