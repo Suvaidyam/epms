@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"WaujojESER\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Camp</span>\",\"col\":12}},{\"id\":\"hYZiOGYr-L\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Camp lists\",\"col\":3}}]",
+ "content": "[{\"id\":\"WaujojESER\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Camp</span>\",\"col\":12}},{\"id\":\"bNVgwKun58\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Camp Form\",\"col\":12}}]",
  "creation": "2023-10-17 10:56:28.735174",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Camp",
  "links": [],
- "modified": "2023-10-17 11:46:43.357540",
+ "modified": "2023-11-01 17:52:26.979796",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Camp",
@@ -21,7 +21,12 @@
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
- "quick_lists": [],
+ "quick_lists": [
+  {
+   "document_type": "Camp Form",
+   "label": "Camp Form"
+  }
+ ],
  "roles": [
   {
    "role": "Admin"
@@ -31,14 +36,6 @@
   }
  ],
  "sequence_id": 11.0,
- "shortcuts": [
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Camp lists",
-   "link_to": "Camp Form",
-   "type": "DocType"
-  }
- ],
+ "shortcuts": [],
  "title": "Camp"
 }
