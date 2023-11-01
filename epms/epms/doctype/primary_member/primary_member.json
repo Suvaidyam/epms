@@ -55,7 +55,7 @@
    "link_fieldname": "family"
   }
  ],
- "modified": "2023-10-31 21:19:43.396533",
+ "modified": "2023-11-01 10:21:22.600497",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Primary Member",
@@ -70,7 +70,8 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
-   "share": 1
+   "share": 1,
+   "write": 1
   },
   {
    "delete": 1,
@@ -80,7 +81,8 @@
    "read": 1,
    "report": 1,
    "role": "Admin",
-   "share": 1
+   "share": 1,
+   "write": 1
   },
   {
    "create": 1,
