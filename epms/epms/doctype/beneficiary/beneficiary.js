@@ -1,11 +1,43 @@
 // Copyright (c) 2023, Management System for Agrasarteach@suvaidyam.com and contributors
 // For license information, please see license.txt
 
+function get_support_list(frm ,support_type){
+  frappe.call({
+    method: 'frappe.desk.search.search_link',
+    args: {
+      doctype: 'Support',
+      txt: '',
+      filters: [
+        ['Support', 'support_type', '=', support_type],
+      ],
+      page_length: 100,  // Adjust the number of results per page as needed
+    },
+    freeze:true,
+    freeze_message: __("Calling"),
+    callback: async function(response) {
+      frm.fields_dict.support_table.grid.update_docfield_property("specific_support_type","options", response.results);
+    }});
+};
+// //////////////////////////////////////////////////////////////////////
+function get_support_types(frm){
+  frappe.call({
+    method: 'frappe.desk.search.search_link',
+    args: {
+      doctype: 'Support Type',
+      txt: '',
+      page_length: 100,  // Adjust the number of results per page as needed
+    },
+    freeze:true,
+    freeze_message: __("Calling"),
+    callback: async function(response) {
+      frm.fields_dict.support_table.grid.update_docfield_property("support_type","options", response.results);
+    }}); 
+};
+// ///////////////////////////////////////////////////////////////////////
 function bank_name(frm,data=[]){
   var new_bank = frm.fields_dict['other_bank_account'];
   for(a of data){
     if(a.bank_name==="Others"){
-      console.log(a.bank_name)
       new_bank.df.hidden = 0;
       frm.set_df_property('other_bank_account', 'reqd', 1);
       new_bank.refresh();
@@ -223,7 +255,6 @@ frappe.ui.form.on("Beneficiary", {
   },
 
   do_you_have_id_document: function (frm) {
-    console.log("Form data", frm.doc)
     var id_section = frm.get_field('id_section');
     if (frm.doc.do_you_have_id_document === 'Yes') {
       id_section.df.hidden = 0;
@@ -286,7 +317,6 @@ frappe.ui.form.on("Beneficiary", {
     bank_name(frm,frm.doc.existing_bank_account)
   },
   current_location: function (frm) {
-    console.log("lllll", frm.doc.current_location)
     var new_location = frm.fields_dict['other_current_location'];
     if (frm.doc.current_location === "Others") {
       frm.set_df_property('other_current_location', 'reqd', 1);
@@ -310,16 +340,12 @@ frappe.ui.form.on("Beneficiary", {
       new_sorce.refresh();
     }
   },
+  
 
 
 });
 // ********************* SUPERT CHILD Table***********************
 frappe.ui.form.on('Support Child', {
-  form_render(frm) {
-    // frm.set_query("specific_support_type", () => {
-    //   return { page_length: 1000 };
-    // });
-  },
 
   refresh(frm) {
     frm.set_query("specific_support_type", () => {
@@ -327,56 +353,21 @@ frappe.ui.form.on('Support Child', {
     });
   },
   specific_support_type: function (frm) {
-    console.log(frm)
     frm.set_query("specific_support_type", () => {
       return { page_length: 1000 };
     });
   },
-  support: function (frm) {
-    console.log("hhh")
-  },
-  // status:function(frm, cdt, cdn){
-  //   let row = frappe.get_doc(cdt, cdn);
-  //   console.log("Kk", row)
-  //   let status = row.status
-  //   var df = frappe.meta.get_docfield("Support Child", 'reason_of_rejection'  , frm.doc.name);
-  //   df.hidden = 1;
-  //   frm.refresh_field('reason_of_rejection');
-
-  //   console.log(df)
-  //   frm.fields_dict['support_table'].grid.get_field('specific_support_type').get_query = function(doc, cdt, cdn) {
-  //     var child = locals[cdt][cdn];
-  //     return {
-  //         filters:[
-  //             ['specific_support_type', '=', child.status]
-  //         ]
-  //     }
-  // }
-  //   // if(status ==="Rejected"){
-  //   //   row.reason_of_rejection = 0
-  //   // }
-  // frm.refresh_field('support_tab');
-  // },
   support_table_add(frm, cdt, cdn) {
     let row = frappe.get_doc(cdt, cdn);
+    get_support_types(frm)
+    // set_field_options("specific_support_type", ["Loan Approved","Loan Appealing"])
 
   },
-
-  // support_type:function(frm , cdt , cdn){
-  //   console.log("cd,cdn", cdt , cdn)
-  //   let row = frappe.get_doc(cdt, cdn);
-  //   let supportType = row.support_type;
-  // frm.refresh_field('support_table');
-  // },
   support_type: function (frm, cdt, cdn) {
     let row = frappe.get_doc(cdt, cdn);
-    // frm.set_query("specific_support_type", "Support Child", function() {
-    //   return {
-    //     filters: {
-    //       'support_type': "nnn", // Replace this with your filter
-    //     }
-    //   }
-    // });
+    // console.log("row", row)
+    get_support_list(frm,row.support_type)
+    // frm.fields_dict.support_table.grid.update_docfield_property("specific_support_type","options",["Loan Approved","Loan Appealing"]);
 
   }
 })
@@ -384,16 +375,12 @@ frappe.ui.form.on('Support Child', {
 frappe.ui.form.on('Follow Up Child', {
   followup_table_add(frm, cdt, cdn) {
     let row = frappe.get_doc(cdt, cdn);
-    console.log(frm.fields_dict.followup_table)
-    // frm.set_value(frm.fields_dict.followup_table[0].follow_up_status, "Closed")
-    console.log("child frm", row)
-    // frappe.meta.get_docfield("Follow Up Child", "support_name",
-    // cur_frm.support_name).options = "Initial\n1 Month\n2 Months\n3 Months\n6 Months";
-    // refresh_field("support_name");
-    // row.support_name='support_name';
-    // frm.set_field_options('support_name', 'Option Value');
-    // frm.set_df_property('support_name', 'options', '[aaa]');
-    // frm.refresh_field('support_name');\
+      let support_data = []
+      for(support_name of frm.doc.support_table){
+        support_data.push(support_name.specific_support_type)
+      }
+
+    frm.fields_dict.followup_table.grid.update_docfield_property("support_name","options", support_data);
 
   },
 })
