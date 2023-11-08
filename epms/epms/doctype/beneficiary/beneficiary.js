@@ -206,13 +206,16 @@ frappe.ui.form.on("Beneficiary", {
   },
   setup(frm) {
     frm.set_query("current_location", () => {
-      return { "query": "select name from `tabCurrent location` order by sequence asc , name asc"  };
+      // return { "query": "select name from `tabCurrent location` order by sequence asc , name asc"  };
+      return { page_length: 1000 };
     });
     frm.set_query("occupation", () => {
-      return { "query": "select name from `tabCurrent Occupation` order by sequence asc , name asc" };
+      // return { "query": "select name from `tabCurrent Occupation` order by sequence asc , name asc" };
+      return { page_length: 1000 };
     });
     frm.set_query("existing_bank_account", () => {
-      return { "query": "select name from `tabBank` order by sequence asc, name asc" };
+      // return { "query": "select name from `tabBank` order by sequence asc, name asc" };
+      return { page_length: 1000 };
     });
     frm.set_query("state_of_origin", () => {
       return { page_length: 1000 };
