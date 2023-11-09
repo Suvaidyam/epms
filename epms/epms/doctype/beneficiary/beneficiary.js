@@ -206,13 +206,16 @@ frappe.ui.form.on("Beneficiary", {
   },
   setup(frm) {
     frm.set_query("current_location", () => {
-      return { "query": "select name from `tabCurrent location` order by sequence asc , name asc"  };
+      // return { "query": "select name from `tabCurrent location` order by sequence asc , name asc"  };
+      return { page_length: 1000 };
     });
     frm.set_query("occupation", () => {
-      return { "query": "select name from `tabCurrent Occupation` order by sequence asc , name asc" };
+      // return { "query": "select name from `tabCurrent Occupation` order by sequence asc , name asc" };
+      return { page_length: 1000 };
     });
     frm.set_query("existing_bank_account", () => {
-      return { "query": "select name from `tabBank` order by sequence asc, name asc" };
+      // return { "query": "select name from `tabBank` order by sequence asc, name asc" };
+      return { page_length: 1000 };
     });
     frm.set_query("state_of_origin", () => {
       return { page_length: 1000 };
@@ -377,7 +380,9 @@ frappe.ui.form.on('Follow Up Child', {
     let row = frappe.get_doc(cdt, cdn);
       let support_data = []
       for(support_name of frm.doc.support_table){
-        support_data.push(support_name.specific_support_type)
+        if(support_name.status != "Closed"){
+          support_data.push(support_name.specific_support_type)
+        }
       }
 
     frm.fields_dict.followup_table.grid.update_docfield_property("support_name","options", support_data);

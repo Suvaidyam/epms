@@ -254,7 +254,7 @@
    "fieldname": "csc",
    "fieldtype": "Link",
    "hidden": 1,
-   "label": "CSC",
+   "label": "Centre",
    "options": "Centre"
   },
   {
@@ -275,7 +275,7 @@
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-02 10:51:03.576331",
+ "modified": "2023-11-08 12:03:44.726283",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",
