@@ -35,7 +35,12 @@ class Primary_member:
             frappe.msgprint("New Beneficary Update As a Head of Family")
         return family_doc
     
-    def delete_family():
-        new_doc = ""
+    def delete_family(beneficiary):
 
-        return new_doc
+        family_exist = frappe.db.exists("Primary Member", {"name": beneficiary.contact_number})
+        if family_exist:
+            delate_family = frappe.db.delete("Primary Member", {
+                            "name": beneficiary.name
+                            })   
+            return delate_family
+        print("//////////////////efesdfdsfds/////////////////////////////////////////////////", family_exist , beneficiary.head_of_family)

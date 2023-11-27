@@ -9,6 +9,7 @@
  "engine": "InnoDB",
  "field_order": [
   "name_of_location",
+  "centre",
   "sequence"
  ],
  "fields": [
@@ -26,11 +27,18 @@
    "fieldtype": "Int",
    "label": "sequence",
    "non_negative": 1
+  },
+  {
+   "fieldname": "centre",
+   "fieldtype": "Link",
+   "label": "Centre",
+   "options": "Centre",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-08 11:43:38.630627",
+ "modified": "2023-11-27 11:22:24.906506",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Current location",

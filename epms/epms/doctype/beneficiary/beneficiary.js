@@ -118,6 +118,7 @@ frappe.ui.form.on("Beneficiary", {
     // console.log("after save " , frm)
   },
   refresh(frm) {
+  // console.log("frappe.session.user", frappe.session.user)
     // hide advance search and create new option in lists
     frm.set_df_property('current_location', 'only_select', true);
     frm.set_df_property('occupation', 'only_select', true);
@@ -272,10 +273,12 @@ frappe.ui.form.on("Beneficiary", {
     if (frm.doc.head_of_family === "No" || frm.doc.head_of_family ==='') {
       parentField.df.hidden = 1;
       frm.set_df_property('family', 'reqd', 0);
+      frm.doc.family = ""
       parentField.refresh();
     } else {
       parentField.df.hidden = 0;
       frm.set_df_property('family', 'reqd', 1);
+      frm.doc.family = ""
       parentField.refresh();
     }
   },
