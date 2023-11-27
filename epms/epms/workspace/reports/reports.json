@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Reports",
  "links": [],
- "modified": "2023-11-27 20:13:41.812343",
+ "modified": "2023-11-27 20:14:27.917734",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Reports",
@@ -32,6 +32,13 @@
  ],
  "sequence_id": 10.0,
  "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Total Beneficiaries From The Camps",
+   "link_to": "Total Beneficiaries from the camps",
+   "type": "Report"
+  },
   {
    "color": "Grey",
    "doc_view": "List",
