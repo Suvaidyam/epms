@@ -52,10 +52,8 @@ function bank_name(frm,data=[]){
 // /////////////////////////////////////////////////////////////////////////
 frappe.ui.form.on("Beneficiary", {
   before_save: function (frm) {
-    console.log(frm.doc.id_section?.[0] , frm.doc.do_you_have_id_document)
     if(frm.doc.do_you_have_id_document == "Yes" && frm.doc.id_section?.length =='0'){
       if(frm.doc.id_section[0] && frm.doc?.id_section[0]?.select_id != "undefined"){
-        console.log(frm.doc.id_section[0].select_id)
       }else{
         frappe.throw('Please Select Which of the following ID documents do you have?');
       }
@@ -124,7 +122,6 @@ frappe.ui.form.on("Beneficiary", {
     }
   },
   onupdate: function (frm) {
-    // console.log("after save " , frm)
   },
   refresh(frm) {
   // console.log("frappe.session.user", frappe.session.user)
@@ -274,6 +271,7 @@ frappe.ui.form.on("Beneficiary", {
       id_section.df.hidden = 0;
       id_section.refresh();
     } else {
+      frm.doc.id_section =[]
       id_section.df.hidden = 1;
       id_section.refresh();
     }
