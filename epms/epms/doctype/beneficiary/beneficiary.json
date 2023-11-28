@@ -119,6 +119,7 @@
    "reqd": 1
   },
   {
+   "depends_on": "eval:doc.do_you_have_id_document == \"Yes\"",
    "fieldname": "id_section",
    "fieldtype": "Table",
    "options": "ID Proof"
@@ -275,7 +276,7 @@
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-28 07:38:06.443207",
+ "modified": "2023-11-28 10:42:32.443033",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",
