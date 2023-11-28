@@ -40,5 +40,4 @@ class Primary_member:
 
         delate_family = frappe.db.delete("Primary Member", {
                         "name": beneficiary.contact_number})   
-        print("//////////////////efesdfdsfds/////////////////////////////////////////////////" , beneficiary.head_of_family)
         return delate_family
