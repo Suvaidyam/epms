@@ -52,6 +52,15 @@ function bank_name(frm,data=[]){
 // /////////////////////////////////////////////////////////////////////////
 frappe.ui.form.on("Beneficiary", {
   before_save: function (frm) {
+    console.log(frm.doc.id_section?.[0] , frm.doc.do_you_have_id_document)
+    if(frm.doc.do_you_have_id_document == "Yes" && frm.doc.id_section?.length =='0'){
+      if(frm.doc.id_section[0] && frm.doc?.id_section[0]?.select_id != "undefined"){
+        console.log(frm.doc.id_section[0].select_id)
+      }else{
+        frappe.throw('Please Select Which of the following ID documents do you have?');
+      }
+      return
+    }
     // follow up status manage
     if (frm.selected_doc.followup_table) {
       for (follow_up_items of frm.selected_doc.followup_table) {

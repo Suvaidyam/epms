@@ -111,6 +111,7 @@
    "reqd": 1
   },
   {
+   "default": "No",
    "fieldname": "do_you_have_id_document",
    "fieldtype": "Select",
    "label": "Do you have any ID documents?",
@@ -274,7 +275,7 @@
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-27 12:02:51.916673",
+ "modified": "2023-11-28 07:38:06.443207",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",
