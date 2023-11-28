@@ -37,10 +37,8 @@ class Primary_member:
     
     def delete_family(beneficiary):
 
-        family_exist = frappe.db.exists("Primary Member", {"name": beneficiary.contact_number})
-        if family_exist:
-            delate_family = frappe.db.delete("Primary Member", {
-                            "name": beneficiary.name
-                            })   
-            return delate_family
-        print("//////////////////efesdfdsfds/////////////////////////////////////////////////", family_exist , beneficiary.head_of_family)
+
+        delate_family = frappe.db.delete("Primary Member", {
+                        "name": beneficiary.contact_number})   
+        print("//////////////////efesdfdsfds/////////////////////////////////////////////////" , beneficiary.head_of_family)
+        return delate_family
