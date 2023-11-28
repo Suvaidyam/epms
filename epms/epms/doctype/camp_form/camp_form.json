@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "autoincrement",
+ "autoname": "format:{name_of_the_camp}-{###}",
  "creation": "2023-10-17 09:49:23.623859",
  "default_view": "List",
  "doctype": "DocType",
@@ -59,7 +59,6 @@
   {
    "fieldname": "number_of_participants",
    "fieldtype": "Int",
-   "hidden": 1,
    "in_list_view": 1,
    "label": "Number of participants",
    "non_negative": 1,
@@ -73,11 +72,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-27 17:27:18.216835",
+ "modified": "2023-11-28 11:40:20.047200",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Camp Form",
- "naming_rule": "Autoincrement",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

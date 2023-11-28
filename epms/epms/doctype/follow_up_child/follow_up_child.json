@@ -7,8 +7,10 @@
  "engine": "InnoDB",
  "field_order": [
   "support_name",
-  "follow_up_status",
   "follow_up_date",
+  "follow_up_by",
+  "follow_up_with",
+  "follow_up_status",
   "remark"
  ],
  "fields": [
@@ -16,7 +18,7 @@
    "fieldname": "support_name",
    "fieldtype": "Select",
    "in_list_view": 1,
-   "label": "Support name",
+   "label": "Name of the support",
    "reqd": 1
   },
   {
@@ -24,7 +26,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Follow-up status",
-   "options": "\nUnder process\nInterested\nNot interested",
+   "options": "\nInterested\nNot interested\nNot reachable\nUnder process\nAdditional info required\nCompleted\nrejected",
    "reqd": 1
   },
   {
@@ -39,12 +41,23 @@
    "fieldtype": "Int",
    "in_list_view": 1,
    "label": "Remark"
+  },
+  {
+   "fieldname": "follow_up_by",
+   "fieldtype": "Data",
+   "label": "Follow-up by"
+  },
+  {
+   "fieldname": "follow_up_with",
+   "fieldtype": "Select",
+   "label": "Follow-up with",
+   "options": "\nBeneficiary\nGovernment department\nGovernment website"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-11-04 21:36:56.236563",
+ "modified": "2023-11-28 12:56:06.169101",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Follow Up Child",
