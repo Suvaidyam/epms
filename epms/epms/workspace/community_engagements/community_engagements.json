@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"qsy9gVtZpr\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Data overviews</span>\",\"col\":12}},{\"id\":\"7C-msMnkdM\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Data Overview\",\"col\":12}}]",
+ "content": "[{\"id\":\"qsy9gVtZpr\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Community engagement</span>\",\"col\":12}},{\"id\":\"x4EcOYlJWF\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Community engagement\",\"col\":12}}]",
  "creation": "2023-10-17 11:43:43.165388",
  "custom_blocks": [],
  "docstatus": 0,
@@ -11,20 +11,20 @@
  "idx": 1,
  "indicator_color": "green",
  "is_hidden": 0,
- "label": "Camp data overview",
+ "label": "Community engagements",
  "links": [],
- "modified": "2023-11-01 17:54:24.019297",
+ "modified": "2023-11-28 17:39:56.673876",
  "modified_by": "Administrator",
  "module": "Epms",
- "name": "Camp data overview",
+ "name": "Community engagements",
  "number_cards": [],
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
  "quick_lists": [
   {
-   "document_type": "Data Overview",
-   "label": "Data Overview"
+   "document_type": "Community engagement",
+   "label": "Community engagement"
   }
  ],
  "roles": [
@@ -37,5 +37,5 @@
  ],
  "sequence_id": 23.0,
  "shortcuts": [],
- "title": "Camp data overview"
+ "title": "Community engagements"
 }
