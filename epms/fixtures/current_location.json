@@ -1,258 +1,560 @@
 [
  {
+  "centre": "CSC-S07-028",
   "docstatus": 0,
   "doctype": "Current location",
-  "modified": "2023-10-31 16:33:50.863657",
-  "name": "Others",
+  "modified": "2023-11-28 09:48:55.228610",
+  "name": "Sikanderpur-124",
+  "name_of_location": "Sikanderpur",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-028",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:49:05.637923",
+  "name": "Nathupur-125",
+  "name_of_location": "Nathupur",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-028",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:49:17.391022",
+  "name": "Chakkarpur-126",
+  "name_of_location": "Chakkarpur",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-028",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:49:32.615080",
+  "name": "Ghatta-127",
+  "name_of_location": "Ghatta",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-028",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:49:49.271577",
+  "name": "Sukhrali-128",
+  "name_of_location": "Sukhrali",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-028",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:50:02.327436",
+  "name": "Others-129",
   "name_of_location": "Others",
-  "sequence": 10000
- },
- {
-  "docstatus": 0,
-  "doctype": "Current location",
-  "modified": "2023-10-11 19:35:47.733820",
-  "name": "Vishkarma Colony",
-  "name_of_location": "Vishkarma Colony",
   "sequence": 0
  },
  {
+  "centre": "CSC-S07-029",
   "docstatus": 0,
   "doctype": "Current location",
-  "modified": "2023-10-11 19:35:49.172968",
-  "name": "Visaya Harijan Chaupal",
-  "name_of_location": "Visaya Harijan Chaupal",
+  "modified": "2023-11-28 09:50:30.120348",
+  "name": "Silokhera Gaon-130",
+  "name_of_location": "Silokhera Gaon",
   "sequence": 0
  },
  {
+  "centre": "CSC-S07-029",
   "docstatus": 0,
   "doctype": "Current location",
-  "modified": "2023-10-11 19:35:50.791282",
-  "name": "Vikas Nagar",
-  "name_of_location": "Vikas Nagar",
+  "modified": "2023-11-28 09:50:40.879008",
+  "name": "Moti Vihar-131",
+  "name_of_location": "Moti Vihar",
   "sequence": 0
  },
  {
+  "centre": "CSC-S07-029",
   "docstatus": 0,
   "doctype": "Current location",
-  "modified": "2023-10-11 19:35:51.868347",
-  "name": "Shivji Park",
-  "name_of_location": "Shivji Park",
+  "modified": "2023-11-28 09:50:51.278830",
+  "name": "Silokhera Market-132",
+  "name_of_location": "Silokhera Market",
   "sequence": 0
  },
  {
+  "centre": "CSC-S07-029",
   "docstatus": 0,
   "doctype": "Current location",
-  "modified": "2023-10-11 19:35:53.062366",
-  "name": "Shivaji Park",
-  "name_of_location": "Shivaji Park",
+  "modified": "2023-11-28 09:51:14.031913",
+  "name": "Indra Vikas Colony-133",
+  "name_of_location": "Indra Vikas Colony",
   "sequence": 0
  },
  {
+  "centre": "CSC-S07-029",
   "docstatus": 0,
   "doctype": "Current location",
-  "modified": "2023-10-11 19:35:54.904554",
-  "name": "Shiv Nagar",
-  "name_of_location": "Shiv Nagar",
+  "modified": "2023-11-28 09:51:24.280330",
+  "name": "Saini Khera-134",
+  "name_of_location": "Saini Khera",
   "sequence": 0
  },
  {
+  "centre": "CSC-S07-029",
   "docstatus": 0,
   "doctype": "Current location",
-  "modified": "2023-10-11 19:35:56.129944",
-  "name": "Shakti Park",
-  "name_of_location": "Shakti Park",
+  "modified": "2023-11-28 09:51:37.544870",
+  "name": "Sector-40-135",
+  "name_of_location": "Sector-40",
   "sequence": 0
  },
  {
+  "centre": "CSC-S07-029",
   "docstatus": 0,
   "doctype": "Current location",
-  "modified": "2023-10-11 19:35:58.384429",
-  "name": "Sec-10",
-  "name_of_location": "Sec-10",
+  "modified": "2023-11-28 09:51:48.300955",
+  "name": "Kanhai Gaon-136",
+  "name_of_location": "Kanhai Gaon",
   "sequence": 0
  },
  {
+  "centre": "CSC-S07-029",
   "docstatus": 0,
   "doctype": "Current location",
-  "modified": "2023-10-11 19:36:02.073934",
-  "name": "Ravi Nagar",
+  "modified": "2023-11-28 09:52:29.469981",
+  "name": "Chakkarpur-137",
+  "name_of_location": "Chakkarpur",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-029",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:52:43.172463",
+  "name": "Others-138",
+  "name_of_location": "Others",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-026",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:53:02.977573",
+  "name": "Ravi Nagar-139",
   "name_of_location": "Ravi Nagar",
   "sequence": 0
  },
  {
+  "centre": "CSC-S07-026",
   "docstatus": 0,
   "doctype": "Current location",
-  "modified": "2023-10-11 19:36:03.653909",
-  "name": "Rajasthani Colony",
-  "name_of_location": "Rajasthani Colony",
+  "modified": "2023-11-28 09:53:12.851863",
+  "name": "Manohar Nagar-140",
+  "name_of_location": "Manohar Nagar",
   "sequence": 0
  },
  {
+  "centre": "CSC-S07-026",
   "docstatus": 0,
   "doctype": "Current location",
-  "modified": "2023-10-11 19:36:08.270962",
-  "name": "Nai Basti",
-  "name_of_location": "Nai Basti",
+  "modified": "2023-11-28 09:53:23.398362",
+  "name": "Ambedkar Nagar-141",
+  "name_of_location": "Ambedkar Nagar",
   "sequence": 0
  },
  {
+  "centre": "CSC-S07-026",
   "docstatus": 0,
   "doctype": "Current location",
-  "modified": "2023-10-11 19:36:09.857587",
-  "name": "Madanpuri",
-  "name_of_location": "Madanpuri",
+  "modified": "2023-11-28 09:53:31.883524",
+  "name": "Firozgandhi Colony-142",
+  "name_of_location": "Firozgandhi Colony",
   "sequence": 0
  },
  {
+  "centre": "CSC-S07-026",
   "docstatus": 0,
   "doctype": "Current location",
-  "modified": "2023-10-11 19:36:11.496430",
-  "name": "Laxmi Garden",
-  "name_of_location": "Laxmi Garden",
-  "sequence": 0
- },
- {
-  "docstatus": 0,
-  "doctype": "Current location",
-  "modified": "2023-10-11 19:36:14.964556",
-  "name": "Krishna Colony",
+  "modified": "2023-11-28 09:53:48.434243",
+  "name": "Krishna Colony-143",
   "name_of_location": "Krishna Colony",
   "sequence": 0
  },
  {
+  "centre": "CSC-S07-026",
   "docstatus": 0,
   "doctype": "Current location",
-  "modified": "2023-10-11 19:36:16.950207",
-  "name": "Khandsa Road",
-  "name_of_location": "Khandsa Road",
-  "sequence": 0
- },
- {
-  "docstatus": 0,
-  "doctype": "Current location",
-  "modified": "2023-10-11 19:36:19.505599",
-  "name": "Kadipur",
-  "name_of_location": "Kadipur",
-  "sequence": 0
- },
- {
-  "docstatus": 0,
-  "doctype": "Current location",
-  "modified": "2023-10-11 19:36:21.231524",
-  "name": "Islampur",
-  "name_of_location": "Islampur",
-  "sequence": 0
- },
- {
-  "docstatus": 0,
-  "doctype": "Current location",
-  "modified": "2023-10-11 19:36:23.374937",
-  "name": "Heera Nagar",
-  "name_of_location": "Heera Nagar",
-  "sequence": 0
- },
- {
-  "docstatus": 0,
-  "doctype": "Current location",
-  "modified": "2023-10-11 19:36:25.022850",
-  "name": "Hari Nagar",
-  "name_of_location": "Hari Nagar",
-  "sequence": 0
- },
- {
-  "docstatus": 0,
-  "doctype": "Current location",
-  "modified": "2023-10-11 19:36:26.451608",
-  "name": "Gandhinagar",
-  "name_of_location": "Gandhinagar",
-  "sequence": 0
- },
- {
-  "docstatus": 0,
-  "doctype": "Current location",
-  "modified": "2023-10-11 19:36:27.890612",
-  "name": "Firoz Gandhi Colony",
-  "name_of_location": "Firoz Gandhi Colony",
-  "sequence": 0
- },
- {
-  "docstatus": 0,
-  "doctype": "Current location",
-  "modified": "2023-10-11 19:36:29.733364",
-  "name": "Devilal Colony",
-  "name_of_location": "Devilal Colony",
-  "sequence": 0
- },
- {
-  "docstatus": 0,
-  "doctype": "Current location",
-  "modified": "2023-10-11 19:36:31.162367",
-  "name": "Current Location",
-  "name_of_location": "Current Location",
-  "sequence": 0
- },
- {
-  "docstatus": 0,
-  "doctype": "Current location",
-  "modified": "2023-10-11 19:36:32.797847",
-  "name": "Bhawani Enclave",
-  "name_of_location": "Bhawani Enclave",
-  "sequence": 0
- },
- {
-  "docstatus": 0,
-  "doctype": "Current location",
-  "modified": "2023-10-11 19:36:34.438977",
-  "name": "Basai Road",
-  "name_of_location": "Basai Road",
-  "sequence": 0
- },
- {
-  "docstatus": 0,
-  "doctype": "Current location",
-  "modified": "2023-10-11 19:36:36.274316",
-  "name": "Basai Enclave",
+  "modified": "2023-11-28 09:54:00.845521",
+  "name": "Basai Enclave-144",
   "name_of_location": "Basai Enclave",
   "sequence": 0
  },
  {
+  "centre": "CSC-S07-026",
   "docstatus": 0,
   "doctype": "Current location",
-  "modified": "2023-10-11 19:36:40.152482",
-  "name": "Amar Colony",
-  "name_of_location": "Amar Colony",
+  "modified": "2023-11-28 09:54:13.200189",
+  "name": "Bhiwani Enclave-145",
+  "name_of_location": "Bhiwani Enclave",
   "sequence": 0
  },
  {
+  "centre": "CSC-S07-026",
   "docstatus": 0,
   "doctype": "Current location",
-  "modified": "2023-10-11 19:36:00.639326",
-  "name": "Roopa Naharpur",
-  "name_of_location": "Roopa Naharpur",
+  "modified": "2023-11-28 09:54:22.630739",
+  "name": "Kadipur-146",
+  "name_of_location": "Kadipur",
   "sequence": 0
  },
  {
+  "centre": "CSC-S07-026",
   "docstatus": 0,
   "doctype": "Current location",
-  "modified": "2023-10-11 19:36:05.044188",
-  "name": "Om Vihar",
-  "name_of_location": "Om Vihar",
+  "modified": "2023-11-28 09:54:36.504143",
+  "name": "Jyoti Park-147",
+  "name_of_location": "Jyoti Park",
   "sequence": 0
  },
  {
+  "centre": "CSC-S07-026",
   "docstatus": 0,
   "doctype": "Current location",
-  "modified": "2023-10-11 19:36:06.586140",
-  "name": "Om Nagar",
+  "modified": "2023-11-28 09:54:53.977752",
+  "name": "DeviLal Colony-148",
+  "name_of_location": "DeviLal Colony",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-026",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:55:05.944227",
+  "name": "Others-149",
+  "name_of_location": "Others",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-027",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:55:28.253122",
+  "name": "Sarhaul-150",
+  "name_of_location": "Sarhaul",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-027",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:55:39.534869",
+  "name": "Palam Vihar-151",
+  "name_of_location": "Palam Vihar",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-027",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:55:49.814698",
+  "name": "Salapur-152",
+  "name_of_location": "Salapur",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-027",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:55:58.605130",
+  "name": "Mullahera-153",
+  "name_of_location": "Mullahera",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-027",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:56:07.812115",
+  "name": "Sukhrali-154",
+  "name_of_location": "Sukhrali",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-027",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:56:15.433962",
+  "name": "Dundahera-155",
+  "name_of_location": "Dundahera",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-027",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:56:28.182318",
+  "name": "Others-156",
+  "name_of_location": "Others",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-064",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:56:48.765679",
+  "name": "Islampur-157",
+  "name_of_location": "Islampur",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-064",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:57:00.360470",
+  "name": "Others-158",
+  "name_of_location": "Others",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-025",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:57:24.017924",
+  "name": "Kadipur-159",
+  "name_of_location": "Kadipur",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-025",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:57:31.624026",
+  "name": "Sarita Vihar-160",
+  "name_of_location": "Sarita Vihar",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-025",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:57:42.932403",
+  "name": "Arjun Nagar-161",
+  "name_of_location": "Arjun Nagar",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-025",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:57:51.964142",
+  "name": "Om Nagar-162",
   "name_of_location": "Om Nagar",
   "sequence": 0
  },
  {
+  "centre": "CSC-S07-025",
   "docstatus": 0,
   "doctype": "Current location",
-  "modified": "2023-10-11 19:36:37.703887",
-  "name": "Arjun Nagar",
-  "name_of_location": "Arjun Nagar",
+  "modified": "2023-11-28 09:58:01.663534",
+  "name": "Om Vihar-163",
+  "name_of_location": "Om Vihar",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-025",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:58:14.164111",
+  "name": "Roopa Naharpur-164",
+  "name_of_location": "Roopa Naharpur",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-025",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:58:24.877388",
+  "name": "Amar Colony-165",
+  "name_of_location": "Amar Colony",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-025",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:58:33.086953",
+  "name": "Basai Road-166",
+  "name_of_location": "Basai Road",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-025",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:58:47.434459",
+  "name": "Gandhi Nagar-167",
+  "name_of_location": "Gandhi Nagar",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-025",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:58:57.664740",
+  "name": "Hari Nagar-168",
+  "name_of_location": "Hari Nagar",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-025",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:59:05.059694",
+  "name": "Heera Nagar-169",
+  "name_of_location": "Heera Nagar",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-025",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:59:14.408113",
+  "name": "Khandsa Road-170",
+  "name_of_location": "Khandsa Road",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-025",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:59:23.660875",
+  "name": "Laxmi Garden-171",
+  "name_of_location": "Laxmi Garden",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-025",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:59:31.276199",
+  "name": "Madanpuri-172",
+  "name_of_location": "Madanpuri",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-025",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:59:39.992162",
+  "name": "Nai Basti-173",
+  "name_of_location": "Nai Basti",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-025",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 09:59:54.838114",
+  "name": "Rajasthani Colony-174",
+  "name_of_location": "Rajasthani Colony",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-025",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 10:00:02.114658",
+  "name": "Sec-10-175",
+  "name_of_location": "Sec-10",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-025",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 10:00:16.914942",
+  "name": "Shakti Park-176",
+  "name_of_location": "Shakti Park",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-025",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 10:00:26.482386",
+  "name": "Shiv Nagar-177",
+  "name_of_location": "Shiv Nagar",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-025",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 10:00:38.823706",
+  "name": "Shivaji Park-178",
+  "name_of_location": "Shivaji Park",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-025",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 10:00:47.271687",
+  "name": "Shivji Park-179",
+  "name_of_location": "Shivji Park",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-025",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 10:01:04.017243",
+  "name": "Vikas Nagar-180",
+  "name_of_location": "Vikas Nagar",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-025",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 10:01:13.480247",
+  "name": "Visaya Harijan Chaupal-181",
+  "name_of_location": "Visaya Harijan Chaupal",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-025",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 10:01:23.741133",
+  "name": "Bhawani Enclave-182",
+  "name_of_location": "Bhawani Enclave",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-025",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 10:01:37.727107",
+  "name": "DeviLal Colony-183",
+  "name_of_location": "DeviLal Colony",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-025",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 10:01:45.447086",
+  "name": "Vishwakarma Colony-184",
+  "name_of_location": "Vishwakarma Colony",
+  "sequence": 0
+ },
+ {
+  "centre": "CSC-S07-025",
+  "docstatus": 0,
+  "doctype": "Current location",
+  "modified": "2023-11-28 10:01:55.326953",
+  "name": "Others-185",
+  "name_of_location": "Others",
   "sequence": 0
  }
 ]

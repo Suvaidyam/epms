@@ -1,11 +1,43 @@
 // Copyright (c) 2023, Management System for Agrasarteach@suvaidyam.com and contributors
 // For license information, please see license.txt
 
+function get_support_list(frm ,support_type){
+  frappe.call({
+    method: 'frappe.desk.search.search_link',
+    args: {
+      doctype: 'Support',
+      txt: '',
+      filters: [
+        ['Support', 'support_type', '=', support_type],
+      ],
+      page_length: 100,  // Adjust the number of results per page as needed
+    },
+    freeze:true,
+    freeze_message: __("Calling"),
+    callback: async function(response) {
+      frm.fields_dict.support_table.grid.update_docfield_property("specific_support_type","options", response.results);
+    }});
+};
+// //////////////////////////////////////////////////////////////////////
+function get_support_types(frm){
+  frappe.call({
+    method: 'frappe.desk.search.search_link',
+    args: {
+      doctype: 'Support Type',
+      txt: '',
+      page_length: 100,  // Adjust the number of results per page as needed
+    },
+    freeze:true,
+    freeze_message: __("Calling"),
+    callback: async function(response) {
+      frm.fields_dict.support_table.grid.update_docfield_property("support_type","options", response.results);
+    }}); 
+};
+// ///////////////////////////////////////////////////////////////////////
 function bank_name(frm,data=[]){
   var new_bank = frm.fields_dict['other_bank_account'];
   for(a of data){
     if(a.bank_name==="Others"){
-      console.log(a.bank_name)
       new_bank.df.hidden = 0;
       frm.set_df_property('other_bank_account', 'reqd', 1);
       new_bank.refresh();
@@ -20,21 +52,44 @@ function bank_name(frm,data=[]){
 // /////////////////////////////////////////////////////////////////////////
 frappe.ui.form.on("Beneficiary", {
   before_save: function (frm) {
+    if(frm.doc.do_you_have_id_document == "Yes" && frm.doc.id_section?.length =='0'){
+      if(frm.doc.id_section[0] && frm.doc?.id_section[0]?.select_id != "undefined"){
+      }else{
+        frappe.throw('Please Select Which of the following ID documents do you have?');
+      }
+      return
+    }
+    // support status manage
+    if(frm.selected_doc.support_table){
+      for (support_items of frm.selected_doc.support_table) {
+        if(support_items.application_submitted =="No"){
+          support_items.status = 'Open'
+        }else if(support_items.application_submitted =="Yes"){
+          support_items.status = 'Under process'
+        }else{
+          support_items.status = 'Completed'
+        }
+      }
+    }
     // follow up status manage
     if (frm.selected_doc.followup_table) {
       for (follow_up_items of frm.selected_doc.followup_table) {
+        console.log("follow_up_items",follow_up_items)
         let support_name = follow_up_items.support_name;
         for (support_items of frm.selected_doc.support_table) {
           if (support_items.specific_support_type === support_name) {
-            if (follow_up_items.follow_up_status === "Not interested") {
+            if (follow_up_items.follow_up_status === "Interested") {
+              support_items.status = "Open"
+            } else if (follow_up_items.follow_up_status === "Not interested") {
               support_items.status = "Closed"
-            } else if (follow_up_items.follow_up_status === "Interested") {
-              // support_items.status = "Open"
-              if (support_items.status === 'Closed') {
-                support_items.status = "Open"
-              }
-            } else {
-              support_items.status = follow_up_items.follow_up_status
+            }else if(follow_up_items.follow_up_status === "Rejected"){
+              support_items.status = "Rejected"
+            }else if(follow_up_items.follow_up_status === "Completed"){
+              support_items.status = "Completed"
+              support_items.date_of_completion = follow_up_items.date_of_completion;
+            } 
+            else {
+              support_items.status = "Under process"
             }
           }
         }
@@ -83,9 +138,15 @@ frappe.ui.form.on("Beneficiary", {
     }
   },
   onupdate: function (frm) {
-    // console.log("after save " , frm)
   },
   refresh(frm) {
+    // child table api defult call
+    get_support_types(frm)
+    if(cur_frm.doc.support_table[0].support_type){
+      get_support_list(frm ,cur_frm.doc.support_table[0].support_type)
+    }
+
+  // console.log("frappe.session.user", frappe.session.user)
     // hide advance search and create new option in lists
     frm.set_df_property('current_location', 'only_select', true);
     frm.set_df_property('occupation', 'only_select', true);
@@ -129,7 +190,8 @@ frappe.ui.form.on("Beneficiary", {
     }
 
     let new_location = frm.fields_dict['other_current_location'];
-    if (frm.doc.current_location === "Others") {
+    let current_loc = frm.doc.current_location.split('-')[0]
+    if (frm.doc.current_location.split('-')[0] === "Others") {
       frm.set_df_property('other_current_location', 'reqd', 1);
       new_location.df.hidden = 0;
       new_location.refresh();
@@ -174,13 +236,16 @@ frappe.ui.form.on("Beneficiary", {
   },
   setup(frm) {
     frm.set_query("current_location", () => {
-      return { "query": "select name from `tabCurrent location` order by sequence asc , name asc"  };
+      // return { "query": "select name from `tabCurrent location` order by sequence asc , name asc"  };
+      return { page_length: 1000 };
     });
     frm.set_query("occupation", () => {
-      return { "query": "select name from `tabCurrent Occupation` order by sequence asc , name asc" };
+      // return { "query": "select name from `tabCurrent Occupation` order by sequence asc , name asc" };
+      return { page_length: 1000 };
     });
     frm.set_query("existing_bank_account", () => {
-      return { "query": "select name from `tabBank` order by sequence asc, name asc" };
+      // return { "query": "select name from `tabBank` order by sequence asc, name asc" };
+      return { page_length: 1000 };
     });
     frm.set_query("state_of_origin", () => {
       return { page_length: 1000 };
@@ -223,12 +288,12 @@ frappe.ui.form.on("Beneficiary", {
   },
 
   do_you_have_id_document: function (frm) {
-    console.log("Form data", frm.doc)
     var id_section = frm.get_field('id_section');
     if (frm.doc.do_you_have_id_document === 'Yes') {
       id_section.df.hidden = 0;
       id_section.refresh();
     } else {
+      frm.doc.id_section =[]
       id_section.df.hidden = 1;
       id_section.refresh();
     }
@@ -238,10 +303,12 @@ frappe.ui.form.on("Beneficiary", {
     if (frm.doc.head_of_family === "No" || frm.doc.head_of_family ==='') {
       parentField.df.hidden = 1;
       frm.set_df_property('family', 'reqd', 0);
+      frm.doc.family = ""
       parentField.refresh();
     } else {
       parentField.df.hidden = 0;
       frm.set_df_property('family', 'reqd', 1);
+      frm.doc.family = ""
       parentField.refresh();
     }
   },
@@ -286,9 +353,8 @@ frappe.ui.form.on("Beneficiary", {
     bank_name(frm,frm.doc.existing_bank_account)
   },
   current_location: function (frm) {
-    console.log("lllll", frm.doc.current_location)
     var new_location = frm.fields_dict['other_current_location'];
-    if (frm.doc.current_location === "Others") {
+    if (frm.doc.current_location.split('-')[0] === "Others") {
       frm.set_df_property('other_current_location', 'reqd', 1);
       new_location.df.hidden = 0;
       new_location.refresh();
@@ -310,16 +376,12 @@ frappe.ui.form.on("Beneficiary", {
       new_sorce.refresh();
     }
   },
+  
 
 
 });
 // ********************* SUPERT CHILD Table***********************
 frappe.ui.form.on('Support Child', {
-  form_render(frm) {
-    // frm.set_query("specific_support_type", () => {
-    //   return { page_length: 1000 };
-    // });
-  },
 
   refresh(frm) {
     frm.set_query("specific_support_type", () => {
@@ -327,56 +389,21 @@ frappe.ui.form.on('Support Child', {
     });
   },
   specific_support_type: function (frm) {
-    console.log(frm)
     frm.set_query("specific_support_type", () => {
       return { page_length: 1000 };
     });
   },
-  support: function (frm) {
-    console.log("hhh")
-  },
-  // status:function(frm, cdt, cdn){
-  //   let row = frappe.get_doc(cdt, cdn);
-  //   console.log("Kk", row)
-  //   let status = row.status
-  //   var df = frappe.meta.get_docfield("Support Child", 'reason_of_rejection'  , frm.doc.name);
-  //   df.hidden = 1;
-  //   frm.refresh_field('reason_of_rejection');
-
-  //   console.log(df)
-  //   frm.fields_dict['support_table'].grid.get_field('specific_support_type').get_query = function(doc, cdt, cdn) {
-  //     var child = locals[cdt][cdn];
-  //     return {
-  //         filters:[
-  //             ['specific_support_type', '=', child.status]
-  //         ]
-  //     }
-  // }
-  //   // if(status ==="Rejected"){
-  //   //   row.reason_of_rejection = 0
-  //   // }
-  // frm.refresh_field('support_tab');
-  // },
   support_table_add(frm, cdt, cdn) {
     let row = frappe.get_doc(cdt, cdn);
+    get_support_types(frm)
+    // set_field_options("specific_support_type", ["Loan Approved","Loan Appealing"])
 
   },
-
-  // support_type:function(frm , cdt , cdn){
-  //   console.log("cd,cdn", cdt , cdn)
-  //   let row = frappe.get_doc(cdt, cdn);
-  //   let supportType = row.support_type;
-  // frm.refresh_field('support_table');
-  // },
   support_type: function (frm, cdt, cdn) {
     let row = frappe.get_doc(cdt, cdn);
-    // frm.set_query("specific_support_type", "Support Child", function() {
-    //   return {
-    //     filters: {
-    //       'support_type': "nnn", // Replace this with your filter
-    //     }
-    //   }
-    // });
+    // console.log("row", row)
+    get_support_list(frm,row.support_type)
+    // frm.fields_dict.support_table.grid.update_docfield_property("specific_support_type","options",["Loan Approved","Loan Appealing"]);
 
   }
 })
@@ -384,18 +411,34 @@ frappe.ui.form.on('Support Child', {
 frappe.ui.form.on('Follow Up Child', {
   followup_table_add(frm, cdt, cdn) {
     let row = frappe.get_doc(cdt, cdn);
-    console.log(frm.fields_dict.followup_table)
-    // frm.set_value(frm.fields_dict.followup_table[0].follow_up_status, "Closed")
-    console.log("child frm", row)
-    // frappe.meta.get_docfield("Follow Up Child", "support_name",
-    // cur_frm.support_name).options = "Initial\n1 Month\n2 Months\n3 Months\n6 Months";
-    // refresh_field("support_name");
-    // row.support_name='support_name';
-    // frm.set_field_options('support_name', 'Option Value');
-    // frm.set_df_property('support_name', 'options', '[aaa]');
-    // frm.refresh_field('support_name');\
+      let support_data = []
+      for(support_name of frm.doc.support_table){
+        if(support_name.status != "Completed"){
+          support_data.push(support_name.specific_support_type)
+        }
+      }
+
+    frm.fields_dict.followup_table.grid.update_docfield_property("support_name","options", support_data);
 
   },
+  support_name:function(frm, cdt, cdn){
+    let row = frappe.get_doc(cdt, cdn);
+    for(support_items of frm.doc.support_table){
+      if(row.support_name == support_items.specific_support_type){
+        console.log(support_items.specific_support_type)
+        console.log(support_items)
+        if(support_items.status ==="Open"){
+          frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_with","options", ["Beneficiary"]);
+          frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status","options", ["Interested" ,"Not interested" ,"Not reachable"]);
+        }else if(support_items.status ==="Under process"){
+          frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_with","options", ["Beneficiary", "Government department","Government website"]);
+          frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status","options", ["Not reachable","Under process" ,"Additional info required" ,"Completed","Rejected"]);
+        }
+      }
+      // console.log(support_items)
+    }
+    // console.log(frm)
+  }
 })
 
 

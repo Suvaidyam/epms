@@ -31,7 +31,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-22 15:03:47.596652",
+ "modified": "2023-11-26 10:27:35.455693",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Caste master",
@@ -63,8 +63,6 @@
    "write": 1
   },
   {
-   "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,

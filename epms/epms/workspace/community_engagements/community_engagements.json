@@ -1,0 +1,41 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"qsy9gVtZpr\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Community engagement</span>\",\"col\":12}},{\"id\":\"x4EcOYlJWF\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Community engagement\",\"col\":12}}]",
+ "creation": "2023-10-17 11:43:43.165388",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "income",
+ "idx": 1,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Community engagements",
+ "links": [],
+ "modified": "2023-11-28 17:39:56.673876",
+ "modified_by": "Administrator",
+ "module": "Epms",
+ "name": "Community engagements",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Community engagement",
+   "label": "Community engagement"
+  }
+ ],
+ "roles": [
+  {
+   "role": "Admin"
+  },
+  {
+   "role": "MIS executive"
+  }
+ ],
+ "sequence_id": 23.0,
+ "shortcuts": [],
+ "title": "Community engagements"
+}

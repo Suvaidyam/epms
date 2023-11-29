@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class Participantdetails(Document):
+class Communityengagement(Document):
 	pass

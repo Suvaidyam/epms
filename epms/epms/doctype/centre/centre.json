@@ -36,7 +36,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-28 15:24:15.792118",
+ "modified": "2023-11-27 21:33:58.338981",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Centre",
@@ -66,6 +66,15 @@
    "role": "Admin",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "MIS executive",
+   "share": 1
   }
  ],
  "show_title_field_in_link": 1,

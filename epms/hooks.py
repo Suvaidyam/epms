@@ -16,7 +16,8 @@ fixtures = [
     "Caste master",
     "Source information about center",
     "ID Master",
-    "Centre"
+    "Centre",
+    "Role Profile"
 
     # {
     #     "dt":"docttype name",
@@ -32,6 +33,7 @@ fixtures = [
 permission_query_conditions = {
     "Beneficiary": "epms.middlewares.beneficiary.list_query",
     "Primary Member": "epms.middlewares.family.list_query",
+    "Current location":"epms.middlewares.current_location.list_query"
 
 }
 
@@ -201,8 +203,8 @@ permission_query_conditions = {
 # Ignore links to specified DocTypes when deleting documents
 # -----------------------------------------------------------
 
-# ignore_links_on_delete = ["CSC" , "Primary Member", "User" , "Beneficiary" , "Route History", 
-#                           "Current location", "Caste master" ,"Bank"]
+ignore_links_on_delete = ["CSC" , "Primary Member", "User" , "Beneficiary" , "Route History", 
+                          "Current location", "Caste master" ,"Bank"]
 
 # Request Events
 # ----------------
