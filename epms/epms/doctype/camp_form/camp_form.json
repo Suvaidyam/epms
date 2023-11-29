@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "autoincrement",
+ "autoname": "field:name_of_the_camp",
  "creation": "2023-10-17 09:49:23.623859",
  "default_view": "List",
  "doctype": "DocType",
@@ -8,26 +8,19 @@
  "engine": "InnoDB",
  "field_order": [
   "session_details_tab",
-  "session_name",
+  "name_of_the_camp",
   "date",
   "location",
   "duration",
-  "participant_details_tab",
-  "table_nvlx"
+  "attach_attendance_sheet",
+  "camp_child_table",
+  "number_of_participants"
  ],
  "fields": [
   {
    "fieldname": "session_details_tab",
    "fieldtype": "Tab Break",
    "label": "Session details"
-  },
-  {
-   "fieldname": "session_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Session Name",
-   "non_negative": 1,
-   "reqd": 1
   },
   {
    "fieldname": "date",
@@ -51,23 +44,40 @@
    "reqd": 1
   },
   {
-   "fieldname": "participant_details_tab",
-   "fieldtype": "Tab Break",
-   "label": "Participant details"
+   "fieldname": "name_of_the_camp",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name of the camp",
+   "non_negative": 1,
+   "reqd": 1,
+   "unique": 1
   },
   {
-   "fieldname": "table_nvlx",
+   "fieldname": "attach_attendance_sheet",
+   "fieldtype": "Attach",
+   "label": "Attach attendance sheet"
+  },
+  {
+   "fieldname": "number_of_participants",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Number of participants",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "camp_child_table",
    "fieldtype": "Table",
-   "options": "Participant details"
+   "options": "Camp Form Child"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-17 09:55:23.736714",
+ "modified": "2023-11-29 05:47:05.868890",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Camp Form",
- "naming_rule": "Autoincrement",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

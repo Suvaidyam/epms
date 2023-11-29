@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestDataOverview(FrappeTestCase):
+class TestCommunityengagement(FrappeTestCase):
 	pass

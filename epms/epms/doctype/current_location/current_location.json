@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_import": 1,
- "autoname": "field:name_of_location",
+ "autoname": "format:{name_of_location}-{centre}",
  "creation": "2023-10-06 13:12:55.239708",
  "default_view": "List",
  "doctype": "DocType",
@@ -9,6 +9,7 @@
  "engine": "InnoDB",
  "field_order": [
   "name_of_location",
+  "centre",
   "sequence"
  ],
  "fields": [
@@ -17,8 +18,7 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Name of Location",
-   "reqd": 1,
-   "unique": 1
+   "reqd": 1
   },
   {
    "default": "0",
@@ -26,15 +26,25 @@
    "fieldtype": "Int",
    "label": "sequence",
    "non_negative": 1
+  },
+  {
+   "fieldname": "centre",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Centre",
+   "options": "Centre",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-08 11:43:38.630627",
+ "modified": "2023-11-28 10:21:47.061891",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Current location",
- "naming_rule": "By fieldname",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -77,7 +87,9 @@
   }
  ],
  "search_fields": "name_of_location",
+ "show_title_field_in_link": 1,
  "sort_field": "sequence",
- "sort_order": "DESC",
- "states": []
+ "sort_order": "ASC",
+ "states": [],
+ "title_field": "name_of_location"
 }

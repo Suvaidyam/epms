@@ -43,9 +43,11 @@ class Beneficiary(Document):
 			print("CREATING CHILD BENEFICARY")
 	
 	def on_update(self):
-		# beneficiary = frappe.get_doc("Beneficiary" , self.name)
+		beneficiary = frappe.get_doc("Beneficiary" , self.name)
 		if(self.head_of_family == "No"):
 			# update primary members
 			Primary_member.update_family(self)
+			# beneficiary.family = Primary_member.create_family
+			# beneficiary.save()
 		else:
-			print("THis is beneficary is not a parent ")
+			Primary_member.delete_family(self)

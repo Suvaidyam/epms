@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"fMnFYgrVea\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Reports</span>\",\"col\":12}},{\"id\":\"Qhb0H6rDy-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Current location\",\"col\":12}},{\"id\":\"EfsZzioC_c\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gender composition\",\"col\":12}},{\"id\":\"MOZ98zSIlu\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Education composition\",\"col\":12}},{\"id\":\"PPAv2DIXje\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Bank account status\",\"col\":12}},{\"id\":\"uNmRrDK46T\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"State of origin\",\"col\":12}},{\"id\":\"s3L5BiOTXf\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Place of origin\",\"col\":12}},{\"id\":\"V_k7vXyWON\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overall tracking of beneficiaries\",\"col\":12}},{\"id\":\"9bTNJO93Xd\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tracking of occupation of beneficiaries, segregated by caste\",\"col\":12}},{\"id\":\"Jv-e8KHtvL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overall tracking of scheme\",\"col\":12}}]",
+ "content": "[{\"id\":\"fMnFYgrVea\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Reports</span>\",\"col\":12}},{\"id\":\"Qhb0H6rDy-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Current location\",\"col\":12}},{\"id\":\"EfsZzioC_c\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gender composition\",\"col\":12}},{\"id\":\"MOZ98zSIlu\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Education composition\",\"col\":12}},{\"id\":\"PPAv2DIXje\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Bank account status\",\"col\":12}},{\"id\":\"uNmRrDK46T\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"State of origin\",\"col\":12}},{\"id\":\"s3L5BiOTXf\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Place of origin\",\"col\":12}},{\"id\":\"V_k7vXyWON\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overall tracking of beneficiaries\",\"col\":12}},{\"id\":\"9bTNJO93Xd\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tracking of occupation of beneficiaries, segregated by caste\",\"col\":12}},{\"id\":\"Jv-e8KHtvL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overall tracking of scheme\",\"col\":12}},{\"id\":\"lIn4qdQCEX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Total Beneficiaries From The Camps\",\"col\":12}}]",
  "creation": "2023-10-12 12:09:55.430267",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Reports",
  "links": [],
- "modified": "2023-10-25 11:08:28.713797",
+ "modified": "2023-11-27 20:14:27.917734",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Reports",
@@ -32,6 +32,13 @@
  ],
  "sequence_id": 10.0,
  "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Total Beneficiaries From The Camps",
+   "link_to": "Total Beneficiaries from the camps",
+   "type": "Report"
+  },
   {
    "color": "Grey",
    "doc_view": "List",
