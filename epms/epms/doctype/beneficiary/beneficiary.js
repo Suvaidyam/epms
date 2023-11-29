@@ -59,21 +59,37 @@ frappe.ui.form.on("Beneficiary", {
       }
       return
     }
+    // support status manage
+    if(frm.selected_doc.support_table){
+      for (support_items of frm.selected_doc.support_table) {
+        if(support_items.application_submitted =="No"){
+          support_items.status = 'Open'
+        }else if(support_items.application_submitted =="Yes"){
+          support_items.status = 'Under process'
+        }else{
+          support_items.status = 'Completed'
+        }
+      }
+    }
     // follow up status manage
     if (frm.selected_doc.followup_table) {
       for (follow_up_items of frm.selected_doc.followup_table) {
+        console.log("follow_up_items",follow_up_items)
         let support_name = follow_up_items.support_name;
         for (support_items of frm.selected_doc.support_table) {
           if (support_items.specific_support_type === support_name) {
-            if (follow_up_items.follow_up_status === "Not interested") {
+            if (follow_up_items.follow_up_status === "Interested") {
+              support_items.status = "Open"
+            } else if (follow_up_items.follow_up_status === "Not interested") {
               support_items.status = "Closed"
-            } else if (follow_up_items.follow_up_status === "Interested") {
-              // support_items.status = "Open"
-              if (support_items.status === 'Closed') {
-                support_items.status = "Open"
-              }
-            } else {
-              support_items.status = follow_up_items.follow_up_status
+            }else if(follow_up_items.follow_up_status === "Rejected"){
+              support_items.status = "Rejected"
+            }else if(follow_up_items.follow_up_status === "Completed"){
+              support_items.status = "Completed"
+              support_items.date_of_completion = follow_up_items.date_of_completion;
+            } 
+            else {
+              support_items.status = "Under process"
             }
           }
         }
@@ -124,6 +140,12 @@ frappe.ui.form.on("Beneficiary", {
   onupdate: function (frm) {
   },
   refresh(frm) {
+    // child table api defult call
+    get_support_types(frm)
+    if(cur_frm.doc.support_table[0].support_type){
+      get_support_list(frm ,cur_frm.doc.support_table[0].support_type)
+    }
+
   // console.log("frappe.session.user", frappe.session.user)
     // hide advance search and create new option in lists
     frm.set_df_property('current_location', 'only_select', true);
@@ -391,7 +413,7 @@ frappe.ui.form.on('Follow Up Child', {
     let row = frappe.get_doc(cdt, cdn);
       let support_data = []
       for(support_name of frm.doc.support_table){
-        if(support_name.status != "Closed"){
+        if(support_name.status != "Completed"){
           support_data.push(support_name.specific_support_type)
         }
       }
@@ -399,6 +421,24 @@ frappe.ui.form.on('Follow Up Child', {
     frm.fields_dict.followup_table.grid.update_docfield_property("support_name","options", support_data);
 
   },
+  support_name:function(frm, cdt, cdn){
+    let row = frappe.get_doc(cdt, cdn);
+    for(support_items of frm.doc.support_table){
+      if(row.support_name == support_items.specific_support_type){
+        console.log(support_items.specific_support_type)
+        console.log(support_items)
+        if(support_items.status ==="Open"){
+          frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_with","options", ["Beneficiary"]);
+          frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status","options", ["Interested" ,"Not interested" ,"Not reachable"]);
+        }else if(support_items.status ==="Under process"){
+          frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_with","options", ["Beneficiary", "Government department","Government website"]);
+          frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status","options", ["Not reachable","Under process" ,"Additional info required" ,"Completed","Rejected"]);
+        }
+      }
+      // console.log(support_items)
+    }
+    // console.log(frm)
+  }
 })
 
 

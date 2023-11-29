@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "format:{name_of_the_camp}-{###}",
+ "autoname": "field:name_of_the_camp",
  "creation": "2023-10-17 09:49:23.623859",
  "default_view": "List",
  "doctype": "DocType",
@@ -49,7 +49,8 @@
    "in_list_view": 1,
    "label": "Name of the camp",
    "non_negative": 1,
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "attach_attendance_sheet",
@@ -72,11 +73,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-28 11:40:20.047200",
+ "modified": "2023-11-29 05:47:05.868890",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Camp Form",
- "naming_rule": "Expression",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

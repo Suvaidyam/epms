@@ -1,19 +1,20 @@
 {
  "actions": [],
- "autoname": "autoincrement",
+ "autoname": "format:{session_name}-{###}",
  "creation": "2023-10-17 10:19:02.480587",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "session_name",
   "date",
   "duration",
   "location",
-  "session_name",
-  "session_plan",
   "facilitators",
+  "session_plan",
   "number_of_participants",
-  "key_learnings_and_any_challenges"
+  "key_learnings_and_any_challenges",
+  "attach_attendance_sheet"
  ],
  "fields": [
   {
@@ -40,7 +41,7 @@
    "fieldname": "session_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Session name",
+   "label": "Name of the session",
    "reqd": 1
   },
   {
@@ -68,15 +69,20 @@
    "fieldtype": "Small Text",
    "label": "Key learnings and any challenges",
    "reqd": 1
+  },
+  {
+   "fieldname": "attach_attendance_sheet",
+   "fieldtype": "Attach",
+   "label": "Attach attendance sheet"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-17 15:53:37.714998",
+ "modified": "2023-11-28 17:48:30.927522",
  "modified_by": "Administrator",
  "module": "Epms",
- "name": "Data Overview",
- "naming_rule": "Autoincrement",
+ "name": "Community engagement",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
