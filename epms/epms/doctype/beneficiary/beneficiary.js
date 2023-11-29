@@ -1,6 +1,90 @@
 // Copyright (c) 2023, Management System for Agrasarteach@suvaidyam.com and contributors
 // For license information, please see license.txt
+let support__document_sub = []
+let document_submitted = new frappe.ui.Dialog({
+  title: 'Enter details for Support',
+  fields: [
+      {
+          label: 'Date of application',
+          fieldname: 'date_of_application',
+          fieldtype: 'Date',
+          reqd: 1,
+      },
+      {
+          label: 'Application number',
+          fieldname: 'application_number',
+          fieldtype: 'Data'
+      },
+      {
+          label: 'Amount paid',
+          fieldname: 'amount_paid',
+          fieldtype: 'Int'
+      },
+      {
+        label: 'Paid by',
+        fieldname: 'paid_by',
+        fieldtype: 'Select',
+        options:["Self","CSC"]
+    }
+  ],
+  size: 'small', // small, large, extra-large 
+  primary_action_label: 'Save',
+  primary_action(values) {
+    support__document_sub = values
+      document_submitted.hide();
+  }
+});
+let support__document_com =[]
+let document_completed = new frappe.ui.Dialog({
+  title: 'Enter details for Support',
+  fields: [
+      {
+          label: 'Date of completion',
+          fieldname: 'date_of_completion',
+          fieldtype: 'Date',
+          reqd: 1,
+      },
+      {
+          label: 'Completion certificate',
+          fieldname: 'completion_certificate',
+          fieldtype: 'Attach'
+      }
+  ],
+  size: 'small', // small, large, extra-large 
+  primary_action_label: 'Save',
+  primary_action(values) {
+    support__document_com = values
+    console.log("save")
+    document_completed.hide();
+  }
+});
+let support__document_rej =[]
+let document_rejected = new frappe.ui.Dialog({
+  title: 'Enter details for Support',
+  fields: [
+      {
+          label: 'Date of rejection',
+          fieldname: 'date_of_rejection',
+          fieldtype: 'Date',
+          reqd: 1,
+      },
+      {
+          label: 'Reason of rejection',
+          fieldname: 'reason_of_rejection',
+          fieldtype: 'Data',
+          reqd: 1,
+      }
+  ],
+  size: 'small', // small, large, extra-large 
+  primary_action_label: 'Save',
+  primary_action(values) {
+    support__document_rej = values
+    console.log("save")
+    document_rejected.hide();
+  }
+});
 
+////////////////////////////////
 function get_support_list(frm ,support_type){
   frappe.call({
     method: 'frappe.desk.search.search_link',
@@ -74,22 +158,41 @@ frappe.ui.form.on("Beneficiary", {
     // follow up status manage
     if (frm.selected_doc.followup_table) {
       for (follow_up_items of frm.selected_doc.followup_table) {
-        console.log("follow_up_items",follow_up_items)
-        let support_name = follow_up_items.support_name;
         for (support_items of frm.selected_doc.support_table) {
-          if (support_items.specific_support_type === support_name) {
+          if (support_items.specific_support_type === follow_up_items.support_name) {
+            // enter follow up
             if (follow_up_items.follow_up_status === "Interested") {
               support_items.status = "Open"
             } else if (follow_up_items.follow_up_status === "Not interested") {
               support_items.status = "Closed"
             }else if(follow_up_items.follow_up_status === "Rejected"){
               support_items.status = "Rejected"
+              if(support__document_rej.length != 0){
+                support_items.date_of_rejection = support__document_rej.date_of_rejection
+                support_items.reason_of_rejection = support__document_rej.reason_of_rejection
+              }
+            }else if(follow_up_items.follow_up_status === "Document submitted"){
+              if(support__document_sub.length != 0){
+                support_items.date_of_application = support__document_sub.date_of_application
+                support_items.application_number = support__document_sub.application_number
+                support_items.amount_paid = support__document_sub.amount_paid
+                support_items.paid_by = support__document_sub.paid_by
+              }else if(support__document_com.length != 0){
+                support_items.date_of_completion = support__document_com.date_of_completion
+                support_items.completion_certificate = support__document_com.completion_certificate
+              }         
+              support_items.application_submitted = "Yes"
+              support_items.status = "Under process"
             }else if(follow_up_items.follow_up_status === "Completed"){
               support_items.status = "Completed"
-              support_items.date_of_completion = follow_up_items.date_of_completion;
+              if(support__document_com.length != 0){
+                support_items.date_of_completion = support__document_com.date_of_completion
+                support_items.completion_certificate = support__document_com.completion_certificate
+              } 
             } 
             else {
               support_items.status = "Under process"
+
             }
           }
         }
@@ -142,7 +245,7 @@ frappe.ui.form.on("Beneficiary", {
   refresh(frm) {
     // child table api defult call
     get_support_types(frm)
-    if(cur_frm.doc.support_table[0].support_type){
+    if(cur_frm.doc.support_table[0]?.support_type){
       get_support_list(frm ,cur_frm.doc.support_table[0].support_type)
     }
 
@@ -417,7 +520,8 @@ frappe.ui.form.on('Follow Up Child', {
           support_data.push(support_name.specific_support_type)
         }
       }
-
+      row.follow_up_date = frappe.datetime.get_today()
+    console.log(row)
     frm.fields_dict.followup_table.grid.update_docfield_property("support_name","options", support_data);
 
   },
@@ -427,17 +531,32 @@ frappe.ui.form.on('Follow Up Child', {
       if(row.support_name == support_items.specific_support_type){
         console.log(support_items.specific_support_type)
         console.log(support_items)
-        if(support_items.status ==="Open"){
+        if(support_items.status ==="Open" || support_items.status ==="Closed"){
           frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_with","options", ["Beneficiary"]);
-          frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status","options", ["Interested" ,"Not interested" ,"Not reachable"]);
-        }else if(support_items.status ==="Under process"){
+          row.follow_up_with = "Beneficiary"
+          frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status","options", ["Interested" ,"Not interested" ,"Document submitted","Not reachable"]);
+        }else if(support_items.status === "Under process"){
           frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_with","options", ["Beneficiary", "Government department","Government website"]);
           frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status","options", ["Not reachable","Under process" ,"Additional info required" ,"Completed","Rejected"]);
         }
       }
-      // console.log(support_items)
     }
-    // console.log(frm)
+  },
+  follow_up_with:function(frm, cdt , cdn){
+    let row = frappe.get_doc(cdt, cdn);
+    if(row.follow_up_with !="Beneficiary"){
+      frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status","options", ["Under process" ,"Additional info required" ,"Completed","Rejected"]);
+    }
+  },
+  follow_up_status:function(frm, cdt , cdn){
+    let row = frappe.get_doc(cdt, cdn);
+    if(row.follow_up_status ==="Document submitted"){
+      document_submitted.show();
+    }else if(row.follow_up_status ==="Completed"){
+      document_completed.show()
+    }else if(row.follow_up_status ==="Rejected"){
+      document_rejected.show()
+    }
   }
 })
 
