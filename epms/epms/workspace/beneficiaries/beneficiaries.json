@@ -17,7 +17,7 @@
    "label": "Current location"
   }
  ],
- "content": "[{\"id\":\"nSyCLnHvUy\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of Beneficiaries\",\"col\":6}},{\"id\":\"EXmth7zOaZ\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of families\",\"col\":6}},{\"id\":\"UjlosovxUu\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of Camps\",\"col\":6}},{\"id\":\"i7cx2NgbOP\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total number of participants in camp\",\"col\":6}},{\"id\":\"8MwIEpbEYX\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Gender composition\",\"col\":6}},{\"id\":\"ds3OKc4Rqj\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Beneficiaries with Bank Account\",\"col\":6}},{\"id\":\"TROMGsPZq2\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Education composition\",\"col\":12}},{\"id\":\"FkxHXNCSQe\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Current location\",\"col\":12}}]",
+ "content": "[{\"id\":\"nSyCLnHvUy\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of Beneficiaries\",\"col\":6}},{\"id\":\"EXmth7zOaZ\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of families\",\"col\":6}},{\"id\":\"UjlosovxUu\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of Community engagement\",\"col\":6}},{\"id\":\"i7cx2NgbOP\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total number of participants in Community engagement\",\"col\":6}},{\"id\":\"8MwIEpbEYX\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Gender composition\",\"col\":6}},{\"id\":\"ds3OKc4Rqj\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Beneficiaries with Bank Account\",\"col\":6}},{\"id\":\"TROMGsPZq2\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Education composition\",\"col\":12}},{\"id\":\"FkxHXNCSQe\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Current location\",\"col\":12}}]",
  "creation": "2023-09-15 20:25:51.986386",
  "custom_blocks": [],
  "docstatus": 0,
@@ -29,26 +29,26 @@
  "is_hidden": 0,
  "label": "Beneficiaries",
  "links": [],
- "modified": "2023-11-29 05:54:57.887495",
+ "modified": "2023-11-30 11:23:13.261188",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiaries",
  "number_cards": [
   {
+   "label": "Number of Community engagement",
+   "number_card_name": "No. of camp"
+  },
+  {
+   "label": "Total number of participants in Community engagement",
+   "number_card_name": "Total no of participant in camp"
+  },
+  {
    "label": "Number of Beneficiaries",
    "number_card_name": "No of Beneficiary"
   },
   {
-   "label": "Total number of participants in camp",
-   "number_card_name": "Total no of participant in camp"
-  },
-  {
    "label": "Number of families",
    "number_card_name": "No of Family"
-  },
-  {
-   "label": "Number of Camps",
-   "number_card_name": "No. of camp"
   }
  ],
  "owner": "Administrator",

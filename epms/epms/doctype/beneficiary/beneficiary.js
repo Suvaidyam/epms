@@ -71,8 +71,7 @@ let document_rejected = new frappe.ui.Dialog({
     {
       label: 'Reason of rejection',
       fieldname: 'reason_of_rejection',
-      fieldtype: 'Data',
-      reqd: 1,
+      fieldtype: 'Data'
     }
   ],
   size: 'small', // small, large, extra-large
@@ -194,7 +193,9 @@ frappe.ui.form.on("Beneficiary", {
                 support_item.date_of_completion = support__document_com.date_of_completion
                 support_item.completion_certificate = support__document_com.completion_certificate
               }
-            } else {
+            } else  if(latestFollowup.follow_up_status === "Not reachable"){
+              support_item.status = "Open"
+            }else {
               support_item.status = "Under process"
             }
           }
@@ -285,6 +286,7 @@ frappe.ui.form.on("Beneficiary", {
     }
   },
   onupdate: function (frm) {
+    frm.refresh()
   },
   refresh(frm) {
     // child table api defult call
@@ -554,7 +556,13 @@ frappe.ui.form.on('Support Child', {
     get_support_list(frm, row.support_type)
     // frm.fields_dict.support_table.grid.update_docfield_property("specific_support_type","options",["Loan Approved","Loan Appealing"]);
 
+  },
+  application_submitted:function (frm, cdt, cdn) {
+    let row = frappe.get_doc(cdt, cdn);
+    row.status = "Completed"
+    frm.refresh()
   }
+
 })
 // ********************* FOLLOW UP CHILD Table***********************
 frappe.ui.form.on('Follow Up Child', {
