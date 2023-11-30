@@ -98,8 +98,10 @@ function get_support_list(frm, support_type) {
     freeze: true,
     freeze_message: __("Calling"),
     callback: async function (response) {
-      let not_completed_ops = frm.doc.support_table.filter(f => (f.status != 'Completed' && !f.__islocal)).map(m => m.specific_support_type)
-      let ops = response.results.filter(f => !not_completed_ops.includes(f.value))
+      let under_process_completed_ops = frm.doc.support_table.filter(f => (f.status == 'Under process')).map(m => m.specific_support_type)
+      // console.log("under_process_completed_ops", under_process_completed_ops)
+      let ops = response.results.filter(f => !under_process_completed_ops.includes(f.value))
+      // console.log(" options", ops)
       frm.fields_dict.support_table.grid.update_docfield_property("specific_support_type", "options", ops);
     }
   });
@@ -286,9 +288,12 @@ frappe.ui.form.on("Beneficiary", {
         frm.doc.overall_status = 'Partially completed'
       }
     }
+
+    frm.fields_dict['support_table'].grid.refresh();
+    // window.location.reload();
   },
   onupdate: function (frm) {
-    frm.refresh()
+    // frm.refresh()
   },
   refresh(frm) {
     // child table api defult call
@@ -569,7 +574,7 @@ frappe.ui.form.on('Support Child', {
 frappe.ui.form.on('Follow Up Child', {
   followup_table_add(frm, cdt, cdn) {
     let row = frappe.get_doc(cdt, cdn);
-    let support_data = frm.doc.support_table.filter(f => (f.status != 'Completed' && f.status != 'Closed' && !f.__islocal)).map(m => m.specific_support_type);
+    let support_data = frm.doc.support_table.filter(f => (f.status != 'Completed' && f.status != 'Rejected' && !f.__islocal)).map(m => m.specific_support_type);
     row.follow_up_date = frappe.datetime.get_today()
     frm.fields_dict.followup_table.grid.update_docfield_property("support_name", "options", support_data);
   },
