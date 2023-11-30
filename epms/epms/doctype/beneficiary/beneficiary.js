@@ -199,6 +199,8 @@ frappe.ui.form.on("Beneficiary", {
               support_item.status = "Under process"
             }
           }
+        }else{
+          refresh_field("support_table");
         }
 
       }
