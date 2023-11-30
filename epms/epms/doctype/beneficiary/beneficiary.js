@@ -561,7 +561,6 @@ frappe.ui.form.on('Support Child', {
   },
   application_submitted:function (frm, cdt, cdn) {
     let row = frappe.get_doc(cdt, cdn);
-    row.status = "Completed"
     frm.refresh()
   }
 
