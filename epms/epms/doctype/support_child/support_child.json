@@ -63,12 +63,12 @@
    "set_only_once": 1
   },
   {
-   "depends_on": "eval:doc.status == \"Completed\"",
+   "depends_on": "eval:(doc.status ==\"Completed\" || doc.application_submitted ==\"Completed\")",
    "fieldname": "date_of_completion",
    "fieldtype": "Date",
    "in_list_view": 1,
    "label": "Date of completion",
-   "mandatory_depends_on": "eval:doc.status == \"Completed\"",
+   "mandatory_depends_on": "eval:(doc.status ==\"Completed\" || doc.application_submitted ==\"Completed\")",
    "set_only_once": 1
   },
   {
@@ -148,7 +148,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-11-30 13:56:57.875854",
+ "modified": "2023-11-30 18:36:23.023100",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Support Child",
