@@ -289,8 +289,9 @@ frappe.ui.form.on("Beneficiary", {
   refresh(frm) {
     // child table api defult call
     get_support_types(frm)
-    if (cur_frm.doc.support_table[0]?.support_type) {
-      get_support_list(frm, cur_frm.doc.support_table[0].support_type)
+    console.log(frm.doc?.support_table)
+    if (frm.doc.support_table) {
+      get_support_list(frm, cur_frm.doc?.support_table[0]?.support_type)
     }
 
     // console.log("frappe.session.user", frappe.session.user)
@@ -337,8 +338,7 @@ frappe.ui.form.on("Beneficiary", {
     }
 
     let new_location = frm.fields_dict['other_current_location'];
-    let current_loc = frm.doc.current_location.split('-')[0]
-    if (frm.doc.current_location.split('-')[0] === "Others") {
+    if (frm.doc?.current_location?.split('-')[0] === "Others") {
       frm.set_df_property('other_current_location', 'reqd', 1);
       new_location.df.hidden = 0;
       new_location.refresh();
@@ -560,7 +560,7 @@ frappe.ui.form.on('Support Child', {
 frappe.ui.form.on('Follow Up Child', {
   followup_table_add(frm, cdt, cdn) {
     let row = frappe.get_doc(cdt, cdn);
-    let support_data = frm.doc.support_table.filter(f => (f.status != 'Completed' && !f.__islocal)).map(m => m.specific_support_type);
+    let support_data = frm.doc.support_table.filter(f => (f.status != 'Completed' && f.status != 'Closed' && !f.__islocal)).map(m => m.specific_support_type);
     row.follow_up_date = frappe.datetime.get_today()
     frm.fields_dict.followup_table.grid.update_docfield_property("support_name", "options", support_data);
   },
@@ -591,6 +591,8 @@ frappe.ui.form.on('Follow Up Child', {
     let row = frappe.get_doc(cdt, cdn);
     if (row.follow_up_with != "Beneficiary") {
       frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status", "options", ["Under process", "Additional info required", "Completed", "Rejected"]);
+    }else{
+      frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status", "options", ["Interested", "Not interested", "Document submitted", "Not reachable"]);
     }
   },
   follow_up_status: function (frm, cdt, cdn) {
@@ -601,6 +603,22 @@ frappe.ui.form.on('Follow Up Child', {
       document_completed.show()
     } else if (row.follow_up_status === "Rejected") {
       document_rejected.show()
+    }else if(row.follow_up_status === "Not reachable"){
+      let followups = frm.doc.followup_table.filter(f => f.support_name == row.support_name && f.follow_up_status == "Not reachable")
+      console.log(followups.length)
+      if(followups.length >= 2){
+        frappe.warn('Do you want to close the status ?',
+        `The follow-up status is "Not reachable" ${followups.length} times`,
+        () => {
+            row.follow_up_status = "Not interested"
+            console.log("aaaa", row)
+        },
+        'Close',
+        true // Sets dialog as minimizable
+    )
+
+      }
+        //  show popup and continue and close if more than two times
     }
   }
 })

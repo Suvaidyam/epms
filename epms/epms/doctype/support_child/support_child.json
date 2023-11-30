@@ -44,13 +44,15 @@
    "in_list_view": 1,
    "label": "Current status",
    "options": "\nOpen\nClosed\nUnder process\nCompleted\nRejected",
-   "read_only": 1
+   "read_only": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "remarks",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Remarks"
+   "label": "Remarks",
+   "set_only_once": 1
   },
   {
    "default": " ",
@@ -58,7 +60,8 @@
    "fieldname": "reason_of_rejection",
    "fieldtype": "Data",
    "label": "Reason of rejection",
-   "mandatory_depends_on": "eval:doc.status=='Rejected'"
+   "mandatory_depends_on": "eval:doc.status=='Rejected'",
+   "set_only_once": 1
   },
   {
    "depends_on": "eval:doc.status == \"Completed\"",
@@ -66,13 +69,15 @@
    "fieldtype": "Date",
    "in_list_view": 1,
    "label": "Date of completion",
-   "mandatory_depends_on": "eval:doc.status == \"Completed\""
+   "mandatory_depends_on": "eval:doc.status == \"Completed\"",
+   "set_only_once": 1
   },
   {
    "depends_on": "eval:doc.status == \"Completed\"",
    "fieldname": "completion_certificate",
    "fieldtype": "Attach",
-   "label": "Completion certificate"
+   "label": "Completion certificate",
+   "set_only_once": 1
   },
   {
    "depends_on": "eval:doc.status=='Rejected'",
@@ -80,7 +85,8 @@
    "fieldtype": "Date",
    "in_list_view": 1,
    "label": "Date of rejection",
-   "mandatory_depends_on": "eval:doc.status=='Rejected'"
+   "mandatory_depends_on": "eval:doc.status=='Rejected'",
+   "set_only_once": 1
   },
   {
    "default": " ",
@@ -97,6 +103,7 @@
    "set_only_once": 1
   },
   {
+   "default": "No",
    "fieldname": "application_submitted",
    "fieldtype": "Select",
    "in_list_view": 1,
@@ -118,14 +125,16 @@
    "depends_on": "eval:doc.application_submitted != \"No\"",
    "fieldname": "application_number",
    "fieldtype": "Data",
-   "label": "Application number"
+   "label": "Application number",
+   "set_only_once": 1
   },
   {
    "depends_on": "eval:doc.application_submitted != \"No\"",
    "fieldname": "amount_paid",
-   "fieldtype": "Currency",
+   "fieldtype": "Int",
    "label": "Amount paid",
-   "non_negative": 1
+   "non_negative": 1,
+   "set_only_once": 1
   },
   {
    "depends_on": "eval:doc.application_submitted != \"No\"",
@@ -133,13 +142,14 @@
    "fieldtype": "Select",
    "label": "Paid by",
    "mandatory_depends_on": "eval:doc.amount_paid",
-   "options": "\nSelf\nCSC"
+   "options": "\nSelf\nCSC",
+   "set_only_once": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-11-29 21:17:10.340327",
+ "modified": "2023-11-29 23:07:34.239883",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Support Child",
