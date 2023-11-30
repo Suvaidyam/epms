@@ -56,14 +56,14 @@
   },
   {
    "default": " ",
-   "depends_on": "eval:doc.status=='Rejected'",
+   "depends_on": "eval:doc.status==\"Rejected\"",
    "fieldname": "reason_of_rejection",
    "fieldtype": "Data",
    "label": "Reason of rejection",
    "set_only_once": 1
   },
   {
-   "depends_on": "eval:doc.status == \"Completed\" && doc.",
+   "depends_on": "eval:doc.status == \"Completed\"",
    "fieldname": "date_of_completion",
    "fieldtype": "Date",
    "in_list_view": 1,
@@ -84,7 +84,7 @@
    "fieldtype": "Date",
    "in_list_view": 1,
    "label": "Date of rejection",
-   "mandatory_depends_on": "eval:doc.status=='Rejected'",
+   "mandatory_depends_on": "eval:doc.status ==\"Rejected\"",
    "set_only_once": 1
   },
   {
@@ -112,7 +112,7 @@
    "set_only_once": 1
   },
   {
-   "depends_on": "eval:(doc.application_submitted != \"No\")",
+   "depends_on": "eval:doc.application_submitted != \"No\"",
    "fieldname": "date_of_application",
    "fieldtype": "Date",
    "in_list_view": 1,
@@ -148,7 +148,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-11-30 13:04:12.757997",
+ "modified": "2023-11-30 13:56:57.875854",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Support Child",
