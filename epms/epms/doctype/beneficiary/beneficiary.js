@@ -98,7 +98,7 @@ function get_support_list(frm, support_type) {
     freeze: true,
     freeze_message: __("Calling"),
     callback: async function (response) {
-      let under_process_completed_ops = frm.doc.support_table.filter(f => (f.status == 'Under process')).map(m => m.specific_support_type)
+      let under_process_completed_ops = frm.doc.support_table.filter(f => (['Under process', 'Open'].includes(f.status))).map(m => m.specific_support_type)
       // console.log("under_process_completed_ops", under_process_completed_ops)
       let ops = response.results.filter(f => !under_process_completed_ops.includes(f.value))
       // console.log(" options", ops)
@@ -140,6 +140,9 @@ function bank_name(frm, data = []) {
 
 // /////////////////////////////////////////////////////////////////////////
 frappe.ui.form.on("Beneficiary", {
+  after_save: () => {
+    window.location.reload();
+  },
   before_save: function (frm) {
     if (frm.doc.do_you_have_id_document == "Yes" && frm.doc.id_section?.length == '0') {
       if (frm.doc.id_section[0] && frm.doc?.id_section[0]?.select_id != "undefined") {
@@ -195,13 +198,13 @@ frappe.ui.form.on("Beneficiary", {
                 support_item.date_of_completion = support__document_com.date_of_completion
                 support_item.completion_certificate = support__document_com.completion_certificate
               }
-            } else  if(latestFollowup.follow_up_status === "Not reachable"){
+            } else if (latestFollowup.follow_up_status === "Not reachable") {
               support_item.status = "Open"
-            }else {
+            } else {
               support_item.status = "Under process"
             }
           }
-        }else{
+        } else {
           refresh_field("support_table");
         }
 
@@ -564,7 +567,7 @@ frappe.ui.form.on('Support Child', {
     // frm.fields_dict.support_table.grid.update_docfield_property("specific_support_type","options",["Loan Approved","Loan Appealing"]);
 
   },
-  application_submitted:function (frm, cdt, cdn) {
+  application_submitted: function (frm, cdt, cdn) {
     let row = frappe.get_doc(cdt, cdn);
     frm.refresh()
   }
@@ -605,7 +608,7 @@ frappe.ui.form.on('Follow Up Child', {
     let row = frappe.get_doc(cdt, cdn);
     if (row.follow_up_with != "Beneficiary") {
       frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status", "options", ["Under process", "Additional info required", "Completed", "Rejected"]);
-    }else{
+    } else {
       frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status", "options", ["Interested", "Not interested", "Document submitted", "Not reachable"]);
     }
   },
@@ -617,22 +620,22 @@ frappe.ui.form.on('Follow Up Child', {
       document_completed.show()
     } else if (row.follow_up_status === "Rejected") {
       document_rejected.show()
-    }else if(row.follow_up_status === "Not reachable"){
+    } else if (row.follow_up_status === "Not reachable") {
       let followups = frm.doc.followup_table.filter(f => f.support_name == row.support_name && f.follow_up_status == "Not reachable")
       console.log(followups.length)
-      if(followups.length >= 2){
+      if (followups.length >= 2) {
         frappe.warn('Do you want to close the status ?',
-        `The follow-up status is "Not reachable" ${followups.length} times`,
-        () => {
+          `The follow-up status is "Not reachable" ${followups.length} times`,
+          () => {
             row.follow_up_status = "Not interested"
             console.log("aaaa", row)
-        },
-        'Close',
-        true // Sets dialog as minimizable
-    )
+          },
+          'Close',
+          true // Sets dialog as minimizable
+        )
 
       }
-        //  show popup and continue and close if more than two times
+      //  show popup and continue and close if more than two times
     }
   }
 })
