@@ -137,6 +137,26 @@ function bank_name(frm, data = []) {
     }
   }
 }
+// disable checkbxes
+function controlChildTable(frm, options = { disableCheckbox: true }) {
+  return;
+  let childTables = ['support_table', 'followup_table']
+  for (let table of childTables) {
+    let rows = frm.fields_dict[table].grid.grid_rows;
+    for (row of rows) {
+      if (!row.doc.__islocal) {
+        if (options.disableCheckbox) {
+          let checkboxElement = $(row.row_check).find('input[type="checkbox"]');
+          setTimeout(() => {
+            checkboxElement.prop('disabled', true)
+          }, 500);
+        }
+      }
+
+    }
+  }
+  // frm.refresh()
+}
 
 // /////////////////////////////////////////////////////////////////////////
 frappe.ui.form.on("Beneficiary", {
@@ -392,6 +412,7 @@ frappe.ui.form.on("Beneficiary", {
     if (frm.doc.__islocal) {
       frm.set_value('registration_date', frappe.datetime.get_today());
     }
+    controlChildTable(frm)
   },
   setup(frm) {
     frm.set_query("current_location", () => {
@@ -557,6 +578,7 @@ frappe.ui.form.on('Support Child', {
   support_table_add(frm, cdt, cdn) {
     let row = frappe.get_doc(cdt, cdn);
     get_support_types(frm)
+    controlChildTable(frm)
     // set_field_options("specific_support_type", ["Loan Approved","Loan Appealing"])
 
   },
