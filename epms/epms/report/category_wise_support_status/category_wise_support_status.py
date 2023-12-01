@@ -48,19 +48,42 @@ def execute(filters=None):
 
     sql_query = f"""
 
-		SELECT
-			support_type,
-			COUNT(DISTINCT parent) AS count,
-			SUM(CASE WHEN status = 'Completed' THEN 1 ELSE 0 END) AS comp_count
-		FROM (
-			SELECT DISTINCT parent, support_type, status
-			FROM `tabSupport Child`
-			WHERE 1=1 {ben_condition_str} {comp_condition_str}
-		) AS distinct_parents
-		GROUP BY
-			support_type;
+        SELECT
+            support_type,
+            COUNT(DISTINCT parent) AS count,
+            SUM(CASE WHEN status = 'Completed' THEN 1 ELSE 0 END) AS comp_count
+        FROM (
+            SELECT DISTINCT parent, support_type, status
+            FROM `tabSupport Child`
+            WHERE 1=1 {ben_condition_str} {comp_condition_str}
+        ) AS distinct_parents
+        GROUP BY
+            support_type;
     """
-    print(sql_query)
     result = frappe.db.sql(sql_query, as_dict=True)
     data = result
-    return columns, data
+
+    chart = {
+        'data': {
+            'labels': [r.support_type for r in result],
+            'datasets': [
+                {
+                    'name': "Applied",
+                    'backgroundColor': "pink",
+                    'borderColor': "red",
+                    'borderWidth': 1,
+                    'values': [r.count for r in result]
+                },
+                {
+                    'name': "Completed",
+                    'backgroundColor': "lightblue",
+                    'borderColor': "blue",
+                    'borderWidth': 1,
+                    'values': [r.comp_count for r in result]
+                }
+            ]
+        },
+        'type': 'bar'
+    }
+
+    return columns, data, None, chart
