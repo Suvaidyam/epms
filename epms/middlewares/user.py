@@ -3,6 +3,10 @@ from epms.utils.cache import Cache
 def list_query(user):
     if not user:
         user = frappe.session.user
-        
-        # return """(`tabUser`.csc = '{0}')""".format(value)
-    return ""
+    
+    if( "Administrator" not in frappe.get_roles(user)):
+        profile_condition = f"""(`tabUser`.name = '{user}' OR `tabUser`.role_profile_name = 'MIS executive')"""
+        # return """(`tabUser`.role_profile_name = 'MIS executive')"""
+        return profile_condition
+    else:
+        return ""
