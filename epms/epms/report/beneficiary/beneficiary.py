@@ -4,36 +4,51 @@
 import frappe
 from epms.utils.filter import Filter
 
+
 def execute(filters=None):
-	# frappe.errprint(filters)
-	# columns = [
-	# 	{
-	# 	"fieldname":"beneficary",
-	# 	"label":"Bank account status of the beneficiaries",
-	# 	"fieldtype":"Data",
-	# 	"width":400
-	# 	},
-	# 	{
-	# 	"fieldname":"count",
-	# 	"label":"Count",
-	# 	"fieldtype":"int",
-	# 	"width":100
-	# 	}
-	# ]
-	meta = frappe.get_meta('Beneficiary')
-	filtered_fields = [{"label": field.label, "fieldtype": field.fieldtype ,"fieldname": field.fieldname, "options":field.options} for field in meta.fields if field.fieldtype]
-	new_filters = Filter.set_report_filters(filters, 'registration_date')
-	# bank_account_data = frappe.get_all("Beneficiary",filters=filters, fields=["do_you_have_bank_account as have_account",'count(name) as count'], group_by='do_you_have_bank_account')
-	bank_account_data = frappe.get_all("Beneficiary",
-	filters=new_filters,
-	fields=["*" , "occupation.occupation as 'occupation'", "csc.csc_name as 'csc'","state_of_origin.state_name as 'state_of_origin'" , "district_of_origin.district_name as 'district_of_origin'",
-		 "block_of_origin.block_name as 'block_of_origin'" , "current_location.name_of_location as 'current_location'" , "family.name_of_parents as 'family'"])
+    ben_meta = frappe.get_meta('Beneficiary')
+    support_meta = frappe.get_meta('Support Child')
+    followup_meta = frappe.get_meta('Follow Up Child')
+    allowed_types = ['Data', 'Int', 'Select', 'Link', 'Check']
 
+    filtered_fields = [
+        {"label": field.label, "fieldtype": field.fieldtype,
+         "fieldname": field.fieldname, "options": field.options}
+        for field in ben_meta.fields if field.fieldtype in allowed_types
+    ]
 
-	print("///////////////////////////////////////////////////", bank_account_data)
-	data = bank_account_data
-	# data = []
-	# chart = get_chart(columns , [yes_count, no_count])
+    filtered_fields.extend([
+        {"label": field.label, "fieldtype": field.fieldtype,
+         "fieldname": field.fieldname, "options": field.options}
+        for field in support_meta.fields if field.fieldtype in allowed_types
+    ])
 
+    filtered_fields.extend([
+        {"label": field.label, "fieldtype": field.fieldtype,
+         "fieldname": field.fieldname, "options": field.options}
+        for field in followup_meta.fields if field.fieldtype in allowed_types
+    ])
 
-	return filtered_fields, data ,None
+    # Construct a list of column names for the SQL SELECT statement
+    columns = [
+        f"`{field['fieldname']}`" for field in filtered_fields]
+
+    # Add additional columns to the list if needed
+    columns.append("`state`.`state_name`")
+
+    # Construct the SQL query
+    sql_query = f"""
+        SELECT
+            {', '.join(columns)},
+			state.state_name as state_of_origin
+        FROM
+            `tabBeneficiary` ben
+        LEFT JOIN `tabState` state ON state.name = ben.state_of_origin
+        LEFT JOIN `tabSupport Child` support_child ON (support_child.parent = ben.name AND support_child.parenttype = 'Beneficiary')
+        LEFT JOIN `tabFollow Up Child` follow_up_child ON (follow_up_child.parent = ben.name AND follow_up_child.parenttype = 'Beneficiary')
+    """
+
+    # Execute the SQL query
+    data = frappe.db.sql(sql_query)
+
+    return filtered_fields, data, None
