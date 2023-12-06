@@ -396,6 +396,27 @@ frappe.ui.form.on("Beneficiary", {
       id_section.refresh();
     }
     // CURRENT RESIDENT DEPENDENT DROPDOWNS LOGICS
+    if(!frappe.user_roles.includes("MIS executive") || frappe.user_roles.includes("Administrator")){
+      if(frm.doc.csc){
+        frm.fields_dict["current_location"].get_query = function (doc) {
+          return {
+            filters: {
+              centre: frm.doc.csc,
+            },
+            page_length: 1000
+          };
+        }
+      }else{
+        frm.fields_dict["current_location"].get_query = function (doc) {
+          return {
+            filters: {
+              centre: "please select Center",
+            },
+            page_length: 1000
+          };
+        }
+      }
+    }
     frm.fields_dict["district_of_origin"].get_query = function (doc) {
       return {
         filters: {
@@ -557,6 +578,16 @@ frappe.ui.form.on("Beneficiary", {
       new_sorce.refresh();
     }
   },
+  csc:function(frm){
+    frm.fields_dict["current_location"].get_query = function (doc) {
+      return {
+        filters: {
+          centre: frm.doc.csc,
+        },
+        page_length: 1000
+      };
+    }
+  }
 
 
 
@@ -621,7 +652,7 @@ frappe.ui.form.on('Follow Up Child', {
           row.follow_up_with = "Beneficiary"
           frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status", "options", ["Interested", "Not interested", "Document submitted", "Not reachable"]);
         } else if (support_items.status === "Under process") {
-          frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_with", "options", ["Beneficiary", "Government department", "Government website"]);
+          frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_with", "options", ["Beneficiary", "Government department", "Government website" ,"Others"]);
           frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status", "options", ["Not reachable", "Under process", "Additional info required", "Completed", "Rejected"]);
         }
       }

@@ -19,6 +19,10 @@ class Beneficiary(Document):
 		# 	new_bank_doc.save()
 		if(self.other_current_location):
 			new_location_doc = frappe.new_doc("Current location")
+			if(self.csc):
+				new_location_doc.centre = self.csc
+			else:
+				new_location_doc.centre = Cache.get_csc()
 			new_location_doc.name_of_location = self.other_current_location
 			new_location_doc.save()
 		# if(self.other_caste_category):
@@ -46,8 +50,13 @@ class Beneficiary(Document):
 		beneficiary = frappe.get_doc("Beneficiary" , self.name)
 		if(self.head_of_family == "No"):
 			# update primary members
-			Primary_member.update_family(self)
-			# beneficiary.family = Primary_member.create_family
-			# beneficiary.save()
+			if(self.family):
+				Primary_member.update_family(self)
+			else:
+				Primary_member.create_family(beneficiary)
+				beneficiary.family = Primary_member.create_family
+				beneficiary.save()
+
 		else:
 			Primary_member.delete_family(self)
+			# beneficiary.save()
