@@ -1,11 +1,15 @@
 // Copyright (c) 2023, Management System for Agrasarteach@suvaidyam.com and contributors
 // For license information, please see license.txt
-
 var filters = [
 	{
-		"fieldname": "date_of_application",
+		"fieldname": "from_date",
 		"fieldtype": "Date",
-		"label": "Date of application",
+		"label": "From Date",
+	},
+	{
+		"fieldname": "to_date",
+		"fieldtype": "Date",
+		"label": "To Date"
 	}
 	
 ];
@@ -17,8 +21,6 @@ if (!frappe.user_roles.includes("MIS executive") || frappe.user_roles.includes("
 		"options": "Centre"
 	})
 }
-frappe.query_reports["Total beneficiaries whose application is completed group by support category"] = {
-	"filters": [
-
-	]
+frappe.query_reports["Beneficiary group by age"] = {
+	filters: filters
 };

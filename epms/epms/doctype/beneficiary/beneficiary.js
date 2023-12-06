@@ -119,6 +119,7 @@ function get_support_types(frm) {
     freeze_message: __("Calling"),
     callback: async function (response) {
       frm.fields_dict.support_table.grid.update_docfield_property("support_type", "options", response.results);
+      console.log(response)
     }
   });
 };
@@ -628,10 +629,15 @@ frappe.ui.form.on('Follow Up Child', {
   },
   follow_up_with: function (frm, cdt, cdn) {
     let row = frappe.get_doc(cdt, cdn);
+    
     if (row.follow_up_with != "Beneficiary") {
       frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status", "options", ["Under process", "Additional info required", "Completed", "Rejected"]);
-    } else {
-      frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status", "options", ["Interested", "Not interested", "Document submitted", "Not reachable"]);
+    }else{
+      let support_data = frm.doc.support_table.filter(f => (f.status != 'Completed' && f.status != 'Rejected' && f.specific_support_type === row.support_name && !f.__islocal));
+    console.log(support_data[support_data.length - 1].status)
+    if(support_data[support_data.length - 1].status === "Under process"){
+      frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status", "options", ["Not reachable", "Under process", "Additional info required", "Completed", "Rejected"]);
+    }
     }
   },
   follow_up_status: function (frm, cdt, cdn) {
