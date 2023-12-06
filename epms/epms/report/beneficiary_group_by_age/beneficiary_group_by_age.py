@@ -44,7 +44,7 @@ SELECT
     UNION ALL
 
     SELECT
-        '11 - 18 years' AS Age_Category, COUNT(CASE WHEN age BETWEEN 11 AND 18 THEN 1 END) AS Number_of_People
+        '11 - 17 years' AS Age_Category, COUNT(CASE WHEN age BETWEEN 11 AND 17 THEN 1 END) AS Number_of_People
     FROM
         `tabBeneficiary`
     {condition_str}
@@ -52,7 +52,7 @@ SELECT
     UNION ALL
 
     SELECT
-        '19 - 40 years' AS Age_Category, COUNT(CASE WHEN age BETWEEN 19 AND 40 THEN 1 END) AS Number_of_People
+        '18 - 40 years' AS Age_Category, COUNT(CASE WHEN age BETWEEN 18 AND 40 THEN 1 END) AS Number_of_People
     FROM
         `tabBeneficiary`
     {condition_str}

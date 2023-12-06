@@ -252,10 +252,11 @@
    "label": "Other source of information about the center"
   },
   {
+   "depends_on": "eval:(!frappe.user_roles.includes(\"MIS executive\") || frappe.user_roles.includes(\"Administrator\"))",
    "fieldname": "csc",
    "fieldtype": "Link",
-   "hidden": 1,
    "label": "Centre",
+   "mandatory_depends_on": "eval:(!frappe.user_roles.includes(\"MIS executive\") || frappe.user_roles.includes(\"Administrator\"))",
    "options": "Centre"
   },
   {
@@ -276,7 +277,7 @@
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-01 17:13:36.497770",
+ "modified": "2023-12-06 10:09:21.393646",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",
