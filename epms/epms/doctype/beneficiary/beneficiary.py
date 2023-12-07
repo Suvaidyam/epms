@@ -50,11 +50,12 @@ class Beneficiary(Document):
 		beneficiary = frappe.get_doc("Beneficiary" , self.name)
 		if(self.head_of_family == "No"):
 			# update primary members
+			Primary_member.update_family(self)
 			if(self.family):
-				Primary_member.update_family(self)
+				print("")
 			else:
 				# Primary_member.create_family(beneficiary)
-				beneficiary.family = Primary_member.create_family
+				beneficiary.family = Primary_member.update_family
 				beneficiary.save()
 
 		else:
