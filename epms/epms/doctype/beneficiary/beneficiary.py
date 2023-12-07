@@ -53,7 +53,7 @@ class Beneficiary(Document):
 			if(self.family):
 				Primary_member.update_family(self)
 			else:
-				Primary_member.create_family(beneficiary)
+				# Primary_member.create_family(beneficiary)
 				beneficiary.family = Primary_member.create_family
 				beneficiary.save()
 
