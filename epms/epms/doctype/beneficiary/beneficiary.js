@@ -162,7 +162,7 @@ function controlChildTable(frm, options = { disableCheckbox: true }) {
 // /////////////////////////////////////////////////////////////////////////
 frappe.ui.form.on("Beneficiary", {
   after_save: () => {
-    window.location.reload();
+    // window.location.reload();
   },
   before_save: function (frm) {
     if (frm.doc.do_you_have_id_document == "Yes" && frm.doc.id_section?.length == '0') {
