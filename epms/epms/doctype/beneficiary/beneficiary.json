@@ -153,7 +153,7 @@
    "default": "No",
    "fieldname": "head_of_family",
    "fieldtype": "Select",
-   "label": "Has anyone from your family visisted Agrasar before?",
+   "label": "Has anyone from your family visited Agrasar before?",
    "options": "\nNo\nYes",
    "reqd": 1
   },
@@ -277,7 +277,7 @@
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-06 10:09:21.393646",
+ "modified": "2023-12-11 17:30:48.165739",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",
