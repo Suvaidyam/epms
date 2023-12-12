@@ -98,7 +98,7 @@ function get_support_list(frm, support_type) {
     freeze: true,
     freeze_message: __("Calling"),
     callback: async function (response) {
-      let under_process_completed_ops = frm.doc.support_table.filter(f => (['Under process', 'Open'].includes(f.status))).map(m => m.specific_support_type)
+      let under_process_completed_ops = frm.doc.support_table.filter(f => (['Under process', 'Open' ,'Closed'].includes(f.status))).map(m => m.specific_support_type)
       // console.log("under_process_completed_ops", under_process_completed_ops)
       let ops = response?.results?.filter(f => !under_process_completed_ops.includes(f.value))
       // console.log(" options", ops)
