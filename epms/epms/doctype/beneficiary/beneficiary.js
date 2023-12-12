@@ -98,9 +98,9 @@ function get_support_list(frm, support_type) {
     freeze: true,
     freeze_message: __("Calling"),
     callback: async function (response) {
-      let under_process_completed_ops = frm.doc.support_table.filter(f => (['Under process', 'Open'].includes(f.status))).map(m => m.specific_support_type)
+      let under_process_completed_ops = frm.doc.support_table.filter(f => (['Under process', 'Open' ,'Closed'].includes(f.status))).map(m => m.specific_support_type)
       // console.log("under_process_completed_ops", under_process_completed_ops)
-      let ops = response.results.filter(f => !under_process_completed_ops.includes(f.value))
+      let ops = response?.results?.filter(f => !under_process_completed_ops.includes(f.value))
       // console.log(" options", ops)
       frm.fields_dict.support_table.grid.update_docfield_property("specific_support_type", "options", ops);
     }
@@ -126,8 +126,9 @@ function get_support_types(frm) {
 // ///////////////////////////////////////////////////////////////////////
 function bank_name(frm, data = []) {
   var new_bank = frm.fields_dict['other_bank_account'];
-  for (a of data) {
-    if (a.bank_name === "Others") {
+  //  filter data from delected field and run conditions
+  let ops = data?.filter(f => ['Others'].includes(f.bank_name))
+    if (ops[0]?.bank_name == "Others") {
       new_bank.df.hidden = 0;
       frm.set_df_property('other_bank_account', 'reqd', 1);
       new_bank.refresh();
@@ -136,7 +137,7 @@ function bank_name(frm, data = []) {
       frm.set_df_property('other_bank_account', 'reqd', 0);
       new_bank.refresh();
     }
-  }
+  
 }
 // disable checkbxes
 function controlChildTable(frm, options = { disableCheckbox: true }) {
@@ -188,8 +189,12 @@ frappe.ui.form.on("Beneficiary", {
     if (frm.selected_doc.followup_table) {
       for (support_item of frm.selected_doc.support_table) {
         if (!['Completed'].includes(support_item.status)) {
-          let followups = frm.selected_doc.followup_table.filter(f => f.parent_ref == support_item.name)
+          let followups = frm.selected_doc.followup_table.filter(f => f.parent_ref == support_item?.name)
           let latestFollowup = followups.length ? followups[(followups.length - 1)] : null
+          // find support on which folow-up is going and check two conditions
+          let latest_support = frm.selected_doc.support_table.filter(s => s.specific_support_type == latestFollowup?.support_name);
+          // let latest_support = support.length ? support[(followups.length - 1) - 1]:null
+          console.log("latest_support",latest_support)
           if (latestFollowup) {
             if (latestFollowup.follow_up_status === "Interested") {
               support_item.status = "Open"
@@ -220,8 +225,13 @@ frappe.ui.form.on("Beneficiary", {
                 support_item.date_of_completion = support__document_com.date_of_completion
                 support_item.completion_certificate = support__document_com.completion_certificate
               }
-            } else if (latestFollowup.follow_up_status === "Not reachable") {
-              support_item.status = "Open"
+            } else if (latestFollowup?.follow_up_status === "Not reachable") {
+              // console.log("condition parts",latest_support)
+              if(latest_support[0]?.application_submitted == "Yes"){
+                support_item.status = "Under process"
+              }else{
+                support_item.status = "Open"
+              }
             } else {
               support_item.status = "Under process"
             }
