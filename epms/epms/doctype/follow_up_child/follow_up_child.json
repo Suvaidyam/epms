@@ -58,6 +58,7 @@
    "in_list_view": 1,
    "label": "Follow-up with",
    "options": "\nBeneficiary\nGovernment department\nGovernment website\nOthers",
+   "reqd": 1,
    "set_only_once": 1
   },
   {
@@ -70,7 +71,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-12-06 14:21:36.573224",
+ "modified": "2023-12-12 13:49:29.909936",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Follow Up Child",

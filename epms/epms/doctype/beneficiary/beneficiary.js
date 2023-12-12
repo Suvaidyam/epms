@@ -100,7 +100,7 @@ function get_support_list(frm, support_type) {
     callback: async function (response) {
       let under_process_completed_ops = frm.doc.support_table.filter(f => (['Under process', 'Open'].includes(f.status))).map(m => m.specific_support_type)
       // console.log("under_process_completed_ops", under_process_completed_ops)
-      let ops = response.results.filter(f => !under_process_completed_ops.includes(f.value))
+      let ops = response?.results?.filter(f => !under_process_completed_ops.includes(f.value))
       // console.log(" options", ops)
       frm.fields_dict.support_table.grid.update_docfield_property("specific_support_type", "options", ops);
     }
@@ -126,8 +126,9 @@ function get_support_types(frm) {
 // ///////////////////////////////////////////////////////////////////////
 function bank_name(frm, data = []) {
   var new_bank = frm.fields_dict['other_bank_account'];
-  for (a of data) {
-    if (a.bank_name === "Others") {
+  //  filter data from delected field and run conditions
+  let ops = data?.filter(f => ['Others'].includes(f.bank_name))
+    if (ops[0]?.bank_name == "Others") {
       new_bank.df.hidden = 0;
       frm.set_df_property('other_bank_account', 'reqd', 1);
       new_bank.refresh();
@@ -136,7 +137,7 @@ function bank_name(frm, data = []) {
       frm.set_df_property('other_bank_account', 'reqd', 0);
       new_bank.refresh();
     }
-  }
+  
 }
 // disable checkbxes
 function controlChildTable(frm, options = { disableCheckbox: true }) {
