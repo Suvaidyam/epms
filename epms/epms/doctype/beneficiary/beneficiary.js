@@ -208,6 +208,7 @@ frappe.ui.form.on("Beneficiary", {
                 support_item.amount_paid = support__document_sub.amount_paid
                 support_item.paid_by = support__document_sub.paid_by
               } else if (support__document_com.length != 0) {
+
                 support_item.date_of_completion = support__document_com.date_of_completion
                 support_item.completion_certificate = support__document_com.completion_certificate
               }
@@ -592,7 +593,7 @@ frappe.ui.form.on("Beneficiary", {
 
 
 });
-// ********************* SUPERT CHILD Table***********************
+// ********************* Support CHILD Table***********************
 frappe.ui.form.on('Support Child', {
 
   refresh(frm) {
@@ -683,7 +684,7 @@ frappe.ui.form.on('Follow Up Child', {
       let followups = frm.doc.followup_table.filter(f => f.support_name == row.support_name && f.follow_up_status == "Not reachable")
       console.log(followups.length)
       if (followups.length >= 2) {
-        frappe.warn('Do you want to close the status ?',
+        frappe.warn('Do you want to support the status?',
           `The follow-up status is "Not reachable" ${followups.length} times`,
           () => {
             row.follow_up_status = "Not interested"
