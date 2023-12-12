@@ -189,8 +189,12 @@ frappe.ui.form.on("Beneficiary", {
     if (frm.selected_doc.followup_table) {
       for (support_item of frm.selected_doc.support_table) {
         if (!['Completed'].includes(support_item.status)) {
-          let followups = frm.selected_doc.followup_table.filter(f => f.parent_ref == support_item.name)
+          let followups = frm.selected_doc.followup_table.filter(f => f.parent_ref == support_item?.name)
           let latestFollowup = followups.length ? followups[(followups.length - 1)] : null
+          // find support on which folow-up is going and check two conditions
+          let latest_support = frm.selected_doc.support_table.filter(s => s.specific_support_type == latestFollowup?.support_name);
+          // let latest_support = support.length ? support[(followups.length - 1) - 1]:null
+          console.log("latest_support",latest_support)
           if (latestFollowup) {
             if (latestFollowup.follow_up_status === "Interested") {
               support_item.status = "Open"
@@ -221,8 +225,13 @@ frappe.ui.form.on("Beneficiary", {
                 support_item.date_of_completion = support__document_com.date_of_completion
                 support_item.completion_certificate = support__document_com.completion_certificate
               }
-            } else if (latestFollowup.follow_up_status === "Not reachable") {
-              support_item.status = "Open"
+            } else if (latestFollowup?.follow_up_status === "Not reachable") {
+              // console.log("condition parts",latest_support)
+              if(latest_support[0]?.application_submitted == "Yes"){
+                support_item.status = "Under process"
+              }else{
+                support_item.status = "Open"
+              }
             } else {
               support_item.status = "Under process"
             }

@@ -27,7 +27,6 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Follow-up status",
-   "options": "\nInterested\nNot interested\nDocument submitted\nNot reachable\nUnder process\nAdditional info required\nCompleted\nRejected",
    "reqd": 1,
    "set_only_once": 1
   },
@@ -71,7 +70,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-12-12 13:49:29.909936",
+ "modified": "2023-12-12 16:01:22.262743",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Follow Up Child",
