@@ -684,7 +684,7 @@ frappe.ui.form.on('Follow Up Child', {
       let followups = frm.doc.followup_table.filter(f => f.support_name == row.support_name && f.follow_up_status == "Not reachable")
       console.log(followups.length)
       if (followups.length >= 2) {
-        frappe.warn('Do you want to close the status ?',
+        frappe.warn('Do you want to support the status?',
           `The follow-up status is "Not reachable" ${followups.length} times`,
           () => {
             row.follow_up_status = "Not interested"

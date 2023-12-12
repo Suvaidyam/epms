@@ -48,7 +48,7 @@ header = [
     'Application submitted (support_table)',"Name of the support (followup_table)","Follow-up date (followup_table)","Follow-up status (followup_table)"
 ]
 
-for i in range(20):
+for i in range(20000):
     new_data = {
         'registration_date': generate_random_date(),
         'name_of_the_beneficiary': generate_random_name(),

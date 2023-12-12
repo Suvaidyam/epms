@@ -32,7 +32,7 @@ class Primary_member:
             family_doc.csc = beneficiary.csc
             family_doc.insert()
 			# update current beneficery to family
-            frappe.msgprint("New Beneficary Update As a Head of Family")
+            frappe.msgprint("New Beneficary Update As a Primary member")
         return family_doc
     
     def delete_family(beneficiary):
