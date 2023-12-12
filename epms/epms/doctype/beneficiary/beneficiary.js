@@ -208,6 +208,7 @@ frappe.ui.form.on("Beneficiary", {
                 support_item.amount_paid = support__document_sub.amount_paid
                 support_item.paid_by = support__document_sub.paid_by
               } else if (support__document_com.length != 0) {
+
                 support_item.date_of_completion = support__document_com.date_of_completion
                 support_item.completion_certificate = support__document_com.completion_certificate
               }
@@ -592,7 +593,7 @@ frappe.ui.form.on("Beneficiary", {
 
 
 });
-// ********************* SUPERT CHILD Table***********************
+// ********************* Support CHILD Table***********************
 frappe.ui.form.on('Support Child', {
 
   refresh(frm) {
