@@ -86,8 +86,6 @@ const createDialog = (_doc, config) => {
     }
   });
 }
-var support__document_sub = [];
-var support__document_com = []
 ////////////////////////////////
 function get_support_list(frm, support_type) {
   frappe.call({
@@ -224,56 +222,18 @@ frappe.ui.form.on("Beneficiary", {
                 break;
               case "Not reachable":
                 support_item.status = support_item?.application_submitted == "Yes" ? "Under process" : "Open"
+                if(latestFollowup.to_close_status){
+                  support_item.status = latestFollowup.to_close_status
+                }
                 break;
               default:
                 support_item.status = "Under process"
                 break;
             }
           }
-        } else {
-          refresh_field("support_table");
         }
       }
-      /*
-      for (follow_up_items of frm.selected_doc.followup_table) {
-        for (support_items of frm.selected_doc.support_table) {
-          if (support_items.specific_support_type === follow_up_items.support_name) {
-            // enter follow up
-            if (follow_up_items.follow_up_status === "Interested") {
-              support_items.status = "Open"
-            } else if (follow_up_items.follow_up_status === "Not interested") {
-              support_items.status = "Closed"
-            } else if (follow_up_items.follow_up_status === "Rejected") {
-              support_items.status = "Rejected"
-              if (support__document_rej.length != 0) {
-                support_items.date_of_rejection = support__document_rej.date_of_rejection
-                support_items.reason_of_rejection = support__document_rej.reason_of_rejection
-              }
-            } else if (follow_up_items.follow_up_status === "Document submitted") {
-              if (support__document_sub.length != 0) {
-                support_items.date_of_application = support__document_sub.date_of_application
-                support_items.application_number = support__document_sub.application_number
-                support_items.amount_paid = support__document_sub.amount_paid
-                support_items.paid_by = support__document_sub.paid_by
-              } else if (support__document_com.length != 0) {
-                support_items.date_of_completion = support__document_com.date_of_completion
-                support_items.completion_certificate = support__document_com.completion_certificate
-              }
-              support_items.application_submitted = "Yes"
-              support_items.status = "Under process"
-            } else if (follow_up_items.follow_up_status === "Completed") {
-              support_items.status = "Completed"
-              if (support__document_com.length != 0) {
-                support_items.date_of_completion = support__document_com.date_of_completion
-                support_items.completion_certificate = support__document_com.completion_certificate
-              }
-            } else {
-              support_items.status = "Under process"
-
-            }
-          }
-        }
-      }*/
+  
     }
 
     // console.log("before save ", frm.selected_doc.support_table)
@@ -628,7 +588,11 @@ frappe.ui.form.on('Support Child', {
   },
   application_submitted: function (frm, cdt, cdn) {
     let row = frappe.get_doc(cdt, cdn);
-    // frm.refresh()
+    if(row.application_submitted == "Yes"){
+      createDialog(row, dialogsConfig.document_submitted).show();
+    }else if(row.application_submitted == "Completed"){
+      createDialog(row, dialogsConfig.document_completed).show();
+    }
   }
 
 })
@@ -692,8 +656,8 @@ frappe.ui.form.on('Follow Up Child', {
         frappe.warn('Do you want to support the status?',
           `The follow-up status is "Not reachable" ${followups.length} times`,
           () => {
-            row.follow_up_status = "Not interested"
-            console.log("aaaa", row)
+            row.to_close_status = "Closed"
+            // console.log("aaaa", row)
           },
           'Close',
           true // Sets dialog as minimizable
