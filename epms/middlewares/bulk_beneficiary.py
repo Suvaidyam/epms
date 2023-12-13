@@ -51,14 +51,15 @@ header = [
     'Bank name (Bank name)', 'Current location','State of origin', 'District of origin', 'Tehsil/Block of origin',
     'Education details','Source of information about the center', 'Has anyone from your family visited Agrasar before?', 'Overall status', 'Numeric overall status' ,
     'Support category (support_table)' ,'Support name (support_table)','Application submitted (support_table)',"Name of the support (followup_table)","Follow-up date (followup_table)",
-    "Follow-up status (followup_table)"
+    "Follow-up status (followup_table)", "Follow-up with (followup_table)"
 ]
 @frappe.whitelist()
 def generate():
     bank_list = frappe.db.get_list("Bank", fields=["name",'bank_name'])
     support_list = frappe.db.get_list("Support", fields=['name','support_type'])
     data_list.append(header)
-    for i in range(100):
+    count = frappe.request.args.get('count', 1000)
+    for i in range(int(count)):
         _bank_ac = random.choice(bank_account)
         _selected_banks = []
         supports = random.sample(support_list, random.randint(4, 20))
@@ -102,7 +103,8 @@ def generate():
             #'Follow-up date (followup_table)'
             generate_random_date(),
             #'Follow-up status (followup_table)'
-            'Interested'
+            'Interested',
+            'Beneficiary'
         ]
         if _bank_ac is 'Yes':
             _selected_banks = random.sample(bank_list, random.randint(1, 4))
@@ -121,6 +123,7 @@ def generate():
             _list[23] = supports[i].name
             _list[24] = generate_random_date()
             _list[25] = 'Interested'
+            _list[26] = 'Beneficiary'
             data_list.append(_list)
             i += 1
 
