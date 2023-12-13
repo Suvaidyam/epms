@@ -43,8 +43,6 @@ district_of_origin=['S16292']
 block_of_origin=["S162920040", "S162920039" ,"S162920038" ,"S162920037" ,"S162920036" ,"S162920035","S162920034" ,"S162920033"]
 education=['B.Com','Post Graduate' ,'Illiterate', 'Graduate','Under Graduate','ITI/Technical','Below Primary']
 source_information_about_center=["Agrasar sathi","Radio program","Self","Direct mobilization","Collectivisation"]
-
-data_list = []
 header = [
     'Registration date', 'Name', 'Contact number', 'Age', 'Gender',
     'Occupation', 'Caste category', 'Centre', 'Do you have any bank account','ID (Bank name)',
@@ -55,6 +53,7 @@ header = [
 ]
 @frappe.whitelist()
 def generate():
+    data_list = []
     bank_list = frappe.db.get_list("Bank", fields=["name",'bank_name'])
     support_list = frappe.db.get_list("Support", fields=['name','support_type'])
     data_list.append(header)
