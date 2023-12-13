@@ -136,6 +136,7 @@ function bank_name(frm, data = []) {
     frm.set_df_property('other_bank_account', 'reqd', 1);
     new_bank.refresh();
   } else {
+    frm.doc.other_bank_account = ''
     new_bank.df.hidden = 1;
     frm.set_df_property('other_bank_account', 'reqd', 0);
     new_bank.refresh();
@@ -622,7 +623,7 @@ frappe.ui.form.on('Follow Up Child', {
           frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status", "options", ["Interested", "Not interested", "Document submitted", "Not reachable"]);
         } else if (support_items.status === "Under process") {
           frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_with", "options", ["Beneficiary", "Government department", "Government website", "Others"]);
-          frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status", "options", ["Not reachable", "Under process", "Additional info required", "Completed", "Rejected"]);
+          // frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status", "options", ["Not reachable", "Under process", "Additional info required", "Completed", "Rejected"]);
         }
       }
     }
