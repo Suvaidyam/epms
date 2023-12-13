@@ -73,7 +73,7 @@ def generate():
             random.choice(caste), #caste
             random.choice(csc), #csc
             _bank_ac, #do_you_have_bank_account
-            None,#Bank name
+            None,#Bank ID
             None,#Bank name
             random.choice(current_location), #current_location
             #'state_of_origin'
@@ -108,14 +108,14 @@ def generate():
         ]
         if _bank_ac is 'Yes':
             _selected_banks = random.sample(bank_list, random.randint(1, 4))
-            new_data[9] = _selected_banks[0].name
+            # new_data[9] = _selected_banks[0].name
             new_data[10] = _selected_banks[0].bank_name
         data_list.append(new_data)
         i = 1
         while i < len(supports):
             _list = [None] * (len(header))
             if i < len(_selected_banks):
-                _list[9] = _selected_banks[i].name
+                # _list[9] = _selected_banks[i].name
                 _list[10] = _selected_banks[i].bank_name
             _list[20] = supports[i].support_type
             _list[21] = supports[i].name
