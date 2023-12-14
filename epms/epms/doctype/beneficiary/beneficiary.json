@@ -25,6 +25,7 @@
   "do_you_have_bank_account",
   "existing_bank_account",
   "other_bank_account",
+  "saving_status",
   "current_location",
   "other_current_location",
   "state_of_origin",
@@ -273,12 +274,20 @@
    "hidden": 1,
    "label": "Bank name",
    "options": "Bank Child"
+  },
+  {
+   "depends_on": "eval:doc.do_you_have_bank_account ==\"Yes\"",
+   "fieldname": "saving_status",
+   "fieldtype": "Select",
+   "label": "Saving status",
+   "mandatory_depends_on": "eval:doc.do_you_have_bank_account ==\"Yes\"",
+   "options": "\nSaving regularly\nSaving irregularly\nNo saving"
   }
  ],
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-14 12:02:42.852644",
+ "modified": "2023-12-14 14:28:48.402028",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",
