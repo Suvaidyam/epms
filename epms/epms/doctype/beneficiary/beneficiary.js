@@ -43,6 +43,25 @@ const dialogsConfig = {
         _doc: true
       },
       {
+        label: 'Application number',
+        fieldname: 'application_number',
+        fieldtype: 'Data',
+        _doc: true
+      },
+      {
+        label: 'Amount paid',
+        fieldname: 'amount_paid',
+        fieldtype: 'Int',
+        _doc: true
+      },
+      {
+        label: 'Paid by',
+        fieldname: 'paid_by',
+        fieldtype: 'Select',
+        options: ["Self", "CSC"],
+        _doc: true
+      },
+      {
         label: 'Date of completion',
         fieldname: 'date_of_completion',
         fieldtype: 'Date',
@@ -89,6 +108,7 @@ const dialogsConfig = {
         label: 'Reason of rejection',
         fieldname: 'reason_of_rejection',
         fieldtype: 'Data',
+        reqd: 1,
         _doc: true
       }
     ]
