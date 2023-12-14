@@ -32,6 +32,31 @@ const dialogsConfig = {
       }
     ]
   },
+  document_completed_frm_support: {
+    title: 'Enter details for Support',
+    fields: [
+      {
+        label: 'Date of application',
+        fieldname: 'date_of_application',
+        fieldtype: 'Date',
+        reqd: 1,
+        _doc: true
+      },
+      {
+        label: 'Date of completion',
+        fieldname: 'date_of_completion',
+        fieldtype: 'Date',
+        reqd: 1,
+        _doc: true
+      },
+      {
+        label: 'Completion certificate',
+        fieldname: 'completion_certificate',
+        fieldtype: 'Attach',
+        _doc: true
+      }
+    ]
+  },
   document_completed: {
     title: 'Enter details for Support',
     fields: [
@@ -576,9 +601,10 @@ frappe.ui.form.on('Support Child', {
   application_submitted: function (frm, cdt, cdn) {
     let row = frappe.get_doc(cdt, cdn);
     if(row.application_submitted == "Yes"){
+      row.status =''
       createDialog(row, dialogsConfig.document_submitted).show();
     }else if(row.application_submitted == "Completed"){
-      createDialog(row, dialogsConfig.document_completed).show();
+      createDialog(row, dialogsConfig.document_completed_frm_support).show();
     }
   }
 
