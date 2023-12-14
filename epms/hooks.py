@@ -205,8 +205,7 @@ permission_query_conditions = {
 # Ignore links to specified DocTypes when deleting documents
 # -----------------------------------------------------------
 
-ignore_links_on_delete = ["CSC" , "Primary Member", "User" , "Beneficiary" , "Route History", 
-                          "Current location", "Caste master" ,"Bank", "Notification Settings"]
+ignore_links_on_delete = ["Beneficiary" , "Route History", "Notification Settings" ,"Access Log"]
 
 # Request Events
 # ----------------
