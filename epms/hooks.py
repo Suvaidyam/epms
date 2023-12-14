@@ -34,7 +34,8 @@ permission_query_conditions = {
     "Beneficiary": "epms.middlewares.beneficiary.list_query",
     "Primary Member": "epms.middlewares.family.list_query",
     "Current location":"epms.middlewares.current_location.list_query",
-    "User":"epms.middlewares.user.list_query"
+    "User":"epms.middlewares.user.list_query",
+    "Role Profile":"epms.middlewares.role_profile.list_query"
 
 }
 
