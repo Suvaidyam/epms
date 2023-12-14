@@ -611,6 +611,10 @@ frappe.ui.form.on('Follow Up Child', {
           // last call update 
           frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_with", "options", ["Beneficiary"]);
           frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status", "options", ["Not reachable", "Under process", "Additional info required", "Completed", "Rejected"]);
+        }else if(support_items.status === "Closed" && support_items.application_submitted == "No"){
+          frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_with", "options", ["Beneficiary"]);
+          row.follow_up_with = "Beneficiary"
+          frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status", "options", ["Interested", "Not interested", "Document submitted", "Not reachable"]);
         }
       }
     }
