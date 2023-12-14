@@ -617,13 +617,17 @@ frappe.ui.form.on('Follow Up Child', {
       if (row.support_name == support_items.specific_support_type) {
         console.log(support_items.specific_support_type)
         console.log(support_items)
-        if (support_items.status === "Open" || support_items.status === "Closed") {
+        if (support_items.status === "Open" && support_items.application_submitted == "No") {
           frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_with", "options", ["Beneficiary"]);
           row.follow_up_with = "Beneficiary"
           frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status", "options", ["Interested", "Not interested", "Document submitted", "Not reachable"]);
-        } else if (support_items.status === "Under process") {
+        } else if (support_items.status === "Under process" && support_items.application_submitted == "Yes") {
           frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_with", "options", ["Beneficiary", "Government department", "Government website", "Others"]);
-          // frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status", "options", ["Not reachable", "Under process", "Additional info required", "Completed", "Rejected"]);
+          frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status", "options", ["Not reachable", "Under process", "Additional info required", "Completed", "Rejected"]);
+        }else if (support_items.status === "Closed" && support_items.application_submitted == "Yes"){
+          // last call update 
+          frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_with", "options", ["Beneficiary"]);
+          frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status", "options", ["Not reachable", "Under process", "Additional info required", "Completed", "Rejected"]);
         }
       }
     }
@@ -633,16 +637,21 @@ frappe.ui.form.on('Follow Up Child', {
 
     if (row.follow_up_with != "Beneficiary") {
       frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status", "options", ["Under process", "Additional info required", "Completed", "Rejected"]);
-    } else {
-      let support_data = frm.doc.support_table.filter(f => (f.status != 'Completed' && f.status != 'Rejected' && f.specific_support_type === row.support_name && !f.__islocal));
-      console.log(support_data[support_data.length - 1].status)
-      if (support_data[support_data.length - 1].status === "Under process") {
-        frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status", "options", ["Not reachable", "Under process", "Additional info required", "Completed", "Rejected"]);
-      }
+    }else{
+      frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status", "options", ["Not reachable", "Under process", "Additional info required", "Completed", "Rejected"]);
     }
+    //else {
+    //   let support_data = frm.doc.support_table.filter(f => (f.status != 'Completed' && f.status != 'Rejected' && f.specific_support_type === row.support_name && !f.__islocal));
+    //   // console.log(support_data[support_data.length - 1].status)
+    //   if (support_data[support_data.length - 1].status === "Under process") {
+    //     frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status", "options", ["Not reachable", "Under process", "Additional info required", "Completed", "Rejected"]);
+    //   }
+    // }
   },
   follow_up_status: function (frm, cdt, cdn) {
     let row = frappe.get_doc(cdt, cdn);
+    let supports = frm.doc.support_table.filter(f => f.specific_support_type == row.support_name);
+    let latestSupport = supports.length ? supports[supports.length - 1] : null;
     if (row.follow_up_status === "Document submitted") {
       createDialog(row, dialogsConfig.document_submitted).show();
       // dialog.show();
@@ -651,7 +660,7 @@ frappe.ui.form.on('Follow Up Child', {
       // document_completed.show()
     } else if (row.follow_up_status === "Rejected") {
       createDialog(row, dialogsConfig.document_rejected).show();
-    } else if (row.follow_up_status === "Not reachable") {
+    } else if (row.follow_up_status === "Not reachable" && latestSupport.status != "Closed") {
       let followups = frm.doc.followup_table.filter(f => f.parent_ref == row.parent_ref && f.support_name == row.support_name && f.follow_up_status == "Not reachable")
       if (followups.length >= 2) {
         frappe.warn('Do you want to support the status?',
