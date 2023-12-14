@@ -617,11 +617,14 @@ frappe.ui.form.on('Follow Up Child', {
   },
   follow_up_with: function (frm, cdt, cdn) {
     let row = frappe.get_doc(cdt, cdn);
-
-    if (row.follow_up_with != "Beneficiary") {
+    let supports = frm.doc.support_table.filter(f => f.specific_support_type == row.support_name);
+    let latestSupport = supports.length ? supports[supports.length - 1] : null;
+    if (row.follow_up_with != "Beneficiary" && latestSupport.application_submitted == "Yes") {
       frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status", "options", ["Under process", "Additional info required", "Completed", "Rejected"]);
-    }else{
+    }else if(row.follow_up_with == "Beneficiary" && latestSupport.application_submitted == "Yes"){
       frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status", "options", ["Not reachable", "Under process", "Additional info required", "Completed", "Rejected"]);
+    }else if(row.follow_up_with == "Beneficiary" && latestSupport.application_submitted == "No"){
+      frm.fields_dict.followup_table.grid.update_docfield_property("follow_up_status", "options", ["Interested", "Not interested", "Document submitted", "Not reachable"]);
     }
   },
   follow_up_status: function (frm, cdt, cdn) {
