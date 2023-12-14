@@ -383,6 +383,14 @@ frappe.ui.form.on("Beneficiary", {
         }
       }
     }
+    // hsdklhdsihkdhkfdzkfkdfkjdskjfhdkjfkjdshfkjdshkjfh
+    frm.fields_dict["family"].get_query = function (doc) {
+      return {
+        filters: {
+          "name": ["!=", frm.doc.contact_number],
+        },
+      };
+    }
     frm.fields_dict["district_of_origin"].get_query = function (doc) {
       return {
         filters: {
