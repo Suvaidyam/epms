@@ -13,3 +13,8 @@ def get_support_list(support_type = None):
     support_tuple = tuple(row["name"] for row in support)
 
     return support_tuple
+
+@frappe.whitelist()
+def get_report():
+    report_doc = frappe.get_doc('Report', 'Ben Report')
+    return report_doc
