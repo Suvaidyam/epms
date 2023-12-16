@@ -77,7 +77,9 @@ def execute(filters=None):
     join_str = '\n'.join(joins)
     columns = []
     for field in fields:
-        if len(field.get('fieldname').split('.')) == 2:
+        if len(field.get('fieldname').split('.')) == 3:
+            columns.append(f"{field.get('fieldname').split('.')[1]}.{field.get('fieldname').split('.')[2]} as `{field.get('label')}`")
+        elif len(field.get('fieldname').split('.')) == 2:
             columns.append(f"{field.get('fieldname')} as `{field.get('label')}`")
         elif len(field.get('fieldname').split('.')) == 1:
             columns.append(f"{base_tbl}.{field.get('fieldname')} as `{field.get('label')}`")
