@@ -1,6 +1,7 @@
 {
  "actions": [],
- "autoname": "field:name_of_the_camp",
+ "allow_import": 1,
+ "autoname": "autoincrement",
  "creation": "2023-10-17 09:49:23.623859",
  "default_view": "List",
  "doctype": "DocType",
@@ -73,11 +74,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-12 15:23:11.331819",
+ "modified": "2023-12-16 20:27:28.698691",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Camp Form",
- "naming_rule": "By fieldname",
+ "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
   {
@@ -116,7 +117,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "name_of_the_camp"
 }
