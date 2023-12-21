@@ -7,6 +7,9 @@ from epms.utils.cache import Cache
 from epms.services.primary_member import Primary_member
 
 class Beneficiary(Document):
+	def validate(self):
+		if not self.csc:
+			self.csc = Cache.get_csc()
 	def after_insert(self):
 		# if other select then auto add in list next time
 		if(self.new_occupation):
@@ -35,28 +38,21 @@ class Beneficiary(Document):
 		# 	new_source.save()
 
 		beneficiary = frappe.get_doc("Beneficiary" , self.name)
-		beneficiary.csc = Cache.get_csc()
+		# beneficiary.csc = Cache.get_csc()
 		if(self.head_of_family == "No"):
 			# To Create primary member
-			Primary_member.create_family(beneficiary)
+			family_doc = Primary_member.create_family(beneficiary)
 			# update current beneficery
-			beneficiary.family = Primary_member.create_family
-			beneficiary.save()
+			frappe.db.set_value('Beneficiary', self.name, 'family', family_doc.name, update_modified=False)
 		else:
-			beneficiary.save()
+			# beneficiary.save()
 			print("CREATING CHILD BENEFICARY")
-	
+
 	def on_update(self):
-		beneficiary = frappe.get_doc("Beneficiary" , self.name)
 		if(self.head_of_family == "No"):
 			# update primary members
-			if(self.family):
-				Primary_member.update_family(self)
-			else:
-				Primary_member.create_family(beneficiary)
-				beneficiary.family = Primary_member.create_family
-				beneficiary.save()
-
+			family_doc = Primary_member.update_family(self)
+			if not self.family:
+				frappe.db.set_value('Beneficiary', self.name, 'family', family_doc.name, update_modified=False)
 		else:
 			Primary_member.delete_family(self)
-			# beneficiary.save()
