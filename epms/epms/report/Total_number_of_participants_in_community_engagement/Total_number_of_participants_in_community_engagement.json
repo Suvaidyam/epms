@@ -19,12 +19,12 @@
  "modified": "2023-11-28 17:51:13.768939",
  "modified_by": "Administrator",
  "module": "Epms",
- "name": "No. of Participant in camp",
+ "name": "Total number of participants in community engagement",
  "owner": "Administrator",
  "prepared_report": 0,
  "query": "\nselect sum(number_of_participants) from `tabCommunity engagement`;\n\n\n\n\n\n\n\n\n\n",
  "ref_doctype": "Community engagement",
- "report_name": "No. of Participant in camp",
+ "report_name": "Total number of participants in community engagement",
  "report_type": "Query Report",
  "roles": [
   {

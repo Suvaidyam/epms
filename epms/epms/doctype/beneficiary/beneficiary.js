@@ -368,7 +368,7 @@ frappe.ui.form.on("Beneficiary", {
     }
 
     let new_location = frm.fields_dict['other_current_location'];
-    if (frm.doc?.current_location?.split('-')[0] === "Others") {
+    if (frm.doc?.current_location?.split('-').slice(-1)[0] === "Others") {
       frm.set_df_property('other_current_location', 'reqd', 1);
       new_location.df.hidden = 0;
       new_location.refresh();
@@ -558,7 +558,7 @@ frappe.ui.form.on("Beneficiary", {
   },
   current_location: function (frm) {
     var new_location = frm.fields_dict['other_current_location'];
-    if (frm.doc.current_location.split('-')[0] === "Others") {
+    if (frm.doc?.current_location?.split('-').slice(-1)[0] === "Others") {
       frm.set_df_property('other_current_location', 'reqd', 1);
       new_location.df.hidden = 0;
       new_location.refresh();

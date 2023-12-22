@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_import": 1,
- "autoname": "format:L-{centre}-{####}",
+ "autoname": "format:{centre}-{name_of_location}",
  "creation": "2023-10-06 13:12:55.239708",
  "default_view": "List",
  "doctype": "DocType",
@@ -40,7 +40,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-04 21:04:37.997282",
+ "modified": "2023-12-22 12:27:25.929254",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Current location",
