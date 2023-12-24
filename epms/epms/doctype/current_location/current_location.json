@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_import": 1,
- "autoname": "format:{centre}-{name_of_location}",
+ "autoname": "format:L-{centre}-{####}",
  "creation": "2023-10-06 13:12:55.239708",
  "default_view": "List",
  "doctype": "DocType",
@@ -25,7 +25,8 @@
    "fieldname": "sequence",
    "fieldtype": "Int",
    "label": "sequence",
-   "non_negative": 1
+   "non_negative": 1,
+   "print_hide": 1
   },
   {
    "fieldname": "centre",
@@ -40,7 +41,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-22 12:27:25.929254",
+ "modified": "2023-12-23 20:19:44.048683",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Current location",
