@@ -18,11 +18,9 @@ class Primary_member:
             return frappe.printmsg("New Beneficary Not Found")
     
     def update_family(beneficiary):
-        family_doc_name = frappe.get_list("Primary Member",
-        filters={'head_of_family': beneficiary.name},
-        fields=["name"])
+        family_doc_name = frappe.db.exists('Primary Member', beneficiary.contact_number)
         if(family_doc_name):
-            family_doc = frappe.get_doc("Primary Member", family_doc_name[0].name)
+            family_doc = frappe.get_doc("Primary Member", family_doc_name)
             family_doc.name_of_parents = beneficiary.name_of_the_beneficiary
             family_doc.contact_number = beneficiary.contact_number
 			# family_doc.csc = beneficiary.csc
