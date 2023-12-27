@@ -6,8 +6,9 @@ from frappe.model.document import Document
 from epms.utils.cache import Cache
 
 class Currentlocation(Document):
-	def validate(self):
-		if not self.csc:
-			self.csc = Cache.get_csc()
+    pass
+	# def validate(self):
+	# 	if not self.csc:
+	# 		self.csc = Cache.get_csc()
 	# def after_insert(self):
 	# 	''
