@@ -46,7 +46,7 @@
  "is_hidden": 0,
  "label": "Beneficiaries",
  "links": [],
- "modified": "2023-12-27 07:43:33.951351",
+ "modified": "2023-12-27 11:28:56.498721",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiaries",
@@ -57,7 +57,7 @@
   },
   {
    "label": "Total number of participants in Community engagement",
-   "number_card_name": "Total no of participant in camp"
+   "number_card_name": "Number of Participants in Community Engagement"
   },
   {
    "label": "Number of Beneficiaries",
