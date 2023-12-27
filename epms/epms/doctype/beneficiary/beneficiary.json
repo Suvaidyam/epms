@@ -287,7 +287,7 @@
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-14 14:28:48.402028",
+ "modified": "2023-12-27 11:45:54.254598",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",
@@ -295,7 +295,6 @@
  "owner": "Administrator",
  "permissions": [
   {
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -316,7 +315,6 @@
    "write": 1
   },
   {
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
