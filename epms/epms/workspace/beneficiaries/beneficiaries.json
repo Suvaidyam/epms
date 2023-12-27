@@ -5,6 +5,10 @@
    "label": "Beneficiaries with Bank Account"
   },
   {
+   "chart_name": "Saving status",
+   "label": "Saving status"
+  },
+  {
    "chart_name": "Category-wise support status",
    "label": "Support-wise Status"
   },
@@ -29,7 +33,7 @@
    "label": "Current location"
   }
  ],
- "content": "[{\"id\":\"iTNZamOWgX\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"print in pdf\",\"col\":12}},{\"id\":\"nSyCLnHvUy\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of Beneficiaries\",\"col\":6}},{\"id\":\"EXmth7zOaZ\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of families\",\"col\":6}},{\"id\":\"UjlosovxUu\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of Community engagement\",\"col\":6}},{\"id\":\"i7cx2NgbOP\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total number of participants in Community engagement\",\"col\":6}},{\"id\":\"8MwIEpbEYX\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Gender composition\",\"col\":6}},{\"id\":\"ds3OKc4Rqj\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Beneficiaries with Bank Account\",\"col\":6}},{\"id\":\"pBWi2C_H-B\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Total Beneficiaries from the camps\",\"col\":12}},{\"id\":\"_o8M9PU4bF\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Support-wise Status\",\"col\":12}},{\"id\":\"TQPKvouQKp\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Beneficiary group by age\",\"col\":12}},{\"id\":\"TROMGsPZq2\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Education composition\",\"col\":12}},{\"id\":\"FkxHXNCSQe\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Current location\",\"col\":12}}]",
+ "content": "[{\"id\":\"iTNZamOWgX\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"print in pdf\",\"col\":12}},{\"id\":\"nSyCLnHvUy\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of Beneficiaries\",\"col\":6}},{\"id\":\"EXmth7zOaZ\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of families\",\"col\":6}},{\"id\":\"UjlosovxUu\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of Community engagement\",\"col\":6}},{\"id\":\"i7cx2NgbOP\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total number of participants in Community engagement\",\"col\":6}},{\"id\":\"8MwIEpbEYX\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Gender composition\",\"col\":6}},{\"id\":\"ds3OKc4Rqj\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Beneficiaries with Bank Account\",\"col\":6}},{\"id\":\"7FmPMxSjS6\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Saving status\",\"col\":12}},{\"id\":\"pBWi2C_H-B\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Total Beneficiaries from the camps\",\"col\":12}},{\"id\":\"_o8M9PU4bF\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Support-wise Status\",\"col\":12}},{\"id\":\"TQPKvouQKp\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Beneficiary group by age\",\"col\":12}},{\"id\":\"TROMGsPZq2\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Education composition\",\"col\":12}},{\"id\":\"FkxHXNCSQe\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Current location\",\"col\":12}}]",
  "creation": "2023-09-15 20:25:51.986386",
  "custom_blocks": [
   {
@@ -46,7 +50,7 @@
  "is_hidden": 0,
  "label": "Beneficiaries",
  "links": [],
- "modified": "2023-12-27 07:43:33.951351",
+ "modified": "2023-12-27 13:29:28.442678",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiaries",
@@ -57,7 +61,7 @@
   },
   {
    "label": "Total number of participants in Community engagement",
-   "number_card_name": "Total no of participant in camp"
+   "number_card_name": "Number of Participants in Community Engagement"
   },
   {
    "label": "Number of Beneficiaries",
