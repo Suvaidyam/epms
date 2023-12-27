@@ -7,8 +7,8 @@ from epms.utils.filter import Filter
 def execute(filters=None):
 	columns = [
 		{
-		"fieldname":"block",
-		"label":"Block",
+		"fieldname":"saving_status",
+		"label":"Saving Status",
 		"fieldtype":"Data",
 		"width":300
 		},
@@ -26,14 +26,9 @@ def execute(filters=None):
 		condition_str = "1=1"
 
 	sql_query = f"""
-	SELECT  s.state_name as state, d.district_name as district , t.block_name AS block, COUNT(b.name) AS count
-	FROM tabBeneficiary AS b
-	JOIN tabState AS s JOIN tabDistrict AS d JOIN tabBlock AS t ON b.state_of_origin = s.name AND b.district_of_origin = d.name
-	AND b.block_of_origin = t.name
+	select saving_status , count(name) as count from `tabBeneficiary`
 	WHERE {condition_str}
- 	GROUP BY state_of_origin, district_of_origin , block_of_origin
-	ORDER BY state_of_origin, district_of_origin;
+ 	group by saving_status
 	"""
-	print("sql_query",sql_query)
 	data = frappe.db.sql(sql_query, as_dict=True)
 	return columns, data
