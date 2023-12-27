@@ -319,6 +319,10 @@ frappe.ui.form.on("Beneficiary", {
     // frm.refresh()
   },
   refresh(frm) {
+    frm.set_df_property('support_table', 'cannot_delete_rows', true); // Hide delete button
+    frm.set_df_property('support_table', 'cannot_delete_all_rows', true);
+    frm.set_df_property('followup_table', 'cannot_delete_rows', true); // Hide delete button
+    frm.set_df_property('followup_table', 'cannot_delete_all_rows', true);
     // child table api defult call
     get_support_types(frm)
     if (frm.doc.support_table) {
