@@ -27,6 +27,6 @@ if (!frappe.user_roles.includes("MIS executive") || frappe.user_roles.includes("
 		"options": "Centre"
 	})
 }
-frappe.query_reports["Saving status"] = {
+frappe.query_reports["Number of Unique Beneficiaries (Government Scheme + Documentation)"] = {
 	filters:filters
 };

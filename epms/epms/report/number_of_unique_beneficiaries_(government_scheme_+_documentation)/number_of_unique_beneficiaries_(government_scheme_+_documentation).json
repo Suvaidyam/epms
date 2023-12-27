@@ -1,0 +1,32 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2023-12-27 13:48:30.410806",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2023-12-27 13:49:31.218541",
+ "modified_by": "Administrator",
+ "module": "Epms",
+ "name": "Number of Unique Beneficiaries (Government Scheme + Documentation)",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Beneficiary",
+ "report_name": "Number of Unique Beneficiaries (Government Scheme + Documentation)",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "MIS executive"
+  },
+  {
+   "role": "Admin"
+  }
+ ]
+}
