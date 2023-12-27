@@ -419,13 +419,15 @@ frappe.ui.form.on("Beneficiary", {
       }
     }
     // hsdklhdsihkdhkfdzkfkdfkjdskjfhdkjfkjdshfkjdshkjfh
-    // frm.fields_dict["family"].get_query = function (doc) {
-    //   return {
-    //     filters: {
-    //       "name": ["!=", frm.doc.contact_number],
-    //     },
-    //   };
-    // }
+    if(!frm.doc.__islocal){
+      frm.fields_dict["family"].get_query = function (doc) {
+        return {
+          filters: {
+            "head_of_family": ["!=", frm.doc.name],
+          },
+        };
+      }
+    }
     frm.fields_dict["district_of_origin"].get_query = function (doc) {
       return {
         filters: {
