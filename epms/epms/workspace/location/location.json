@@ -1,0 +1,33 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"aL36YowgpZ\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Location</span>\",\"col\":12}}]",
+ "creation": "2023-12-27 07:43:20.780922",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "map",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Location",
+ "links": [],
+ "modified": "2023-12-27 07:44:24.825197",
+ "modified_by": "Administrator",
+ "module": "Epms",
+ "name": "Location",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Admin"
+  }
+ ],
+ "sequence_id": 3.0,
+ "shortcuts": [],
+ "title": "Location"
+}
