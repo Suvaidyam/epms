@@ -43,6 +43,13 @@ const dialogsConfig = {
         _doc: true
       },
       {
+        label: 'Date of completion',
+        fieldname: 'date_of_completion',
+        fieldtype: 'Date',
+        reqd: 1,
+        _doc: true
+      },
+      {
         label: 'Application number',
         fieldname: 'application_number',
         fieldtype: 'Data',
@@ -59,13 +66,6 @@ const dialogsConfig = {
         fieldname: 'paid_by',
         fieldtype: 'Select',
         options: ["Self", "CSC"],
-        _doc: true
-      },
-      {
-        label: 'Date of completion',
-        fieldname: 'date_of_completion',
-        fieldtype: 'Date',
-        reqd: 1,
         _doc: true
       },
       {
@@ -419,13 +419,13 @@ frappe.ui.form.on("Beneficiary", {
       }
     }
     // hsdklhdsihkdhkfdzkfkdfkjdskjfhdkjfkjdshfkjdshkjfh
-    frm.fields_dict["family"].get_query = function (doc) {
-      return {
-        filters: {
-          "name": ["!=", frm.doc.contact_number],
-        },
-      };
-    }
+    // frm.fields_dict["family"].get_query = function (doc) {
+    //   return {
+    //     filters: {
+    //       "name": ["!=", frm.doc.contact_number],
+    //     },
+    //   };
+    // }
     frm.fields_dict["district_of_origin"].get_query = function (doc) {
       return {
         filters: {
@@ -511,12 +511,12 @@ frappe.ui.form.on("Beneficiary", {
     if (frm.doc.head_of_family === "No" || frm.doc.head_of_family === '') {
       parentField.df.hidden = 1;
       frm.set_df_property('family', 'reqd', 0);
-      frm.doc.family = ""
+      // frm.doc.family = ""
       parentField.refresh();
     } else {
       parentField.df.hidden = 0;
       frm.set_df_property('family', 'reqd', 1);
-      frm.doc.family = ""
+      // frm.doc.family = ""
       parentField.refresh();
     }
   },
