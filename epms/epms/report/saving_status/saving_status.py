@@ -26,9 +26,10 @@ def execute(filters=None):
 		condition_str = "1=1"
 
 	sql_query = f"""
-	select saving_status , count(name) as count from `tabBeneficiary`
-	WHERE {condition_str}
- 	group by saving_status
+	SELECT saving_status, COUNT(name) AS count
+	FROM tabBeneficiary
+	WHERE saving_status IS NOT NULL AND {condition_str}
+	GROUP BY saving_status;
 	"""
 	data = frappe.db.sql(sql_query, as_dict=True)
 	return columns, data
