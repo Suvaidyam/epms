@@ -28,7 +28,7 @@ def execute(filters=None):
 	sql_query = f"""
 	SELECT saving_status, COUNT(name) AS count
 	FROM tabBeneficiary
-	WHERE saving_status IS NOT NULL AND {condition_str}
+	WHERE saving_status IS NOT NULL AND saving_status <> '' AND {condition_str}
 	GROUP BY saving_status;
 	"""
 	data = frappe.db.sql(sql_query, as_dict=True)
