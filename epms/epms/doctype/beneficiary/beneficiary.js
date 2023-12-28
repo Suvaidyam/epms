@@ -43,6 +43,13 @@ const dialogsConfig = {
         _doc: true
       },
       {
+        label: 'Date of completion',
+        fieldname: 'date_of_completion',
+        fieldtype: 'Date',
+        reqd: 1,
+        _doc: true
+      },
+      {
         label: 'Application number',
         fieldname: 'application_number',
         fieldtype: 'Data',
@@ -59,13 +66,6 @@ const dialogsConfig = {
         fieldname: 'paid_by',
         fieldtype: 'Select',
         options: ["Self", "CSC"],
-        _doc: true
-      },
-      {
-        label: 'Date of completion',
-        fieldname: 'date_of_completion',
-        fieldtype: 'Date',
-        reqd: 1,
         _doc: true
       },
       {
@@ -319,6 +319,10 @@ frappe.ui.form.on("Beneficiary", {
     // frm.refresh()
   },
   refresh(frm) {
+    frm.set_df_property('support_table', 'cannot_delete_rows', true); // Hide delete button
+    frm.set_df_property('support_table', 'cannot_delete_all_rows', true);
+    frm.set_df_property('followup_table', 'cannot_delete_rows', true); // Hide delete button
+    frm.set_df_property('followup_table', 'cannot_delete_all_rows', true);
     // child table api defult call
     get_support_types(frm)
     if (frm.doc.support_table) {
@@ -368,7 +372,7 @@ frappe.ui.form.on("Beneficiary", {
     }
 
     let new_location = frm.fields_dict['other_current_location'];
-    if (frm.doc?.current_location?.split('-')[0] === "Others") {
+    if (frm.doc?.current_location?.split('-').slice(-1)[0] === "Others") {
       frm.set_df_property('other_current_location', 'reqd', 1);
       new_location.df.hidden = 0;
       new_location.refresh();
@@ -415,12 +419,14 @@ frappe.ui.form.on("Beneficiary", {
       }
     }
     // hsdklhdsihkdhkfdzkfkdfkjdskjfhdkjfkjdshfkjdshkjfh
-    frm.fields_dict["family"].get_query = function (doc) {
-      return {
-        filters: {
-          "name": ["!=", frm.doc.contact_number],
-        },
-      };
+    if(!frm.doc.__islocal){
+      frm.fields_dict["family"].get_query = function (doc) {
+        return {
+          filters: {
+            "head_of_family": ["!=", frm.doc.name],
+          },
+        };
+      }
     }
     frm.fields_dict["district_of_origin"].get_query = function (doc) {
       return {
@@ -507,12 +513,12 @@ frappe.ui.form.on("Beneficiary", {
     if (frm.doc.head_of_family === "No" || frm.doc.head_of_family === '') {
       parentField.df.hidden = 1;
       frm.set_df_property('family', 'reqd', 0);
-      frm.doc.family = ""
+      // frm.doc.family = ""
       parentField.refresh();
     } else {
       parentField.df.hidden = 0;
       frm.set_df_property('family', 'reqd', 1);
-      frm.doc.family = ""
+      // frm.doc.family = ""
       parentField.refresh();
     }
   },
@@ -558,7 +564,7 @@ frappe.ui.form.on("Beneficiary", {
   },
   current_location: function (frm) {
     var new_location = frm.fields_dict['other_current_location'];
-    if (frm.doc.current_location.split('-')[0] === "Others") {
+    if (frm.doc?.current_location?.split('-').slice(-1)[0] === "Others") {
       frm.set_df_property('other_current_location', 'reqd', 1);
       new_location.df.hidden = 0;
       new_location.refresh();

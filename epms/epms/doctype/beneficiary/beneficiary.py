@@ -16,10 +16,10 @@ class Beneficiary(Document):
 			new_occupation_doc = frappe.new_doc("Current Occupation")
 			new_occupation_doc.occupation = self.new_occupation
 			new_occupation_doc.save()
-		# if(self.other_bank_account):
-		# 	new_bank_doc = frappe.new_doc("Bank")
-		# 	new_bank_doc.bank_name = self.other_bank_account
-		# 	new_bank_doc.save()
+		if(self.other_bank_account):
+			new_bank_doc = frappe.new_doc("Bank")
+			new_bank_doc.bank_name = self.other_bank_account
+			new_bank_doc.save()
 		if(self.other_current_location):
 			new_location_doc = frappe.new_doc("Current location")
 			if(self.csc):

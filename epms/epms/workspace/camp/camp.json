@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Camp",
  "links": [],
- "modified": "2023-12-16 20:34:20.834143",
+ "modified": "2023-12-27 07:43:35.319641",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Camp",
@@ -35,7 +35,7 @@
    "role": "MIS executive"
   }
  ],
- "sequence_id": 11.0,
+ "sequence_id": 12.0,
  "shortcuts": [],
  "title": "Camp"
 }

@@ -13,6 +13,7 @@
   "registration_date",
   "name_of_the_beneficiary",
   "contact_number",
+  "alternate_number",
   "date_of_birth",
   "age",
   "gender",
@@ -282,12 +283,19 @@
    "label": "Saving status",
    "mandatory_depends_on": "eval:doc.do_you_have_bank_account ==\"Yes\"",
    "options": "\nSaving regularly\nSaving irregularly\nNo saving"
+  },
+  {
+   "fieldname": "alternate_number",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Alternate number"
   }
  ],
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-14 14:28:48.402028",
+ "modified": "2023-12-27 12:04:26.698820",
  "modified_by": "Administrator",
  "module": "Epms",
  "name": "Beneficiary",
@@ -295,7 +303,6 @@
  "owner": "Administrator",
  "permissions": [
   {
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -316,7 +323,6 @@
    "write": 1
   },
   {
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
